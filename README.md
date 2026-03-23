@@ -1,0 +1,1 @@
+**MAD System for Fake News Detection**
