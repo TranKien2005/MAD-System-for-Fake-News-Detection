@@ -12,14 +12,20 @@ def add_to_list(current: list, new: list) -> list:
     return current + new
 
 
-class SearchResult(TypedDict):
-    """A single search result with credibility info."""
-    url: str
+def update_dict(current: dict, new: dict) -> dict:
+    """Reducer: merge new dictionary into existing one."""
+    return {**current, **new}
+
+
+class KnowledgeEntry(TypedDict):
+    """A search result stored in the shared knowledge base."""
+    id: str
+    query: str
     title: str
     content: str
+    source_url: str
     domain: str
-    credibility_score: float
-    credibility_label: str
+    relevance_score: float
 
 
 class DebateRound(TypedDict):
@@ -27,17 +33,6 @@ class DebateRound(TypedDict):
     round_number: int
     defender_argument: str
     challenger_argument: str
-    search_queries_used: list[str]
-
-
-class JudgeVerdict(TypedDict):
-    """Final verdict from the Judge agent."""
-    verdict: str              # LIKELY_REAL / LIKELY_FAKE / UNCERTAIN
-    confidence: float         # 0-100
-    reasoning: str
-    key_evidence: list[str]
-    defender_score: dict
-    challenger_score: dict
 
 
 class MADState(TypedDict):
@@ -45,21 +40,27 @@ class MADState(TypedDict):
 
     # --- Input ---
     original_news: str                                    # Tin tức gốc
-    claims: list[str]                                     # Claims đã trích xuất
+
+    # --- Knowledge Base ---
+    knowledge_base: Annotated[list[KnowledgeEntry], add_to_list]
+    source_scores: Annotated[dict[str, float], update_dict] # { "[S1]": 1.0, ... }
 
     # --- Search ---
-    search_results: Annotated[list[SearchResult], add_to_list]  # Tất cả kết quả search
-    pending_search_queries: list[str]                     # Query cần search tiếp
+    pending_search_queries: list[str]
+    executed_queries: Annotated[list[str], add_to_list]   # Các query đã thực hiện
 
     # --- Debate ---
     current_round: int                                    # Vòng hiện tại
     max_rounds: int                                       # Số vòng tối đa
-    debate_history: Annotated[list[DebateRound], add_to_list]   # Lịch sử tranh luận
+    debate_history: Annotated[list[DebateRound], add_to_list]
 
     # --- Current round arguments ---
-    current_defender_argument: str                        # Lập luận Defender vòng hiện tại
-    current_challenger_argument: str                      # Lập luận Challenger vòng hiện tại
-    moderator_ruling: str                                 # Phán quyết Moderator vòng trước
+    current_defender_argument: str
+    current_challenger_argument: str
 
-    # --- Judge ---
-    verdict: JudgeVerdict | None                          # Phán quyết cuối cùng
+    # --- Evaluator ---
+    evaluator_rulings: Annotated[list[dict], add_to_list]  # One ruling per round
+
+    # --- Status ---
+    active_side: str                                      # Bên đang thực hiện (DEFENDER/CHALLENGER)
+    verdict: dict | None                                  # Phán quyết cuối cùng

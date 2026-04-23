@@ -1,120 +1,92 @@
 """
 Defender Agent — Argues that the news is REAL.
-Adapts behavior based on search mode (with/without search).
+Phase 1 (Ask): Decides what info to search for.
+Phase 2 (Speak): Builds arguments using all available evidence.
 """
 
 from langchain_core.messages import HumanMessage
 
 from prompts.templates import (
-    DEFENDER_PROMPT_WITH_SEARCH,
-    DEFENDER_PROMPT_NO_SEARCH,
-    DEBATER_REBUTTAL_CONTEXT_WITH_SEARCH,
-    DEBATER_REBUTTAL_CONTEXT_NO_SEARCH,
+    DEFENDER_ROUND1_PROMPT,
+    DEFENDER_REBUTTAL_PROMPT,
+    DEFENDER_ASK_PROMPT,
 )
-from config.settings import config
+from agents.evaluator import parse_json_robust, format_evaluator_summary, _format_knowledge_base
+
+
+def defend_ask(state: dict, llm) -> dict:
+    """Phase 1: Defender analyzes the situation and requests search queries."""
+    news_text = state["original_news"]
+    history_text = _format_debate_history(state.get("debate_history", []))
+    executed = str(state.get("executed_queries", []))
+    
+    prompt = DEFENDER_ASK_PROMPT.format(
+        original_news=news_text,
+        debate_history=history_text,
+        executed_queries=executed
+    )
+    
+    response = llm.invoke([HumanMessage(content=prompt)])
+    data = parse_json_robust(response.content)
+    
+    return {"pending_search_queries": data.get("pending_search_queries", [])}
 
 
 def defend(state: dict, llm) -> dict:
-    """
-    Generate Defender's argument for the current round.
-    
-    Round 1: Initial argument based on evidence (or logic only).
-    Round 2+: Rebuttal + defense based on opponent's previous argument.
-    """
+    """Phase 2: Defender speaks using all available info from KB."""
+    news_text = state["original_news"]
     current_round = state.get("current_round", 1)
-    claims_text = "\n".join(f"- {c}" for c in state.get("claims", []))
-    enable_search = config.debate.enable_search
+    kb_text = _format_knowledge_base(state.get("knowledge_base", []), state.get("source_scores", {}))
+    debate_history = state.get("debate_history", [])
 
-    # Choose prompt based on search mode
-    if enable_search:
-        evidence_text = format_evidence(state.get("search_results", []))
-        rebuttal_template = DEBATER_REBUTTAL_CONTEXT_WITH_SEARCH
+    if current_round == 1:
+        # Round 1: Initial statements — independent, no rebuttal
+        prompt = DEFENDER_ROUND1_PROMPT.format(
+            original_news=news_text,
+            knowledge_base_with_scores=kb_text,
+        )
     else:
-        evidence_text = None
-        rebuttal_template = DEBATER_REBUTTAL_CONTEXT_NO_SEARCH
+        # Round 2+: Rebuttals — respond to Challenger's PREVIOUS round
+        eval_summary = format_evaluator_summary(state.get("evaluator_rulings", []))
+        opponent_last = _get_opponent_last_argument(debate_history, "challenger")
+        history_text = _format_debate_history(debate_history)
 
-    # Build debate context
-    if current_round > 1:
-        opponent_arg = state.get("current_challenger_argument", "")
-        history = format_debate_history(state.get("debate_history", []))
-        moderator = state.get("moderator_ruling", "")
-        debate_context = rebuttal_template.format(
+        prompt = DEFENDER_REBUTTAL_PROMPT.format(
+            original_news=news_text,
+            knowledge_base_with_scores=kb_text,
             round_number=current_round,
-            opponent_argument=opponent_arg,
-            debate_history=history,
-            moderator_ruling=moderator if moderator else "(Chưa có phán quyết Moderator)",
-        )
-    else:
-        debate_context = "(Đây là vòng đầu tiên — hãy đưa ra lập luận mở đầu)"
-
-    # Build prompt
-    if enable_search:
-        prompt = DEFENDER_PROMPT_WITH_SEARCH.format(
-            original_news=state["original_news"],
-            claims=claims_text,
-            evidence=evidence_text,
-            debate_context=debate_context,
-        )
-    else:
-        prompt = DEFENDER_PROMPT_NO_SEARCH.format(
-            original_news=state["original_news"],
-            claims=claims_text,
-            debate_context=debate_context,
+            opponent_last_argument=opponent_last,
+            debate_history=history_text,
+            evaluator_summary=eval_summary,
         )
 
     response = llm.invoke([HumanMessage(content=prompt)])
     argument = response.content.strip()
 
-    # Extract search queries only if search is enabled
-    search_queries = extract_search_queries(argument) if enable_search else []
-
     return {
         "current_defender_argument": argument,
-        "pending_search_queries": search_queries,
     }
 
 
-def format_evidence(search_results: list) -> str:
-    """Format search results as readable evidence."""
-    if not search_results:
-        return "(Chưa có evidence)"
-
-    lines = []
-    for r in search_results:
-        lines.append(
-            f"- [{r.get('title', 'N/A')}] ({r.get('domain', 'N/A')}, "
-            f"credibility: {r.get('credibility_score', 0):.1f} — "
-            f"{r.get('credibility_label', 'N/A')}): {r.get('content', '')}"
-        )
-    return "\n".join(lines)
+def _get_opponent_last_argument(debate_history: list, opponent: str) -> str:
+    """Get the opponent's argument from the last completed round."""
+    if not debate_history:
+        return "(Chưa có lập luận từ đối phương)"
+    last_round = debate_history[-1]
+    key = "challenger_argument" if opponent == "challenger" else "defender_argument"
+    return last_round.get(key, "(Chưa có)")
 
 
-def format_debate_history(debate_history: list) -> str:
-    """Format previous debate rounds."""
+def _format_debate_history(debate_history: list) -> str:
+    """Format previous debate rounds — full text, no truncation."""
     if not debate_history:
         return "(Chưa có lịch sử tranh luận)"
 
-    lines = []
+    lines = ["\n#### Lịch sử tranh luận:"]
     for r in debate_history:
-        lines.append(f"\n=== VÒNG {r['round_number']} ===")
-        lines.append(f"DEFENDER: {r['defender_argument'][:500]}...")
-        lines.append(f"CHALLENGER: {r['challenger_argument'][:500]}...")
+        lines.append(f"\n{'='*40}")
+        lines.append(f"Vòng {r['round_number']}:")
+        lines.append(f"{'='*40}")
+        lines.append(f"📗 DEFENDER:\n{r['defender_argument']}")
+        lines.append(f"\n📕 CHALLENGER:\n{r['challenger_argument']}")
     return "\n".join(lines)
-
-
-def extract_search_queries(argument: str) -> list[str]:
-    """Extract search queries from the agent's response."""
-    queries = []
-    in_search_section = False
-
-    for line in argument.split("\n"):
-        line = line.strip()
-        if "YÊU CẦU TÌM THÊM" in line:
-            in_search_section = True
-            continue
-        if in_search_section and line and "không cần" not in line.lower():
-            query = line.lstrip("- ").strip()
-            if query and not query.startswith("#"):
-                queries.append(query)
-
-    return queries

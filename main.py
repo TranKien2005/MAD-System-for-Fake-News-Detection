@@ -8,7 +8,7 @@ Usage:
 import os
 import json
 from dotenv import load_dotenv
-from langchain_groq import ChatGroq
+from langchain_openai import ChatOpenAI
 
 from config.settings import config
 from graph.workflow import build_workflow
@@ -16,13 +16,22 @@ from graph.workflow import build_workflow
 
 def create_llms():
     """Create LLM instances from config."""
-    llm_main = ChatGroq(
+    api_key = os.getenv("NINEROUTER_API_KEY")
+    base_url = os.getenv("NINEROUTER_BASE_URL")
+
+    llm_main = ChatOpenAI(
         model=config.model.main_model,
         temperature=config.model.debate_temperature,
+        api_key=api_key,
+        base_url=base_url,
+        max_tokens=config.model.max_tokens,
     )
-    llm_light = ChatGroq(
+    llm_light = ChatOpenAI(
         model=config.model.light_model,
         temperature=config.model.parser_temperature,
+        api_key=api_key,
+        base_url=base_url,
+        max_tokens=config.model.max_tokens,
     )
     return llm_main, llm_light
 
@@ -30,10 +39,10 @@ def create_llms():
 def run_mad(news_text: str) -> dict:
     """
     Run the MAD System on a piece of news.
-    
+
     Args:
         news_text: The news article to verify.
-    
+
     Returns:
         Final state dict containing verdict and debate history.
     """
@@ -43,6 +52,7 @@ def run_mad(news_text: str) -> dict:
     initial_state = {
         "original_news": news_text,
         "claims": [],
+        "knowledge_base": [],
         "search_results": [],
         "pending_search_queries": [],
         "current_round": 1,
@@ -50,6 +60,7 @@ def run_mad(news_text: str) -> dict:
         "debate_history": [],
         "current_defender_argument": "",
         "current_challenger_argument": "",
+        "evaluator_rulings": [],
         "verdict": None,
     }
 
@@ -58,7 +69,8 @@ def run_mad(news_text: str) -> dict:
     print("=" * 60)
     print(f"\n📰 Tin tức cần kiểm tra:\n{news_text}")
     print(f"\n⚙️  Config: {config.debate.max_rounds} vòng tranh luận, "
-          f"search={'BẬT' if config.debate.enable_search else 'TẮT (simulated)'}")
+          f"Wikipedia search: BẬT, "
+          f"Languages: {config.debate.wikipedia_languages}")
     print("=" * 60)
 
     # Run the workflow
@@ -84,7 +96,6 @@ def _print_verdict(state: dict):
     v = verdict.get("verdict", "UNCERTAIN")
     confidence = verdict.get("confidence", 50)
 
-    # Verdict emoji and color
     if v == "LIKELY_REAL":
         emoji = "✅"
         label = "CÓ VẺ LÀ TIN THẬT"
@@ -99,26 +110,27 @@ def _print_verdict(state: dict):
     print(f"📊 Độ tin cậy: {confidence}%")
     print(f"\n📝 Giải thích:\n{verdict.get('reasoning', 'N/A')}")
 
-    # Key evidence
-    key_evidence = verdict.get("key_evidence", [])
-    if key_evidence:
-        print(f"\n🔑 Bằng chứng chính:")
-        for i, e in enumerate(key_evidence, 1):
-            print(f"   {i}. {e}")
+    # Per-claim scores
+    claim_scores = verdict.get("claim_scores", [])
+    if claim_scores:
+        print(f"\n📊 Điểm từng nhận định:")
+        print(f"   {'ID':<6} {'Bên':<12} {'Credibility':>11} {'Reliability':>11} {'Relevance':>9} {'Score':>8}")
+        print(f"   {'—'*57}")
+        for cs in claim_scores:
+            cid = cs.get("claim_id", "?")
+            side = cs.get("side", "?")
+            cred = cs.get("source_credibility", 0)
+            rel = cs.get("reliability", 0)
+            rev = cs.get("relevance", 0)
+            score = cs.get("score", 0)
+            print(f"   {cid:<6} {side:<12} {cred:>11.2f} {rel:>11.2f} {rev:>9.2f} {score:>8.3f}")
 
-    # Scores
-    def_score = verdict.get("defender_score", {})
-    chal_score = verdict.get("challenger_score", {})
-    if def_score and chal_score:
-        print(f"\n📊 Điểm đánh giá:")
-        print(f"   {'Tiêu chí':<25} {'Defender':>10} {'Challenger':>10}")
-        print(f"   {'—'*45}")
-        for key in ["evidence_quality", "rebuttal_effectiveness",
-                     "unrefuted_points", "consistency", "faithfulness"]:
-            label = key.replace("_", " ").title()
-            d = def_score.get(key, "N/A")
-            c = chal_score.get(key, "N/A")
-            print(f"   {label:<25} {str(d):>10} {str(c):>10}")
+    # Total scores
+    def_total = verdict.get("defender_total", 0)
+    chal_total = verdict.get("challenger_total", 0)
+    print(f"\n📊 Tổng điểm:")
+    print(f"   Defender:   {def_total:.3f}")
+    print(f"   Challenger: {chal_total:.3f}")
 
     print("\n" + "=" * 60)
 
