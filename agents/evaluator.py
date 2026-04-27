@@ -1,92 +1,226 @@
-"""
-Evaluator Agent — Evaluates each debate round and makes rulings on claims.
-Replaces the old Moderator with authority to CONFIRM, REJECT, or KEEP claims.
-"""
+"""Evaluator and source-credibility utilities."""
 
 import json
+import time
+import logging
 
 from langchain_core.messages import HumanMessage
 
 from prompts.templates import EVALUATOR_PROMPT, SOURCE_SCORER_PROMPT
 
 
+def _safe_invoke(llm, messages, max_retries=3, delay=2):
+    for i in range(max_retries):
+        try:
+            return llm.invoke(messages)
+        except Exception as e:
+            if "429" in str(e) and i < max_retries - 1:
+                logging.warning(f"Rate limit hit. Retrying in {delay}s... (Attempt {i+1}/{max_retries})")
+                time.sleep(delay)
+                delay *= 2
+                continue
+            raise e
+    return None
+
+
+def parse_json_robust(text: str) -> dict:
+    text = text.strip()
+    if text.startswith("```"):
+        lines = text.split("\n")
+        text = "\n".join(lines[1:-1])
+
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        start = text.find("{")
+        end = text.rfind("}") + 1
+        if start != -1 and end > start:
+            try:
+                return json.loads(text[start:end])
+            except json.JSONDecodeError:
+                pass
+    return {}
+
+
 def score_sources(state: dict, llm) -> dict:
-    """
-    Evaluates the trust score of new sources in the knowledge base.
-    """
     kb = state.get("knowledge_base", [])
     scores = state.get("source_scores", {})
-    
-    # Identify new sources that haven't been scored yet
+
     new_sources_list = [entry for entry in kb if entry["id"] not in scores]
-    
     if not new_sources_list:
         return {"source_scores": {}}
 
-    # Format new sources for the prompt
-    new_sources_text = "\n".join([
-        f"📖 {s['id']} {s['title']} (Domain: {s['domain']})\n   {s['content'][:300]}..."
-        for s in new_sources_list
-    ])
+    new_sources_text = "\n".join(
+        [
+            f"📖 {s['id']} {s['title']} (Domain: {s['domain']})\n   {s['content'][:300]}..."
+            for s in new_sources_list
+        ]
+    )
 
     prompt = SOURCE_SCORER_PROMPT.format(
         original_news=state["original_news"],
-        new_sources=new_sources_text
+        new_sources=new_sources_text,
     )
 
-    response = llm.invoke([HumanMessage(content=prompt)])
-    data = _parse_json_robust(response.content)
-    
+    response = _safe_invoke(llm, [HumanMessage(content=prompt)])
+    data = parse_json_robust(response.content)
+
     new_scores = {}
     for item in data.get("assessments", []):
         sid = item.get("source_id")
         score = float(item.get("trust_score", 0.0))
         if sid:
             new_scores[sid] = score
-            
-    # Default 0.0 for any missed sources
+
     for s in new_sources_list:
         if s["id"] not in new_scores:
             new_scores[s["id"]] = 0.0
 
-    print(f"\n⚖️ [Source Scorer] Đã giám định {len(new_scores)} nguồn mới.")
     return {"source_scores": new_scores}
 
 
 def evaluate_round(state: dict, llm) -> dict:
-    """
-    Evaluate the current round's arguments based on evidence.
-    Phases: Round 1 (Eligibility) | Round 2+ (Resolution/Steerance)
-    """
     current_round = state.get("current_round", 1) - 1
 
-    # Format knowledge base with scores
-    kb_text = _format_knowledge_base(state.get("knowledge_base", []), state.get("source_scores", {}))
-
-    # Format previous evaluator rulings
+    kb_text = format_knowledge_base(state.get("knowledge_base", []), state.get("source_scores", {}))
     prev_rulings = state.get("evaluator_rulings", [])
     prev_text = _format_previous_rulings(prev_rulings)
+
+    defender_claims = state.get("current_defender_claims", [])
+    challenger_claims = state.get("current_challenger_claims", [])
 
     prompt = EVALUATOR_PROMPT.format(
         original_news=state["original_news"],
         knowledge_base_with_scores=kb_text,
         previous_evaluator_rulings=prev_text,
         round_number=current_round,
-        defender_argument=state.get("current_defender_argument", ""),
-        challenger_argument=state.get("current_challenger_argument", ""),
+        defender_argument=_format_claims_for_eval(defender_claims, "D"),
+        challenger_argument=_format_claims_for_eval(challenger_claims, "C"),
     )
 
-    response = llm.invoke([HumanMessage(content=prompt)])
-    ruling = _parse_json_robust(response.content)
+    seeded = _seed_claim_decisions(defender_claims, challenger_claims)
+
+    response = _safe_invoke(llm, [HumanMessage(content=prompt)])
+    ruling = parse_json_robust(response.content)
     ruling["round_number"] = current_round
 
-    return {
-        "evaluator_rulings": [ruling],
-    }
+    normalized = []
+    raw_decisions = ruling.get("claim_decisions", [])
+    if not raw_decisions:
+        raw_decisions = seeded
+
+    for idx, decision in enumerate(raw_decisions):
+        normalized.append(
+            {
+                "claim_id": decision.get("claim_id", "?"),
+                "status": decision.get("status", "ACTIVE"),
+                "admissibility": decision.get("admissibility", "PASS"),
+                "relevance": decision.get("relevance", "MEDIUM"),
+                "stance_check": decision.get("stance_check", "PASS"),
+                "evidence_check": decision.get("evidence_check", "PASS"),
+                "closure_reason": decision.get("closure_reason", ""),
+                "guidance": decision.get("guidance", ""),
+                "turn_index": idx,
+            }
+        )
+
+    if not normalized:
+        for idx, decision in enumerate(seeded):
+            normalized.append(
+                {
+                    "claim_id": decision.get("claim_id", "?"),
+                    "status": decision.get("status", "ACTIVE"),
+                    "admissibility": decision.get("admissibility", "PASS"),
+                    "relevance": decision.get("relevance", "MEDIUM"),
+                    "stance_check": decision.get("stance_check", "PASS"),
+                    "evidence_check": decision.get("evidence_check", "PASS"),
+                    "closure_reason": decision.get("closure_reason", ""),
+                    "guidance": decision.get("guidance", ""),
+                    "turn_index": idx,
+                }
+            )
+
+    ruling["claim_decisions"] = normalized
+    return {"evaluator_rulings": [ruling]}
+
+
+def _seed_claim_decisions(defender_claims: list, challenger_claims: list) -> list[dict]:
+    seeded = []
+    for claim in defender_claims + challenger_claims:
+        cid = claim.get("claim_id", "?")
+        targets = claim.get("target_claim_ids", [])
+        action = claim.get("action_type", "ASSERT")
+        evidence = claim.get("evidence", [])
+
+        stance_ok = str(cid).startswith("D") or str(cid).startswith("C")
+        has_source = any(e.get("evidence_type") == "SOURCE" and e.get("source_id") for e in evidence)
+        has_common_knowledge = any(e.get("evidence_type") == "COMMON_KNOWLEDGE" for e in evidence)
+
+        status = "ACTIVE"
+        admissibility = "PASS"
+        relevance = "HIGH"
+        evidence_check = "PASS"
+        stance_check = "PASS" if stance_ok else "FAIL"
+        closure_reason = ""
+
+        if not stance_ok:
+            status = "DROPPED"
+            admissibility = "FAIL"
+            closure_reason = "Sai định dạng claim_id theo phe"
+
+        if not has_source and not has_common_knowledge:
+            status = "DROPPED"
+            admissibility = "FAIL"
+            evidence_check = "FAIL"
+            closure_reason = "Không có evidence hợp lệ (cần SOURCE hoặc COMMON_KNOWLEDGE)"
+
+        if action in ("REBUT", "DEFEND") and not has_source:
+            status = "DROPPED"
+            admissibility = "FAIL"
+            evidence_check = "FAIL"
+            closure_reason = "Vòng phản biện/bảo vệ bắt buộc phải có SOURCE; COMMON_KNOWLEDGE không đủ"
+
+        if action in ("REBUT", "DEFEND") and not targets:
+            status = "DROPPED"
+            admissibility = "FAIL"
+            closure_reason = "REBUT/DEFEND phải có target_claim_ids"
+
+        seeded.append(
+            {
+                "claim_id": cid,
+                "status": status,
+                "admissibility": admissibility,
+                "relevance": relevance,
+                "stance_check": stance_check,
+                "evidence_check": evidence_check,
+                "closure_reason": closure_reason,
+                "guidance": "Tăng bằng chứng mới và nhắm đúng claim đối phương nếu phản biện.",
+            }
+        )
+    return seeded
+
+
+def _format_claims_for_eval(claims: list, prefix: str) -> str:
+    if not claims:
+        return f"(Không có claim {prefix})"
+
+    lines = []
+    for c in claims:
+        cid = c.get('claim_id', '?')
+        atype = c.get('action_type', 'ASSERT')
+        targets = c.get('target_claim_ids', [])
+        txt = c.get('text', '')
+        ev = c.get('evidence', [])
+        
+        lines.append(
+            f"{cid} [{atype}] -> {targets}\n"
+            f"Text: {txt}\n"
+            f"Evidence: {ev}"
+        )
+    return "\n\n".join(lines)
 
 
 def format_evaluator_summary(evaluator_rulings: list[dict]) -> str:
-    """Format all evaluator rulings as readable text for debater prompts."""
     if not evaluator_rulings:
         return "(Chưa có đánh giá từ Evaluator)"
 
@@ -94,25 +228,15 @@ def format_evaluator_summary(evaluator_rulings: list[dict]) -> str:
     for ruling in evaluator_rulings:
         r_num = ruling.get("round_number", "?")
         lines.append(f"\n⚖️ THẨM ĐỊNH SAU VÒNG {r_num}:")
-
-        # Point Verifications
-        verifications = ruling.get("point_verifications", [])
-        for v in verifications:
-            pid = v.get("point_id", "?")
-            status = v.get("status", "UNCERTAIN")
-            grounded = "Grounded" if v.get("is_grounded") else "✖️ KHÔNG NGUỒN"
-            common = " | Common Knowledge" if v.get("is_common_knowledge") else ""
-            basic_r = " | Basic Reasoning" if v.get("is_basic_reasoning") else ""
-            stubborn = " | ⚠️ CÃI CÙN" if v.get("is_stubborn") else ""
-            verdict = v.get("evaluator_verdict", "")
-            guidance = v.get("guidance", "")
-            
-            symbol = {"VERIFIED": "✅", "DEBUNKED": "❌", "REJECTED": "🗑️"}.get(status, "🔄")
-            lines.append(f"  {symbol} {pid}: {status} ({grounded}{common}{basic_r}{stubborn})")
-            if verdict:
-                lines.append(f"     -> Kết luận: {verdict}")
-            if guidance:
-                lines.append(f"     -> 💡 CHỈ DẪN: {guidance}")
+        for d in ruling.get("claim_decisions", []):
+            lines.append(
+                f"- {d.get('claim_id', '?')}: {d.get('status', 'ACTIVE')} "
+                f"(admissibility={d.get('admissibility', 'PASS')}, relevance={d.get('relevance', 'MEDIUM')})"
+            )
+            if d.get("closure_reason"):
+                lines.append(f"  -> closure_reason: {d.get('closure_reason')}")
+            if d.get("guidance"):
+                lines.append(f"  -> guidance: {d.get('guidance')}")
 
         summary = ruling.get("round_summary", "")
         if summary:
@@ -121,8 +245,7 @@ def format_evaluator_summary(evaluator_rulings: list[dict]) -> str:
     return "\n".join(lines)
 
 
-def _format_knowledge_base(knowledge_base: list, source_scores: dict = None) -> str:
-    """Format knowledge base as readable text, including trust scores."""
+def format_knowledge_base(knowledge_base: list, source_scores: dict | None = None) -> str:
     if not knowledge_base:
         return "(Không có dữ liệu từ Knowledge Base)"
 
@@ -137,7 +260,7 @@ def _format_knowledge_base(knowledge_base: list, source_scores: dict = None) -> 
         domain = entry.get("domain", "")
         relevance = entry.get("relevance_score", 0.5)
         trust = source_scores.get(tid, "Chưa giám định")
-        
+
         lines.append(f"📖 {tid} {title} (Trust: {trust} | Domain: {domain} | Relevance: {relevance:.2f})")
         lines.append(f"   {content[:400]}")
         lines.append("")
@@ -145,46 +268,6 @@ def _format_knowledge_base(knowledge_base: list, source_scores: dict = None) -> 
 
 
 def _format_previous_rulings(rulings: list) -> str:
-    """Format previous evaluator rulings."""
     if not rulings:
         return "(Chưa có đánh giá trước đó)"
     return format_evaluator_summary(rulings)
-
-
-def _format_debate_history(debate_history: list) -> str:
-    """Format debate history."""
-    if not debate_history:
-        return "(Chưa có lịch sử tranh luận)"
-
-    lines = []
-    for r in debate_history:
-        lines.append(f"\n{'='*50}")
-        lines.append(f"VÒNG {r['round_number']}")
-        lines.append(f"{'='*50}")
-        lines.append(f"📗 DEFENDER:\n{r['defender_argument']}")
-        lines.append(f"\n📕 CHALLENGER:\n{r['challenger_argument']}")
-    return "\n".join(lines)
-
-
-def _parse_json_robust(text: str) -> dict:
-    """Robustly parse JSON from LLM response."""
-    text = text.strip()
-    if text.startswith("```"):
-        lines = text.split("\n")
-        text = "\n".join(lines[1:-1])
-    
-    try:
-        return json.loads(text)
-    except json.JSONDecodeError:
-        start = text.find("{")
-        end = text.rfind("}") + 1
-        if start != -1 and end > start:
-            try:
-                return json.loads(text[start:end])
-            except json.JSONDecodeError:
-                pass
-    return {}
-
-
-# Public alias used by defender.py and challenger.py
-parse_json_robust = _parse_json_robust

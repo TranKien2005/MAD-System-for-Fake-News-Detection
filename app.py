@@ -1,26 +1,20 @@
 """
-MAD System — Information Dashboard (3-Column Layout)
-Focused on data transparency and complete information visibility.
-
-Usage:
-    python app.py
+MAD System — Redesigned Interface
+Focus: Unified Thread Tracking, Dynamic ID Visualization, and Enhanced UX.
 """
 
 import os
-import json
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
+import gradio as gr
 
 from config.settings import config
 from graph.workflow import build_workflow
+from graph.state import build_initial_state
 
 load_dotenv()
 
-import gradio as gr
-
-
 def create_llms():
-    """Create LLM instances."""
     api_key = os.getenv("NINEROUTER_API_KEY")
     base_url = os.getenv("NINEROUTER_BASE_URL")
 
@@ -40,11 +34,7 @@ def create_llms():
     )
     return llm_main, llm_light
 
-
 def run_analysis(news_text: str, max_rounds: int):
-    """
-    Run the MAD system and yield progress updates for Gradio.
-    """
     if not news_text.strip():
         yield "⚠️ Vui lòng nhập tin tức.", "", "", ""
         return
@@ -53,225 +43,196 @@ def run_analysis(news_text: str, max_rounds: int):
     llm_main, llm_light = create_llms()
     app = build_workflow(llm_main, llm_light)
 
-    initial_state = {
-        "original_news": news_text,
-        "knowledge_base": [],
-        "pending_search_queries": [],
-        "executed_queries": [],
-        "active_side": "DEFENDER",
-        "current_round": 1,
-        "max_rounds": config.debate.max_rounds,
-        "debate_history": [],
-        "current_defender_argument": "",
-        "current_challenger_argument": "",
-        "evaluator_rulings": [],
-        "verdict": None,
-    }
+    initial_state = build_initial_state(
+        news_text=news_text,
+        max_rounds=config.debate.max_rounds,
+    )
 
-    # State variables for display
-    progress_log = "🚀 **Bắt đầu phân tích hệ thống...**\n\n"
-    research_display = "### 📚 PHÒNG NGHIÊN CỨU (KNOWLEDGE BASE)\n\n*Chưa có dữ liệu tìm kiếm...*"
-    debate_display = "### ⚔️ ĐẤU TRƯỜNG TRANH LUẬN\n\n*Đang khởi tạo bối cảnh...*"
-    analysis_display = "### ⚖️ HÀNH LANG PHÂN TÍCH\n\n*Chờ dữ liệu từ các vòng...*"
+    progress_log = "🚀 **Khởi động hệ thống MAD...**\n\n"
+    research_display = "### 📚 PHÒNG NGHIÊN CỨU\n*Chưa có dữ liệu...*"
+    debate_display = "### ⚔️ LUỒNG TRANH LUẬN\n*Đang chờ lượt đầu tiên...*"
+    verdict_display = "### ⚖️ PHÁN QUYẾT\n*Chờ kết thúc tranh luận...*"
 
-    yield progress_log, research_display, debate_display, analysis_display
+    yield progress_log, research_display, debate_display, verdict_display
 
-    # Internal buffers
     kb_entries = []
     executed_queries = []
-    debate_history_text = ""
-    eval_text = ""
+    claims_registry = {}
 
     for event in app.stream(initial_state, stream_mode="updates"):
         for node_name, node_output in event.items():
+            
+            if node_name == "prepare_round":
+                progress_log += f"🧭 **Vòng {node_output.get('current_round', '?')}**: Đang lập kế hoạch tìm kiếm...\n"
+                yield progress_log, research_display, debate_display, verdict_display
 
-            if node_name == "direct_search_news":
-                new_kb = node_output.get("knowledge_base", [])
-                queries = node_output.get("executed_queries", [])
-                
-                kb_entries.extend(new_kb)
-                executed_queries.extend(queries)
-                
-                if not new_kb:
-                    progress_log += f"⚠️ **Tim kiem ban dau**: Khong tim thay nguon tin nao.\n\n"
-                else:
-                    progress_log += f"🔍 **Tim kiem ban dau**: Thanh cong ({len(new_kb)} nguon).\n\n"
-                
-                research_display = _build_research_column(kb_entries, executed_queries)
-                yield progress_log, research_display, debate_display, analysis_display
-
-            elif node_name.startswith("ask_"):
-                queries = node_output.get("pending_search_queries", [])
-                side = node_output.get("active_side", "Agent")
-                
-                if queries:
-                    q_str = ", ".join(f"`{q}`" for q in queries)
-                    progress_log += f"🧠 **{side}** yeu cau tim kiem: {q_str}\n\n"
-                else:
-                    progress_log += f"🧠 **{side}**: Da du bang chung, khong can tim them.\n\n"
-                
-                yield progress_log, research_display, debate_display, analysis_display
-
-            elif node_name.startswith("search_"):
+            elif "search" in node_name:
                 new_kb = node_output.get("knowledge_base", [])
                 new_queries = node_output.get("executed_queries", [])
                 kb_entries.extend(new_kb)
                 executed_queries.extend(new_queries)
-                
-                if new_kb:
-                    progress_log += f"🔄 **Tra cuu bo sung**: Them {len(new_kb)} nguon moi.\n\n"
-                    research_display = _build_research_column(kb_entries, executed_queries)
-                yield progress_log, research_display, debate_display, analysis_display
+                research_display = _build_research_view(kb_entries, executed_queries)
+                progress_log += f"🔍 **Tìm kiếm**: Đã tìm thấy {len(new_kb)} nguồn mới.\n"
+                if new_queries:
+                    progress_log += f"   *(Truy vấn: {', '.join([q for q in new_queries])})*\n"
+                yield progress_log, research_display, debate_display, verdict_display
 
-            elif node_name in ("score_initial", "score_def", "score_chal"):
-                new_scores = node_output.get("source_scores", {})
-                if new_scores:
-                    progress_log += f"⚖️ **Source Scorer**: Da cham diem {len(new_scores)} nguon.\n\n"
-                yield progress_log, research_display, debate_display, analysis_display
-
-            elif node_name == "defender":
-                arg = node_output.get("current_defender_argument", "")
-                progress_log += "✅ **Defender** da gui lap luan.\n\n"
-                debate_history_text += f"\n\n---\n### 🟢 DEFENDER (Bao ve tin THAT)\n\n{arg}"
-                debate_display = f"### ⚔️ DAU TRUONG TRANH LUAN\n{debate_history_text}"
-                yield progress_log, research_display, debate_display, analysis_display
-
-            elif node_name == "challenger":
-                arg = node_output.get("current_challenger_argument", "")
-                progress_log += "❌ **Challenger** da gui phan bien.\n\n"
-                debate_history_text += f"\n\n---\n### 🔴 CHALLENGER (Bao ve tin GIA)\n\n{arg}"
-                debate_display = f"### ⚔️ DAU TRUONG TRANH LUAN\n{debate_history_text}"
-                yield progress_log, research_display, debate_display, analysis_display
-
-            elif node_name == "evaluator":
-                rulings = node_output.get("evaluator_rulings", [])
-                if rulings:
-                    r = rulings[0]
-                    eval_text += _format_eval_ruling_dense(r)
-                    analysis_display = f"### ⚖️ HANH LANG PHAN TICH\n{eval_text}"
-                    progress_log += f"⚖️ **Evaluator** da tham dinh vong {r.get('round_number')}.\n\n"
-                yield progress_log, research_display, debate_display, analysis_display
+            elif node_name in ["defender", "challenger"]:
+                claims_registry.update(node_output.get("claims_registry", {}))
+                side = "DEFENDER" if node_name == "defender" else "CHALLENGER"
+                emoji = "🟢" if side == "DEFENDER" else "🔴"
+                progress_log += f"{emoji} **{side}** đã đưa ra lập luận.\n"
+                debate_display = _build_debate_thread_view(claims_registry)
+                yield progress_log, research_display, debate_display, verdict_display
 
             elif node_name == "judge":
-                progress_log += "🏆 **PHAN QUYET CUOI CUNG DA CO.**\n\n"
                 verdict = node_output.get("verdict", {})
-                analysis_display += _build_final_verdict_dense(verdict)
-                yield progress_log, research_display, debate_display, analysis_display
+                progress_log += f"\n⚖️  [Judge] Đang tổng hợp và đưa ra phán quyết...\n"
+                progress_log += f"   → Truth Score: {verdict.get('truth_score', 0.5)}\n"
+                verdict_display = _build_verdict_view(verdict)
+                yield progress_log, research_display, debate_display, verdict_display
 
-
-def _build_research_column(kb_entries, executed_queries):
-    text = "### 📚 PHONG NGHIEN CUU (KNOWLEDGE BASE)\n\n"
+def _build_debate_thread_view(registry: dict):
+    if not registry:
+        return "Chưa có nội dung."
     
-    if executed_queries:
-        text += "#### 🔎 Lich su truy van:\n"
-        for q in executed_queries:
-            text += f"- `{q}`\n"
-        text += "\n"
+    # Collect and sort all interactions
+    all_interactions = []
+    for cid, history in registry.items():
+        for entry in history:
+            all_interactions.append({**entry, "claim_id": cid})
+            
+    all_interactions.sort(key=lambda x: (x['round'], 0 if x['side'] == 'D' else 1))
+    
+    text = "### ⚔️ LUỒNG TRANH LUẬN\n"
+    current_round = 0
+    
+    for h in all_interactions:
+        if h['round'] > current_round:
+            current_round = h['round']
+            text += f"\n<hr>\n<h4 style='color: #4f46e5; margin-top: 15px;'>📍 VÒNG {current_round}</h4>\n\n"
+            
+        side_emoji = "🛡️" if h['side'] == "D" else "🗡️"
+        side_name = "DEFENDER" if h['side'] == "D" else "CHALLENGER"
+        atype = h.get('action_type', 'ASSERT')
+        target_ids = h.get('target_claim_ids', [])
+        cid = h.get('claim_id', '?')
+        
+        # Labeling according to user request
+        if atype == "ASSERT":
+            label = f"[KHỞI TẠO NHẬN ĐỊNH {cid}]"
+        elif atype == "REBUT":
+            label = f"[PHẢN BIỆN {', '.join(target_ids)}]"
+        elif atype == "DEFEND":
+            label = f"[BẢO VỆ {cid}]"
+        else:
+            label = f"[{atype} {cid}]"
+            
+        color = "#16a34a" if h['side'] == "D" else "#dc2626"
+        bg_color = "rgba(22, 163, 74, 0.05)" if h['side'] == "D" else "rgba(220, 38, 38, 0.05)"
+        border_color = "#16a34a" if h['side'] == "D" else "#dc2626"
+        
+        text += f"<div style='background-color: {bg_color}; border-left: 4px solid {border_color}; padding: 10px 15px; margin: 10px 0; border-radius: 4px;'>\n"
+        text += f"{side_emoji} <strong style='color:{color}'>{side_name}</strong> <code>{label}</code><br><br>\n"
+        text += f"<div style='color: inherit; line-height: 1.5;'>{h['text']}</div>\n\n"
+        
+        # Sources
+        source_ids = [e.get('source_id') for e in h.get('evidence', []) if e.get('evidence_type') == 'SOURCE']
+        if source_ids:
+            text += f"<br><em style='color: #6b7280; font-size: 0.9em;'>(Nguồn: {', '.join(source_ids)})</em>\n"
+        
+        text += "</div>\n"
+            
+    return text
 
-    text += "#### 📖 Danh sach nguon du lieu:\n"
+def _build_research_view(kb_entries, executed_queries):
+    text = "### 📚 PHÒNG NGHIÊN CỨU\n\n"
+    if executed_queries:
+        text += "**Lịch sử tìm kiếm:**\n" + ", ".join([f"`{q}`" for q in executed_queries[-3:]]) + "\n\n"
+    
     for entry in kb_entries:
         eid = entry.get("id", "S?")
         title = entry.get("title", "N/A")
-        rel = entry.get("relevance_score", 0.0)
+        score = entry.get("relevance_score", 0.0)
         url = entry.get("source_url", "#")
-        content = entry.get("content", "")[:300]
+        content = entry.get("content", "Chưa có trích xuất chi tiết...")
         
-        text += f"---\n**{eid} - {title}**\n"
-        text += f"- **Relevance**: `{rel:.2f}` | [Source]({url})\n"
-        text += f"> {content}...\n\n"
-    
+        text += f"<details open style='margin-bottom: 8px; border: 1px solid var(--border-color-primary, #e2e8f0); border-radius: 4px; padding: 5px 10px; background: var(--background-fill-secondary, transparent);'>\n"
+        text += f"  <summary style='cursor: pointer; font-weight: 500;'><strong>{eid}</strong>: <a href='{url}' target='_blank'>{title}</a> <em>(Score: {score:.2f})</em></summary>\n"
+        text += f"  <p style='margin-top: 8px; font-size: 0.9em; opacity: 0.85; white-space: pre-wrap;'>{content}</p>\n"
+        text += f"</details>\n"
     return text
 
-
-def _format_eval_ruling_dense(ruling):
-    r_num = ruling.get("round_number", "?")
-    text = f"\n#### 🔔 Tham dinh Vong {r_num}\n"
-    
-    # Use point_verifications (new format from evaluator)
-    points = ruling.get("point_verifications", [])
-    for p in points:
-        pid = p.get("point_id", "?")
-        status = p.get("status", "UNCERTAIN")
-        verdict_text = p.get("evaluator_verdict", "")
-        guidance = p.get("guidance", "")
-        grounded = "Grounded" if p.get("is_grounded") else "NO SOURCE"
-        common = " | Common Knowledge" if p.get("is_common_knowledge") else ""
-        basic_r = " | Basic Reasoning" if p.get("is_basic_reasoning") else ""
-        stubborn = " | STUBBORN" if p.get("is_stubborn") else ""
+def _build_verdict_view(verdict):
+    score = verdict.get("truth_score", 0.5)
+    if score == 1.0:
+        emoji = "✅"
+        label = "HOÀN TOÀN CHÍNH XÁC (True)"
+    elif score >= 0.75:
+        emoji = "☑️"
+        label = "KHÁ CHÍNH XÁC (Mostly True)"
+    elif score == 0.5:
+        emoji = "❓"
+        label = "KHÔNG THỂ XÁC ĐỊNH (Uncertain)"
+    elif score >= 0.25:
+        emoji = "⚠️"
+        label = "SAI LỆCH NGHIÊM TRỌNG (Misleading/Mostly False)"
+    else:
+        emoji = "🚫"
+        label = "HOÀN TOÀN BỊA ĐẶT (Fake News)"
         
-        symbol = {"VERIFIED": "✅", "DEBUNKED": "❌", "REJECTED": "🗑️"}.get(status, "🔄")
-        text += f"- {symbol} **{pid}**: {status} ({grounded}{common}{basic_r}{stubborn})\n"
-        if verdict_text:
-            text += f"  - Ket luan: *{verdict_text}*\n"
-        if guidance:
-            text += f"  - 💡 **Guidance**: *{guidance}*\n"
-    
-    summary = ruling.get("round_summary", "")
-    if summary:
-        text += f"\n📝 **Tom tat**: {summary}\n"
-    
-    text += "---\n"
+    text = f"## {emoji} KẾT LUẬN: {label}\n"
+    text += f"**Độ chân thực (Truth Score):** {score*100:.1f}%\n\n"
+    text += "#### 🎯 Các điểm mấu chốt:\n"
+    for p in verdict.get("top_3_decisive_points", []):
+        text += f"- {p}\n"
+    text += f"\n#### 📝 Phân tích chi tiết:\n{verdict.get('final_reasoning', '')}"
     return text
 
+# --- UI Design ---
+custom_theme = gr.themes.Soft(
+    primary_hue="indigo",
+    secondary_hue="blue",
+    neutral_hue="slate"
+)
 
-def _build_final_verdict_dense(verdict):
-    v = verdict.get("verdict", "UNCERTAIN")
-    conf = verdict.get("confidence", 0)
+with gr.Blocks(title="MAD System", theme=custom_theme) as demo:
+    gr.HTML("""
+    <div style="text-align: center; max-width: 800px; margin: 0 auto; padding: 20px 0;">
+        <h1 style="color: #4338ca; font-size: 2.5rem; margin-bottom: 5px;">🛡️ MAD System</h1>
+        <p style="font-size: 1.1rem; color: #64748b;">Hệ thống AI Đa tác vụ tự động điều tra, tranh biện và đánh giá độ xác thực của thông tin.</p>
+    </div>
+    """)
     
-    emoji = {"LIKELY_REAL": "✅", "LIKELY_FAKE": "🚫"}.get(v, "❓")
-    label = {"LIKELY_REAL": "TIN THAT", "LIKELY_FAKE": "TIN GIA"}.get(v, "KHONG XAC DINH")
-    
-    text = f"\n\n## 🏆 PHAN QUYET: {emoji} {label}\n"
-    text += f"### 📊 Confidence: {conf}%\n\n"
-    
-    text += "#### 📈 Diem so tung nhan dinh:\n"
-    for ps in verdict.get("final_scores", []):
-        pid = ps.get("id", "?")
-        combined = ps.get("combined_score", 0.0)
-        reason = ps.get("reason", "")
-        concluded = " (Evaluator da ket luan)" if ps.get("is_concluded_by_evaluator") else ""
-        text += f"- **{pid}**: `{combined:.2f}`{concluded} - *{reason}*\n"
-    
-    text += f"\n- **Defender Weighted Avg**: `{verdict.get('defender_weighted_avg', 0):.2f}`\n"
-    text += f"- **Challenger Weighted Avg**: `{verdict.get('challenger_weighted_avg', 0):.2f}`\n\n"
-    
-    text += f"#### 📝 Phan tich:\n{verdict.get('analysis', '')}\n\n"
-    text += f"#### 🏁 Ket luan:\n{verdict.get('final_reasoning', '')}\n"
-    
-    return text
-
-
-# --- Gradio UI ---
-
-with gr.Blocks(title="MAD System — Command Center", theme=gr.themes.Default()) as demo:
-    gr.Markdown("# 🕹️ MAD System: News Command Center")
-    gr.Markdown("Hệ thống tranh biện đa Agent - Tập trung tối đa vào dữ liệu và tính minh bạch.")
-
     with gr.Row():
-        with gr.Column(scale=1):
-            news_input = gr.Textbox(label="📰 Tin tức đầu vào", lines=5, placeholder="Dán tin tức cần kiểm tra...")
-            max_rounds = gr.Slider(minimum=1, maximum=5, value=3, step=1, label="🔄 Số vòng tranh luận")
-            run_btn = gr.Button("🚀 BẮT ĐẦU PHÂN TÍCH", variant="primary")
+        with gr.Column(scale=4):
+            with gr.Group():
+                news_input = gr.Textbox(
+                    show_label=False,
+                    placeholder="📰 Dán nội dung bản tin, bài viết hoặc tin đồn bạn muốn kiểm chứng vào đây...", 
+                    lines=5
+                )
+                with gr.Row():
+                    rounds_slider = gr.Slider(1, 5, 3, step=1, label="Số vòng tranh luận", info="Nhiều vòng hơn cho kết quả sâu hơn nhưng tốn thời gian hơn.")
+                    run_btn = gr.Button("🚀 Phân tích & Kiểm chứng", variant="primary", size="lg")
             
-            progress_output = gr.Markdown(label="📡 Trạng thái hệ thống", value="*Hệ thống sẵn sàng...*")
-
-    with gr.Row():
-        # Column 1: Research
-        with gr.Column(scale=1, variant="panel"):
-            research_output = gr.Markdown(value="### 📚 PHÒNG NGHIÊN CỨU")
+            with gr.Accordion("📡 Bảng điều khiển hệ thống", open=True):
+                status_box = gr.Markdown("*Hệ thống sẵn sàng.*")
             
-        # Column 2: Debate
-        with gr.Column(scale=1, variant="panel"):
-            debate_output = gr.Markdown(value="### ⚔️ ĐẤU TRƯỜNG TRANH LUẬN")
+            with gr.Accordion("📚 Nguồn Dữ liệu & Nghiên cứu", open=False):
+                research_box = gr.Markdown("*Chưa có dữ liệu.*")
             
-        # Column 3: Analysis
-        with gr.Column(scale=1, variant="panel"):
-            analysis_output = gr.Markdown(value="### ⚖️ HÀNH LANG PHÂN TÍCH")
+        with gr.Column(scale=6):
+            with gr.Tabs():
+                with gr.TabItem("⚔️ Diễn biến Tranh luận"):
+                    debate_box = gr.Markdown("### ⚔️ LUỒNG TRANH LUẬN\n*Hãy nhập tin tức và bấm Phân tích để bắt đầu...*")
+                with gr.TabItem("⚖️ Kết luận Phán quyết"):
+                    verdict_box = gr.Markdown("### ⚖️ PHÁN QUYẾT\n*Chờ hệ thống đưa ra phán quyết cuối cùng...*")
 
     run_btn.click(
         fn=run_analysis,
-        inputs=[news_input, max_rounds],
-        outputs=[progress_output, research_output, debate_output, analysis_output]
+        inputs=[news_input, rounds_slider],
+        outputs=[status_box, research_box, debate_box, verdict_box]
     )
 
 if __name__ == "__main__":

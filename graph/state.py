@@ -5,6 +5,7 @@ This state is shared across all nodes in the graph.
 
 from typing import Annotated
 from typing_extensions import TypedDict
+from config.settings import config
 
 
 def add_to_list(current: list, new: list) -> list:
@@ -21,11 +22,15 @@ class KnowledgeEntry(TypedDict):
     """A search result stored in the shared knowledge base."""
     id: str
     query: str
+    query_language: str
     title: str
     content: str
     source_url: str
     domain: str
     relevance_score: float
+    retrieval_provider: str
+    retrieval_language: str
+    rank_within_query_language: int
 
 
 class DebateRound(TypedDict):
@@ -33,34 +38,104 @@ class DebateRound(TypedDict):
     round_number: int
     defender_argument: str
     challenger_argument: str
+    defender_claims: list[dict]
+    challenger_claims: list[dict]
 
 
 class MADState(TypedDict):
     """Main state for the Multi-Agent Debate workflow."""
 
     # --- Input ---
-    original_news: str                                    # Tin tức gốc
+    original_news: str
+
+    # --- Version ---
+    state_version: int
 
     # --- Knowledge Base ---
     knowledge_base: Annotated[list[KnowledgeEntry], add_to_list]
-    source_scores: Annotated[dict[str, float], update_dict] # { "[S1]": 1.0, ... }
+    source_scores: Annotated[dict[str, float], update_dict]
 
     # --- Search ---
-    pending_search_queries: list[str]
-    executed_queries: Annotated[list[str], add_to_list]   # Các query đã thực hiện
+    pending_search_queries: list[dict]
+    pending_search_requests: list[dict]
+    executed_queries: Annotated[list[str], add_to_list]
+    round_retrieval_plan: Annotated[list[dict], add_to_list]
+    round_search_results: Annotated[list[dict], add_to_list]
+
+    # --- Claim Context ---
+    claim_contexts: Annotated[dict[str, list[str]], update_dict]
+    focused_targets: Annotated[dict[str, dict], update_dict]
 
     # --- Debate ---
-    current_round: int                                    # Vòng hiện tại
-    max_rounds: int                                       # Số vòng tối đa
+    current_round: int
+    max_rounds: int
     debate_history: Annotated[list[DebateRound], add_to_list]
-
-    # --- Current round arguments ---
+    claims_registry: Annotated[dict[str, list[dict]], update_dict]
     current_defender_argument: str
     current_challenger_argument: str
+    current_defender_claims: list[dict]
+    current_challenger_claims: list[dict]
 
     # --- Evaluator ---
-    evaluator_rulings: Annotated[list[dict], add_to_list]  # One ruling per round
+    evaluator_rulings: Annotated[list[dict], add_to_list]
 
     # --- Status ---
-    active_side: str                                      # Bên đang thực hiện (DEFENDER/CHALLENGER)
-    verdict: dict | None                                  # Phán quyết cuối cùng
+    active_side: str
+    verdict: dict | None
+
+
+def build_initial_state(news_text: str, max_rounds: int | None = None) -> MADState:
+    """Build a consistent initial state used by both CLI and UI entry points."""
+    resolved_rounds = max_rounds if max_rounds is not None else config.debate.max_rounds
+    return {
+        "original_news": news_text,
+        "state_version": 2,
+        "knowledge_base": [],
+        "source_scores": {},
+        "pending_search_queries": [],
+        "pending_search_requests": [],
+        "executed_queries": [],
+        "round_retrieval_plan": [],
+        "round_search_results": [],
+        "claim_contexts": {},
+        "focused_targets": {},
+        "active_side": "DEFENDER",
+        "current_round": 1,
+        "max_rounds": resolved_rounds,
+        "debate_history": [],
+        "claims_registry": {},
+        "current_defender_argument": "",
+        "current_challenger_argument": "",
+        "current_defender_claims": [],
+        "current_challenger_claims": [],
+        "evaluator_rulings": [],
+        "verdict": None,
+    }
+
+
+def ensure_state_defaults(state: dict) -> MADState:
+    """Backfill missing keys so legacy callers can still run under the new schema."""
+    merged = build_initial_state(
+        news_text=state.get("original_news", ""),
+        max_rounds=state.get("max_rounds", config.debate.max_rounds),
+    )
+    merged.update(state)
+
+    pending = merged.get("pending_search_queries", [])
+    if pending and isinstance(pending[0], str):
+        merged["pending_search_queries"] = [
+            {
+                "query": q,
+                "language": "auto",
+                "intent": "verify",
+                "target_claim_ids": [],
+            }
+            for q in pending
+        ]
+
+    if "pending_search_requests" not in merged:
+        merged["pending_search_requests"] = []
+    if "focused_targets" not in merged:
+        merged["focused_targets"] = {}
+
+    return merged  # type: ignore[return-value]

@@ -3,6 +3,7 @@ Centralized configuration for the MAD System.
 All configurable parameters are defined here.
 """
 
+import os
 from dataclasses import dataclass, field
 
 
@@ -10,9 +11,9 @@ from dataclasses import dataclass, field
 class ModelConfig:
     """LLM model configuration."""
     # Model cho các agent phức tạp (Defender, Challenger, Judge, Evaluator)
-    main_model: str = "text-processing"
-    # Model cho agent đơn giản (Search Agent, Evaluator helper)
-    light_model: str = "text-processing"
+    main_model: str = field(default_factory=lambda: os.getenv("NINEROUTER_MAIN_MODEL", "llama3"))
+    # Model cho agent đơn giản (Search Agent, planner)
+    light_model: str = field(default_factory=lambda: os.getenv("NINEROUTER_LIGHT_MODEL", "llama3"))
     # Token giới hạn cho output (Tăng lên để tránh bị cắt output)
     max_tokens: int = 8192
     # Temperature cho từng loại agent
@@ -25,15 +26,15 @@ class ModelConfig:
 class DebateConfig:
     """Debate flow configuration."""
     max_rounds: int = 3                   # Số vòng tranh luận tối đa
-    enable_search: bool = True            # Bật tìm kiếm Wikipedia
-    max_search_results: int = 15          # Tổng số kết quả tối đa toàn bộ KB
+    enable_search: bool = True            # Bật tìm kiếm
+    max_search_results: int = 20          # Tổng số kết quả tối đa toàn bộ KB
     # Wikipedia config
     wikipedia_languages: list = field(default_factory=lambda: ["vi", "en"])
-    max_wiki_results_per_query: int = 1   # Chỉ lấy 1 kết quả Wiki chất lượng nhất
+    max_wiki_results_per_query: int = 3   # Đồng bộ với yêu cầu người dùng
     
     # Tavily config
-    max_tavily_results_per_query: int = 2 # Giới hạn 2 nguồn để tránh nhiễu và tràn ngữ cảnh
-    max_initial_results: int = 5           # Lấy 5 nguồn liên quan nhất cho tin tức ban đầu
+    max_tavily_results_per_query: int = 3 # Đồng bộ với yêu cầu người dùng (tối đa 3 nội dung tốt nhất)
+    max_initial_results: int = 3           # Đồng bộ
 
 
 @dataclass

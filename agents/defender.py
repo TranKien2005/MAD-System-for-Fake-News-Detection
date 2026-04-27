@@ -1,92 +1,169 @@
-"""
-Defender Agent — Argues that the news is REAL.
-Phase 1 (Ask): Decides what info to search for.
-Phase 2 (Speak): Builds arguments using all available evidence.
-"""
+"""Defender agent (structured JSON output)."""
 
+import time
+import logging
 from langchain_core.messages import HumanMessage
 
 from prompts.templates import (
-    DEFENDER_ROUND1_PROMPT,
-    DEFENDER_REBUTTAL_PROMPT,
-    DEFENDER_ASK_PROMPT,
+    DEFENDER_SPEAK_ROUND1_PROMPT,
+    DEFENDER_SPEAK_ROUND2_PROMPT,
 )
-from agents.evaluator import parse_json_robust, format_evaluator_summary, _format_knowledge_base
+from agents.evaluator import parse_json_robust, format_knowledge_base
 
 
-def defend_ask(state: dict, llm) -> dict:
-    """Phase 1: Defender analyzes the situation and requests search queries."""
-    news_text = state["original_news"]
-    history_text = _format_debate_history(state.get("debate_history", []))
-    executed = str(state.get("executed_queries", []))
-    
-    prompt = DEFENDER_ASK_PROMPT.format(
-        original_news=news_text,
-        debate_history=history_text,
-        executed_queries=executed
-    )
-    
-    response = llm.invoke([HumanMessage(content=prompt)])
-    data = parse_json_robust(response.content)
-    
-    return {"pending_search_queries": data.get("pending_search_queries", [])}
+def _safe_invoke(llm, messages, max_retries=3, delay=2):
+    for i in range(max_retries):
+        try:
+            return llm.invoke(messages)
+        except Exception as e:
+            if "429" in str(e) and i < max_retries - 1:
+                logging.warning(f"Rate limit hit. Retrying in {delay}s... (Attempt {i+1}/{max_retries})")
+                time.sleep(delay)
+                delay *= 2
+                continue
+            raise e
+    return None
 
 
 def defend(state: dict, llm) -> dict:
-    """Phase 2: Defender speaks using all available info from KB."""
     news_text = state["original_news"]
     current_round = state.get("current_round", 1)
-    kb_text = _format_knowledge_base(state.get("knowledge_base", []), state.get("source_scores", {}))
-    debate_history = state.get("debate_history", [])
+    kb_text = format_knowledge_base(state.get("knowledge_base", []), state.get("source_scores", {}))
+    registry = state.get("claims_registry", {})
+    history = state.get("debate_history", [])
+
+    all_registry_updates = dict(registry)
 
     if current_round == 1:
-        # Round 1: Initial statements — independent, no rebuttal
-        prompt = DEFENDER_ROUND1_PROMPT.format(
+        # Round 1: Initial assertions
+        prompt = DEFENDER_SPEAK_ROUND1_PROMPT.format(
             original_news=news_text,
             knowledge_base_with_scores=kb_text,
         )
+        response = _safe_invoke(llm, [HumanMessage(content=prompt)])
+        data = parse_json_robust(response.content)
+        interactions = data.get("interactions", [])
+        overall_summary = data.get("overall_summary", "").strip()
+        
+        processed, updated = _process_interactions(interactions, "D", current_round, all_registry_updates)
     else:
-        # Round 2+: Rebuttals — respond to Challenger's PREVIOUS round
-        eval_summary = format_evaluator_summary(state.get("evaluator_rulings", []))
-        opponent_last = _get_opponent_last_argument(debate_history, "challenger")
-        history_text = _format_debate_history(debate_history)
-
-        prompt = DEFENDER_REBUTTAL_PROMPT.format(
+        # Round 2+: Unified response
+        # 1. Identify rebut targets (all opponent claims)
+        rebut_targets = _build_targets_from_registry(all_registry_updates, "C")
+        
+        # 2. Identify defend targets (only own claims that were attacked in previous round)
+        attacked_ids = set()
+        if history:
+            last_opp_claims = history[-1].get("challenger_claims", [])
+            for c in last_opp_claims:
+                for tid in c.get("target_claim_ids", []):
+                    if tid.startswith("D"):
+                        attacked_ids.add(tid)
+        
+        defend_targets = [t for t in _build_targets_from_registry(all_registry_updates, "D") if t["claim_id"] in attacked_ids]
+        
+        prompt = DEFENDER_SPEAK_ROUND2_PROMPT.format(
             original_news=news_text,
             knowledge_base_with_scores=kb_text,
-            round_number=current_round,
-            opponent_last_argument=opponent_last,
-            debate_history=history_text,
-            evaluator_summary=eval_summary,
+            rebut_targets=_format_targets_for_llm(rebut_targets),
+            defend_targets=_format_targets_for_llm(defend_targets),
+            full_history=str(history)
         )
+        
+        response = _safe_invoke(llm, [HumanMessage(content=prompt)])
+        data = parse_json_robust(response.content)
+        interactions = data.get("interactions", [])
+        overall_summary = data.get("overall_summary", "").strip()
+        
+        processed, updated = _process_interactions(interactions, "D", current_round, all_registry_updates)
 
-    response = llm.invoke([HumanMessage(content=prompt)])
-    argument = response.content.strip()
+    # For UI compatibility and state persistence
+    claim_contexts = {}
+    for claim in processed:
+        cid = claim.get("claim_id")
+        source_ids = [e.get("source_id") for e in claim.get("evidence", []) if e.get("evidence_type") == "SOURCE"]
+        if cid:
+            claim_contexts[cid] = source_ids
 
     return {
-        "current_defender_argument": argument,
+        "current_defender_argument": overall_summary or _fallback_argument(processed),
+        "current_defender_claims": processed,
+        "claims_registry": updated,
+        "claim_contexts": claim_contexts,
     }
 
 
-def _get_opponent_last_argument(debate_history: list, opponent: str) -> str:
-    """Get the opponent's argument from the last completed round."""
-    if not debate_history:
-        return "(Chưa có lập luận từ đối phương)"
-    last_round = debate_history[-1]
-    key = "challenger_argument" if opponent == "challenger" else "defender_argument"
-    return last_round.get(key, "(Chưa có)")
+def _process_interactions(interactions, prefix, round_num, registry):
+    updated_registry = dict(registry)
+    processed = []
+
+    for interact in interactions:
+        target_id = interact.get("target_id", "").strip()
+        action_type = interact.get("action_type", "ASSERT").upper()
+        text = interact.get("argument", "").strip()
+        ev = interact.get("evidence", [])
+
+        if not text:
+            continue
+
+        targets = [target_id] if target_id else []
+
+        if action_type == "ASSERT" or not target_id:
+            # Create new root claim in registry with simple ID (D1, D2...)
+            count = sum(1 for k in updated_registry.keys() if k.startswith(prefix))
+            new_id = f"{prefix}{count + 1}"
+            entry = {
+                "round": round_num,
+                "side": prefix,
+                "action_type": "ASSERT",
+                "text": text,
+                "evidence": ev,
+                "target_claim_ids": []
+            }
+            updated_registry[new_id] = [entry]
+            processed.append({**entry, "claim_id": new_id})
+        else:
+            # Append to existing thread (REBUT/DEFEND)
+            # Use the target_id as the claim_id to maintain the thread
+            if target_id in updated_registry:
+                entry = {
+                    "round": round_num,
+                    "side": prefix,
+                    "action_type": action_type,
+                    "text": text,
+                    "evidence": ev,
+                    "target_claim_ids": targets
+                }
+                updated_registry[target_id].append(entry)
+                processed.append({**entry, "claim_id": target_id})
+
+    return processed, updated_registry
 
 
-def _format_debate_history(debate_history: list) -> str:
-    """Format previous debate rounds — full text, no truncation."""
-    if not debate_history:
-        return "(Chưa có lịch sử tranh luận)"
+def _build_targets_from_registry(registry, prefix):
+    """Build a list of targets with their full history."""
+    targets = []
+    for cid, history in registry.items():
+        if cid.startswith(prefix):
+            targets.append({
+                "claim_id": cid,
+                "history": history
+            })
+    return targets
 
-    lines = ["\n#### Lịch sử tranh luận:"]
-    for r in debate_history:
-        lines.append(f"\n{'='*40}")
-        lines.append(f"Vòng {r['round_number']}:")
-        lines.append(f"{'='*40}")
-        lines.append(f"📗 DEFENDER:\n{r['defender_argument']}")
-        lines.append(f"\n📕 CHALLENGER:\n{r['challenger_argument']}")
+
+def _format_targets_for_llm(targets):
+    if not targets:
+        return "(Không có)"
+    lines = []
+    for t in targets:
+        cid = t["claim_id"]
+        history = t["history"]
+        lines.append(f"Claim {cid}:")
+        for h in history:
+            lines.append(f"  - R{h['round']} {h['side']} [{h['action_type']}]: {h['text']}")
     return "\n".join(lines)
+
+
+def _fallback_argument(claims):
+    return "\n".join([f"- {c.get('claim_id')}: {c.get('text')}" for c in claims])

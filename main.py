@@ -6,12 +6,12 @@ Usage:
 """
 
 import os
-import json
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 
 from config.settings import config
 from graph.workflow import build_workflow
+from graph.state import build_initial_state
 
 
 def create_llms():
@@ -49,21 +49,10 @@ def run_mad(news_text: str) -> dict:
     llm_main, llm_light = create_llms()
     app = build_workflow(llm_main, llm_light)
 
-    initial_state = {
-        "original_news": news_text,
-        "claims": [],
-        "knowledge_base": [],
-        "search_results": [],
-        "pending_search_queries": [],
-        "current_round": 1,
-        "max_rounds": config.debate.max_rounds,
-        "debate_history": [],
-        "current_defender_argument": "",
-        "current_challenger_argument": "",
-        "evaluator_rulings": [],
-        "verdict": None,
-    }
-
+    initial_state = build_initial_state(
+        news_text=news_text,
+        max_rounds=config.debate.max_rounds,
+    )
     print("=" * 60)
     print("🔎 MAD SYSTEM — FAKE NEWS DETECTION")
     print("=" * 60)
@@ -93,44 +82,30 @@ def _print_verdict(state: dict):
     print("⚖️  KẾT QUẢ PHÁN QUYẾT")
     print("=" * 60)
 
-    v = verdict.get("verdict", "UNCERTAIN")
+    winner = verdict.get("winner", "UNCERTAIN")
+    margin = verdict.get("margin", "low")
     confidence = verdict.get("confidence", 50)
 
-    if v == "LIKELY_REAL":
+    if winner == "DEFENDER":
         emoji = "✅"
-        label = "CÓ VẺ LÀ TIN THẬT"
-    elif v == "LIKELY_FAKE":
+        label = "DEFENDER CHIẾM ƯU THẾ"
+    elif winner == "CHALLENGER":
         emoji = "🚫"
-        label = "CÓ VẺ LÀ TIN GIẢ"
+        label = "CHALLENGER CHIẾM ƯU THẾ"
     else:
         emoji = "❓"
-        label = "KHÔNG CHẮC CHẮN"
+        label = "CHƯA THỂ KẾT LUẬN"
 
     print(f"\n{emoji} {label}")
-    print(f"📊 Độ tin cậy: {confidence}%")
-    print(f"\n📝 Giải thích:\n{verdict.get('reasoning', 'N/A')}")
+    print(f"📊 Độ tự tin: {confidence}% | Biên độ: {margin}")
 
-    # Per-claim scores
-    claim_scores = verdict.get("claim_scores", [])
-    if claim_scores:
-        print(f"\n📊 Điểm từng nhận định:")
-        print(f"   {'ID':<6} {'Bên':<12} {'Credibility':>11} {'Reliability':>11} {'Relevance':>9} {'Score':>8}")
-        print(f"   {'—'*57}")
-        for cs in claim_scores:
-            cid = cs.get("claim_id", "?")
-            side = cs.get("side", "?")
-            cred = cs.get("source_credibility", 0)
-            rel = cs.get("reliability", 0)
-            rev = cs.get("relevance", 0)
-            score = cs.get("score", 0)
-            print(f"   {cid:<6} {side:<12} {cred:>11.2f} {rel:>11.2f} {rev:>9.2f} {score:>8.3f}")
+    points = verdict.get("top_3_decisive_points", [])
+    if points:
+        print("\n🎯 3 điểm quyết định:")
+        for idx, p in enumerate(points[:3], start=1):
+            print(f"   {idx}. {p}")
 
-    # Total scores
-    def_total = verdict.get("defender_total", 0)
-    chal_total = verdict.get("challenger_total", 0)
-    print(f"\n📊 Tổng điểm:")
-    print(f"   Defender:   {def_total:.3f}")
-    print(f"   Challenger: {chal_total:.3f}")
+    print(f"\n📝 Giải thích:\n{verdict.get('final_reasoning', 'N/A')}")
 
     print("\n" + "=" * 60)
 
