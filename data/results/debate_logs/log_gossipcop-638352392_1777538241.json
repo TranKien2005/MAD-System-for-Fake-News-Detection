@@ -1,0 +1,961 @@
+{
+  "metadata": {
+    "id": "gossipcop-638352392",
+    "label": 0.0,
+    "type": "GossipCop",
+    "timestamp": "2026-04-30 15:37:21"
+  },
+  "input": {
+    "news_headline": "Selena Gomez kidney donor Francia Raisa reveals she 'went through a depression' after transplant"
+  },
+  "base_llm_result": {
+    "score": 1.0,
+    "is_correct": false
+  },
+  "mad_system_result": {
+    "score": 1.0,
+    "is_correct": false,
+    "duration_seconds": 35.66552400588989,
+    "final_verdict": {
+      "truth_score": 1.0
+    }
+  },
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Tóm tắt chiến lược bảo vệ tin: Bản tin nói về việc Francia Raisa trải qua trầm cảm sau khi hiến thận cho Selena Gomez là có cơ sở và được hỗ trợ bởi các nguồn đáng tin cậy. Việc hiến thận có thể gây ra các vấn đề tâm lý cho người hiến, bao gồm cả trầm cảm, là một thực tế được công nhận.",
+      "challenger_argument": "Bản tin về Francia Raisa, người hiến thận cho Selena Gomez, có thể chưa cung cấp đầy đủ thông tin về quá trình hồi phục và chăm sóc sau khi hiến thận, cũng như các biến chứng có thể xảy ra. Do đó, cần có thêm thông tin và bằng chứng cụ thể để xác minh tính chính xác của bản tin.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[KHỞI TẠO NHẬN ĐỊNH D1] Nhận định: Bản tin khẳng định Francia Raisa trải qua trầm cảm sau khi hiến thận cho Selena Gomez là chính xác. Lý lẽ: Theo nguồn [S4], nhiều người hiến thận sống có thể trải qua trầm cảm và lo lắng sau khi hiến tặng, và nguồn [S5] cũng chỉ ra rằng những người hiến thận có thể gặp phải các vấn đề tâm lý sau khi hiến tặng. Điều này cho thấy rằng trải nghiệm của Francia Raisa có thể được giải thích bằng các bằng chứng từ các nguồn đáng tin cậy. (Nguồn: [S4], [S5])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S4]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S5]"
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        },
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[KHỞI TẠO NHẬN ĐỊNH D2] Nhận định: Bản tin nói về việc Francia Raisa trải qua trầm cảm sau khi hiến thận cho Selena Gomez là có cơ sở. Lý lẽ: Nguồn [S6] cho biết rằng việc hiến thận có thể gây ra các vấn đề tâm lý cho người hiến, bao gồm cả trầm cảm, và nguồn [S8] cũng đề cập đến việc người hiến thận có thể gặp phải các vấn đề tâm lý sau khi hiến tặng. Điều này cho thấy rằng bản tin có cơ sở khi nói về việc Francia Raisa trải qua trầm cảm sau khi hiến thận. (Nguồn: [S6], [S8])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S6]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S8]"
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D2"
+        },
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[KHỞI TẠO NHẬN ĐỊNH D3] Nhận định: Việc hiến thận có thể gây ra các vấn đề tâm lý cho người hiến, bao gồm cả trầm cảm, là một thực tế được công nhận. Lý lẽ: Các nguồn [S1], [S2], [S3] đều cho biết rằng việc hiến thận có thể gây ra các vấn đề tâm lý cho người hiến, bao gồm cả trầm cảm, và nguồn [S9] cũng đề cập đến việc người hiến thận cần được chăm sóc và hỗ trợ sau khi hiến tặng để tránh các vấn đề tâm lý. Điều này cho thấy rằng việc hiến thận có thể gây ra các vấn đề tâm lý là một thực tế được công nhận. (Nguồn: [S1], [S2], [S3], [S9])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S2]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S3]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S9]"
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D3"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[KHỞI TẠO NHẬN ĐỊNH C1] Nhận định: Bản tin cho rằng Francia Raisa, người hiến thận cho Selena Gomez, đã trải qua một giai đoạn trầm cảm sau khi hiến thận là một khẳng định chưa được kiểm chứng đầy đủ. Lý lẽ: Theo nguồn [S4], nghiên cứu đã chỉ ra rằng nhiều người hiến thận sống có thể trải qua trầm cảm và lo lắng sau khi hiến, nhưng không phải tất cả đều trải qua điều này. Do đó, bản tin nên cung cấp thêm thông tin và bằng chứng cụ thể về trường hợp của Francia Raisa. (Nguồn: [S4])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S4]"
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": ""
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        },
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[KHỞI TẠO NHẬN ĐỊNH C2] Nhận định: Bản tin không cung cấp thông tin đầy đủ về quá trình hồi phục và chăm sóc sau khi hiến thận của Francia Raisa. Lý lẽ: Theo nguồn [S7], thời gian hồi phục sau khi hiến thận có thể khác nhau tùy thuộc vào thể trạng và chế độ chăm sóc của mỗi người, và người hiến có thể cần thời gian nghỉ ngơi và chăm sóc sau khi hiến. Do đó, bản tin nên cung cấp thêm thông tin về quá trình hồi phục của Francia Raisa. (Nguồn: [S7])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S7]"
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": ""
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C2"
+        },
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[KHỞI TẠO NHẬN ĐỊNH C3] Nhận định: Bản tin không đề cập đến các biến chứng có thể xảy ra sau khi hiến thận, mà Francia Raisa có thể đã trải qua. Lý lẽ: Theo nguồn [S1], các biến chứng sau khi hiến thận có thể bao gồm thải ghép, nhiễm trùng, và biến chứng bệnh đái tháo đường. Do đó, bản tin nên cung cấp thêm thông tin về các biến chứng có thể xảy ra và cách mà Francia Raisa đã đối mặt với chúng. (Nguồn: [S1])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]"
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": ""
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C3"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Tóm tắt chiến thuật vòng này: Phản biện lại nhận định của đối phương rằng bản tin cho rằng Francia Raisa trải qua trầm cảm sau khi hiến thận là một khẳng định chưa được kiểm chứng đầy đủ, bản tin không cung cấp thông tin đầy đủ về quá trình hồi phục và chăm sóc sau khi hiến thận của Francia Raisa, và bản tin không đề cập đến các biến chứng có thể xảy ra sau khi hiến thận.",
+      "challenger_argument": "Tóm tắt chiến thuật phản công: Chúng tôi sẽ tập trung vào việc phản biện các nhận định của Defender về việc Francia Raisa trải qua trầm cảm sau khi hiến thận cho Selena Gomez và việc bản tin nói về trải nghiệm này là có cơ sở. Chúng tôi sẽ sử dụng các nguồn đáng tin cậy để chỉ ra rằng việc hiến thận có thể gây ra các vấn đề tâm lý, nhưng không phải tất cả người hiến đều trải qua trầm cảm. Chúng tôi cũng sẽ đề cập đến việc người hiến thận cần được chăm sóc và hỗ trợ sau khi hiến tặng để tránh các vấn đề tâm lý, nhưng không cung cấp thông tin cụ thể về cách mà Francia Raisa đã được chăm sóc và hỗ trợ.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN C1] Nhận định của đối phương rằng bản tin cho rằng Francia Raisa trải qua trầm cảm sau khi hiến thận là một khẳng định chưa được kiểm chứng đầy đủ là không chính xác. Lý lẽ: Theo nguồn [S4], nhiều người hiến thận sống có thể trải qua trầm cảm và lo lắng sau khi hiến, và nguồn [S5] cũng chỉ ra rằng những người hiến thận có thể gặp phải các vấn đề tâm lý sau khi hiến tặng. Tuy nhiên, nguồn [S21] và [S22] đều cho biết rằng Francia Raisa đã trải qua trầm cảm sau khi hiến thận, điều này chứng tỏ rằng nhận định của bản tin là có cơ sở. (Nguồn: [S4], [S5], [S21], [S22])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S4]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S5]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S21]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S22]"
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        },
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN C2] Nhận định của đối phương rằng bản tin không cung cấp thông tin đầy đủ về quá trình hồi phục và chăm sóc sau khi hiến thận của Francia Raisa là không chính xác. Lý lẽ: Theo nguồn [S7], thời gian hồi phục sau khi hiến thận có thể khác nhau tùy thuộc vào thể trạng và chế độ chăm sóc của mỗi người, nhưng nguồn [S10] và [S11] đều cho biết rằng quá trình hồi phục của người hiến thận thường được theo dõi và chăm sóc cẩn thận. (Nguồn: [S7], [S10], [S11])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S7]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S10]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S11]"
+            }
+          ],
+          "target_claim_ids": [
+            "C2"
+          ],
+          "claim_id": "C2"
+        },
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN C3] Nhận định của đối phương rằng bản tin không đề cập đến các biến chứng có thể xảy ra sau khi hiến thận là không chính xác. Lý lẽ: Theo nguồn [S1], các biến chứng sau khi hiến thận có thể bao gồm thải ghép, nhiễm trùng, và biến chứng bệnh đái tháo đường, nhưng nguồn [S12] và [S13] đều cho biết rằng các biến chứng này thường được theo dõi và quản lý cẩn thận sau khi hiến thận. (Nguồn: [S1], [S12], [S13])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S12]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S13]"
+            }
+          ],
+          "target_claim_ids": [
+            "C3"
+          ],
+          "claim_id": "C3"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN D1] Nhận định của Defender về việc Francia Raisa trải qua trầm cảm sau khi hiến thận cho Selena Gomez dựa trên nguồn [S4] và [S5] có thể chưa đầy đủ. Theo nguồn [S3], hiến thận có thể gây ra các vấn đề tâm lý, nhưng không phải tất cả người hiến đều trải qua trầm cảm. Điều này cho thấy rằng trải nghiệm của Francia Raisa có thể không đại diện cho tất cả người hiến thận. Hơn nữa, nguồn [S6] cũng đề cập đến việc người hiến thận có thể gặp phải các vấn đề tâm lý sau khi hiến tặng, nhưng không cung cấp thông tin cụ thể về tỷ lệ hoặc mức độ phổ biến của các vấn đề này. Do đó, cần có thêm thông tin và bằng chứng cụ thể để xác minh tính chính xác của bản tin. (Nguồn: [S3], [S6])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S3]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S6]"
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN D2] Nhận định của Defender về việc bản tin nói về Francia Raisa trải qua trầm cảm sau khi hiến thận cho Selena Gomez là có cơ sở dựa trên nguồn [S6] và [S8] có thể chưa chính xác. Theo nguồn [S9], việc hiến thận có thể gây ra các vấn đề tâm lý cho người hiến, nhưng không phải tất cả người hiến đều trải qua trầm cảm. Hơn nữa, nguồn [S10] cũng đề cập đến việc người hiến thận cần được chăm sóc và hỗ trợ sau khi hiến tặng để tránh các vấn đề tâm lý, nhưng không cung cấp thông tin cụ thể về cách mà Francia Raisa đã được chăm sóc và hỗ trợ. Do đó, cần có thêm thông tin và bằng chứng cụ thể để xác minh tính chính xác của bản tin. (Nguồn: [S9], [S10])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S9]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S10]"
+            }
+          ],
+          "target_claim_ids": [
+            "D2"
+          ],
+          "claim_id": "D2"
+        },
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN D3] Nhận định của Defender về việc việc hiến thận có thể gây ra các vấn đề tâm lý cho người hiến, bao gồm cả trầm cảm, là một thực tế được công nhận dựa trên nguồn [S1], [S2], [S3] và [S9] có thể chưa đầy đủ. Theo nguồn [S11], việc hiến thận có thể gây ra các vấn đề tâm lý, nhưng không phải tất cả người hiến đều trải qua trầm cảm. Hơn nữa, nguồn [S12] cũng đề cập đến việc người hiến thận cần được chăm sóc và hỗ trợ sau khi hiến tặng để tránh các vấn đề tâm lý, nhưng không cung cấp thông tin cụ thể về cách mà người hiến thận có thể được chăm sóc và hỗ trợ. Do đó, cần có thêm thông tin và bằng chứng cụ thể để xác minh tính chính xác của bản tin. (Nguồn: [S11], [S12])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S11]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S12]"
+            }
+          ],
+          "target_claim_ids": [
+            "D3"
+          ],
+          "claim_id": "D3"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Tóm tắt chiến thuật vòng này: Phản biện lại nhận định của đối phương rằng bản tin cho rằng Francia Raisa trải qua trầm cảm sau khi hiến thận là một khẳng định chưa được kiểm chứng đầy đủ, bản tin không cung cấp thông tin đầy đủ về quá trình hồi phục và chăm sóc sau khi hiến thận của Francia Raisa, và bản tin không đề cập đến các biến chứng có thể xảy ra sau khi hiến thận. Đồng thời, bảo vệ các nhận định của bản tin rằng Francia Raisa trải qua trầm cảm sau khi hiến thận cho Selena Gomez là chính xác, việc bản tin nói về trải nghiệm này là có cơ sở, và việc hiến thận có thể gây ra các vấn đề tâm lý cho người hiến là một thực tế được công nhận.",
+      "challenger_argument": "Tóm tắt chiến thuật phản công: Chúng tôi sẽ tập trung vào việc phản biện các nhận định của Defender về việc Francia Raisa trải qua trầm cảm sau khi hiến thận cho Selena Gomez và việc bản tin nói về trải nghiệm này là có cơ sở. Chúng tôi sẽ sử dụng các nguồn đáng tin cậy để chỉ ra rằng việc hiến thận có thể gây ra các vấn đề tâm lý, nhưng không phải tất cả người hiến đều trải qua trầm cảm. Chúng tôi cũng sẽ đề cập đến việc người hiến thận cần được chăm sóc và hỗ trợ sau khi hiến tặng để tránh các vấn đề tâm lý, nhưng không cung cấp thông tin cụ thể về cách mà Francia Raisa đã được chăm sóc và hỗ trợ.",
+      "defender_claims": [
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN C1] Nhận định của đối phương rằng bản tin cho rằng Francia Raisa trải qua trầm cảm sau khi hiến thận là một khẳng định chưa được kiểm chứng đầy đủ là không chính xác. Lý lẽ: Theo nguồn [S4], nhiều người hiến thận sống có thể trải qua trầm cảm và lo lắng sau khi hiến, và nguồn [S5] cũng chỉ ra rằng những người hiến thận có thể gặp phải các vấn đề tâm lý sau khi hiến tặng. Tuy nhiên, nguồn [S21] và [S22] đều cho biết rằng Francia Raisa đã trải qua trầm cảm sau khi hiến thận, điều này chứng tỏ rằng nhận định của bản tin là có cơ sở. (Nguồn: [S4], [S5], [S21], [S22])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S4]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S5]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S21]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S22]"
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        },
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN C2] Nhận định của đối phương rằng bản tin không cung cấp thông tin đầy đủ về quá trình hồi phục và chăm sóc sau khi hiến thận của Francia Raisa là không chính xác. Lý lẽ: Theo nguồn [S7], thời gian hồi phục sau khi hiến thận có thể khác nhau tùy thuộc vào thể trạng và chế độ chăm sóc của mỗi người, nhưng nguồn [S10] và [S11] đều cho biết rằng quá trình hồi phục của người hiến thận thường được theo dõi và chăm sóc cẩn thận. (Nguồn: [S7], [S10], [S11])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S7]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S10]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S11]"
+            }
+          ],
+          "target_claim_ids": [
+            "C2"
+          ],
+          "claim_id": "C2"
+        },
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN C3] Nhận định của đối phương rằng bản tin không đề cập đến các biến chứng có thể xảy ra sau khi hiến thận là không chính xác. Lý lẽ: Theo nguồn [S1], các biến chứng sau khi hiến thận có thể bao gồm thải ghép, nhiễm trùng, và biến chứng bệnh đái tháo đường, nhưng nguồn [S12] và [S13] đều cho biết rằng các biến chứng này thường được theo dõi và quản lý cẩn thận sau khi hiến thận. (Nguồn: [S1], [S12], [S13])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S12]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S13]"
+            }
+          ],
+          "target_claim_ids": [
+            "C3"
+          ],
+          "claim_id": "C3"
+        },
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "DEFEND",
+          "text": "[BẢO VỆ D1] Nhận định của bản tin rằng Francia Raisa trải qua trầm cảm sau khi hiến thận cho Selena Gomez là chính xác. Lý lẽ: Theo nguồn [S4], nhiều người hiến thận sống có thể trải qua trầm cảm và lo lắng sau khi hiến tặng, và nguồn [S5] cũng chỉ ra rằng những người hiến thận có thể gặp phải các vấn đề tâm lý sau khi hiến tặng. Điều này cho thấy rằng trải nghiệm của Francia Raisa có thể được giải thích bằng các bằng chứng từ các nguồn đáng tin cậy. (Nguồn: [S4], [S5])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S4]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S5]"
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "DEFEND",
+          "text": "[BẢO VỆ D2] Nhận định của bản tin rằng việc Francia Raisa trải qua trầm cảm sau khi hiến thận cho Selena Gomez là có cơ sở. Lý lẽ: Nguồn [S6] cho biết rằng việc hiến thận có thể gây ra các vấn đề tâm lý cho người hiến, bao gồm cả trầm cảm, và nguồn [S8] cũng đề cập đến việc người hiến thận có thể gặp phải các vấn đề tâm lý sau khi hiến tặng. Điều này cho thấy rằng bản tin có cơ sở khi nói về việc Francia Raisa trải qua trầm cảm sau khi hiến thận. (Nguồn: [S6], [S8])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S6]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S8]"
+            }
+          ],
+          "target_claim_ids": [
+            "D2"
+          ],
+          "claim_id": "D2"
+        },
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "DEFEND",
+          "text": "[BẢO VỆ D3] Nhận định của bản tin rằng việc hiến thận có thể gây ra các vấn đề tâm lý cho người hiến, bao gồm cả trầm cảm, là một thực tế được công nhận. Lý lẽ: Các nguồn [S1], [S2], [S3] đều cho biết rằng việc hiến thận có thể gây ra các vấn đề tâm lý cho người hiến, bao gồm cả trầm cảm, và nguồn [S9] cũng đề cập đến việc người hiến thận cần được chăm sóc và hỗ trợ sau khi hiến tặng để tránh các vấn đề tâm lý. Điều này cho thấy rằng việc hiến thận có thể gây ra các vấn đề tâm lý là một thực tế được công nhận. (Nguồn: [S1], [S2], [S3], [S9])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S2]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S3]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S9]"
+            }
+          ],
+          "target_claim_ids": [
+            "D3"
+          ],
+          "claim_id": "D3"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN D1] Nhận định của Defender về việc Francia Raisa trải qua trầm cảm sau khi hiến thận cho Selena Gomez dựa trên nguồn [S4] và [S5] có thể chưa đầy đủ. Theo nguồn [S3], hiến thận có thể gây ra các vấn đề tâm lý, nhưng không phải tất cả người hiến đều trải qua trầm cảm. Điều này cho thấy rằng trải nghiệm của Francia Raisa có thể không đại diện cho tất cả người hiến thận. Hơn nữa, nguồn [S6] cũng đề cập đến việc người hiến thận có thể gặp phải các vấn đề tâm lý sau khi hiến tặng, nhưng không cung cấp thông tin cụ thể về tỷ lệ hoặc mức độ phổ biến của các vấn đề này. Do đó, cần có thêm thông tin và bằng chứng cụ thể để xác minh tính chính xác của bản tin. (Nguồn: [S3], [S6])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S3]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S6]"
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN D2] Nhận định của Defender về việc bản tin nói về Francia Raisa trải qua trầm cảm sau khi hiến thận cho Selena Gomez là có cơ sở dựa trên nguồn [S6] và [S8] có thể chưa chính xác. Theo nguồn [S9], việc hiến thận có thể gây ra các vấn đề tâm lý cho người hiến, nhưng không phải tất cả người hiến đều trải qua trầm cảm. Hơn nữa, nguồn [S10] cũng đề cập đến việc người hiến thận cần được chăm sóc và hỗ trợ sau khi hiến tặng để tránh các vấn đề tâm lý, nhưng không cung cấp thông tin cụ thể về cách mà Francia Raisa đã được chăm sóc và hỗ trợ. Do đó, cần có thêm thông tin và bằng chứng cụ thể để xác minh tính chính xác của bản tin. (Nguồn: [S9], [S10])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S9]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S10]"
+            }
+          ],
+          "target_claim_ids": [
+            "D2"
+          ],
+          "claim_id": "D2"
+        },
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN D3] Nhận định của Defender về việc việc hiến thận có thể gây ra các vấn đề tâm lý cho người hiến, bao gồm cả trầm cảm, là một thực tế được công nhận dựa trên nguồn [S1], [S2], [S3] và [S9] có thể chưa đầy đủ. Theo nguồn [S11], việc hiến thận có thể gây ra các vấn đề tâm lý, nhưng không phải tất cả người hiến đều trải qua trầm cảm. Hơn nữa, nguồn [S12] cũng đề cập đến việc người hiến thận cần được chăm sóc và hỗ trợ sau khi hiến tặng để tránh các vấn đề tâm lý, nhưng không cung cấp thông tin cụ thể về cách mà người hiến thận có thể được chăm sóc và hỗ trợ. Do đó, cần có thêm thông tin và bằng chứng cụ thể để xác minh tính chính xác của bản tin. (Nguồn: [S11], [S12])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S11]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S12]"
+            }
+          ],
+          "target_claim_ids": [
+            "D3"
+          ],
+          "claim_id": "D3"
+        },
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "DEFEND",
+          "text": "[BẢO VỆ C1] Nhận định của chúng tôi rằng bản tin cho rằng Francia Raisa trải qua trầm cảm sau khi hiến thận là một khẳng định chưa được kiểm chứng đầy đủ là có cơ sở. Theo nguồn [S4], nghiên cứu đã chỉ ra rằng nhiều người hiến thận sống có thể trải qua trầm cảm và lo lắng sau khi hiến, nhưng không phải tất cả đều trải qua điều này. Do đó, bản tin nên cung cấp thêm thông tin và bằng chứng cụ thể về trường hợp của Francia Raisa. (Nguồn: [S4])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S4]"
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        },
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "DEFEND",
+          "text": "[BẢO VỆ C2] Nhận định của chúng tôi rằng bản tin không cung cấp thông tin đầy đủ về quá trình hồi phục và chăm sóc sau khi hiến thận của Francia Raisa là có cơ sở. Theo nguồn [S7], thời gian hồi phục sau khi hiến thận có thể khác nhau tùy thuộc vào thể trạng và chế độ chăm sóc của mỗi người, và người hiến có thể cần thời gian nghỉ ngơi và chăm sóc sau khi hiến. Do đó, bản tin nên cung cấp thêm thông tin về quá trình hồi phục của Francia Raisa. (Nguồn: [S7])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S7]"
+            }
+          ],
+          "target_claim_ids": [
+            "C2"
+          ],
+          "claim_id": "C2"
+        },
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "DEFEND",
+          "text": "[BẢO VỆ C3] Nhận định của chúng tôi rằng bản tin không đề cập đến các biến chứng có thể xảy ra sau khi hiến thận là có cơ sở. Theo nguồn [S1], các biến chứng sau khi hiến thận có thể bao gồm thải ghép, nhiễm trùng, và biến chứng bệnh đái tháo đường. Do đó, bản tin nên cung cấp thêm thông tin về các biến chứng có thể xảy ra và cách mà Francia Raisa đã đối mặt với chúng. (Nguồn: [S1])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]"
+            }
+          ],
+          "target_claim_ids": [
+            "C3"
+          ],
+          "claim_id": "C3"
+        }
+      ]
+    }
+  ],
+  "knowledge_base": [
+    {
+      "id": "[S1]",
+      "query": "tác động tâm lý của việc hiến thận",
+      "query_language": "vi",
+      "title": "“Hiến thận”, chuyện đắng lòng - Báo Công an Nhân dân điện tử",
+      "content": "",
+      "source_url": "https://cand.com.vn/Phong-su/Hien-than-chuyen-dang-long-i309034/",
+      "domain": "cand.com.vn",
+      "relevance_score": 0.99989843,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "vi",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S2]",
+      "query": "tác động tâm lý của việc hiến thận",
+      "query_language": "vi",
+      "title": "Tâm sự xúc động của người đàn ông nhận hiến thận từ một ... - Dân trí",
+      "content": "",
+      "source_url": "https://dantri.com.vn/doi-song/tam-su-xuc-dong-cua-nguoi-dan-ong-nhan-hien-than-tu-mot-nguoi-dung-20190418104752490.htm",
+      "domain": "dantri.com.vn",
+      "relevance_score": 0.9989183,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "vi",
+      "rank_within_query_language": 2
+    },
+    {
+      "id": "[S3]",
+      "query": "tác động tâm lý của việc hiến thận",
+      "query_language": "vi",
+      "title": "Hiến thận có gây ảnh hưởng hay di chứng gì không? - Vinmec",
+      "content": "",
+      "source_url": "https://www.vinmec.com/vie/bai-viet/hien-co-gay-anh-huong-hay-di-chung-gi-khong-vi",
+      "domain": "www.vinmec.com",
+      "relevance_score": 0.99724233,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "vi",
+      "rank_within_query_language": 3
+    },
+    {
+      "id": "[S4]",
+      "query": "psychological impact of kidney donation",
+      "query_language": "en",
+      "title": "Psychological Impact of Living Kidney Donation: A Systematic ... - PMC",
+      "content": "",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10703979/",
+      "domain": "pmc.ncbi.nlm.nih.gov",
+      "relevance_score": 0.9999485,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S5]",
+      "query": "psychological impact of kidney donation",
+      "query_language": "en",
+      "title": "[PDF] Psychosocial Risks of Living Kidney Donation",
+      "content": "",
+      "source_url": "https://www.livingdonortoolkit.com/sites/default/files/pdf/Chapter%2013%20%20Psychosocial%20Risks%20of%20kidney%20donation_0.pdf",
+      "domain": "www.livingdonortoolkit.com",
+      "relevance_score": 0.9996699,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 2
+    },
+    {
+      "id": "[S6]",
+      "query": "psychological impact of kidney donation",
+      "query_language": "en",
+      "title": "Psycho-social health and quality of life among kidney donors ...",
+      "content": "",
+      "source_url": "https://www.sciencedirect.com/science/article/abs/pii/S096632742200123X",
+      "domain": "www.sciencedirect.com",
+      "relevance_score": 0.99945146,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 3
+    },
+    {
+      "id": "[S7]",
+      "query": "quá trình hồi phục sau khi nhận thận hiến",
+      "query_language": "vi",
+      "title": "Thời gian hồi phục sau khi hiến thận và những điều bạn cần biết",
+      "content": "",
+      "source_url": "https://nhathuoclongchau.com.vn/bai-viet/thoi-gian-hoi-phuc-sau-khi-hien-than-va-nhung-dieu-ban-can-biet.html",
+      "domain": "nhathuoclongchau.com.vn",
+      "relevance_score": 0.99989927,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "vi",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S8]",
+      "query": "quá trình hồi phục sau khi nhận thận hiến",
+      "query_language": "vi",
+      "title": "Sức khỏe sau khi hiến thận như thế nào?",
+      "content": "",
+      "source_url": "https://benhvienphuongdong.vn/suc-khoe-sau-khi-hien-than-nhu-the-nao/",
+      "domain": "benhvienphuongdong.vn",
+      "relevance_score": 0.99945575,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "vi",
+      "rank_within_query_language": 2
+    },
+    {
+      "id": "[S9]",
+      "query": "quá trình hồi phục sau khi nhận thận hiến",
+      "query_language": "vi",
+      "title": "Ghép thận (từ người hiến sống) - Quy trình, chi phí, rủi ro và phục hồi",
+      "content": "",
+      "source_url": "https://www.apollohospitals.com/vi/procedures/renal-transplant-living-donor",
+      "domain": "www.apollohospitals.com",
+      "relevance_score": 0.9992563,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "vi",
+      "rank_within_query_language": 3
+    },
+    {
+      "id": "[S10]",
+      "query": "recovery process after kidney transplant",
+      "query_language": "en",
+      "title": "Kidney Transplant Recovery | Temple Health",
+      "content": "",
+      "source_url": "https://www.templehealth.org/services/transplant/kidney-transplant/recovery",
+      "domain": "www.templehealth.org",
+      "relevance_score": 0.99992967,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S11]",
+      "query": "recovery process after kidney transplant",
+      "query_language": "en",
+      "title": "Recovery, care, and life after kidney transplant - Penn Medicine",
+      "content": "",
+      "source_url": "https://www.pennmedicine.org/specialties/transplant/kidney-transplant/recovery",
+      "domain": "www.pennmedicine.org",
+      "relevance_score": 0.9997527,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 2
+    },
+    {
+      "id": "[S12]",
+      "query": "recovery process after kidney transplant",
+      "query_language": "en",
+      "title": "Recovery at the transplant centre - Organ transplantation - NHS Blood and Transplant",
+      "content": "",
+      "source_url": "https://www.nhsbt.nhs.uk/organ-transplantation/kidney/at-the-transplant-centre/recovery-at-the-transplant-centre/",
+      "domain": "www.nhsbt.nhs.uk",
+      "relevance_score": 0.9997428,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 3
+    },
+    {
+      "id": "[S1]",
+      "query": "biến chứng sau cấy ghép thận",
+      "query_language": "vi",
+      "title": "Các biến chứng sau ghép thận thường gặp - Vinmec",
+      "content": "",
+      "source_url": "https://www.vinmec.com/vie/bai-viet/cac-bien-chung-sau-ghep-than-thuong-gap-vi",
+      "domain": "www.vinmec.com",
+      "relevance_score": 0.8588255,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "vi",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S2]",
+      "query": "biến chứng sau cấy ghép thận",
+      "query_language": "vi",
+      "title": "Ghép thận là gì? Những biến chứng sau ghép thận thường gặp",
+      "content": "",
+      "source_url": "https://nhathuoclongchau.com.vn/bai-viet/ghep-than-la-gi-nhung-bien-chung-sau-ghep-than-thuong-gap-66469.html",
+      "domain": "nhathuoclongchau.com.vn",
+      "relevance_score": 0.8170061,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "vi",
+      "rank_within_query_language": 2
+    },
+    {
+      "id": "[S3]",
+      "query": "complications after kidney transplant",
+      "query_language": "en",
+      "title": "Annals of Transplantation | Surgical Complications After Kidney Transplantation - Article abstract #948531",
+      "content": "",
+      "source_url": "https://annalsoftransplantation.com/abstract/full/idArt/948531",
+      "domain": "annalsoftransplantation.com",
+      "relevance_score": 0.92074,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S4]",
+      "query": "complications after kidney transplant",
+      "query_language": "en",
+      "title": "Complications Following a Kidney Transplant | Treatments & Procedures",
+      "content": "",
+      "source_url": "https://www.cincinnatichildrens.org/health/k/kidney-transplant-complications",
+      "domain": "www.cincinnatichildrens.org",
+      "relevance_score": 0.9174287,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 2
+    },
+    {
+      "id": "[S5]",
+      "query": "complications after kidney transplant",
+      "query_language": "en",
+      "title": "What are the complications of transplantation? | National Kidney Federation",
+      "content": "",
+      "source_url": "https://www.kidney.org.uk/what-are-the-complications-of-transplantation",
+      "domain": "www.kidney.org.uk",
+      "relevance_score": 0.8773195,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 3
+    },
+    {
+      "id": "[S6]",
+      "query": "psychological impact after kidney transplant",
+      "query_language": "en",
+      "title": "Understanding mental health following a kidney transplant",
+      "content": "",
+      "source_url": "https://www.kidneyresearchuk.org/2024/05/20/understanding-the-impact-on-mental-health-where-there-is-a-negative-outcome-following-a-kidney-transplant/",
+      "domain": "www.kidneyresearchuk.org",
+      "relevance_score": 0.8390101,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S7]",
+      "query": "psychological impact after kidney transplant",
+      "query_language": "en",
+      "title": "Looking to The  Future:  The Emotional  Impact Following a Kidney Transplant",
+      "content": "",
+      "source_url": "https://www.kidney.org.uk/looking-to-the-future-the-emotional-impact-following-a-kidney-transplant",
+      "domain": "www.kidney.org.uk",
+      "relevance_score": 0.83742094,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 2
+    },
+    {
+      "id": "[S8]",
+      "query": "psychological impact after kidney transplant",
+      "query_language": "en",
+      "title": "Psychological and Psychopathological Aspects of Kidney ... - Frontiers",
+      "content": "",
+      "source_url": "https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2020.00106/full",
+      "domain": "www.frontiersin.org",
+      "relevance_score": 0.8259413,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 3
+    },
+    {
+      "id": "[S21]",
+      "query": "Selena Gomez kidney donor Francia Raisa reveals she 'went through a depression' after transplant",
+      "query_language": "vi",
+      "title": "Francia Raisa Had 'Rough' Recovery After Donating Kidney to ...",
+      "content": "",
+      "source_url": "https://www.businessinsider.com/francia-raisa-selena-gomez-kidney-interview-depression-2018-3",
+      "domain": "www.businessinsider.com",
+      "relevance_score": 0.99996996,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "vi",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S22]",
+      "query": "Selena Gomez kidney donor Francia Raisa reveals she 'went through a depression' after transplant",
+      "query_language": "vi",
+      "title": "Selena Gomez's Transplant: Francia Raisa Talks ... - People.com",
+      "content": "",
+      "source_url": "https://people.com/health/francia-raisa-selena-gomez-depression-after-kidney-transplant/",
+      "domain": "people.com",
+      "relevance_score": 0.9999596,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "vi",
+      "rank_within_query_language": 2
+    },
+    {
+      "id": "[S23]",
+      "query": "Selena Gomez kidney donor Francia Raisa reveals she 'went through a depression' after transplant",
+      "query_language": "vi",
+      "title": "Selena Gomez kidney donor Francia Raisa reveals she 'went ...",
+      "content": "",
+      "source_url": "https://www.foxnews.com/entertainment/selena-gomez-kidney-donor-francia-raisa-reveals-she-went-through-a-depression-after-transplant",
+      "domain": "www.foxnews.com",
+      "relevance_score": 0.9999465,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "vi",
+      "rank_within_query_language": 3
+    },
+    {
+      "id": "[S24]",
+      "query": "Selena Gomez kidney donor Francia Raisa reveals she 'went through a depression' after transplant",
+      "query_language": "en",
+      "title": "Francia Raisa Talks About Depression Post Kidney Transplant",
+      "content": "",
+      "source_url": "https://www.eonline.com/news/920789/francia-raisa-says-she-and-selena-gomez-went-through-a-depression-after-kidney-transplant",
+      "domain": "www.eonline.com",
+      "relevance_score": 0.99991584,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S25]",
+      "query": "Selena Gomez kidney donor Francia Raisa reveals she 'went through a depression' after transplant",
+      "query_language": "en",
+      "title": "Body Stories: Francia Raísa - Facebook",
+      "content": "",
+      "source_url": "https://www.facebook.com/SelfMagazine/videos/body-stories-francia-ra%C3%ADsa/10155438273413811/",
+      "domain": "www.facebook.com",
+      "relevance_score": 0.91288006,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 2
+    },
+    {
+      "id": "[S26]",
+      "query": "Selena Gomez kidney donor Francia Raisa reveals she 'went through a depression' after transplant",
+      "query_language": "en",
+      "title": "Francia Raisa & Selena Gomez 'Went Through a Depression' After ...",
+      "content": "",
+      "source_url": "https://www.billboard.com/music/music-news/francia-raisa-selena-gomez-went-through-a-depression-after-kidney-transplant-8247423/",
+      "domain": "www.billboard.com",
+      "relevance_score": 0.8785752,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 3
+    },
+    {
+      "id": "[S21]",
+      "query": "Selena Gomez kidney donor Francia Raisa reveals she 'went through a depression' after transplant",
+      "query_language": "vi",
+      "title": "Francia Raisa Talks About Depression Post Kidney Transplant",
+      "content": "",
+      "source_url": "https://www.eonline.com/news/920789/francia-raisa-says-she-and-selena-gomez-went-through-a-depression-after-kidney-transplant",
+      "domain": "www.eonline.com",
+      "relevance_score": 0.93206495,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "vi",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S22]",
+      "query": "Selena Gomez kidney donor Francia Raisa reveals she 'went through a depression' after transplant",
+      "query_language": "vi",
+      "title": "Body Stories: Francia Raísa - Facebook",
+      "content": "",
+      "source_url": "https://www.facebook.com/SelfMagazine/videos/body-stories-francia-ra%C3%ADsa/10155438273413811/",
+      "domain": "www.facebook.com",
+      "relevance_score": 0.91288006,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "vi",
+      "rank_within_query_language": 2
+    },
+    {
+      "id": "[S23]",
+      "query": "Selena Gomez kidney donor Francia Raisa reveals she 'went through a depression' after transplant",
+      "query_language": "vi",
+      "title": "Selena Gomez's Transplant: Francia Raisa Talks ... - People.com",
+      "content": "",
+      "source_url": "https://people.com/health/francia-raisa-selena-gomez-depression-after-kidney-transplant/",
+      "domain": "people.com",
+      "relevance_score": 0.9123193,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "vi",
+      "rank_within_query_language": 3
+    },
+    {
+      "id": "[S24]",
+      "query": "Selena Gomez kidney donor Francia Raisa reveals she 'went through a depression' after transplant",
+      "query_language": "en",
+      "title": "Francia Raisa Had 'Rough' Recovery After Donating Kidney to ...",
+      "content": "",
+      "source_url": "https://www.businessinsider.com/francia-raisa-selena-gomez-kidney-interview-depression-2018-3",
+      "domain": "www.businessinsider.com",
+      "relevance_score": 0.99996996,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S25]",
+      "query": "Selena Gomez kidney donor Francia Raisa reveals she 'went through a depression' after transplant",
+      "query_language": "en",
+      "title": "Francia Raisa & Selena Gomez 'Went Through a Depression' After ...",
+      "content": "",
+      "source_url": "https://www.billboard.com/music/music-news/francia-raisa-selena-gomez-went-through-a-depression-after-kidney-transplant-8247423/",
+      "domain": "www.billboard.com",
+      "relevance_score": 0.8785752,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 2
+    }
+  ]
+}

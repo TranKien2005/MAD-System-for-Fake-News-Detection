@@ -3,6 +3,7 @@
 import json
 import time
 import logging
+from typing import Any
 
 from langchain_core.messages import HumanMessage
 
@@ -23,11 +24,17 @@ def _safe_invoke(llm, messages, max_retries=3, delay=2):
     return None
 
 
-def parse_json_robust(text: str) -> dict:
+def parse_json_robust(text: Any) -> dict:
+    if isinstance(text, list):
+        text = "".join([c.get("text", "") for c in text if isinstance(c, dict)])
+    else:
+        text = str(text)
+        
     text = text.strip()
     if text.startswith("```"):
         lines = text.split("\n")
-        text = "\n".join(lines[1:-1])
+        if len(lines) > 2:
+            text = "\n".join(lines[1:-1])
 
     try:
         return json.loads(text)

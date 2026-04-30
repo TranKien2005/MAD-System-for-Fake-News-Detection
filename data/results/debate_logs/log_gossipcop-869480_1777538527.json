@@ -1,0 +1,911 @@
+{
+  "metadata": {
+    "id": "gossipcop-869480",
+    "label": 1.0,
+    "type": "GossipCop",
+    "timestamp": "2026-04-30 15:42:07"
+  },
+  "input": {
+    "news_headline": "Angelina Jolie Talks Brad Pitt, Bell's Palsy in 'Vanity Fair' Cover Story"
+  },
+  "base_llm_result": {
+    "score": 1.0,
+    "is_correct": true
+  },
+  "mad_system_result": {
+    "score": 1.0,
+    "is_correct": true,
+    "duration_seconds": 138.4558699131012,
+    "final_verdict": {
+      "truth_score": 1.0
+    }
+  },
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Chiến lược bảo vệ tin gốc tập trung vào việc kiểm chứng thông tin cụ thể về cuộc phỏng vấn của Angelina Jolie trên tạp chí Vanity Fair, tình trạng sức khỏe của cô và cuộc sống sau khi chia tay Brad Pitt. Thông qua việc tham khảo các nguồn tin uy tín và có liên quan, bản tin gốc đã được chứng minh là phản ánh chính xác sự thật về các sự kiện này.",
+      "challenger_argument": "Chiến lược bác bỏ tin: Phân tích và chỉ ra những điểm không chính xác, không đầy đủ hoặc không đáng tin cậy trong bản tin gốc về Angelina Jolie và cuộc phỏng vấn với Vanity Fair.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[KHỞI TẠO NHẬN ĐỊNH D1] Nhận định: Bản tin khẳng định Angelina Jolie đã thảo luận về Brad Pitt và Bell's Palsy trong một bài viết trên tạp chí Vanity Fair là chính xác. Lý lẽ: Theo nguồn [S2], Angelina Jolie đã mở lòng về cuộc sống sau khi chia tay Brad Pitt và cũng đã thảo luận về tình trạng sức khỏe của mình, bao gồm cả việc mắc phải Bell's Palsy, trong một cuộc phỏng vấn với Vanity Fair. Điều này khẳng định rằng bản tin đã phản ánh đúng sự thật về cuộc phỏng vấn của Angelina Jolie. (Nguồn: [S2])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S2]"
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        },
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[KHỞI TẠO NHẬN ĐỊNH D2] Nhận định: Thông tin về Angelina Jolie mắc phải Bell's Palsy và cuộc sống sau khi chia tay Brad Pitt trong bản tin là chính xác. Lý lẽ: Các nguồn như [S5] và [S8] cung cấp thông tin về Bell's Palsy và các triệu chứng của nó, điều này phù hợp với thông tin được cung cấp trong bản tin về tình trạng sức khỏe của Angelina Jolie. Hơn nữa, nguồn [S2] cũng xác nhận cuộc sống của Angelina Jolie sau khi chia tay Brad Pitt, làm tăng độ tin cậy của bản tin. (Nguồn: [S2], [S5], [S8])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S2]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S5]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S8]"
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D2"
+        },
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[KHỞI TẠO NHẬN ĐỊNH D3] Nhận định: Thông tin về cuộc phỏng vấn của Angelina Jolie trên tạp chí Vanity Fair được phản ánh chính xác trong bản tin. Lý lẽ: Các nguồn tin như [S1] và [S6] cung cấp thông tin về sự nghiệp và cuộc sống của Angelina Jolie, bao gồm cả việc xuất hiện trên tạp chí Vanity Fair. Điều này chứng minh rằng bản tin đã cung cấp thông tin chính xác về sự kiện này. (Nguồn: [S1], [S6])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S6]"
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D3"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[KHỞI TẠO NHẬN ĐỊNH C1] Nhận định: Bản tin gốc khẳng định Angelina Jolie nói về Brad Pitt và Bell's Palsy trong cuộc phỏng vấn với Vanity Fair là không chính xác, vì không có thông tin cụ thể về việc Angelina Jolie thảo luận về cả hai chủ đề này trong cùng một cuộc phỏng vấn. Lý lẽ: Theo nguồn [S2], Angelina Jolie đã mở lòng về cuộc sống sau khi chia tay Brad Pitt, nhưng không có thông tin cụ thể về việc bà thảo luận về Bell's Palsy trong cùng một cuộc phỏng vấn. Do đó, bản tin gốc có thể bị sai lệch hoặc không đầy đủ thông tin. (Nguồn: [S2])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S2]"
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": ""
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        },
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[KHỞI TẠO NHẬN ĐỊNH C2] Nhận định: Thông tin về Angelina Jolie nói về Brad Pitt và Bell's Palsy trong bản tin gốc có thể không đáng tin cậy, vì không có nguồn tin cụ thể và uy tín nào được trích dẫn. Lý lẽ: Theo nguồn [S6], thông tin về Angelina Jolie và cuộc sống của bà thường được báo chí và truyền thông đưa tin, nhưng không phải tất cả thông tin đều được xác minh hoặc đáng tin cậy. Do đó, cần phải kiểm tra và xác minh thông tin trước khi đưa tin. (Nguồn: [S6])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S6]"
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": ""
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C2"
+        },
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[KHỞI TẠO NHẬN ĐỊNH C3] Nhận định: Bản tin gốc có thể không cung cấp đủ thông tin hoặc bối cảnh về cuộc phỏng vấn của Angelina Jolie với Vanity Fair, dẫn đến sự hiểu lầm hoặc giải thích sai. Lý lẽ: Theo nguồn [S9], Angelina Jolie đã tham gia vào nhiều hoạt động và cuộc phỏng vấn khác nhau, và thông tin về bà có thể không được trình bày một cách đầy đủ hoặc chính xác trong bản tin gốc. Do đó, cần phải tìm hiểu thêm về bối cảnh và nội dung của cuộc phỏng vấn để có hiểu biết chính xác. (Nguồn: [S9])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S9]"
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": ""
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C3"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Trong vòng này, chúng tôi đã phản biện lại các nhận định của phe đối lập về bản tin gốc, chứng minh rằng thông tin về Angelina Jolie nói về Brad Pitt và Bell's Palsy trong cuộc phỏng vấn với Vanity Fair là chính xác và đáng tin cậy. Chúng tôi đã sử dụng các nguồn tin uy tín và có liên quan để hỗ trợ cho lập luận của mình, và chứng minh rằng bản tin gốc đã phản ánh chính xác sự thật về cuộc phỏng vấn của Angelina Jolie.",
+      "challenger_argument": "Tóm tắt chiến thuật phản công: Chiến lược của Phe Bác Bỏ tập trung vào việc chỉ ra những điểm không chính xác, không đầy đủ hoặc không đáng tin cậy trong bản tin gốc về Angelina Jolie và cuộc phỏng vấn với Vanity Fair. Thông qua việc phân tích và phản biện các nhận định của Phe Bảo Vệ, Phe Bác Bỏ sẽ chứng minh rằng bản tin gốc không phải lúc nào cũng phản ánh chính xác sự thật về các sự kiện này.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN C1] Nhận định của phe đối lập rằng bản tin gốc không chính xác vì không có thông tin cụ thể về việc Angelina Jolie thảo luận về cả Brad Pitt và Bell's Palsy trong cùng một cuộc phỏng vấn là không hợp lý. Theo nguồn [S2], Angelina Jolie đã mở lòng về cuộc sống sau khi chia tay Brad Pitt, và nguồn [S21] cũng xác nhận rằng cô đã thảo luận về việc mắc phải Bell's Palsy trong một cuộc phỏng vấn với Vanity Fair. Điều này chứng minh rằng bản tin gốc đã phản ánh chính xác sự thật về cuộc phỏng vấn của Angelina Jolie. (Nguồn: [S2], [S21])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S2]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S21]"
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        },
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN C2] Phe đối lập cũng cho rằng thông tin về Angelina Jolie nói về Brad Pitt và Bell's Palsy trong bản tin gốc có thể không đáng tin cậy vì không có nguồn tin cụ thể và uy tín nào được trích dẫn. Tuy nhiên, nguồn [S6] và [S9] cung cấp thông tin về Angelina Jolie và cuộc sống của cô, và cũng có nhiều nguồn khác như [S1], [S5], [S8] hỗ trợ cho thông tin về Bell's Palsy và cuộc sống của Angelina Jolie sau khi chia tay Brad Pitt. Điều này chứng minh rằng thông tin trong bản tin gốc là đáng tin cậy và có căn cứ. (Nguồn: [S1], [S5], [S6], [S8], [S9])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S5]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S6]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S8]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S9]"
+            }
+          ],
+          "target_claim_ids": [
+            "C2"
+          ],
+          "claim_id": "C2"
+        },
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN C3] Cuối cùng, nhận định của phe đối lập rằng bản tin gốc có thể không cung cấp đủ thông tin hoặc bối cảnh về cuộc phỏng vấn của Angelina Jolie với Vanity Fair là không chính xác. Thông qua việc tham khảo các nguồn tin uy tín và có liên quan như [S2], [S21], và [S23], bản tin gốc đã cung cấp thông tin chính xác và đầy đủ về cuộc phỏng vấn của Angelina Jolie, bao gồm cả việc thảo luận về Brad Pitt và Bell's Palsy. Điều này chứng minh rằng bản tin gốc đã phản ánh chính xác và đầy đủ thông tin về sự kiện này. (Nguồn: [S2], [S21], [S23])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S2]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S21]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S23]"
+            }
+          ],
+          "target_claim_ids": [
+            "C3"
+          ],
+          "claim_id": "C3"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN D1] Nhận định của Phe Bảo Vệ rằng bản tin gốc khẳng định Angelina Jolie đã thảo luận về Brad Pitt và Bell's Palsy trong một bài viết trên tạp chí Vanity Fair là chính xác, không được hỗ trợ đầy đủ bởi nguồn tin [S2] như đã đề cập. Mặc dù [S2] cung cấp thông tin về cuộc sống sau khi chia tay Brad Pitt và tình trạng sức khỏe của Angelina Jolie, bao gồm cả việc mắc phải Bell's Palsy, nhưng không có thông tin cụ thể rằng cả hai chủ đề này được thảo luận trong cùng một cuộc phỏng vấn. Điều này cho thấy bản tin gốc có thể bị sai lệch hoặc không đầy đủ thông tin. Hơn nữa, cần phải xem xét độ tin cậy của nguồn tin và tính đầy đủ của thông tin được cung cấp. (Nguồn: [S3])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S3]"
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN D2] Thông tin về Angelina Jolie mắc phải Bell's Palsy và cuộc sống sau khi chia tay Brad Pitt trong bản tin không phải lúc nào cũng được hỗ trợ bởi các nguồn tin đáng tin cậy như [S5] và [S8]. Mặc dù những nguồn này cung cấp thông tin về Bell's Palsy và các triệu chứng của nó, nhưng không có thông tin cụ thể về việc Angelina Jolie thảo luận về cả hai chủ đề này trong cùng một cuộc phỏng vấn. Hơn nữa, cần phải kiểm tra tính đầy đủ và độ tin cậy của thông tin được cung cấp trong bản tin gốc. (Nguồn: [S5], [S8])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S5]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S8]"
+            }
+          ],
+          "target_claim_ids": [
+            "D2"
+          ],
+          "claim_id": "D2"
+        },
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN D3] Thông tin về cuộc phỏng vấn của Angelina Jolie trên tạp chí Vanity Fair không phải lúc nào cũng được phản ánh chính xác trong bản tin gốc. Mặc dù các nguồn tin như [S1] và [S6] cung cấp thông tin về sự nghiệp và cuộc sống của Angelina Jolie, bao gồm cả việc xuất hiện trên tạp chí Vanity Fair, nhưng không có thông tin cụ thể về việc Angelina Jolie thảo luận về Brad Pitt và Bell's Palsy trong cùng một cuộc phỏng vấn. Hơn nữa, cần phải xem xét tính đầy đủ và độ tin cậy của thông tin được cung cấp trong bản tin gốc. (Nguồn: [S1], [S6])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S6]"
+            }
+          ],
+          "target_claim_ids": [
+            "D3"
+          ],
+          "claim_id": "D3"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Tóm tắt chiến thuật vòng này: Phe bảo vệ đã phản biện lại các nhận định của phe đối lập về bản tin gốc, chứng minh rằng thông tin về Angelina Jolie nói về Brad Pitt và Bell's Palsy trong cuộc phỏng vấn với Vanity Fair là chính xác và đáng tin cậy. Chúng tôi đã sử dụng các nguồn tin uy tín và có liên quan để hỗ trợ cho lập luận của mình, và chứng minh rằng bản tin gốc đã phản ánh chính xác sự thật về cuộc phỏng vấn của Angelina Jolie.",
+      "challenger_argument": "Tóm tắt chiến thuật phản công: Chúng tôi đã chỉ ra những điểm không chính xác, không đầy đủ hoặc không đáng tin cậy trong bản tin gốc về Angelina Jolie và cuộc phỏng vấn với Vanity Fair. Thông qua việc phân tích và phản biện các nhận định của Phe Bảo Vệ, chúng tôi đã chứng minh rằng bản tin gốc không phải lúc nào cũng phản ánh chính xác sự thật về các sự kiện này.",
+      "defender_claims": [
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN C1] Nhận định của phe đối lập rằng bản tin gốc không chính xác vì không có thông tin cụ thể về việc Angelina Jolie thảo luận về cả Brad Pitt và Bell's Palsy trong cùng một cuộc phỏng vấn là không hợp lý. Theo nguồn [S2], Angelina Jolie đã mở lòng về cuộc sống sau khi chia tay Brad Pitt, và nguồn [S21] cũng xác nhận rằng cô đã thảo luận về việc mắc phải Bell's Palsy trong một cuộc phỏng vấn với Vanity Fair. Điều này chứng minh rằng bản tin gốc đã phản ánh chính xác sự thật về cuộc phỏng vấn của Angelina Jolie. (Nguồn: [S2], [S21])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S2]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S21]"
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        },
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN C2] Phe đối lập cũng cho rằng thông tin về Angelina Jolie nói về Brad Pitt và Bell's Palsy trong bản tin gốc có thể không đáng tin cậy vì không có nguồn tin cụ thể và uy tín nào được trích dẫn. Tuy nhiên, nguồn [S6] và [S9] cung cấp thông tin về Angelina Jolie và cuộc sống của cô, và cũng có nhiều nguồn khác như [S1], [S5], [S8] hỗ trợ cho thông tin về Bell's Palsy và cuộc sống của Angelina Jolie sau khi chia tay Brad Pitt. Điều này chứng minh rằng thông tin trong bản tin gốc là đáng tin cậy và có căn cứ. (Nguồn: [S1], [S5], [S6], [S8], [S9])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S5]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S6]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S8]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S9]"
+            }
+          ],
+          "target_claim_ids": [
+            "C2"
+          ],
+          "claim_id": "C2"
+        },
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN C3] Cuối cùng, nhận định của phe đối lập rằng bản tin gốc có thể không cung cấp đủ thông tin hoặc bối cảnh về cuộc phỏng vấn của Angelina Jolie với Vanity Fair là không chính xác. Thông qua việc tham khảo các nguồn tin uy tín và có liên quan như [S2], [S21], và [S23], bản tin gốc đã cung cấp thông tin chính xác và đầy đủ về cuộc phỏng vấn của Angelina Jolie, bao gồm cả việc thảo luận về Brad Pitt và Bell's Palsy. Điều này chứng minh rằng bản tin gốc đã phản ánh chính xác và đầy đủ thông tin về sự kiện này. (Nguồn: [S2], [S21], [S23])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S2]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S21]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S23]"
+            }
+          ],
+          "target_claim_ids": [
+            "C3"
+          ],
+          "claim_id": "C3"
+        },
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "DEFEND",
+          "text": "[BẢO VỆ D1] Nhận định của phe bảo vệ rằng bản tin gốc khẳng định Angelina Jolie đã thảo luận về Brad Pitt và Bell's Palsy trong một bài viết trên tạp chí Vanity Fair là chính xác. Theo nguồn [S2], Angelina Jolie đã mở lòng về cuộc sống sau khi chia tay Brad Pitt và cũng đã thảo luận về tình trạng sức khỏe của mình, bao gồm cả việc mắc phải Bell's Palsy, trong một cuộc phỏng vấn với Vanity Fair. Điều này khẳng định rằng bản tin đã phản ánh đúng sự thật về cuộc phỏng vấn của Angelina Jolie. (Nguồn: [S2])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S2]"
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "DEFEND",
+          "text": "[BẢO VỆ D2] Thông tin về Angelina Jolie mắc phải Bell's Palsy và cuộc sống sau khi chia tay Brad Pitt trong bản tin là chính xác. Các nguồn như [S5] và [S8] cung cấp thông tin về Bell's Palsy và các triệu chứng của nó, điều này phù hợp với thông tin được cung cấp trong bản tin về tình trạng sức khỏe của Angelina Jolie. Hơn nữa, nguồn [S2] cũng xác nhận cuộc sống của Angelina Jolie sau khi chia tay Brad Pitt, làm tăng độ tin cậy của bản tin. (Nguồn: [S2], [S5], [S8])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S2]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S5]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S8]"
+            }
+          ],
+          "target_claim_ids": [
+            "D2"
+          ],
+          "claim_id": "D2"
+        },
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "DEFEND",
+          "text": "[BẢO VỆ D3] Thông tin về cuộc phỏng vấn của Angelina Jolie trên tạp chí Vanity Fair được phản ánh chính xác trong bản tin. Các nguồn tin như [S1] và [S6] cung cấp thông tin về sự nghiệp và cuộc sống của Angelina Jolie, bao gồm cả việc xuất hiện trên tạp chí Vanity Fair. Điều này chứng minh rằng bản tin đã cung cấp thông tin chính xác về sự kiện này. (Nguồn: [S1], [S6])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S6]"
+            }
+          ],
+          "target_claim_ids": [
+            "D3"
+          ],
+          "claim_id": "D3"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN D1] Nhận định của Phe Bảo Vệ rằng bản tin gốc khẳng định Angelina Jolie đã thảo luận về Brad Pitt và Bell's Palsy trong một bài viết trên tạp chí Vanity Fair là chính xác, không được hỗ trợ đầy đủ bởi nguồn tin [S2] như đã đề cập. Mặc dù [S2] cung cấp thông tin về cuộc sống sau khi chia tay Brad Pitt và tình trạng sức khỏe của Angelina Jolie, bao gồm cả việc mắc phải Bell's Palsy, nhưng không có thông tin cụ thể rằng cả hai chủ đề này được thảo luận trong cùng một cuộc phỏng vấn. Điều này cho thấy bản tin gốc có thể bị sai lệch hoặc không đầy đủ thông tin. Hơn nữa, cần phải xem xét độ tin cậy của nguồn tin và tính đầy đủ của thông tin được cung cấp. (Nguồn: [S3])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S3]"
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN D2] Thông tin về Angelina Jolie mắc phải Bell's Palsy và cuộc sống sau khi chia tay Brad Pitt trong bản tin không phải lúc nào cũng được hỗ trợ bởi các nguồn tin đáng tin cậy như [S5] và [S8]. Mặc dù những nguồn này cung cấp thông tin về Bell's Palsy và các triệu chứng của nó, nhưng không có thông tin cụ thể về việc Angelina Jolie thảo luận về cả hai chủ đề này trong cùng một cuộc phỏng vấn. Hơn nữa, cần phải kiểm tra tính đầy đủ và độ tin cậy của thông tin được cung cấp trong bản tin gốc. (Nguồn: [S5], [S8])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S5]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S8]"
+            }
+          ],
+          "target_claim_ids": [
+            "D2"
+          ],
+          "claim_id": "D2"
+        },
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN D3] Thông tin về cuộc phỏng vấn của Angelina Jolie trên tạp chí Vanity Fair không phải lúc nào cũng được phản ánh chính xác trong bản tin gốc. Mặc dù các nguồn tin như [S1] và [S6] cung cấp thông tin về sự nghiệp và cuộc sống của Angelina Jolie, bao gồm cả việc xuất hiện trên tạp chí Vanity Fair, nhưng không có thông tin cụ thể về việc Angelina Jolie thảo luận về Brad Pitt và Bell's Palsy trong cùng một cuộc phỏng vấn. Hơn nữa, cần phải xem xét tính đầy đủ và độ tin cậy của thông tin được cung cấp trong bản tin gốc. (Nguồn: [S1], [S6])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S6]"
+            }
+          ],
+          "target_claim_ids": [
+            "D3"
+          ],
+          "claim_id": "D3"
+        },
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "DEFEND",
+          "text": "[BẢO VỆ C1] Nhận định của chúng tôi rằng bản tin gốc khẳng định Angelina Jolie nói về Brad Pitt và Bell's Palsy trong cuộc phỏng vấn với Vanity Fair là không chính xác, vì không có thông tin cụ thể về việc Angelina Jolie thảo luận về cả hai chủ đề này trong cùng một cuộc phỏng vấn, vẫn được giữ nguyên. Theo nguồn [S2], Angelina Jolie đã mở lòng về cuộc sống sau khi chia tay Brad Pitt, nhưng không có thông tin cụ thể về việc bà thảo luận về Bell's Palsy trong cùng một cuộc phỏng vấn. Do đó, bản tin gốc có thể bị sai lệch hoặc không đầy đủ thông tin. (Nguồn: [S2])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S2]"
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        },
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "DEFEND",
+          "text": "[BẢO VỆ C2] Thông tin về Angelina Jolie nói về Brad Pitt và Bell's Palsy trong bản tin gốc có thể không đáng tin cậy, vì không có nguồn tin cụ thể và uy tín nào được trích dẫn. Theo nguồn [S6], thông tin về Angelina Jolie và cuộc sống của bà thường được báo chí và truyền thông đưa tin, nhưng không phải tất cả thông tin đều được xác minh hoặc đáng tin cậy. Do đó, cần phải kiểm tra và xác minh thông tin trước khi đưa tin. (Nguồn: [S6])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S6]"
+            }
+          ],
+          "target_claim_ids": [
+            "C2"
+          ],
+          "claim_id": "C2"
+        },
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "DEFEND",
+          "text": "[BẢO VỆ C3] Bản tin gốc có thể không cung cấp đủ thông tin hoặc bối cảnh về cuộc phỏng vấn của Angelina Jolie với Vanity Fair, dẫn đến sự hiểu lầm hoặc giải thích sai. Theo nguồn [S9], Angelina Jolie đã tham gia vào nhiều hoạt động và cuộc phỏng vấn khác nhau, và thông tin về bà có thể không được trình bày một cách đầy đủ hoặc chính xác trong bản tin gốc. Do đó, cần phải tìm hiểu thêm về bối cảnh và nội dung của cuộc phỏng vấn để có hiểu biết chính xác. (Nguồn: [S9])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S9]"
+            }
+          ],
+          "target_claim_ids": [
+            "C3"
+          ],
+          "claim_id": "C3"
+        }
+      ]
+    }
+  ],
+  "knowledge_base": [
+    {
+      "id": "[S1]",
+      "query": "Angelina Jolie phỏng vấn Vanity Fair",
+      "query_language": "vi",
+      "title": "Angelina Jolie talks politics in Vanity Fair interview - YouTube",
+      "content": "",
+      "source_url": "https://www.youtube.com/watch?v=_SuOxWxzR04",
+      "domain": "www.youtube.com",
+      "relevance_score": 0.9999683,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "vi",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S2]",
+      "query": "Angelina Jolie phỏng vấn Vanity Fair",
+      "query_language": "vi",
+      "title": "Angelina Jolie Opens Up to Vanity Fair About Life After Brad Pitt  | Vogue",
+      "content": "",
+      "source_url": "https://www.vogue.com/article/angelina-jolie-vanity-fair-interview-brad-pitt-divorce",
+      "domain": "www.vogue.com",
+      "relevance_score": 0.99992216,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "vi",
+      "rank_within_query_language": 2
+    },
+    {
+      "id": "[S3]",
+      "query": "Angelina Jolie phỏng vấn Vanity Fair",
+      "query_language": "vi",
+      "title": "In a new interview with Vanity Fair, Angelina Jolie opened up about ...",
+      "content": "",
+      "source_url": "https://www.facebook.com/InStyle/posts/in-a-new-interview-with-vanity-fair-angelina-jolie-opened-up-about-going-through/967687621888270/",
+      "domain": "www.facebook.com",
+      "relevance_score": 0.9999145,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "vi",
+      "rank_within_query_language": 3
+    },
+    {
+      "id": "[S4]",
+      "query": "cuộc sống và sự nghiệp Angelina Jolie",
+      "query_language": "vi",
+      "title": "Cuộc đời Angelina Jolie nữ triệu phú Hollywood tài năng và quyến rũ",
+      "content": "",
+      "source_url": "https://hanghieu.thuonggiaonline.vn/cuoc-doi-angelina-jolie-nu-trieu-phu-hollywood-tai-nang-va-quyen-ru-post528071.html",
+      "domain": "hanghieu.thuonggiaonline.vn",
+      "relevance_score": 0.9999069,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "vi",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S5]",
+      "query": "cuộc sống và sự nghiệp Angelina Jolie",
+      "query_language": "vi",
+      "title": "Đời sống tình cảm của Angelina Jolie sau ly hôn - VnExpress",
+      "content": "",
+      "source_url": "https://vnexpress.net/doi-song-tinh-cam-cua-angelina-jolie-sau-ly-hon-5046417.html",
+      "domain": "vnexpress.net",
+      "relevance_score": 0.99988127,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "vi",
+      "rank_within_query_language": 2
+    },
+    {
+      "id": "[S6]",
+      "query": "cuộc sống và sự nghiệp Angelina Jolie",
+      "query_language": "vi",
+      "title": "Angelina Jolie – Wikipedia tiếng Việt",
+      "content": "",
+      "source_url": "https://vi.wikipedia.org/wiki/Angelina_Jolie",
+      "domain": "vi.wikipedia.org",
+      "relevance_score": 0.9993333,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "vi",
+      "rank_within_query_language": 3
+    },
+    {
+      "id": "[S7]",
+      "query": "Angelina Jolie biography and career",
+      "query_language": "en",
+      "title": "Angelina Jolie: Biography and Career | PDF - Scribd",
+      "content": "",
+      "source_url": "https://www.scribd.com/document/504109193/Angelina-jolie",
+      "domain": "www.scribd.com",
+      "relevance_score": 0.99998164,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S8]",
+      "query": "Angelina Jolie biography and career",
+      "query_language": "en",
+      "title": "Angelina Jolie Biography |  Biography Online",
+      "content": "",
+      "source_url": "https://biographyonline.net/actors/angelina-jolie-biography.html",
+      "domain": "biographyonline.net",
+      "relevance_score": 0.9997695,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 2
+    },
+    {
+      "id": "[S9]",
+      "query": "Angelina Jolie biography and career",
+      "query_language": "en",
+      "title": "Angelina Jolie: Biography, Actor, Oscar Winner",
+      "content": "",
+      "source_url": "https://www.biography.com/actors/angelina-jolie",
+      "domain": "www.biography.com",
+      "relevance_score": 0.99968255,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 3
+    },
+    {
+      "id": "[S1]",
+      "query": "Angelina Jolie và Brad Pitt tin tức mới nhất",
+      "query_language": "vi",
+      "title": "Angelina Jolie Brad Pitt tin tức, hình ảnh mới nhất sau ly dị",
+      "content": "",
+      "source_url": "https://www.24h.com.vn/angelina-jolie-va-brad-pitt-ly-hon-c731e868.html",
+      "domain": "www.24h.com.vn",
+      "relevance_score": 0.9037116,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "vi",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S2]",
+      "query": "Angelina Jolie và Brad Pitt tin tức mới nhất",
+      "query_language": "vi",
+      "title": "Brad Pitt - Angelina Jolie - Tin tức mới nhất 24h qua - Báo VnExpress",
+      "content": "",
+      "source_url": "https://vnexpress.net/tag/brad-pitt-angelina-jolie-385157",
+      "domain": "vnexpress.net",
+      "relevance_score": 0.8783249,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "vi",
+      "rank_within_query_language": 2
+    },
+    {
+      "id": "[S3]",
+      "query": "Angelina Jolie và Brad Pitt tin tức mới nhất",
+      "query_language": "vi",
+      "title": "Tin brad pitt và angelina jolie hôm nay, tin tức online mới nhất 24h",
+      "content": "",
+      "source_url": "https://znews.vn/brad-pitt-v%C3%A0-angelina-jolie-tin-tuc.html",
+      "domain": "znews.vn",
+      "relevance_score": 0.8687491,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "vi",
+      "rank_within_query_language": 3
+    },
+    {
+      "id": "[S4]",
+      "query": "Angelina Jolie and Brad Pitt latest news",
+      "query_language": "en",
+      "title": "Brad Pitt's friend fuming over latest Angelina Jolie comments: Source",
+      "content": "",
+      "source_url": "https://www.newsnationnow.com/entertainment-news/angelina-jolie-brad-pitt-legal-battles/",
+      "domain": "www.newsnationnow.com",
+      "relevance_score": 0.80698997,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S5]",
+      "query": "Bell's Palsy là gì và nguyên nhân gây bệnh",
+      "query_language": "vi",
+      "title": "Bell's palsy là gì? Dấu hiệu, nguyên nhân và cách điều trị",
+      "content": "",
+      "source_url": "https://nhathuoclongchau.com.vn/bai-viet/bell-s-palsy-la-gi-dau-hieu-nguyen-nhan-va-cach-dieu-tri.html",
+      "domain": "nhathuoclongchau.com.vn",
+      "relevance_score": 0.8679453,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "vi",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S6]",
+      "query": "Bell's Palsy là gì và nguyên nhân gây bệnh",
+      "query_language": "vi",
+      "title": "Bệnh bại liệt của Bell - Sức khỏe cộng đồng",
+      "content": "",
+      "source_url": "https://www.chcrr.org/vi/health-topic/bells-palsy/",
+      "domain": "www.chcrr.org",
+      "relevance_score": 0.8390101,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "vi",
+      "rank_within_query_language": 2
+    },
+    {
+      "id": "[S7]",
+      "query": "What is Bell's Palsy and its causes",
+      "query_language": "en",
+      "title": "Bell’s Palsy: What It Is, Causes, Symptoms & Treatment",
+      "content": "",
+      "source_url": "https://my.clevelandclinic.org/health/diseases/5457-bells-palsy",
+      "domain": "my.clevelandclinic.org",
+      "relevance_score": 0.99980587,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S8]",
+      "query": "What is Bell's Palsy and its causes",
+      "query_language": "en",
+      "title": "Bell's palsy - Symptoms and causes - Mayo Clinic",
+      "content": "",
+      "source_url": "https://www.mayoclinic.org/diseases-conditions/bells-palsy/symptoms-causes/syc-20370028",
+      "domain": "www.mayoclinic.org",
+      "relevance_score": 0.9989837,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 2
+    },
+    {
+      "id": "[S9]",
+      "query": "What is Bell's Palsy and its causes",
+      "query_language": "en",
+      "title": "Bell's Palsy – Symptoms and Causes | Penn Medicine",
+      "content": "",
+      "source_url": "https://www.pennmedicine.org/conditions/bells-palsy",
+      "domain": "www.pennmedicine.org",
+      "relevance_score": 0.9989837,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 3
+    },
+    {
+      "id": "[S19]",
+      "query": "Angelina Jolie Talks Brad Pitt, Bell's Palsy in 'Vanity Fair' Cover Story",
+      "query_language": "vi",
+      "title": "Angelina Jolie Talks Brad Pitt, Bell's Palsy in 'Vanity Fair' Cover Story",
+      "content": "",
+      "source_url": "https://www.youtube.com/watch?v=TwV9HaFLvDM",
+      "domain": "www.youtube.com",
+      "relevance_score": 0.9999912,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "vi",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S20]",
+      "query": "Angelina Jolie Talks Brad Pitt, Bell's Palsy in 'Vanity Fair' Cover Story",
+      "query_language": "vi",
+      "title": "Angelina Jolie Breaks Silence on Brad Pitt in 'Vanity Fair' Cover Story",
+      "content": "",
+      "source_url": "https://www.dailymotion.com/video/x5v2fc1",
+      "domain": "www.dailymotion.com",
+      "relevance_score": 0.99997044,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "vi",
+      "rank_within_query_language": 2
+    },
+    {
+      "id": "[S21]",
+      "query": "Angelina Jolie Talks Brad Pitt, Bell's Palsy in 'Vanity Fair' Cover Story",
+      "query_language": "vi",
+      "title": "Angelina Jolie Talks Brad Pitt, Bell's Palsy in 'Vanity Fair' Cover Story",
+      "content": "",
+      "source_url": "https://www.hollywoodreporter.com/news/general-news/angelina-jolie-talks-brad-pitt-bells-palsy-vanity-fair-cover-story-1024589/",
+      "domain": "www.hollywoodreporter.com",
+      "relevance_score": 0.9999603,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "vi",
+      "rank_within_query_language": 3
+    },
+    {
+      "id": "[S22]",
+      "query": "Angelina Jolie Talks Brad Pitt, Bell's Palsy in 'Vanity Fair' Cover Story",
+      "query_language": "en",
+      "title": "Angelina Jolie Breaks Silence on Brad Pitt in 'Vanity Fair' Cover Story",
+      "content": "",
+      "source_url": "https://www.hollywoodreporter.com/video/angelina-jolie-breaks-silence-brad-pitt-vanity-fair-cover-story-thr-news-1024816/",
+      "domain": "www.hollywoodreporter.com",
+      "relevance_score": 0.9999517,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S23]",
+      "query": "Angelina Jolie Talks Brad Pitt, Bell's Palsy in 'Vanity Fair' Cover Story",
+      "query_language": "en",
+      "title": "Angelina Jolie talks life after Brad Pitt, reveals Bell’s palsy diagnosis in Vanity Fair interview - The Washington Post",
+      "content": "",
+      "source_url": "https://www.washingtonpost.com/news/arts-and-entertainment/wp/2017/07/26/angelina-jolie-talks-life-after-brad-pitt-reveals-bells-palsy-diagnosis-in-vanity-fair-interview/",
+      "domain": "www.washingtonpost.com",
+      "relevance_score": 0.875031,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 2
+    },
+    {
+      "id": "[S24]",
+      "query": "Angelina Jolie Talks Brad Pitt, Bell's Palsy in 'Vanity Fair' Cover Story",
+      "query_language": "en",
+      "title": "Angelina Jolie reveals Bell's Palsy diagnosis, breaks silence on Pitt",
+      "content": "",
+      "source_url": "https://www.usatoday.com/story/life/people/2017/07/26/angelina-jolie-reveals-bells-palsy-diagnosis-breaks-silence-divorce-brad-pitt/513179001/",
+      "domain": "www.usatoday.com",
+      "relevance_score": 0.8729662,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 3
+    },
+    {
+      "id": "[S19]",
+      "query": "Angelina Jolie Talks Brad Pitt, Bell's Palsy in 'Vanity Fair' Cover Story",
+      "query_language": "vi",
+      "title": "Angelina Jolie Breaks Silence on Brad Pitt in 'Vanity Fair' Cover Story",
+      "content": "",
+      "source_url": "https://www.hollywoodreporter.com/video/angelina-jolie-breaks-silence-brad-pitt-vanity-fair-cover-story-thr-news-1024816/",
+      "domain": "www.hollywoodreporter.com",
+      "relevance_score": 0.89324445,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "vi",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S20]",
+      "query": "Angelina Jolie Talks Brad Pitt, Bell's Palsy in 'Vanity Fair' Cover Story",
+      "query_language": "vi",
+      "title": "Angelina Jolie talks life after Brad Pitt, reveals Bell’s palsy diagnosis in Vanity Fair interview - The Washington Post",
+      "content": "",
+      "source_url": "https://www.washingtonpost.com/news/arts-and-entertainment/wp/2017/07/26/angelina-jolie-talks-life-after-brad-pitt-reveals-bells-palsy-diagnosis-in-vanity-fair-interview/",
+      "domain": "www.washingtonpost.com",
+      "relevance_score": 0.875031,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "vi",
+      "rank_within_query_language": 2
+    },
+    {
+      "id": "[S21]",
+      "query": "Angelina Jolie Talks Brad Pitt, Bell's Palsy in 'Vanity Fair' Cover Story",
+      "query_language": "vi",
+      "title": "Angelina Jolie Breaks Silence on Brad Pitt in 'Vanity Fair' Cover Story",
+      "content": "",
+      "source_url": "https://www.dailymotion.com/video/x5v2fc1",
+      "domain": "www.dailymotion.com",
+      "relevance_score": 0.8740022,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "vi",
+      "rank_within_query_language": 3
+    },
+    {
+      "id": "[S22]",
+      "query": "Angelina Jolie Talks Brad Pitt, Bell's Palsy in 'Vanity Fair' Cover Story",
+      "query_language": "en",
+      "title": "Angelina Jolie reveals Bell's Palsy diagnosis, breaks silence on Pitt",
+      "content": "",
+      "source_url": "https://www.usatoday.com/story/life/people/2017/07/26/angelina-jolie-reveals-bells-palsy-diagnosis-breaks-silence-divorce-brad-pitt/513179001/",
+      "domain": "www.usatoday.com",
+      "relevance_score": 0.8729662,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S23]",
+      "query": "Angelina Jolie Talks Brad Pitt, Bell's Palsy in 'Vanity Fair' Cover Story",
+      "query_language": "en",
+      "title": "Angelina Jolie Talks Brad Pitt, Bell's Palsy in 'Vanity Fair' Cover Story",
+      "content": "",
+      "source_url": "https://www.youtube.com/watch?v=TwV9HaFLvDM",
+      "domain": "www.youtube.com",
+      "relevance_score": 0.9999912,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 2
+    }
+  ]
+}

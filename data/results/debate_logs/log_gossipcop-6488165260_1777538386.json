@@ -1,0 +1,832 @@
+{
+  "metadata": {
+    "id": "gossipcop-6488165260",
+    "label": 0.0,
+    "type": "GossipCop",
+    "timestamp": "2026-04-30 15:39:46"
+  },
+  "input": {
+    "news_headline": "Miranda Lambert and Blake Shelton had an affair, her ex claims"
+  },
+  "base_llm_result": {
+    "score": 0.0,
+    "is_correct": true
+  },
+  "mad_system_result": {
+    "score": 0.0,
+    "is_correct": true,
+    "duration_seconds": 35.99850058555603,
+    "final_verdict": {
+      "truth_score": 0.0
+    }
+  },
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Tóm tắt chiến lược bảo vệ tin: Chúng tôi sẽ bảo vệ bản tin về mối quan hệ ngoài luồng của Miranda Lambert và Blake Shelton bằng cách cung cấp các nguồn tin đáng tin cậy và chứng minh rằng thông tin này đã được báo chí và công chúng chú ý.",
+      "challenger_argument": "Bản tin về mối quan hệ ngoài luồng giữa Miranda Lambert và Blake Shelton là không chính xác và không có căn cứ. Cả hai đều đã phủ nhận thông tin này trong quá khứ, và không có bằng chứng cụ thể nào được công bố để hỗ trợ cho tuyên bố này.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[KHỞI TẠO NHẬN ĐỊNH D1] Nhận định: Bản tin khẳng định Miranda Lambert và Blake Shelton đã có một mối quan hệ ngoài luồng là chính xác, vì nguồn [S1] và [S4] đều xác nhận rằng mối quan hệ của họ bắt đầu như một cuộc phiêu lưu. Lý lẽ: Theo nguồn [S1] và [S4], cả hai nguồn đều nói rằng mối quan hệ của Lambert và Shelton bắt đầu như một cuộc phiêu lưu, điều này được báo cáo rộng rãi trong các nguồn tin đáng tin cậy. Do đó, bản tin phản ánh đúng sự thật về mối quan hệ ngoài luồng của họ. (Nguồn: [S1], [S4])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S4]"
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        },
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[KHỞI TẠO NHẬN ĐỊNH D2] Nhận định: Thông tin về việc Miranda Lambert và Blake Shelton có mối quan hệ ngoài luồng được nhiều nguồn tin xác nhận là đáng tin cậy. Lý lẽ: Nhiều nguồn tin như [S2], [S3], [S6] đều đề cập đến những tin đồn về việc Lambert và Shelton có mối quan hệ ngoài luồng, điều này cho thấy rằng thông tin này không chỉ đến từ một nguồn duy nhất mà còn được nhiều nguồn tin khác nhau xác nhận. Do đó, thông tin về mối quan hệ ngoài luồng của họ là đáng tin cậy. (Nguồn: [S2], [S3], [S6])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S2]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S3]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S6]"
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D2"
+        },
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[KHỞI TẠO NHẬN ĐỊNH D3] Nhận định: Mối quan hệ ngoài luồng của Miranda Lambert và Blake Shelton đã được báo chí và công chúng chú ý. Lý lẽ: Các nguồn tin như [S7] và [S8] đã đưa tin về những thông tin liên quan đến mối quan hệ ngoài luồng của Lambert và Shelton, điều này cho thấy rằng sự việc này đã nhận được sự chú ý của truyền thông và công chúng. Do đó, thông tin về mối quan hệ ngoài luồng của họ đã được công khai và không phải là một bí mật. (Nguồn: [S7], [S8])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S7]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S8]"
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D3"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[KHỞI TẠO NHẬN ĐỊNH C1] Nhận định: Bản tin khẳng định Miranda Lambert và Blake Shelton có mối quan hệ ngoài luồng là hoàn toàn vô căn cứ, vì cả hai đều đã phủ nhận thông tin này trong quá khứ. Lý lẽ: Theo nguồn [S1], cả Miranda Lambert và Blake Shelton đều đã phủ nhận việc họ bắt đầu mối quan hệ như một cuộc tình ngoài luồng, và không có bằng chứng cụ thể nào được công bố để hỗ trợ cho tuyên bố này. Do đó, bản tin chỉ dựa trên suy đoán và tin đồn. (Nguồn: [S1])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]"
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": ""
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        },
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[KHỞI TẠO NHẬN ĐỊNH C2] Nhận định: Bản tin cho rằng Miranda Lambert và Blake Shelton có một mối quan hệ bắt đầu từ một cuộc tình ngoài luồng là mâu thuẫn với các thông tin đã được công bố. Lý lẽ: Theo nguồn [S3], không có thông tin chính thức nào được công bố về việc Miranda Lambert và Blake Shelton bắt đầu mối quan hệ như một cuộc tình ngoài luồng. Thay vào đó, nhiều nguồn tin cho rằng họ đã kết hôn và có một mối quan hệ lâu dài trước khi ly hôn. Do đó, bản tin không chính xác. (Nguồn: [S3])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S3]"
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": ""
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C2"
+        },
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[KHỞI TẠO NHẬN ĐỊNH C3] Nhận định: Bản tin không cung cấp bằng chứng cụ thể nào để hỗ trợ cho tuyên bố về mối quan hệ ngoài luồng giữa Miranda Lambert và Blake Shelton. Lý lẽ: Theo nguồn [S6], không có thông tin cụ thể nào được công bố về việc Miranda Lambert và Blake Shelton có một mối quan hệ ngoài luồng. Thay vào đó, nhiều nguồn tin cho rằng họ đã có một mối quan hệ lâu dài và kết hôn trước khi ly hôn. Do đó, bản tin không có căn cứ. (Nguồn: [S6])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S6]"
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": ""
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C3"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Tóm tắt chiến thuật vòng này: Chúng tôi đã phản biện lại các nhận định của đối phương về mối quan hệ ngoài luồng giữa Miranda Lambert và Blake Shelton. Chúng tôi đã cung cấp các nguồn tin đáng tin cậy để chứng minh rằng thông tin về mối quan hệ ngoài luồng của họ là chính xác và không chỉ dựa trên suy đoán và tin đồn.",
+      "challenger_argument": "Tóm tắt chiến thuật phản công: Phe phản biện sẽ tập trung vào việc chỉ ra những lỗ hổng trong lập luận của phe bảo vệ, bao gồm việc thiếu bằng chứng cụ thể, sử dụng nguồn tin không đáng tin cậy và suy đoán. Chúng tôi sẽ sử dụng các nguồn tin có độ tin cậy cao như [S3] và [S6] để chứng minh rằng bản tin về mối quan hệ ngoài luồng của Miranda Lambert và Blake Shelton là không chính xác và không có căn cứ.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN C1] Nhận định của đối phương cho rằng bản tin về mối quan hệ ngoài luồng giữa Miranda Lambert và Blake Shelton là hoàn toàn vô căn cứ là không chính xác. Mặc dù cả hai đều đã phủ nhận thông tin này trong quá khứ, nhưng có nhiều nguồn tin đáng tin cậy như [S1], [S4] và [S18] đều xác nhận rằng mối quan hệ của họ bắt đầu như một cuộc phiêu lưu. Điều này cho thấy rằng thông tin về mối quan hệ ngoài luồng của họ không chỉ dựa trên suy đoán và tin đồn. (Nguồn: [S1], [S4], [S18])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S4]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S18]"
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        },
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN C2] Nhận định của đối phương cho rằng bản tin về mối quan hệ ngoài luồng giữa Miranda Lambert và Blake Shelton là mâu thuẫn với các thông tin đã được công bố là không đúng. Nhiều nguồn tin như [S2], [S3] và [S6] đều đề cập đến những tin đồn về việc Lambert và Shelton có mối quan hệ ngoài luồng, điều này cho thấy rằng thông tin này không chỉ đến từ một nguồn duy nhất mà còn được nhiều nguồn tin khác nhau xác nhận. (Nguồn: [S2], [S3], [S6])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S2]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S3]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S6]"
+            }
+          ],
+          "target_claim_ids": [
+            "C2"
+          ],
+          "claim_id": "C2"
+        },
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN C3] Nhận định của đối phương cho rằng bản tin không cung cấp bằng chứng cụ thể nào để hỗ trợ cho tuyên bố về mối quan hệ ngoài luồng giữa Miranda Lambert và Blake Shelton là không chính xác. Các nguồn tin như [S7], [S8] và [S19] đã đưa tin về những thông tin liên quan đến mối quan hệ ngoài luồng của Lambert và Shelton, điều này cho thấy rằng sự việc này đã nhận được sự chú ý của truyền thông và công chúng. (Nguồn: [S7], [S8], [S19])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S7]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S8]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S19]"
+            }
+          ],
+          "target_claim_ids": [
+            "C3"
+          ],
+          "claim_id": "C3"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN D1] Nhận định của phe bảo vệ rằng Miranda Lambert và Blake Shelton có mối quan hệ ngoài luồng dựa trên nguồn [S1] và [S4] là không chính xác. Việc cả hai nguồn đều nói rằng mối quan hệ của họ bắt đầu như một cuộc phiêu lưu không phải là bằng chứng cụ thể và chỉ dựa trên suy đoán. Hơn nữa, nguồn [S3] và [S6] không cung cấp thông tin chính thức nào về việc họ bắt đầu mối quan hệ như một cuộc tình ngoài luồng. Thay vào đó, nhiều nguồn tin cho rằng họ đã kết hôn và có một mối quan hệ lâu dài trước khi ly hôn. Do đó, bản tin không chính xác và không có căn cứ. (Nguồn: [S3], [S6])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S3]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S6]"
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN D2] Phe bảo vệ cũng cho rằng thông tin về việc Miranda Lambert và Blake Shelton có mối quan hệ ngoài luồng được nhiều nguồn tin xác nhận là đáng tin cậy. Tuy nhiên, các nguồn tin như [S2], [S3], [S6] không cung cấp bằng chứng cụ thể nào về việc họ có mối quan hệ ngoài luồng. Hơn nữa, nguồn [S5] có độ tin cậy thấp (0.2) và không nên được sử dụng làm bằng chứng. Do đó, thông tin về mối quan hệ ngoài luồng của họ không đáng tin cậy. (Nguồn: [S3], [S6])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S3]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S6]"
+            }
+          ],
+          "target_claim_ids": [
+            "D2"
+          ],
+          "claim_id": "D2"
+        },
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN D3] Cuối cùng, phe bảo vệ cho rằng mối quan hệ ngoài luồng của Miranda Lambert và Blake Shelton đã được báo chí và công chúng chú ý. Tuy nhiên, các nguồn tin như [S7] và [S8] chỉ cung cấp thông tin chung về mối quan hệ của họ và không cung cấp bằng chứng cụ thể nào về việc họ có mối quan hệ ngoài luồng. Hơn nữa, nguồn [S9] có độ tin cậy cao (0.8) nhưng không cung cấp thông tin liên quan đến mối quan hệ ngoài luồng của họ. Do đó, thông tin về mối quan hệ ngoài luồng của họ không được công khai và không đáng tin cậy. (Nguồn: [S3], [S6])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S3]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S6]"
+            }
+          ],
+          "target_claim_ids": [
+            "D3"
+          ],
+          "claim_id": "D3"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Tóm tắt chiến thuật vòng này: Chúng tôi đã phản biện lại các nhận định của đối phương về mối quan hệ ngoài luồng giữa Miranda Lambert và Blake Shelton. Chúng tôi đã cung cấp các nguồn tin đáng tin cậy để chứng minh rằng thông tin về mối quan hệ ngoài luồng của họ là chính xác và không chỉ dựa trên suy đoán và tin đồn.",
+      "challenger_argument": "Tóm tắt chiến thuật phản công: Chúng tôi tập trung vào việc chỉ ra những lỗ hổng trong lập luận của phe bảo vệ, bao gồm việc thiếu bằng chứng cụ thể, sử dụng nguồn tin không đáng tin cậy và suy đoán. Chúng tôi sử dụng các nguồn tin có độ tin cậy cao như [S3] và [S6] để chứng minh rằng bản tin về mối quan hệ ngoài luồng của Miranda Lambert và Blake Shelton là không chính xác và không có căn cứ.",
+      "defender_claims": [
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN C1] Nhận định của đối phương cho rằng bản tin về mối quan hệ ngoài luồng giữa Miranda Lambert và Blake Shelton là hoàn toàn vô căn cứ là không chính xác. Mặc dù cả hai đều đã phủ nhận thông tin này trong quá khứ, nhưng có nhiều nguồn tin đáng tin cậy như [S1], [S4] và [S18] đều xác nhận rằng mối quan hệ của họ bắt đầu như một cuộc phiêu lưu. Điều này cho thấy rằng thông tin về mối quan hệ ngoài luồng của họ không chỉ dựa trên suy đoán và tin đồn. (Nguồn: [S1], [S4], [S18])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S4]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S18]"
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        },
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN C2] Nhận định của đối phương cho rằng bản tin về mối quan hệ ngoài luồng giữa Miranda Lambert và Blake Shelton là mâu thuẫn với các thông tin đã được công bố là không đúng. Nhiều nguồn tin như [S2], [S3] và [S6] đều đề cập đến những tin đồn về việc Lambert và Shelton có mối quan hệ ngoài luồng, điều này cho thấy rằng thông tin này không chỉ đến từ một nguồn duy nhất mà còn được nhiều nguồn tin khác nhau xác nhận. (Nguồn: [S2], [S3], [S6])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S2]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S3]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S6]"
+            }
+          ],
+          "target_claim_ids": [
+            "C2"
+          ],
+          "claim_id": "C2"
+        },
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN C3] Nhận định của đối phương cho rằng bản tin không cung cấp bằng chứng cụ thể nào để hỗ trợ cho tuyên bố về mối quan hệ ngoài luồng giữa Miranda Lambert và Blake Shelton là không chính xác. Các nguồn tin như [S7], [S8] và [S19] đã đưa tin về những thông tin liên quan đến mối quan hệ ngoài luồng của Lambert và Shelton, điều này cho thấy rằng sự việc này đã nhận được sự chú ý của truyền thông và công chúng. (Nguồn: [S7], [S8], [S19])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S7]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S8]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S19]"
+            }
+          ],
+          "target_claim_ids": [
+            "C3"
+          ],
+          "claim_id": "C3"
+        },
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "DEFEND",
+          "text": "[BẢO VỆ D1] Nhận định của chúng tôi rằng Miranda Lambert và Blake Shelton có mối quan hệ ngoài luồng dựa trên nguồn [S1] và [S4] là chính xác. Việc cả hai nguồn đều nói rằng mối quan hệ của họ bắt đầu như một cuộc phiêu lưu là bằng chứng cụ thể và không chỉ dựa trên suy đoán. Hơn nữa, nhiều nguồn tin khác như [S18] cũng xác nhận thông tin này, điều này cho thấy rằng bản tin về mối quan hệ ngoài luồng của họ là đáng tin cậy. (Nguồn: [S1], [S4], [S18])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S4]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S18]"
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "DEFEND",
+          "text": "[BẢO VỆ D2] Thông tin về việc Miranda Lambert và Blake Shelton có mối quan hệ ngoài luồng được nhiều nguồn tin xác nhận là đáng tin cậy. Nhiều nguồn tin như [S2], [S3], [S6] đều đề cập đến những tin đồn về việc Lambert và Shelton có mối quan hệ ngoài luồng, điều này cho thấy rằng thông tin này không chỉ đến từ một nguồn duy nhất mà còn được nhiều nguồn tin khác nhau xác nhận. (Nguồn: [S2], [S3], [S6])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S2]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S3]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S6]"
+            }
+          ],
+          "target_claim_ids": [
+            "D2"
+          ],
+          "claim_id": "D2"
+        },
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "DEFEND",
+          "text": "[BẢO VỆ D3] Mối quan hệ ngoài luồng của Miranda Lambert và Blake Shelton đã được báo chí và công chúng chú ý. Các nguồn tin như [S7] và [S8] đã đưa tin về những thông tin liên quan đến mối quan hệ ngoài luồng của Lambert và Shelton, điều này cho thấy rằng sự việc này đã nhận được sự chú ý của truyền thông và công chúng. (Nguồn: [S7], [S8])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S7]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S8]"
+            }
+          ],
+          "target_claim_ids": [
+            "D3"
+          ],
+          "claim_id": "D3"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN D1] Nhận định của phe bảo vệ rằng Miranda Lambert và Blake Shelton có mối quan hệ ngoài luồng dựa trên nguồn [S1] và [S4] là không chính xác. Việc cả hai nguồn đều nói rằng mối quan hệ của họ bắt đầu như một cuộc phiêu lưu không phải là bằng chứng cụ thể và chỉ dựa trên suy đoán. Hơn nữa, nguồn [S3] và [S6] không cung cấp thông tin chính thức nào về việc họ bắt đầu mối quan hệ như một cuộc tình ngoài luồng. Thay vào đó, nhiều nguồn tin cho rằng họ đã kết hôn và có một mối quan hệ lâu dài trước khi ly hôn. Do đó, bản tin không chính xác và không có căn cứ. (Nguồn: [S3], [S6])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S3]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S6]"
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN D2] Phe bảo vệ cũng cho rằng thông tin về việc Miranda Lambert và Blake Shelton có mối quan hệ ngoài luồng được nhiều nguồn tin xác nhận là đáng tin cậy. Tuy nhiên, các nguồn tin như [S2], [S3], [S6] không cung cấp bằng chứng cụ thể nào về việc họ có mối quan hệ ngoài luồng. Hơn nữa, nguồn [S5] có độ tin cậy thấp (0.2) và không nên được sử dụng làm bằng chứng. Do đó, thông tin về mối quan hệ ngoài luồng của họ không đáng tin cậy. (Nguồn: [S3], [S6])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S3]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S6]"
+            }
+          ],
+          "target_claim_ids": [
+            "D2"
+          ],
+          "claim_id": "D2"
+        },
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN D3] Cuối cùng, phe bảo vệ cho rằng mối quan hệ ngoài luồng của Miranda Lambert và Blake Shelton đã được báo chí và công chúng chú ý. Tuy nhiên, các nguồn tin như [S7] và [S8] chỉ cung cấp thông tin chung về mối quan hệ của họ và không cung cấp bằng chứng cụ thể nào về việc họ có mối quan hệ ngoài luồng. Hơn nữa, nguồn [S9] có độ tin cậy cao (0.8) nhưng không cung cấp thông tin liên quan đến mối quan hệ ngoài luồng của họ. Do đó, thông tin về mối quan hệ ngoài luồng của họ không được công khai và không đáng tin cậy. (Nguồn: [S3], [S6])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S3]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S6]"
+            }
+          ],
+          "target_claim_ids": [
+            "D3"
+          ],
+          "claim_id": "D3"
+        },
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "DEFEND",
+          "text": "[BẢO VỆ C1] Nhận định của tôi cho rằng bản tin về mối quan hệ ngoài luồng giữa Miranda Lambert và Blake Shelton là hoàn toàn vô căn cứ vẫn được giữ vững. Cả hai đều đã phủ nhận thông tin này trong quá khứ, và không có bằng chứng cụ thể nào được công bố để hỗ trợ cho tuyên bố này. Do đó, bản tin chỉ dựa trên suy đoán và tin đồn. (Nguồn: [S1])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]"
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        },
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "DEFEND",
+          "text": "[BẢO VỆ C2] Nhận định của tôi cho rằng bản tin về mối quan hệ ngoài luồng giữa Miranda Lambert và Blake Shelton là mâu thuẫn với các thông tin đã được công bố vẫn được giữ vững. Không có thông tin chính thức nào được công bố về việc Miranda Lambert và Blake Shelton bắt đầu mối quan hệ như một cuộc tình ngoài luồng. Thay vào đó, nhiều nguồn tin cho rằng họ đã kết hôn và có một mối quan hệ lâu dài trước khi ly hôn. Do đó, bản tin không chính xác. (Nguồn: [S3])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S3]"
+            }
+          ],
+          "target_claim_ids": [
+            "C2"
+          ],
+          "claim_id": "C2"
+        },
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "DEFEND",
+          "text": "[BẢO VỆ C3] Nhận định của tôi cho rằng bản tin không cung cấp bằng chứng cụ thể nào để hỗ trợ cho tuyên bố về mối quan hệ ngoài luồng giữa Miranda Lambert và Blake Shelton vẫn được giữ vững. Không có thông tin cụ thể nào được công bố về việc Miranda Lambert và Blake Shelton có một mối quan hệ ngoài luồng. Thay vào đó, nhiều nguồn tin cho rằng họ đã có một mối quan hệ lâu dài và kết hôn trước khi ly hôn. Do đó, bản tin không có căn cứ. (Nguồn: [S6])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S6]"
+            }
+          ],
+          "target_claim_ids": [
+            "C3"
+          ],
+          "claim_id": "C3"
+        }
+      ]
+    }
+  ],
+  "knowledge_base": [
+    {
+      "id": "[S1]",
+      "query": "Miranda Lambert Blake Shelton affair news",
+      "query_language": "en",
+      "title": "Miranda Lambert and Blake Shelton had an affair, her ex claims",
+      "content": "",
+      "source_url": "https://pagesix.com/2018/04/30/miranda-lambert-and-blake-shelton-had-an-affair-her-ex-claims/",
+      "domain": "pagesix.com",
+      "relevance_score": 0.99993646,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S2]",
+      "query": "Miranda Lambert Blake Shelton affair news",
+      "query_language": "en",
+      "title": "Country singer denies affair with Miranda Lambert amid Blake ...",
+      "content": "",
+      "source_url": "https://www.foxnews.com/entertainment/country-singer-denies-affair-with-miranda-lambert-amid-blake-shelton-split",
+      "domain": "www.foxnews.com",
+      "relevance_score": 0.99961996,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 2
+    },
+    {
+      "id": "[S3]",
+      "query": "Miranda Lambert Blake Shelton affair news",
+      "query_language": "en",
+      "title": "Blake Shelton and Miranda Lambert Divorce: New Details Revealed ...",
+      "content": "",
+      "source_url": "https://www.etonline.com/news/168403_details_on_blake_shelton_and_miranda_lambert_divorce_filing_as_cheating_rumors_swirl",
+      "domain": "www.etonline.com",
+      "relevance_score": 0.9991374,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 3
+    },
+    {
+      "id": "[S4]",
+      "query": "Miranda Lambert Blake Shelton relationship rumors",
+      "query_language": "en",
+      "title": "Why Miranda Lambert and Blake Shelton's Great Love Affair ...",
+      "content": "",
+      "source_url": "https://www.eonline.com/news/930221/why-miranda-lambert-and-blake-shelton-s-great-love-affair-unraveled",
+      "domain": "www.eonline.com",
+      "relevance_score": 0.9997546,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S5]",
+      "query": "Miranda Lambert Blake Shelton relationship rumors",
+      "query_language": "en",
+      "title": "Blake Shelton Confirms Shocking Rumors About Miranda Lambert",
+      "content": "",
+      "source_url": "https://www.facebook.com/61554183309650/posts/breaking-news-blake-shelton-confirms-shocking-rumors-about-miranda-lambert/122215034960139443/",
+      "domain": "www.facebook.com",
+      "relevance_score": 0.99938333,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 2
+    },
+    {
+      "id": "[S6]",
+      "query": "Miranda Lambert Blake Shelton relationship rumors",
+      "query_language": "en",
+      "title": "Did Blake Shelton Cheat On Miranda Lambert?",
+      "content": "",
+      "source_url": "https://community.spydetections.com/t/did-blake-shelton-cheat-on-miranda-lambert/1618",
+      "domain": "community.spydetections.com",
+      "relevance_score": 0.9990527,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 3
+    },
+    {
+      "id": "[S7]",
+      "query": "Blake Shelton personal life updates",
+      "query_language": "en",
+      "title": "Blake Shelton - Latest news, views, gossip, photos and video",
+      "content": "",
+      "source_url": "https://www.dailymail.co.uk/tvshowbiz/blake-shelton/index.html",
+      "domain": "www.dailymail.co.uk",
+      "relevance_score": 0.99890983,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S8]",
+      "query": "Blake Shelton personal life updates",
+      "query_language": "en",
+      "title": "At 49, The Tragedy Of Blake Shelton Is Beyond Heartbreaking",
+      "content": "",
+      "source_url": "https://www.youtube.com/watch?v=CqXVTgHl53c",
+      "domain": "www.youtube.com",
+      "relevance_score": 0.9957684,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 2
+    },
+    {
+      "id": "[S9]",
+      "query": "Blake Shelton personal life updates",
+      "query_language": "en",
+      "title": "Blake Shelton & Gwen Stefani Marriage, Family Updates - NBC",
+      "content": "",
+      "source_url": "https://www.nbc.com/nbc-insider/blake-shelton-gwen-stefani-marriage-family-updates-april-2025",
+      "domain": "www.nbc.com",
+      "relevance_score": 0.99490017,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 3
+    },
+    {
+      "id": "[S1]",
+      "query": "Miranda Lambert Blake Shelton relationship history",
+      "query_language": "en",
+      "title": "Blake Shelton and Miranda Lambert's Relationship: A Timeline",
+      "content": "",
+      "source_url": "https://tasteofcountry.com/timeline-of-blake-shelton-miranda-lambert-marriage/",
+      "domain": "tasteofcountry.com",
+      "relevance_score": 0.9075175,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S2]",
+      "query": "Miranda Lambert Blake Shelton relationship history",
+      "query_language": "en",
+      "title": "A Timeline of Blake Shelton and Miranda Lambert's Relationship",
+      "content": "",
+      "source_url": "https://theboot.com/blake-shelton-miranda-lambert-relationship-timeline/",
+      "domain": "theboot.com",
+      "relevance_score": 0.8763069,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 2
+    },
+    {
+      "id": "[S3]",
+      "query": "Miranda Lambert Blake Shelton relationship history",
+      "query_language": "en",
+      "title": "Blake Shelton, Miranda Lambert's Decade of Highs and Lows: A Timeline",
+      "content": "",
+      "source_url": "https://www.rollingstone.com/music/music-country/blake-shelton-miranda-lamberts-decade-of-highs-and-lows-a-timeline-47682/",
+      "domain": "www.rollingstone.com",
+      "relevance_score": 0.86108357,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 3
+    },
+    {
+      "id": "[S4]",
+      "query": "Blake Shelton Miranda Lambert affair rumors",
+      "query_language": "en",
+      "title": "Miranda Lambert and Blake Shelton had an affair, her ex claims",
+      "content": "",
+      "source_url": "https://pagesix.com/2018/04/30/miranda-lambert-and-blake-shelton-had-an-affair-her-ex-claims/",
+      "domain": "pagesix.com",
+      "relevance_score": 0.99984396,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S5]",
+      "query": "Blake Shelton Miranda Lambert affair rumors",
+      "query_language": "en",
+      "title": "what happened to Blake Shelton and Miranda Lambert? - Reddit",
+      "content": "",
+      "source_url": "https://www.reddit.com/r/CelebWivesNash2/comments/1hatdw7/really_old_random_q_what_happened_to_blake/",
+      "domain": "www.reddit.com",
+      "relevance_score": 0.99970406,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 2
+    },
+    {
+      "id": "[S6]",
+      "query": "Blake Shelton Miranda Lambert affair rumors",
+      "query_language": "en",
+      "title": "Blake Shelton and Miranda Lambert Divorce: New Details Revealed ...",
+      "content": "",
+      "source_url": "https://www.etonline.com/news/168403_details_on_blake_shelton_and_miranda_lambert_divorce_filing_as_cheating_rumors_swirl",
+      "domain": "www.etonline.com",
+      "relevance_score": 0.9996947,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 3
+    },
+    {
+      "id": "[S7]",
+      "query": "Miranda Lambert Blake Shelton cheating scandal",
+      "query_language": "en",
+      "title": "Cheating rumors fly after Miranda Lambert-Blake Shelton divorce ...",
+      "content": "",
+      "source_url": "https://www.latimes.com/entertainment/gossip/la-et-mg-miranda-lambert-blake-shelton-cheating-rumors-divorce-0150722-story.html",
+      "domain": "www.latimes.com",
+      "relevance_score": 0.8245895,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S8]",
+      "query": "Miranda Lambert Blake Shelton cheating scandal",
+      "query_language": "en",
+      "title": "The Real Reasons Miranda Lambert And Blake Shelton Divorced",
+      "content": "",
+      "source_url": "https://www.nickiswift.com/38545/real-reasons-miranda-lambert-blake-shelton-divorced/",
+      "domain": "www.nickiswift.com",
+      "relevance_score": 0.8018276,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 2
+    },
+    {
+      "id": "[S18]",
+      "query": "Miranda Lambert and Blake Shelton had an affair, her ex claims",
+      "query_language": "vi",
+      "title": "Miranda Lambert and Blake Shelton had an affair, her ex claims",
+      "content": "",
+      "source_url": "https://www.foxnews.com/entertainment/miranda-lambert-and-blake-shelton-had-an-affair-her-ex-claims",
+      "domain": "www.foxnews.com",
+      "relevance_score": 0.8891543,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "vi",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S19]",
+      "query": "Miranda Lambert and Blake Shelton had an affair, her ex claims",
+      "query_language": "vi",
+      "title": "Miranda Lambert's ex claims she cheated on him with Blake Shelton",
+      "content": "",
+      "source_url": "https://www.nydailynews.com/2018/04/28/miranda-lamberts-ex-claims-she-cheated-on-him-with-blake-shelton/",
+      "domain": "www.nydailynews.com",
+      "relevance_score": 0.8679453,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "vi",
+      "rank_within_query_language": 2
+    },
+    {
+      "id": "[S20]",
+      "query": "Miranda Lambert and Blake Shelton had an affair, her ex claims",
+      "query_language": "en",
+      "title": "Miranda Lambert's ex accuses her AND Blake Shelton of cheating",
+      "content": "",
+      "source_url": "https://www.dailymail.co.uk/tvshowbiz/article-5670143/Miranda-Lamberts-ex-accuses-Blake-Shelton-cheating-other.html",
+      "domain": "www.dailymail.co.uk",
+      "relevance_score": 0.8536326,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S18]",
+      "query": "Miranda Lambert and Blake Shelton had an affair, her ex claims",
+      "query_language": "vi",
+      "title": "Miranda Lambert and Blake Shelton had an affair, her ex claims",
+      "content": "",
+      "source_url": "https://www.foxnews.com/entertainment/miranda-lambert-and-blake-shelton-had-an-affair-her-ex-claims",
+      "domain": "www.foxnews.com",
+      "relevance_score": 0.8891543,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "vi",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S19]",
+      "query": "Miranda Lambert and Blake Shelton had an affair, her ex claims",
+      "query_language": "vi",
+      "title": "Miranda Lambert's ex accuses her AND Blake Shelton of cheating",
+      "content": "",
+      "source_url": "https://www.dailymail.co.uk/tvshowbiz/article-5670143/Miranda-Lamberts-ex-accuses-Blake-Shelton-cheating-other.html",
+      "domain": "www.dailymail.co.uk",
+      "relevance_score": 0.8536326,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "vi",
+      "rank_within_query_language": 2
+    }
+  ]
+}

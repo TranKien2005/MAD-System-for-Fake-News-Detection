@@ -23,14 +23,12 @@ def create_llms():
         temperature=config.model.debate_temperature,
         api_key=api_key,
         base_url=base_url,
-        max_tokens=config.model.max_tokens,
     )
     llm_light = ChatOpenAI(
         model=config.model.light_model,
         temperature=config.model.parser_temperature,
         api_key=api_key,
         base_url=base_url,
-        max_tokens=config.model.max_tokens,
     )
     return llm_main, llm_light
 

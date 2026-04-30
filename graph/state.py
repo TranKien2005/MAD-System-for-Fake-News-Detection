@@ -15,7 +15,14 @@ def add_to_list(current: list, new: list) -> list:
 
 def update_dict(current: dict, new: dict) -> dict:
     """Reducer: merge new dictionary into existing one."""
+    if current is None: current = {}
+    if new is None: return current
     return {**current, **new}
+
+
+def last_value_reducer(current: any, new: any) -> any:
+    """Reducer: keep only the latest value."""
+    return new
 
 
 class KnowledgeEntry(TypedDict):
@@ -56,11 +63,11 @@ class MADState(TypedDict):
     source_scores: Annotated[dict[str, float], update_dict]
 
     # --- Search ---
-    pending_search_queries: list[dict]
-    pending_search_requests: list[dict]
+    pending_search_queries: Annotated[list[dict], last_value_reducer]
+    pending_search_requests: Annotated[list[dict], last_value_reducer]
     executed_queries: Annotated[list[str], add_to_list]
-    round_retrieval_plan: Annotated[list[dict], add_to_list]
-    round_search_results: Annotated[list[dict], add_to_list]
+    round_retrieval_plan: Annotated[list[dict], last_value_reducer]
+    round_search_results: Annotated[list[dict], last_value_reducer]
 
     # --- Claim Context ---
     claim_contexts: Annotated[dict[str, list[str]], update_dict]
@@ -71,20 +78,23 @@ class MADState(TypedDict):
     max_rounds: int
     debate_history: Annotated[list[DebateRound], add_to_list]
     claims_registry: Annotated[dict[str, list[dict]], update_dict]
-    current_defender_argument: str
-    current_challenger_argument: str
-    current_defender_claims: list[dict]
-    current_challenger_claims: list[dict]
-
+    current_defender_argument: Annotated[str, last_value_reducer]
+    current_challenger_argument: Annotated[str, last_value_reducer]
+    current_defender_claims: Annotated[list[dict], last_value_reducer]
+    current_challenger_claims: Annotated[list[dict], last_value_reducer]
+ 
     # --- Evaluator ---
     evaluator_rulings: Annotated[list[dict], add_to_list]
-
+ 
     # --- Status ---
-    active_side: str
-    verdict: dict | None
+    active_side: Annotated[str, last_value_reducer]
+    verdict: Annotated[dict | None, last_value_reducer]
+
+    # Các thuộc tính phụ trợ phục vụ benchmarking/test
+    custom_output_instructions: str | None
 
 
-def build_initial_state(news_text: str, max_rounds: int | None = None) -> MADState:
+def build_initial_state(news_text: str, max_rounds: int | None = None, custom_output_instructions: str | None = None) -> MADState:
     """Build a consistent initial state used by both CLI and UI entry points."""
     resolved_rounds = max_rounds if max_rounds is not None else config.debate.max_rounds
     return {
@@ -110,6 +120,7 @@ def build_initial_state(news_text: str, max_rounds: int | None = None) -> MADSta
         "current_challenger_claims": [],
         "evaluator_rulings": [],
         "verdict": None,
+        "custom_output_instructions": custom_output_instructions,
     }
 
 

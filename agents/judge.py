@@ -1,10 +1,11 @@
 """Judge agent (qualitative-first final verdict)."""
 
 import json
+from typing import Any
 
 from langchain_core.messages import HumanMessage
 
-from prompts.templates import JUDGE_PROMPT
+from prompts.templates import JUDGE_PROMPT_BASE, DEFAULT_JUDGE_OUTPUT_INSTRUCTIONS
 from agents.evaluator import format_knowledge_base
 
 
@@ -16,10 +17,13 @@ def judge(state: dict, llm) -> dict:
         state.get("evaluator_rulings", []),
     )
 
-    prompt = JUDGE_PROMPT.format(
+    output_instructions = state.get("custom_output_instructions") or DEFAULT_JUDGE_OUTPUT_INSTRUCTIONS
+
+    prompt = JUDGE_PROMPT_BASE.format(
         original_news=state["original_news"],
         knowledge_base=kb_text,
         full_debate_with_evaluator=full_history,
+        output_format_instructions=output_instructions
     )
 
     response = llm.invoke([HumanMessage(content=prompt)])
@@ -64,8 +68,13 @@ def _format_full_debate_with_evaluator(debate_history: list, evaluator_rulings: 
     return "\n".join(lines)
 
 
-def _parse_verdict(raw_text: str) -> dict:
-    text = raw_text.strip()
+def _parse_verdict(raw_text: Any) -> dict:
+    if isinstance(raw_text, list):
+        text = "".join([c.get("text", "") for c in raw_text if isinstance(c, dict)])
+    else:
+        text = str(raw_text)
+        
+    text = text.strip()
 
     if text.startswith("```"):
         lines = text.split("\n")
@@ -80,24 +89,17 @@ def _parse_verdict(raw_text: str) -> dict:
             try:
                 data = json.loads(text[start:end])
             except json.JSONDecodeError:
-                data = {}
+                raise ValueError(f"Không thể parse JSON từ kết quả của Judge: {text}")
         else:
-            data = {}
+            raise ValueError(f"Không tìm thấy JSON trong kết quả của Judge: {text}")
 
-    truth_score = data.get("truth_score", 0.5)
-    try:
-        truth_score = float(truth_score)
-    except (ValueError, TypeError):
-        truth_score = 0.5
+    # Trích xuất truth_score (BẮT BUỘC)
+    if "truth_score" not in data:
+        raise ValueError(f"Kết quả của Judge thiếu trường 'truth_score': {data}")
         
-    points = data.get("top_3_decisive_points", [])
-    reasoning = data.get("final_reasoning", "Không thể parse đầy đủ kết quả Judge.")
-
-    if not isinstance(points, list):
-        points = []
-
-    return {
-        "truth_score": truth_score,
-        "top_3_decisive_points": points[:3],
-        "final_reasoning": reasoning,
-    }
+    try:
+        data["truth_score"] = float(data["truth_score"])
+    except (ValueError, TypeError):
+        raise ValueError(f"Giá trị 'truth_score' của Judge không hợp lệ: {data.get('truth_score')}")
+        
+    return data

@@ -19,27 +19,28 @@ def build_workflow(llm_main, llm_light):
     def node_prepare_round(state: MADState) -> dict:
         safe_state = ensure_state_defaults(state)
         round_num = safe_state.get("current_round", 1)
-        print(f"\n🔎 [Round {round_num}] Lập kế hoạch truy vấn cho DEFENDER...")
-        result = plan_round_queries(safe_state, llm_light, side="DEFENDER")
-        result["active_side"] = "DEFENDER"
-        return result
-
-    def node_prepare_round_challenger(state: MADState) -> dict:
-        safe_state = ensure_state_defaults(state)
-        round_num = safe_state.get("current_round", 1)
-        print(f"\n🔎 [Round {round_num}] Lập kế hoạch truy vấn cho CHALLENGER...")
-        result = plan_round_queries(safe_state, llm_light, side="CHALLENGER")
         
-        # Manually merge with Defender's requests since we removed the reducer
-        existing = safe_state.get("pending_search_requests", [])
-        result["pending_search_requests"] = existing + result.get("pending_search_requests", [])
-        return result
+        print(f"\n🔎 [Round {round_num}] Lập kế hoạch truy vấn cho cả hai phe...")
+        
+        # Lập kế hoạch cho Defender
+        def_res = plan_round_queries(safe_state, llm_light, side="DEFENDER")
+        # Lập kế hoạch cho Challenger
+        cha_res = plan_round_queries(safe_state, llm_light, side="CHALLENGER")
+        
+        # Gộp các yêu cầu tìm kiếm
+        all_pending = def_res.get("pending_search_requests", []) + cha_res.get("pending_search_requests", [])
+        
+        return {
+            "pending_search_requests": all_pending,
+            "active_side": "DEFENDER" # Default
+        }
 
     def node_search_defender(state: MADState) -> dict:
         safe_state = ensure_state_defaults(state)
         safe_state["active_side"] = "DEFENDER"
         round_num = safe_state.get("current_round", 1)
-        print(f"\n🔍 [Round {round_num}] Tìm kiếm bằng chứng cho Defender...")
+        planned = [r for r in safe_state.get("pending_search_requests", []) if r.get("side") == "DEFENDER"]
+        print(f"\n🔍 [Round {round_num}] Tìm kiếm bằng chứng cho Defender với {len(planned)} truy vấn...")
         return search_round_evidence(safe_state)
 
     def node_search_round(state: MADState) -> dict:
@@ -52,7 +53,11 @@ def build_workflow(llm_main, llm_light):
 
     def node_score_sources(state: MADState) -> dict:
         safe_state = ensure_state_defaults(state)
-        return score_sources(safe_state, llm_main)
+        result = score_sources(safe_state, llm_main)
+        # Dọn dẹp danh sách chờ sau khi đã tìm kiếm xong
+        result["pending_search_requests"] = []
+        result["pending_search_queries"] = []
+        return result
 
     def node_defender(state: MADState) -> dict:
         safe_state = ensure_state_defaults(state)
@@ -107,6 +112,10 @@ def build_workflow(llm_main, llm_light):
             "current_round": current_round + 1,
         }
 
+    def node_sync_before_save(state: MADState) -> dict:
+        """Sync point to ensure both agents finished before saving."""
+        return {}
+
     def node_evaluator(state: MADState) -> dict:
         safe_state = ensure_state_defaults(state)
         round_num = safe_state.get("current_round", 1) - 1
@@ -130,9 +139,9 @@ def build_workflow(llm_main, llm_light):
         print("\n⚖️  [Judge] Đang tổng hợp và đưa ra phán quyết...")
         result = judge(safe_state, llm_main)
         verdict = result.get("verdict", {})
-        print(f"   → Winner: {verdict.get('winner', 'UNCERTAIN')}")
-        print(f"   → Margin: {verdict.get('margin', 'low')}")
-        print(f"   → Confidence: {verdict.get('confidence', 'N/A')}%")
+        for key, value in verdict.items():
+            if not isinstance(value, (list, dict)):
+                print(f"   → {key.title()}: {value}")
         return result
 
     def should_continue_debate(state: MADState) -> str:
@@ -148,24 +157,29 @@ def build_workflow(llm_main, llm_light):
     workflow = StateGraph(MADState)
 
     workflow.add_node("prepare_round", node_prepare_round)
-    workflow.add_node("prepare_round_challenger", node_prepare_round_challenger)
     workflow.add_node("search_defender", node_search_defender)
     workflow.add_node("search_round", node_search_round)
     workflow.add_node("score_sources", node_score_sources)
     workflow.add_node("defender", node_defender)
     workflow.add_node("challenger", node_challenger)
+    workflow.add_node("sync_round", node_sync_before_save)
     workflow.add_node("save_round", node_save_round)
     workflow.add_node("judge", node_judge)
 
     workflow.set_entry_point("prepare_round")
-
-    workflow.add_edge("prepare_round", "prepare_round_challenger")
-    workflow.add_edge("prepare_round_challenger", "search_defender")
-    workflow.add_edge("search_defender", "search_round")
+    workflow.add_edge("prepare_round", "search_defender")
+    workflow.add_edge("prepare_round", "search_round")
+    
+    workflow.add_edge("search_defender", "score_sources")
     workflow.add_edge("search_round", "score_sources")
+    
     workflow.add_edge("score_sources", "defender")
-    workflow.add_edge("defender", "challenger")
-    workflow.add_edge("challenger", "save_round")
+    workflow.add_edge("score_sources", "challenger")
+    
+    workflow.add_edge("defender", "sync_round")
+    workflow.add_edge("challenger", "sync_round")
+    workflow.add_edge("sync_round", "save_round")
+    
     workflow.add_conditional_edges(
         "save_round",
         should_continue_debate,

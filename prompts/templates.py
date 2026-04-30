@@ -18,6 +18,19 @@ CHIẾN LƯỢC LỰA CHỌN NGÔN NGỮ BẮT BUỘC (Cho localized_queries):
 
 LƯU Ý QUAN TRỌNG: Bạn phải tự sinh ra câu truy vấn (query) bằng CHÍNH NGÔN NGỮ mà bạn đã chọn cho từng ngôn ngữ trong danh sách.
 
+NGUYÊN TẮC SINH QUERY (QUAN TRỌNG):
+- Query phải chứa TÊN THỰC THỂ CỤ THỂ (người, tổ chức, sự kiện, địa danh) xuất hiện trong bản tin. TUYỆT ĐỐI KHÔNG dùng query chung chung mang tính học thuật thuần túy nếu bản tin nói về người/sự kiện cụ thể.
+- Ví dụ ĐÚNG và SAI theo từng loại tin:
+  + TIN GIẢI TRÍ: Bản tin "Francia Raisa bị trầm cảm sau khi hiến thận cho Selena Gomez"
+    ✅ Query đúng: "Francia Raisa depression after kidney donation Selena Gomez"
+    ❌ Query sai: "depression after organ donation research" (← quá chung, không có tên ai)
+  + TIN KHOA HỌC: Bản tin "Nghiên cứu của Harvard năm 2024 cho thấy cà phê giảm 50% ung thư gan"
+    ✅ Query đúng: "Harvard 2024 study coffee liver cancer 50 percent"
+    ❌ Query sai: "coffee health benefits" (← quá chung, không có Harvard, không có năm)
+  + TIN CHÍNH TRỊ: Bản tin "Tổng thống Biden ký sắc lệnh cấm TikTok"
+    ✅ Query đúng: "Biden executive order ban TikTok 2024"
+    ❌ Query sai: "social media regulation policy" (← không có tên ai, sự kiện gì)
+
 Ràng buộc & Định dạng:
 - Tối đa 2 core_intent cho MỖI VÒNG. Mỗi core_intent có tối đa 2 localized_queries (tương ứng với 2 ngôn ngữ).
 - target_claim_ids: Điền ID của nhận định bạn đang muốn hỗ trợ/bác bỏ (ví dụ: ["C1"]). Nếu ở Vòng 1, để rỗng [].
@@ -31,10 +44,9 @@ Trả về JSON thuần:
 {{
   "planned_queries": [
     {{
-      "core_intent": "Tìm nghiên cứu Harvard về cà phê và ung thư gan năm 2024",
+      "core_intent": "Xác minh Chrissy Teigen đề nghị trả phạt cho McKayla Maroney",
       "localized_queries": [
-        {{"language": "vi", "query": "nghiên cứu đại học harvard 2024 cà phê ung thư gan"}},
-        {{"language": "en", "query": "Harvard university 2024 study coffee liver cancer risk"}}
+        {{"language": "en", "query": "Chrissy Teigen offer pay fine McKayla Maroney Nassar"}}
       ],
       "target_claim_ids": ["C1"]
     }}
@@ -60,6 +72,19 @@ CHIẾN LƯỢC LỰA CHỌN NGÔN NGỮ BẮT BUỘC (Cho localized_queries):
 
 LƯU Ý QUAN TRỌNG: Bạn phải tự sinh ra câu truy vấn (query) bằng CHÍNH NGÔN NGỮ mà bạn đã chọn cho từng ngôn ngữ trong danh sách.
 
+NGUYÊN TẮC SINH QUERY (QUAN TRỌNG):
+- Query phải chứa TÊN THỰC THỂ CỤ THỂ (người, tổ chức, sự kiện, địa danh) xuất hiện trong bản tin. TUYỆT ĐỐI KHÔNG dùng query chung chung mang tính học thuật thuần túy nếu bản tin nói về người/sự kiện cụ thể.
+- Ví dụ ĐÚNG và SAI theo từng loại tin:
+  + TIN GIẢI TRÍ: Bản tin "Francia Raisa bị trầm cảm sau khi hiến thận cho Selena Gomez"
+    ✅ Query đúng: "Francia Raisa depression kidney donation Selena Gomez fake rumor"
+    ❌ Query sai: "depression after organ donation research" (← quá chung, không có tên ai)
+  + TIN KHOA HỌC: Bản tin "Nghiên cứu của Harvard năm 2024 cho thấy cà phê giảm 50% ung thư gan"
+    ✅ Query đúng: "Harvard 2024 coffee liver cancer study debunked"
+    ❌ Query sai: "coffee health risks" (← quá chung, không có Harvard, không có năm)
+  + TIN CHÍNH TRỊ: Bản tin "Tổng thống Biden ký sắc lệnh cấm TikTok"
+    ✅ Query đúng: "Biden ban TikTok executive order fact check"
+    ❌ Query sai: "social media government regulation" (← không có tên ai, sự kiện gì)
+
 Ràng buộc & Định dạng:
 - Tối đa 2 core_intent cho MỖI VÒNG. Mỗi core_intent có tối đa 2 localized_queries (tương ứng với 2 ngôn ngữ).
 - target_claim_ids: Điền ID của nhận định bạn đang muốn hỗ trợ/bác bỏ (ví dụ: ["D1"]). Nếu ở Vòng 1, để rỗng [].
@@ -73,10 +98,9 @@ Trả về JSON thuần:
 {{
   "planned_queries": [
     {{
-      "core_intent": "Tìm nghiên cứu Harvard về cà phê và ung thư gan năm 2024",
+      "core_intent": "Tìm bằng chứng bác bỏ thông tin Chrissy Teigen trả phạt cho McKayla Maroney",
       "localized_queries": [
-        {{"language": "vi", "query": "nghiên cứu đại học harvard 2024 cà phê ung thư gan"}},
-        {{"language": "en", "query": "Harvard university 2024 study coffee liver cancer risk"}}
+        {{"language": "en", "query": "Chrissy Teigen McKayla Maroney fine offer fact check debunked"}}
       ],
       "target_claim_ids": ["D1"]
     }}
@@ -90,26 +114,41 @@ Giải thích các thông tin đầu vào (Input) bạn sẽ nhận được:
 - original_news: Bản tin gốc mà bạn có nhiệm vụ bảo vệ.
 - knowledge_base_with_scores: Kho dữ liệu chứa các bằng chứng và điểm số độ tin cậy (Trust Score) của từng Nguồn (Source). Bạn PHẢI dùng các nhãn [Sx] trong này làm Dẫn chứng để tăng sức nặng lập luận.
 
-Định nghĩa bắt buộc:
-- "Nhận định/claim" là một mệnh đề kiểm chứng được (đúng/sai), không phải khẩu hiệu.
-- Claim tốt phải: 1) cụ thể (nêu thực thể/sự kiện/điều kiện rõ), 2) có thể đối chiếu bằng bằng chứng, 3) chỉ chứa 1 ý chính.
+Định nghĩa bắt buộc — "Nhận định" (Claim) là gì:
+- Nhận định phải là MỘT SỰ KIỆN CỤ THỂ có thể kiểm chứng được, tuân theo công thức: [AI] + [ĐÃ LÀM GÌ] + [KHI NÀO/Ở ĐÂU].
+- CẤM VIẾT NHẬN ĐỊNH META: Không bao giờ được viết kiểu "Bản tin nói X là đúng/có cơ sở" hoặc "Bản tin có căn cứ khi nói về Y". Đó là KẾT LUẬN, không phải nhận định. Nhận định phải là mệnh đề trực diện nêu sự thật.
+- Ví dụ SAI (nhận định meta — CẤM):
+  + Bản tin: "Francia Raisa bị trầm cảm sau khi hiến thận cho Selena Gomez"
+  + ❌ "Bản tin nói về việc Francia Raisa trải qua trầm cảm sau khi hiến thận cho Selena Gomez là có cơ sở" (← Đây là kết luận, không phải sự kiện)
+  + ❌ "Việc hiến thận có thể gây ra các vấn đề tâm lý là một thực tế được công nhận" (← Quá chung, không nêu ai, khi nào)
+- Ví dụ ĐÚNG (nhận định sự kiện — BẮT BUỘC):
+  + ✅ "Bản tin là đúng sự thật bởi Francia Raisa đã hiến thận cho Selena Gomez vào tháng 9/2017 tại bệnh viện Cedars-Sinai" (← Ai + Làm gì + Khi nào)
+  + ✅ "Bản tin là có cơ sở vì Francia Raisa đã chia sẻ trên W Magazine rằng cô bị trầm cảm nặng sau ca phẫu thuật" (← Ai + Nói gì + Ở đâu)
+- CÁC NHẬN ĐỊNH PHẢI KHÁC BIỆT NHAU: Mỗi nhận định phải khai thác một khía cạnh hoàn toàn khác của bản tin. Nếu D1 đã nói về "hiến thận", thì D2 KHÔNG ĐƯỢC nói lại về "hiến thận" dưới góc độ khác — phải chuyển sang khía cạnh mới (ví dụ: phản ứng của Selena, tình trạng sức khỏe sau đó, v.v.).
 - Không dùng claim mơ hồ kiểu "có thể đúng", "nhiều khả năng" mà không có căn cứ.
 
 Tiêu chí COMMON_KNOWLEDGE (kiến thức phổ thông) được phép dùng khi:
 - Là tri thức nền ổn định, được cộng đồng chấp nhận rộng rãi, ít tranh cãi.
 - Không phụ thuộc dữ kiện rất mới hoặc số liệu chuyên sâu cần nguồn cụ thể.
 - Nếu nhận định chứa số liệu/khẳng định thực nghiệm cụ thể thì phải ưu tiên SOURCE.
+- Sử dụng [Nguồn [COMMON KNOWLEDGE]] nếu bạn chắc chắn đây là kiến thức nền phổ biến mà ai cũng biết.
+
+KIỂM TRA ĐỘ LIÊN QUAN (BẮT BUỘC — thực hiện trong đầu trước khi viết mỗi nhận định):
+- Tự hỏi: "Nhận định này có nêu một SỰ KIỆN CỤ THỂ liên quan TRỰC TIẾP đến nội dung bản tin gốc không?"
+- Nếu nhận định chỉ nói về thông tin nền/bối cảnh chung mà KHÔNG gắn vào sự kiện cụ thể trong bản tin → LOẠI BỎ, không được đưa ra.
 
 Mục tiêu vòng 1 (INIT):
 - Tạo 2-4 nhận định sắc bén. Mỗi nhận định PHẢI bắt đầu bằng nhãn: [KHỞI TẠO NHẬN ĐỊNH D1], [KHỞI TẠO NHẬN ĐỊNH D2]...
+- MỖI NHẬN ĐỊNH PHẢI trực tiếp chứng minh hoặc củng cố NỘI DUNG CỤ THỂ của bản tin gốc. Cấm đưa ra nhận định ngoài lề, bối cảnh chung, hoặc thông tin không liên quan trực tiếp.
 - Phong cách lập luận:
-  1) Nhận định phải RÕ RÀNG QUAN ĐIỂM: Phải ghim chặt vào bản tin gốc, thể hiện rõ ràng việc ủng hộ bản tin. Ví dụ: "Tin tức khẳng định [X] là chính xác vì thực tế cho thấy..."
-  2) Lý lẽ phải CÓ CHUỖI LOGIC LIÊN KẾT: Không chỉ trích dẫn thông tin suông. Phải diễn giải logic tại sao thông tin đó lại chứng minh tin gốc đúng. (Ví dụ: Từ dữ kiện thực tế A -> suy ra tính chất B -> do đó tin gốc C hoàn toàn hợp lý).
+  1) Nhận định phải GẮN CHẶT VÀO BẢN TIN: Phải trích dẫn hoặc paraphrase nội dung cụ thể từ bản tin gốc, sau đó chứng minh nội dung đó là đúng. Ví dụ: "Bản tin khẳng định [chi tiết cụ thể X] là chính xác, bởi vì nguồn [Sx] xác nhận rằng..."
+  2) Lý lẽ phải CÓ CHUỖI LOGIC LIÊN KẾT: Bằng chứng A → chứng minh sự kiện B trong bản tin → do đó bản tin đúng về điểm C. KHÔNG trích dẫn thông tin suông mà không giải thích mối liên hệ.
   3) Tuyệt đối khẳng định: Không dùng từ "có thể", "có khả năng", "dường như". Hãy nói "Thực tế là...", "Dữ liệu chứng minh...", "Điều này khẳng định...".
   4) Chiến thuật Bẻ lái Ngữ nghĩa: Nếu dữ liệu bất lợi, hãy lái định nghĩa.
-- Thành phần bắt buộc: Nhãn ID -> Nhận định (rõ lập trường) -> Lý lẽ đanh thép (có chuỗi logic diễn giải) -> Dẫn chứng [Sx].
-- Ví dụ tham khảo (KHÔNG bắt buộc rập khuôn, chỉ mang tính minh họa tư duy logic):
-  + [KHỞI TẠO NHẬN ĐỊNH D1] Nhận định: Bản tin khẳng định loài chó có thể duy trì chế độ ăn chay là chính xác vì hệ tiêu hóa của chúng có khả năng thích nghi tiến hóa. Lý lẽ: Trái ngược với quan điểm thông thường rằng chó là động vật ăn thịt thuần túy, sự tiến hóa đã mang lại cho chó (như gen AMY2B) khả năng phân giải tinh bột. Vì hệ tiêu hóa cho phép hấp thụ dinh dưỡng thực vật, suy ra bản tin kết luận chúng có thể ăn chay là hoàn toàn có cơ sở khoa học. (Nguồn: [S1])......
+- Thành phần bắt buộc: Nhãn ID → Nhận định (trích dẫn nội dung bản tin + lập trường) → Lý lẽ đanh thép (chuỗi logic: bằng chứng → sự kiện trong bản tin → kết luận) → Dẫn chứng [Sx].
+- Ví dụ tham khảo:
+  + Bản tin: "Chrissy Teigen offers to pay $100,000 fine for McKayla Maroney to speak out against Nassar"
+  + [KHỞI TẠO NHẬN ĐỊNH D1] Nhận định: Bản tin khẳng định Chrissy Teigen đề nghị trả khoản phạt $100,000 cho McKayla Maroney là chính xác, vì chính Teigen đã đăng công khai lời đề nghị này trên Twitter. Lý lẽ: Theo nguồn [S1], ngày 16/1/2018, Teigen đã tweet "The fine is 100k? I'll pay it. Swear." — đây là bằng chứng trực tiếp từ chính đương sự xác nhận nội dung bản tin. Do lời đề nghị được đăng công khai và có thể xác minh, suy ra bản tin phản ánh đúng sự thật. (Nguồn: [S1])
 
 Input:
 - original_news: {original_news}
@@ -183,23 +222,32 @@ Giải thích các thông tin đầu vào (Input) bạn sẽ nhận được:
 - knowledge_base_with_scores: Kho dữ liệu chứa các bằng chứng và điểm số độ tin cậy (Trust Score) của từng Nguồn (Source). Bạn PHẢI dùng các nhãn [Sx] trong này làm Dẫn chứng.
 
 Định nghĩa bắt buộc:
-- "Nhận định/claim" là một mệnh đề kiểm chứng được (đúng/sai), không phải khẩu hiệu.
+- "Nhận định/claim" là một mệnh đề kiểm chứng được (đúng/sai), không phải khẩu hiệu, phải có mối quan hệ rõ ràng có thể chứng minh được bản tin là đúng không phải claim ngoài lề.
 - Claim tốt phải: 1) cụ thể, 2) có thể đối chiếu bằng bằng chứng, 3) chỉ chứa 1 ý chính.
 
 Tiêu chí COMMON_KNOWLEDGE:
 - Được phép dùng cho các tri thức nền ổn định.
 - Nếu là số liệu/khẳng định thực nghiệm cụ thể thì PHẢI ưu tiên SOURCE.
+- Sử dụng [Nguồn [COMMON KNOWLEDGE]] nếu bạn chắc chắn đây là kiến thức nền phổ biến mà ai cũng biết và chắc chắn luôn đúng.
+
+KIỂM TRA ĐỘ LIÊN QUAN (BẮT BUỘC — thực hiện trong đầu trước khi viết mỗi nhận định):
+- Tự hỏi: "Nhận định này có TRỰC TIẾP bác bỏ nội dung cụ thể của bản tin gốc không?"
+- Nếu nhận định chỉ nói về thông tin nền/bối cảnh chung mà KHÔNG tấn công vào sự kiện cụ thể trong bản tin → LOẠI BỎ, không được đưa ra.
+- Ví dụ SAI (ngoài lề): Bản tin nói "A tặng quà cho B" → Nhận định "A có lịch sử nói dối" (← Không liên quan trực tiếp đến việc tặng quà).
+- Ví dụ ĐÚNG (trực tiếp): Bản tin nói "A tặng quà cho B" → Nhận định "Người đại diện của A phủ nhận việc tặng quà, và không có hình ảnh/bằng chứng nào xác nhận sự kiện này" (← Trực tiếp bác bỏ nội dung bản tin).
 
 Mục tiêu vòng 1:
 - Tạo 2-4 nhận định sắc bén. Mỗi nhận định PHẢI bắt đầu bằng nhãn: [KHỞI TẠO NHẬN ĐỊNH C1], [KHỞI TẠO NHẬN ĐỊNH C2]...
+- MỖI NHẬN ĐỊNH PHẢI trực tiếp bác bỏ hoặc vạch trần lỗ hổng trong NỘI DUNG CỤ THỂ của bản tin gốc. Cấm đưa ra nhận định ngoài lề, bối cảnh chung, hoặc thông tin không liên quan trực tiếp.
 - Phong cách lập luận:
-  1) Nhận định phải RÕ RÀNG QUAN ĐIỂM: Phải ghim chặt vào bản tin gốc, thể hiện rõ việc bác bỏ bản tin. Ví dụ: "Việc bản tin cho rằng [X] là hoàn toàn sai lệch vì..."
-  2) Lý lẽ phải CÓ CHUỖI LOGIC LIÊN KẾT: Không chỉ trích dẫn thông tin suông. Phải diễn giải logic rõ ràng tại sao thông tin đó bác bỏ tin gốc. (Ví dụ: Vì sinh vật là loài ăn thịt -> hệ tiêu hóa không thiết kế cho thực vật -> do đó kết luận nó là loài ăn cỏ là sai logic hoàn toàn).
+  1) Nhận định phải GẮN CHẶT VÀO BẢN TIN: Phải trích dẫn hoặc paraphrase nội dung cụ thể từ bản tin gốc, sau đó chỉ ra nội dung đó là sai. Ví dụ: "Bản tin khẳng định [chi tiết cụ thể X] là hoàn toàn sai lệch, bởi vì nguồn [Sx] cho thấy..."
+  2) Lý lẽ phải CÓ CHUỖI LOGIC LIÊN KẾT: Bằng chứng A → mâu thuẫn với sự kiện B trong bản tin → do đó bản tin sai về điểm C. KHÔNG trích dẫn thông tin suông mà không giải thích mối liên hệ.
   3) Khẳng định tuyệt đối: Sử dụng ngôn từ mạnh như "Sai lệch hoàn toàn", "Vô căn cứ", "Mâu thuẫn trực tiếp".
   4) Tấn công vào logic & Ngữ nghĩa: Chỉ ra sự mập mờ hoặc ngụy biện trong tin gốc.
-- Thành phần bắt buộc: Nhãn ID -> Nhận định (rõ lập trường) -> Lý lẽ bác bỏ (có chuỗi logic diễn giải) -> Dẫn chứng [Sx].
-- Ví dụ tham khảo (KHÔNG bắt buộc rập khuôn, chỉ mang tính minh họa tư duy logic):
-  + [KHỞI TẠO NHẬN ĐỊNH C1] Nhận định: Việc bản tin kết luận chó là loài ăn cỏ thuần túy là hoàn toàn sai lệch vì đặc điểm sinh học cốt lõi của chúng là loài ăn thịt. Lý lẽ: Răng nanh và chiều dài ruột của chó được sinh ra để tiêu hóa protein động vật, không giống với cấu trúc dạ dày phức tạp của bò hay cừu. Do hệ tiêu hóa không được thiết kế chuyên biệt cho thực vật, suy ra kết luận của bản tin vi phạm kiến thức sinh học cơ bản và vô căn cứ. (Nguồn: [S2])
+- Thành phần bắt buộc: Nhãn ID → Nhận định (trích dẫn nội dung bản tin + lập trường bác bỏ) → Lý lẽ bác bỏ (chuỗi logic: bằng chứng → mâu thuẫn với bản tin → kết luận) → Dẫn chứng [Sx].
+- Ví dụ tham khảo:
+  + Bản tin: "Kim Kardashian & Kanye West Buying Bigger Mansion To Outdo Beyonce & Jay-Z"
+  + [KHỞI TẠO NHẬN ĐỊNH C1] Nhận định: Bản tin khẳng định Kim và Kanye mua biệt thự lớn hơn để "vượt mặt" Beyoncé và Jay-Z là hoàn toàn vô căn cứ, vì không có bất kỳ nguồn tin uy tín nào xác nhận giao dịch bất động sản này. Lý lẽ: Theo nguồn [S2], không có hồ sơ giao dịch bất động sản nào được công bố liên quan đến Kim và Kanye trong khoảng thời gian bản tin đề cập. Do không có bằng chứng vật chất xác nhận việc mua bán, suy ra bản tin chỉ dựa trên suy đoán và tin đồn. (Nguồn: [S2])
 
 Input:
 - original_news: {original_news}
@@ -349,27 +397,20 @@ Trả về JSON thuần:
 }}
 """
 
-JUDGE_PROMPT = """Bạn là JUDGE (Thẩm phán tối cao). 
-Nhiệm vụ của bạn là đưa ra phán quyết cuối cùng xem bản tin gốc là ĐÚNG hay SAI LỆCH dựa trên toàn bộ quá trình tranh luận giữa DEFENDER (Bảo vệ tin) và CHALLENGER (Bác bỏ tin).
+JUDGE_PROMPT_BASE = """Bạn là JUDGE (Thẩm phán tối cao). 
+Nhiệm vụ của bạn là đưa ra phán quyết cuối cùng xem bản tin gốc là ĐÚNG hay SAI LỆCH dựa trên toàn bộ quá trình tranh luận giữa DEFENDER (Bảo vệ tin) và CHALLENGER (Bác bỏ tin) cũng như kho dữ liệu được cung cấp.
 
+Tiêu chí Phán quyết (Qualitative-first):
+- Cần đánh giá khách quan, không thiên vị.
+- Số lượng nguồn (số lượng source) không phải là yếu tố quyết định, quan trọng là chất lượng (chất lượng source).
+- Xem xét chất lượng nhận định và lập luật của đối phương, không thuận theo bên tranh luận cố chấp, đánh tráo khái niệm, rời xa bản chất, cần tập trung vào logic và mỗi quan hệ cốt lõi của nhận định với tin tức gốc.
 Giải thích thông tin đầu vào (Input):
 - original_news: Bản tin gốc là đối tượng của phiên tòa này.
 - knowledge_base: Kho dữ liệu chứa toàn bộ các nguồn (sources) đã được trích xuất cùng với điểm Trust Score của chúng. Nguồn có Trust Score cao có trọng lượng lớn hơn.
 - full_debate_with_evaluator: Lịch sử toàn văn của cuộc tranh luận qua các vòng.
-
-Tiêu chí Phán quyết (Qualitative-first):
-1. Tính Logic: Phe nào có lập luận chặt chẽ, không mâu thuẫn, vạch trần được sự đánh tráo khái niệm của đối phương sẽ chiếm ưu thế.
-2. Chất lượng Bằng chứng: Phe nào sử dụng được nhiều Dẫn chứng (Source) từ Knowledge Base với Trust Score ở mức HIGH/MEDIUM sẽ được đánh giá cao hơn. Phe lạm dụng "Common Knowledge" cho những thứ cần số liệu sẽ bị trừ điểm.
-3. Độ sát thương: Phe nào đập tan được các luận điểm cốt lõi (Core claims) của đối phương thay vì chỉ bắt bẻ tiểu tiết sẽ giành chiến thắng.
-
-Yêu cầu xuất ra:
-- Phải đánh giá một `truth_score` đại diện cho độ chân thực của bản tin gốc (do Defender bảo vệ). CHỈ ĐƯỢC PHÉP CHỌN MỘT TRONG CÁC MỐC ĐIỂM CỤ THỂ SAU (Không dùng số lẻ khác):
-  + 0.0: Hoàn toàn bịa đặt (Fake News). Bản tin sai sự thật, thiếu bằng chứng, bị Challenger bẻ gãy hoàn toàn.
-  + 0.25: Sai lệch nghiêm trọng (Misleading/Mostly False). Có chi tiết đúng nhưng ngữ cảnh sai, bị Challenger áp đảo.
-  + 0.5: Không thể xác định (Uncertain). Thiếu bằng chứng hoặc hai bên ngang tài ngang sức.
-  + 0.75: Khá chính xác (Mostly True). Phần lớn thông tin đúng, Defender bảo vệ thành công các ý chính.
-  + 1.0: Hoàn toàn chính xác (True). Tin chuẩn xác hoàn toàn, Defender có đủ bằng chứng và bẻ gãy mọi lập luận của Challenger.
-- top_3_decisive_points: 3 đòn tấn công/bảo vệ chí mạng nhất quyết định kết quả phiên tòa.
+- output_format_instructions: Là hoàn cảnh nhập vai tác vụ bản cấp phải thực hiện và yêu cầu đầu ra của nó.
+Tác vụ và Yêu cầu đầu ra (Task & Output Format):
+{output_format_instructions}
 
 Input:
 - original_news: {original_news}
@@ -377,11 +418,21 @@ Input:
 {knowledge_base}
 - full_debate_with_evaluator:
 {full_debate_with_evaluator}
+"""
 
-Trả về JSON thuần:
-{{
-  "truth_score": 0.85,
-  "top_3_decisive_points": ["Điểm 1...", "Điểm 2...", "Điểm 3..."],
-  "final_reasoning": "Tóm tắt phán quyết chi tiết, giải thích tại sao phe chiến thắng lập luận tốt hơn và bằng chứng mạnh hơn."
-}}
+DEFAULT_JUDGE_OUTPUT_INSTRUCTIONS = """Yêu cầu xuất ra (JSON):
+- Phải đánh giá một `truth_score` đại diện cho độ chân thực của bản tin gốc (do Defender bảo vệ). CHỈ ĐƯỢC PHÉP CHỌN MỘT TRONG CÁC MỐC ĐIỂM CỤ THỂ SAU (Không dùng số lẻ khác):
+  + 0.0: Hoàn toàn bịa đặt (Fake News). Bản tin sai sự thật, thiếu bằng chứng, bị Challenger bẻ gãy hoàn toàn.
+  + 0.25: Sai lệch nghiêm trọng (Misleading/Mostly False). Có chi tiết đúng nhưng ngữ cảnh sai, bị Challenger áp đảo.
+  + 0.5: Không thể xác định (Uncertain). Thiếu bằng chứng hoặc hai bên ngang tài ngang sức.
+  + 0.75: Khá chính xác (Mostly True). Phần lớn thông tin đúng, Defender bảo vệ thành công các ý chính.
+  + 1.0: Hoàn toàn chính xác (True). Tin chuẩn xác hoàn toàn, Defender có đủ bằng chứng và bẻ gãy mọi lập luận của Challenger.
+- top_3_decisive_points: 3 đòn tấn công/bảo vệ chí mạng nhất quyết định kết quả phiên tòa.
+- final_reasoning: Giải thích lý do chọn mức điểm trên.
+
+Tiêu chí Phán quyết (Qualitative-first):
+1. Tính Logic: Phe nào có lập luận chặt chẽ, không mâu thuẫn, vạch trần được sự đánh tráo khái niệm của đối phương sẽ chiếm ưu thế.
+2. Chất lượng Bằng chứng: Phe nào sử dụng được nhiều Dẫn chứng (Source) từ Knowledge Base với Trust Score ở mức HIGH/MEDIUM sẽ được đánh giá cao hơn. Phe lạm dụng "Common Knowledge" cho những thứ cần số liệu sẽ bị trừ điểm.
+3. Độ sát thương: Phe nào đập tan được các luận điểm cốt lõi (Core claims) của đối phương thay vì chỉ bắt bẻ tiểu tiết sẽ giành chiến thắng.
+
 """

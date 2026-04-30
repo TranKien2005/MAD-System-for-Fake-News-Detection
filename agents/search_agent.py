@@ -10,6 +10,7 @@ import os
 import time
 import logging
 from typing import Any
+from typing import Any
 
 import wikipedia
 from langchain_core.messages import HumanMessage
@@ -33,7 +34,12 @@ def _safe_invoke(llm, messages, max_retries=3, delay=2):
     return None
 
 
-def parse_json_robust(text: str) -> dict:
+def parse_json_robust(text: Any) -> dict:
+    if isinstance(text, list):
+        text = "".join([c.get("text", "") for c in text if isinstance(c, dict)])
+    else:
+        text = str(text)
+        
     text = text.strip()
     try:
         return json.loads(text)
@@ -338,7 +344,6 @@ def search_round_evidence(state: dict) -> dict:
         "knowledge_base": new_entries,
         "round_search_results": round_results,
         "executed_queries": executed_labels,
-        "pending_search_requests": remaining_requests,
     }
 
 

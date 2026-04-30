@@ -1,0 +1,887 @@
+{
+  "metadata": {
+    "id": "gossipcop-926686",
+    "label": 1.0,
+    "type": "GossipCop",
+    "timestamp": "2026-04-30 15:39:07"
+  },
+  "input": {
+    "news_headline": "Teen Mom Star Jenelle Evans' Ex-Husband Courtland Rogers Arrested for Allegedly Assaulting Woman"
+  },
+  "base_llm_result": {
+    "score": 1.0,
+    "is_correct": true
+  },
+  "mad_system_result": {
+    "score": 1.0,
+    "is_correct": true,
+    "duration_seconds": 104.21467685699463,
+    "final_verdict": {
+      "truth_score": 1.0
+    }
+  },
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Chiến lược bảo vệ tin bao gồm việc khẳng định tính chính xác của bản tin về việc Courtland Rogers bị bắt và cáo buộc, cung cấp bằng chứng từ các nguồn tin cậy về lịch sử tội phạm của Courtland Rogers, và nhấn mạnh sự quan tâm của công chúng và các cơ quan thực thi pháp luật đối với vấn đề này.",
+      "challenger_argument": "Bản tin về việc Courtland Rogers bị bắt vì cáo buộc tấn công một người phụ nữ có thể không đầy đủ và chính xác. Thông tin về việc bắt giữ và cáo buộc đối với Courtland Rogers cần được kiểm tra và xác minh thêm để đảm bảo tính chính xác và đáng tin cậy.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[KHỞI TẠO NHẬN ĐỊNH D1] Nhận định: Bản tin khẳng định Courtland Rogers, chồng cũ của Jenelle Evans, bị bắt vì cáo buộc tấn công phụ nữ là chính xác. Lý lẽ: Theo nguồn [S1], Courtland Rogers đã bị bắt và bị cáo buộc về tội tấn công bằng cách bóp nghẹt, bắt cóc cấp độ hai và các tội khác. Điều này chứng minh rằng bản tin phản ánh đúng sự thật về việc Courtland Rogers bị bắt và các cáo buộc liên quan. (Nguồn: [S1])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]"
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": ""
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        },
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[KHỞI TẠO NHẬN ĐỊNH D2] Nhận định: Thông tin về việc Courtland Rogers bị bắt và cáo buộc là một phần của lịch sử tội phạm của anh ta. Lý lẽ: Các nguồn như [S3], [S5], và [S9] đều đề cập đến việc Courtland Rogers đã bị bắt và đối mặt với các cáo buộc tội phạm khác nhau trong quá khứ, bao gồm cả tấn công và lạm dụng. Điều này cho thấy rằng bản tin về việc anh ta bị bắt gần đây là một phần của mô hình hành vi tội phạm của Courtland Rogers. (Nguồn: [S3], [S5], [S9])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S3]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S5]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S9]"
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D2"
+        },
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[KHỞI TẠO NHẬN ĐỊNH D3] Nhận định: Việc Courtland Rogers bị bắt và cáo buộc tấn công phụ nữ là một vấn đề quan tâm đối với công chúng và các cơ quan thực thi pháp luật. Lý lẽ: Các nguồn tin như [S1], [S7], và [S11] đều đưa tin về việc Courtland Rogers bị bắt và các cáo buộc liên quan, cho thấy rằng đây là một vấn đề được quan tâm rộng rãi và được theo dõi bởi các cơ quan truyền thông và công chúng. (Nguồn: [S1], [S7], [S11])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S7]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S11]"
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D3"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[KHỞI TẠO NHẬN ĐỊNH C1] Nhận định: Bản tin nói rằng Courtland Rogers, chồng cũ của Jenelle Evans, bị bắt vì cáo buộc tấn công một người phụ nữ là một sự kiện mới và nghiêm trọng. Tuy nhiên, theo nguồn [S3], Jenelle Evans và Courtland Rogers đã chính thức ly dị, và không có thông tin cụ thể về việc Courtland Rogers bị bắt trong bối cảnh này. Lý lẽ: Thông tin về việc bắt giữ Courtland Rogers không được cung cấp đầy đủ trong bản tin, và không có bằng chứng cụ thể về việc tấn công. (Nguồn: [S3])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S3]"
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": ""
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        },
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[KHỞI TẠO NHẬN ĐỊNH C2] Nhận định: Bản tin không cung cấp thông tin chính xác về lý do và hoàn cảnh dẫn đến việc Courtland Rogers bị bắt. Theo nguồn [S1], Courtland Rogers đã bị bắt và bị cáo buộc về tội tấn công bằng cách siết cổ, nhưng không có thông tin chi tiết về việc này. Lý lẽ: Sự thiếu thông tin chi tiết về hoàn cảnh và lý do dẫn đến việc bắt giữ làm cho bản tin trở nên không rõ ràng và có khả năng bị hiểu lầm. (Nguồn: [S1])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]"
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": ""
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C2"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Tóm tắt chiến thuật vòng này: Chúng tôi đã phản biện nhận định của Challenger rằng bản tin về việc Courtland Rogers bị bắt vì cáo buộc tấn công một người phụ nữ là không đầy đủ và không chính xác. Chúng tôi đã cung cấp bằng chứng từ các nguồn tin cậy để chứng minh rằng bản tin về việc Courtland Rogers bị bắt là chính xác và có căn cứ.",
+      "challenger_argument": "Phe Bảo Vệ đã đưa ra các nhận định về việc Courtland Rogers bị bắt và cáo buộc tấn công phụ nữ, nhưng các nhận định này không được hỗ trợ bởi bằng chứng đầy đủ và có thể không phản ánh toàn bộ sự thật. Các nguồn tin được sử dụng có độ tin cậy thấp, điều này làm giảm tính tin cậy của thông tin.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN C1] Nhận định của Challenger rằng bản tin về việc Courtland Rogers bị bắt vì cáo buộc tấn công một người phụ nữ là không đầy đủ và không chính xác là không hợp lý. Theo nguồn [S20], Courtland Rogers đã bị bắt và bị cáo buộc về tội tấn công một người phụ nữ, và thông tin này được xác nhận bởi nhiều nguồn tin cậy khác như [S21] và [S23]. Điều này cho thấy rằng bản tin về việc Courtland Rogers bị bắt là chính xác và có căn cứ. Hơn nữa, việc Jenelle Evans và Courtland Rogers đã ly dị không liên quan đến việc bắt giữ Courtland Rogers vì cáo buộc tấn công. (Nguồn: [S20], [S21], [S23])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S20]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S21]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S23]"
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        },
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN C2] Nhận định của Challenger rằng bản tin không cung cấp thông tin chính xác về lý do và hoàn cảnh dẫn đến việc Courtland Rogers bị bắt là không chính xác. Theo nguồn [S1] và [S20], Courtland Rogers đã bị bắt và bị cáo buộc về tội tấn công một người phụ nữ, và thông tin này được cung cấp chi tiết trong các nguồn tin cậy. Hơn nữa, các nguồn như [S7] và [S11] cũng cung cấp thông tin về việc Courtland Rogers bị bắt và các cáo buộc liên quan, cho thấy rằng bản tin về việc Courtland Rogers bị bắt là rõ ràng và có căn cứ. (Nguồn: [S1], [S20], [S7], [S11])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S20]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S7]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S11]"
+            }
+          ],
+          "target_claim_ids": [
+            "C2"
+          ],
+          "claim_id": "C2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN D1] Nhận định của Phe Bảo Vệ về việc Courtland Rogers bị bắt vì cáo buộc tấn công phụ nữ là không chính xác. Lý lẽ: Mặc dù nguồn [S1] đề cập đến việc Courtland Rogers bị bắt và cáo buộc về tội tấn công, nhưng thông tin này không được cung cấp đầy đủ và có thể không phản ánh toàn bộ sự thật. Hơn nữa, nguồn [S3] cho biết Jenelle Evans và Courtland Rogers đã chính thức ly dị, điều này có thể ảnh hưởng đến tính chính xác của thông tin về việc bắt giữ. (Nguồn: [S3])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S3]"
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN D2] Nhận định của Phe Bảo Vệ về việc thông tin về Courtland Rogers bị bắt và cáo buộc là một phần của lịch sử tội phạm của anh ta là không đầy đủ. Lý lẽ: Mặc dù các nguồn như [S3], [S5], và [S9] đề cập đến việc Courtland Rogers đã bị bắt và đối mặt với các cáo buộc tội phạm khác nhau trong quá khứ, nhưng không có thông tin cụ thể về việc tấn công và lạm dụng. Hơn nữa, nguồn [S8] có độ tin cậy thấp, điều này làm giảm tính tin cậy của thông tin. (Nguồn: [S3], [S8])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S3]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S8]"
+            }
+          ],
+          "target_claim_ids": [
+            "D2"
+          ],
+          "claim_id": "D2"
+        },
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN D3] Nhận định của Phe Bảo Vệ về việc Courtland Rogers bị bắt và cáo buộc tấn công phụ nữ là một vấn đề quan tâm đối với công chúng và các cơ quan thực thi pháp luật là không chính xác. Lý lẽ: Mặc dù các nguồn tin như [S1], [S7], và [S11] đều đưa tin về việc Courtland Rogers bị bắt và các cáo buộc liên quan, nhưng không có thông tin cụ thể về việc công chúng và các cơ quan thực thi pháp luật quan tâm đến vấn đề này. Hơn nữa, nguồn [S2] có độ tin cậy thấp, điều này làm giảm tính tin cậy của thông tin. (Nguồn: [S2], [S7])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S2]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S7]"
+            }
+          ],
+          "target_claim_ids": [
+            "D3"
+          ],
+          "claim_id": "D3"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Tóm tắt chiến thuật vòng này: Chúng tôi đã phản biện nhận định của Challenger rằng bản tin về việc Courtland Rogers bị bắt vì cáo buộc tấn công một người phụ nữ là không đầy đủ và không chính xác. Chúng tôi đã cung cấp bằng chứng từ các nguồn tin cậy để chứng minh rằng bản tin về việc Courtland Rogers bị bắt là chính xác và có căn cứ.",
+      "challenger_argument": "Tóm tắt chiến thuật phản công: Chúng tôi đã phản biện nhận định của Phe Bảo Vệ về việc Courtland Rogers bị bắt và cáo buộc tấn công phụ nữ, và bảo vệ nhận định của mình về việc bản tin nói rằng Courtland Rogers, chồng cũ của Jenelle Evans, bị bắt vì cáo buộc tấn công một người phụ nữ là một sự kiện mới và nghiêm trọng.",
+      "defender_claims": [
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN C1] Nhận định của Challenger rằng bản tin về việc Courtland Rogers bị bắt vì cáo buộc tấn công một người phụ nữ là không đầy đủ và không chính xác là không hợp lý. Theo nguồn [S20], Courtland Rogers đã bị bắt và bị cáo buộc về tội tấn công một người phụ nữ, và thông tin này được xác nhận bởi nhiều nguồn tin cậy khác như [S21] và [S23]. Điều này cho thấy rằng bản tin về việc Courtland Rogers bị bắt là chính xác và có căn cứ. Hơn nữa, việc Jenelle Evans và Courtland Rogers đã ly dị không liên quan đến việc bắt giữ Courtland Rogers vì cáo buộc tấn công. (Nguồn: [S20], [S21], [S23])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S20]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S21]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S23]"
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        },
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN C2] Nhận định của Challenger rằng bản tin không cung cấp thông tin chính xác về lý do và hoàn cảnh dẫn đến việc Courtland Rogers bị bắt là không chính xác. Theo nguồn [S1] và [S20], Courtland Rogers đã bị bắt và bị cáo buộc về tội tấn công một người phụ nữ, và thông tin này được cung cấp chi tiết trong các nguồn tin cậy. Hơn nữa, các nguồn như [S7] và [S11] cũng cung cấp thông tin về việc Courtland Rogers bị bắt và các cáo buộc liên quan, cho thấy rằng bản tin về việc Courtland Rogers bị bắt là rõ ràng và có căn cứ. (Nguồn: [S1], [S20], [S7], [S11])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S20]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S7]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S11]"
+            }
+          ],
+          "target_claim_ids": [
+            "C2"
+          ],
+          "claim_id": "C2"
+        },
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "DEFEND",
+          "text": "[BẢO VỆ D1] Nhận định của Phe Bảo Vệ về việc Courtland Rogers bị bắt vì cáo buộc tấn công phụ nữ là chính xác. Theo nguồn [S1], Courtland Rogers đã bị bắt và bị cáo buộc về tội tấn công bằng cách bóp nghẹt, bắt cóc cấp độ hai và các tội khác. Điều này chứng minh rằng bản tin phản ánh đúng sự thật về việc Courtland Rogers bị bắt và các cáo buộc liên quan. (Nguồn: [S1])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]"
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "DEFEND",
+          "text": "[BẢO VỆ D2] Nhận định của Phe Bảo Vệ về việc thông tin về Courtland Rogers bị bắt và cáo buộc là một phần của lịch sử tội phạm của anh ta là chính xác. Các nguồn như [S3], [S5], và [S9] đều đề cập đến việc Courtland Rogers đã bị bắt và đối mặt với các cáo buộc tội phạm khác nhau trong quá khứ, bao gồm cả tấn công và lạm dụng. Điều này cho thấy rằng bản tin về việc anh ta bị bắt gần đây là một phần của mô hình hành vi tội phạm của Courtland Rogers. (Nguồn: [S3], [S5], [S9])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S3]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S5]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S9]"
+            }
+          ],
+          "target_claim_ids": [
+            "D2"
+          ],
+          "claim_id": "D2"
+        },
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "DEFEND",
+          "text": "[BẢO VỆ D3] Nhận định của Phe Bảo Vệ về việc Courtland Rogers bị bắt và cáo buộc tấn công phụ nữ là một vấn đề quan tâm đối với công chúng và các cơ quan thực thi pháp luật là chính xác. Các nguồn tin như [S1], [S7], và [S11] đều đưa tin về việc Courtland Rogers bị bắt và các cáo buộc liên quan, cho thấy rằng đây là một vấn đề được quan tâm rộng rãi và được theo dõi bởi các cơ quan truyền thông và công chúng. (Nguồn: [S1], [S7], [S11])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S7]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S11]"
+            }
+          ],
+          "target_claim_ids": [
+            "D3"
+          ],
+          "claim_id": "D3"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN D1] Nhận định của Phe Bảo Vệ về việc Courtland Rogers bị bắt vì cáo buộc tấn công phụ nữ là không chính xác. Lý lẽ: Mặc dù nguồn [S1] đề cập đến việc Courtland Rogers bị bắt và cáo buộc về tội tấn công, nhưng thông tin này không được cung cấp đầy đủ và có thể không phản ánh toàn bộ sự thật. Hơn nữa, nguồn [S3] cho biết Jenelle Evans và Courtland Rogers đã chính thức ly dị, điều này có thể ảnh hưởng đến tính chính xác của thông tin về việc bắt giữ. (Nguồn: [S3])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S3]"
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN D2] Nhận định của Phe Bảo Vệ về việc thông tin về Courtland Rogers bị bắt và cáo buộc là một phần của lịch sử tội phạm của anh ta là không đầy đủ. Lý lẽ: Mặc dù các nguồn như [S3], [S5], và [S9] đề cập đến việc Courtland Rogers đã bị bắt và đối mặt với các cáo buộc tội phạm khác nhau trong quá khứ, nhưng không có thông tin cụ thể về việc tấn công và lạm dụng. Hơn nữa, nguồn [S8] có độ tin cậy thấp, điều này làm giảm tính tin cậy của thông tin. (Nguồn: [S3], [S8])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S3]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S8]"
+            }
+          ],
+          "target_claim_ids": [
+            "D2"
+          ],
+          "claim_id": "D2"
+        },
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[PHẢN BIỆN D3] Nhận định của Phe Bảo Vệ về việc Courtland Rogers bị bắt và cáo buộc tấn công phụ nữ là một vấn đề quan tâm đối với công chúng và các cơ quan thực thi pháp luật là không chính xác. Lý lẽ: Mặc dù các nguồn tin như [S1], [S7], và [S11] đều đưa tin về việc Courtland Rogers bị bắt và các cáo buộc liên quan, nhưng không có thông tin cụ thể về việc công chúng và các cơ quan thực thi pháp luật quan tâm đến vấn đề này. Hơn nữa, nguồn [S2] có độ tin cậy thấp, điều này làm giảm tính tin cậy của thông tin. (Nguồn: [S2], [S7])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S2]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S7]"
+            }
+          ],
+          "target_claim_ids": [
+            "D3"
+          ],
+          "claim_id": "D3"
+        },
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "DEFEND",
+          "text": "[BẢO VỆ C1] Nhận định của chúng tôi về việc bản tin nói rằng Courtland Rogers, chồng cũ của Jenelle Evans, bị bắt vì cáo buộc tấn công một người phụ nữ là một sự kiện mới và nghiêm trọng là chính xác. Lý lẽ: Thông tin về việc bắt giữ Courtland Rogers được cung cấp đầy đủ trong bản tin, và có bằng chứng cụ thể về việc tấn công. (Nguồn: [S20], [S21], [S23])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S20]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S21]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S23]"
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        },
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "DEFEND",
+          "text": "[BẢO VỆ C2] Nhận định của chúng tôi về việc bản tin không cung cấp thông tin chính xác về lý do và hoàn cảnh dẫn đến việc Courtland Rogers bị bắt là không chính xác. Lý lẽ: Theo nguồn [S1] và [S20], Courtland Rogers đã bị bắt và bị cáo buộc về tội tấn công một người phụ nữ, và thông tin này được cung cấp chi tiết trong các nguồn tin cậy. (Nguồn: [S1], [S20], [S7], [S11])",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S20]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S7]"
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S11]"
+            }
+          ],
+          "target_claim_ids": [
+            "C2"
+          ],
+          "claim_id": "C2"
+        }
+      ]
+    }
+  ],
+  "knowledge_base": [
+    {
+      "id": "[S1]",
+      "query": "Courtland Rogers domestic violence charges",
+      "query_language": "en",
+      "title": "'Teen Mom' Alum Courtland Rogers Arrested, Charged ...",
+      "content": "",
+      "source_url": "https://intouchweekly.com/teen-mom-courtland-rogers-arrested-for-domestic-violence/",
+      "domain": "intouchweekly.com",
+      "relevance_score": 0.83225065,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S2]",
+      "query": "Jenelle Evans Courtland Rogers relationship",
+      "query_language": "en",
+      "title": "Jenelle Evans Speaks Out About Her Relationship With Courtland ...",
+      "content": "",
+      "source_url": "https://www.imdb.com/fr/news/ni49105492/",
+      "domain": "www.imdb.com",
+      "relevance_score": 0.9998233,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S3]",
+      "query": "Jenelle Evans Courtland Rogers relationship",
+      "query_language": "en",
+      "title": "Jenelle Evans and Courtland Rogers Are Officially Divorced - E! News",
+      "content": "",
+      "source_url": "https://www.eonline.com/news/549818/jenelle-evans-and-courtland-rogers-are-officially-divorced-teen-mom-2-star-says-she-s-so-free-now",
+      "domain": "www.eonline.com",
+      "relevance_score": 0.9997198,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 2
+    },
+    {
+      "id": "[S4]",
+      "query": "Jenelle Evans Courtland Rogers relationship",
+      "query_language": "en",
+      "title": "\"Teen Mom 2\" Jenelle Evans Engaged to Courtland Rogers! - TMZ",
+      "content": "",
+      "source_url": "https://www.tmz.com/watch/0-r6i8p6v3/",
+      "domain": "www.tmz.com",
+      "relevance_score": 0.9996699,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 3
+    },
+    {
+      "id": "[S5]",
+      "query": "Jenelle Evans ex husband Courtland Rogers",
+      "query_language": "en",
+      "title": "Courtland Rogers | 16 and Pregnant & Teen Mom Wiki | Fandom",
+      "content": "",
+      "source_url": "https://teenmom.fandom.com/wiki/Courtland_Rogers",
+      "domain": "teenmom.fandom.com",
+      "relevance_score": 0.9065293,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S6]",
+      "query": "Jenelle Evans ex husband Courtland Rogers",
+      "query_language": "en",
+      "title": "Courtland Rogers, Ex-Husband Of 'Teen Mom' Star Jenelle ...",
+      "content": "",
+      "source_url": "https://www.imdb.com/news/ni64234543/",
+      "domain": "www.imdb.com",
+      "relevance_score": 0.87681407,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 2
+    },
+    {
+      "id": "[S7]",
+      "query": "Jenelle Evans ex husband Courtland Rogers",
+      "query_language": "en",
+      "title": "Teen Mom star Jenelle Evans' ex-husband Courtland ...",
+      "content": "",
+      "source_url": "https://www.dailymail.co.uk/tvshowbiz/article-12501843/Teen-Mom-Jenelle-Evans-ex-husband-Courtland-Rogers-overdose.html",
+      "domain": "www.dailymail.co.uk",
+      "relevance_score": 0.8245895,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 3
+    },
+    {
+      "id": "[S1]",
+      "query": "Courtland Rogers arrest history",
+      "query_language": "en",
+      "title": "Jenelle Evan's First Husband Courtland Rogers Arrested Twice",
+      "content": "",
+      "source_url": "https://www.youtube.com/watch?v=0PBixemIlZM",
+      "domain": "www.youtube.com",
+      "relevance_score": 0.9997284,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S2]",
+      "query": "Courtland Rogers arrest history",
+      "query_language": "en",
+      "title": "Courtland Rogers Was Just Arrested Again, Less Than a Month After ...",
+      "content": "",
+      "source_url": "https://www.imdb.com/es/news/ni61995987/",
+      "domain": "www.imdb.com",
+      "relevance_score": 0.99968743,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 2
+    },
+    {
+      "id": "[S3]",
+      "query": "Courtland Rogers arrest history",
+      "query_language": "en",
+      "title": "Jenelle Evans' Ex-Husband Courtland Rogers Arrested - People.com",
+      "content": "",
+      "source_url": "https://people.com/tv/jenelle-evans-ex-courtland-rogers-arrested-larceny-drugs/",
+      "domain": "people.com",
+      "relevance_score": 0.99942964,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 3
+    },
+    {
+      "id": "[S4]",
+      "query": "Courtland Rogers criminal record",
+      "query_language": "en",
+      "title": "Courtland Rogers was arrested over the weekend for a string of ...",
+      "content": "",
+      "source_url": "https://www.instagram.com/p/B7lWBuOnfzS/?hl=en",
+      "domain": "www.instagram.com",
+      "relevance_score": 0.9986223,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S5]",
+      "query": "Courtland Rogers criminal record",
+      "query_language": "en",
+      "title": "Jenelle Eason's ex-husband Courtland Rogers released from jail ...",
+      "content": "",
+      "source_url": "https://starcasm.net/jenelle-eason-ex-husband-courtland-rogers-released-from-jail/",
+      "domain": "starcasm.net",
+      "relevance_score": 0.99860066,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 2
+    },
+    {
+      "id": "[S6]",
+      "query": "Courtland Rogers criminal record",
+      "query_language": "en",
+      "title": "Jenelle Evans' Ex-Husband Arrested; Courtland Rogers Held on ...",
+      "content": "",
+      "source_url": "https://www.christianpost.com/news/jenelle-evans-ex-husband-arrested-courtland-rogers-held-on-150500-bail.html",
+      "domain": "www.christianpost.com",
+      "relevance_score": 0.9969722,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 3
+    },
+    {
+      "id": "[S7]",
+      "query": "Courtland Rogers recent arrest",
+      "query_language": "en",
+      "title": "Courtland Rogers | Latest News and Updates - TMZ",
+      "content": "",
+      "source_url": "https://www.tmz.com/people/courtland-rogers/",
+      "domain": "www.tmz.com",
+      "relevance_score": 0.99953806,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S8]",
+      "query": "Courtland Rogers recent arrest",
+      "query_language": "en",
+      "title": "MUG SHOTS Courtland Rogers arrested again - Starcasm",
+      "content": "",
+      "source_url": "https://starcasm.net/mug-shots-courtland-rogers-arrested-again/",
+      "domain": "starcasm.net",
+      "relevance_score": 0.9992792,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 2
+    },
+    {
+      "id": "[S9]",
+      "query": "Courtland Rogers recent arrest",
+      "query_language": "en",
+      "title": "Jenelle Evans Wants 'Insane' Courtland Rogers Behind Bars For Good",
+      "content": "",
+      "source_url": "https://entertainmentnow.com/mtv/jenelle-evans-courtland-rogers-arrested-now/",
+      "domain": "entertainmentnow.com",
+      "relevance_score": 0.99893504,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 3
+    },
+    {
+      "id": "[S10]",
+      "query": "Courtland Rogers latest news",
+      "query_language": "en",
+      "title": "Courtland Rogers | Radar Online",
+      "content": "",
+      "source_url": "https://radaronline.com/t/courtland-rogers/",
+      "domain": "radaronline.com",
+      "relevance_score": 0.9989759,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S11]",
+      "query": "Courtland Rogers latest news",
+      "query_language": "en",
+      "title": "Articles about \"Courtland Rogers\" - In Touch Weekly",
+      "content": "",
+      "source_url": "https://intouchweekly.com/tags/courtland-rogers-12301/",
+      "domain": "intouchweekly.com",
+      "relevance_score": 0.99895155,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 2
+    },
+    {
+      "id": "[S12]",
+      "query": "Courtland Rogers latest news",
+      "query_language": "en",
+      "title": "Courtland Rogers (@courtlandrogersrecovery) - Facebook",
+      "content": "",
+      "source_url": "https://www.facebook.com/courtlandrogersrecovery/",
+      "domain": "www.facebook.com",
+      "relevance_score": 0.998784,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 3
+    },
+    {
+      "id": "[S20]",
+      "query": "Teen Mom Star Jenelle Evans' Ex-Husband Courtland Rogers Arrested for Allegedly Assaulting Woman",
+      "query_language": "vi",
+      "title": "Jenelle Evans' Ex Courtland Rogers Arrested for Allegedly ...",
+      "content": "",
+      "source_url": "https://people.com/tv/jenelle-evans-ex-courtland-rogers-arrested-assault/",
+      "domain": "people.com",
+      "relevance_score": 0.9999789,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "vi",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S21]",
+      "query": "Teen Mom Star Jenelle Evans' Ex-Husband Courtland Rogers Arrested for Allegedly Assaulting Woman",
+      "query_language": "vi",
+      "title": "Jenelle Evans’ Ex-Husband Courtland Rogers Arrested for Allegedly Assaulting a Woman | Us Weekly",
+      "content": "",
+      "source_url": "https://www.usmagazine.com/celebrity-news/news/jenelle-evans-ex-husband-courtland-rogers-arrested-for-allegedly-assaulting-a-woman/",
+      "domain": "www.usmagazine.com",
+      "relevance_score": 0.9999473,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "vi",
+      "rank_within_query_language": 2
+    },
+    {
+      "id": "[S22]",
+      "query": "Teen Mom Star Jenelle Evans' Ex-Husband Courtland Rogers Arrested for Allegedly Assaulting Woman",
+      "query_language": "vi",
+      "title": "#TeenMom2 Jenelle Evans' ex-husband Courtland Rogers released ...",
+      "content": "",
+      "source_url": "https://www.facebook.com/starcasmnet/posts/teenmom2-jenelle-evans-ex-husband-courtland-rogers-released-from-jail-after-his-/827213745629432/",
+      "domain": "www.facebook.com",
+      "relevance_score": 0.999943,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "vi",
+      "rank_within_query_language": 3
+    },
+    {
+      "id": "[S23]",
+      "query": "Teen Mom Star Jenelle Evans' Ex-Husband Courtland Rogers Arrested for Allegedly Assaulting Woman",
+      "query_language": "en",
+      "title": "'Teen Mom' Jenelle Evans' Ex-Husband Arrested for Assaulting a ...",
+      "content": "",
+      "source_url": "https://www.tmz.com/2018/08/27/teen-mom-2-jenelle-evans-ex-husband-courtland-keith-rogers-arrested-assault/",
+      "domain": "www.tmz.com",
+      "relevance_score": 0.999936,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S24]",
+      "query": "Teen Mom Star Jenelle Evans' Ex-Husband Courtland Rogers Arrested for Allegedly Assaulting Woman",
+      "query_language": "en",
+      "title": "Jenelle Evans' Ex Courtland Rogers Arrested for Allegedly ...",
+      "content": "",
+      "source_url": "https://intouchweekly.com/courtland-rogers-arrested-assaulting-woman-165306/",
+      "domain": "intouchweekly.com",
+      "relevance_score": 0.9999355,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 2
+    },
+    {
+      "id": "[S25]",
+      "query": "Teen Mom Star Jenelle Evans' Ex-Husband Courtland Rogers Arrested for Allegedly Assaulting Woman",
+      "query_language": "en",
+      "title": "'Teen Mom' star Jenelle Evans's ex-husband arrested after allegedly ...",
+      "content": "",
+      "source_url": "https://www.yahoo.com/entertainment/teen-mom-star-jenelle-evanss-ex-husband-arrested-allegedly-assaulting-woman-201837032.html",
+      "domain": "www.yahoo.com",
+      "relevance_score": 0.999928,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 3
+    },
+    {
+      "id": "[S20]",
+      "query": "Teen Mom Star Jenelle Evans' Ex-Husband Courtland Rogers Arrested for Allegedly Assaulting Woman",
+      "query_language": "vi",
+      "title": "Jenelle Evans' Ex Courtland Rogers Arrested for Allegedly Assaulting Woman",
+      "content": "",
+      "source_url": "https://people.com/tv/jenelle-evans-ex-courtland-rogers-arrested-assault/",
+      "domain": "people.com",
+      "relevance_score": 0.99998665,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "vi",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S21]",
+      "query": "Teen Mom Star Jenelle Evans' Ex-Husband Courtland Rogers Arrested for Allegedly Assaulting Woman",
+      "query_language": "vi",
+      "title": "#TeenMom2 Jenelle Evans' ex-husband Courtland Rogers released ...",
+      "content": "",
+      "source_url": "https://www.facebook.com/starcasmnet/posts/teenmom2-jenelle-evans-ex-husband-courtland-rogers-released-from-jail-after-his-/827213745629432/",
+      "domain": "www.facebook.com",
+      "relevance_score": 0.999943,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "vi",
+      "rank_within_query_language": 2
+    },
+    {
+      "id": "[S22]",
+      "query": "Teen Mom Star Jenelle Evans' Ex-Husband Courtland Rogers Arrested for Allegedly Assaulting Woman",
+      "query_language": "vi",
+      "title": "'Teen Mom' Jenelle Evans' Ex-Husband Arrested for Assaulting a ...",
+      "content": "",
+      "source_url": "https://www.tmz.com/2018/08/27/teen-mom-2-jenelle-evans-ex-husband-courtland-keith-rogers-arrested-assault/",
+      "domain": "www.tmz.com",
+      "relevance_score": 0.999936,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "vi",
+      "rank_within_query_language": 3
+    },
+    {
+      "id": "[S23]",
+      "query": "Teen Mom Star Jenelle Evans' Ex-Husband Courtland Rogers Arrested for Allegedly Assaulting Woman",
+      "query_language": "en",
+      "title": "Jenelle Evans' Ex-Husband Courtland Rogers Arrested for Allegedly ...",
+      "content": "",
+      "source_url": "https://www.usmagazine.com/celebrity-news/news/jenelle-evans-ex-husband-courtland-rogers-arrested-for-allegedly-assaulting-a-woman/",
+      "domain": "www.usmagazine.com",
+      "relevance_score": 0.9492242,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 1
+    },
+    {
+      "id": "[S24]",
+      "query": "Teen Mom Star Jenelle Evans' Ex-Husband Courtland Rogers Arrested for Allegedly Assaulting Woman",
+      "query_language": "en",
+      "title": "Jenelle Evans' ex Courtland Rogers jailed for 'assaulting a woman'",
+      "content": "",
+      "source_url": "https://www.dailymail.co.uk/tvshowbiz/article-6103581/Jenelle-Evans-ex-Courtland-Rogers-jailed-assaulting-woman-four-months-drug-arrest.html",
+      "domain": "www.dailymail.co.uk",
+      "relevance_score": 0.90102744,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 2
+    },
+    {
+      "id": "[S25]",
+      "query": "Teen Mom Star Jenelle Evans' Ex-Husband Courtland Rogers Arrested for Allegedly Assaulting Woman",
+      "query_language": "en",
+      "title": "'Teen Mom' star Jenelle Evans's ex-husband arrested after allegedly ...",
+      "content": "",
+      "source_url": "https://www.yahoo.com/entertainment/teen-mom-star-jenelle-evanss-ex-husband-arrested-allegedly-assaulting-woman-201837032.html",
+      "domain": "www.yahoo.com",
+      "relevance_score": 0.8729662,
+      "retrieval_provider": "tavily",
+      "retrieval_language": "en",
+      "rank_within_query_language": 3
+    }
+  ]
+}

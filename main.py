@@ -24,24 +24,23 @@ def create_llms():
         temperature=config.model.debate_temperature,
         api_key=api_key,
         base_url=base_url,
-        max_tokens=config.model.max_tokens,
     )
     llm_light = ChatOpenAI(
         model=config.model.light_model,
         temperature=config.model.parser_temperature,
         api_key=api_key,
         base_url=base_url,
-        max_tokens=config.model.max_tokens,
     )
     return llm_main, llm_light
 
 
-def run_mad(news_text: str) -> dict:
+def run_mad(news_text: str, custom_output_instructions: str | None = None, silent: bool = False) -> dict:
     """
     Run the MAD System on a piece of news.
 
     Args:
         news_text: The news article to verify.
+        custom_output_instructions: Optional custom output format instructions to override the default.
 
     Returns:
         Final state dict containing verdict and debate history.
@@ -52,21 +51,22 @@ def run_mad(news_text: str) -> dict:
     initial_state = build_initial_state(
         news_text=news_text,
         max_rounds=config.debate.max_rounds,
+        custom_output_instructions=custom_output_instructions,
     )
-    print("=" * 60)
-    print("🔎 MAD SYSTEM — FAKE NEWS DETECTION")
-    print("=" * 60)
-    print(f"\n📰 Tin tức cần kiểm tra:\n{news_text}")
-    print(f"\n⚙️  Config: {config.debate.max_rounds} vòng tranh luận, "
-          f"Wikipedia search: BẬT, "
-          f"Languages: {config.debate.wikipedia_languages}")
-    print("=" * 60)
+    if not silent:
+        print("=" * 60)
+        print("🔎 MAD SYSTEM — FAKE NEWS DETECTION")
+        print("=" * 60)
+        print(f"\n📰 Tin tức cần kiểm tra:\n{news_text}")
+        print(f"\n⚙️  Config: {config.debate.max_rounds} vòng tranh luận, Tavily Search: BẬT")
+        print("=" * 60)
 
     # Run the workflow
     final_state = app.invoke(initial_state)
 
     # Print final verdict
-    _print_verdict(final_state)
+    if not silent:
+        _print_verdict(final_state)
 
     return final_state
 
@@ -82,30 +82,13 @@ def _print_verdict(state: dict):
     print("⚖️  KẾT QUẢ PHÁN QUYẾT")
     print("=" * 60)
 
-    winner = verdict.get("winner", "UNCERTAIN")
-    margin = verdict.get("margin", "low")
-    confidence = verdict.get("confidence", 50)
-
-    if winner == "DEFENDER":
-        emoji = "✅"
-        label = "DEFENDER CHIẾM ƯU THẾ"
-    elif winner == "CHALLENGER":
-        emoji = "🚫"
-        label = "CHALLENGER CHIẾM ƯU THẾ"
-    else:
-        emoji = "❓"
-        label = "CHƯA THỂ KẾT LUẬN"
-
-    print(f"\n{emoji} {label}")
-    print(f"📊 Độ tự tin: {confidence}% | Biên độ: {margin}")
-
-    points = verdict.get("top_3_decisive_points", [])
-    if points:
-        print("\n🎯 3 điểm quyết định:")
-        for idx, p in enumerate(points[:3], start=1):
-            print(f"   {idx}. {p}")
-
-    print(f"\n📝 Giải thích:\n{verdict.get('final_reasoning', 'N/A')}")
+    for key, value in verdict.items():
+        if isinstance(value, list):
+            print(f"\n🎯 {key.replace('_', ' ').title()}:")
+            for idx, item in enumerate(value, 1):
+                print(f"   {idx}. {item}")
+        else:
+            print(f"→ {key.replace('_', ' ').title()}: {value}")
 
     print("\n" + "=" * 60)
 
