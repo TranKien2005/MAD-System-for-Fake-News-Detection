@@ -20,6 +20,8 @@ class ModelConfig:
     debate_temperature: float = 0.7       # Debater: sáng tạo hơn
     parser_temperature: float = 0.2       # Parser: chính xác hơn
     judge_temperature: float = 0.3        # Judge: cân nhắc, ít ngẫu nhiên
+    # Rate limit (calls per minute)
+    max_calls_per_minute: int = 10
 
 
 @dataclass

@@ -9,6 +9,7 @@ from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from langchain_core.messages import HumanMessage
 import sys
+from utils.rate_limit import safe_invoke
 sys.stdout.reconfigure(encoding='utf-8')
 
 # Thiết lập đường dẫn thư mục
@@ -50,7 +51,7 @@ Câu trả lời: {answer}
 
 Câu khẳng định:"""
     try:
-        res = llm.invoke([HumanMessage(content=prompt)])
+        res = safe_invoke(llm, [HumanMessage(content=prompt)])
         return res.content.strip().strip('"')
     except Exception as e:
         print(f"  [Lỗi LLM]: {e}")

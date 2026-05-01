@@ -18,20 +18,7 @@ from tavily import TavilyClient
 
 from config.settings import config
 from prompts.templates import DEFENDER_QUERY_PLANNER_PROMPT, CHALLENGER_QUERY_PLANNER_PROMPT
-
-
-def _safe_invoke(llm, messages, max_retries=3, delay=2):
-    for i in range(max_retries):
-        try:
-            return llm.invoke(messages)
-        except Exception as e:
-            if "429" in str(e) and i < max_retries - 1:
-                logging.warning(f"Rate limit hit. Retrying in {delay}s... (Attempt {i+1}/{max_retries})")
-                time.sleep(delay)
-                delay *= 2
-                continue
-            raise e
-    return None
+from utils.rate_limit import safe_invoke
 
 
 def parse_json_robust(text: Any) -> dict:
@@ -83,7 +70,7 @@ def plan_round_queries(state: dict, llm, side: str) -> dict:
         executed_queries=str(executed),
     )
 
-    response = _safe_invoke(llm, [HumanMessage(content=prompt)])
+    response = safe_invoke(llm, [HumanMessage(content=prompt)])
     data = parse_json_robust(response.content) if response else {}
 
     planned_intents = data.get("planned_queries", [])

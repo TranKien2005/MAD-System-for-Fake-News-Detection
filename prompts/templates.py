@@ -60,7 +60,7 @@ Nhiệm vụ của bạn là phân tích bối cảnh tranh luận hiện tại 
 Giải thích các thông tin đầu vào (Input):
 - original_news: Bản tin gốc đang được tranh luận. Bạn là phe CHỨNG MINH bản tin này là GIẢ/SAI LỆCH.
 - focused_targets: Danh sách các nhận định (claims) đang là tâm điểm của vòng này.
-  + Ở Vòng 1: Biến này sẽ trống. Mục tiêu là tìm thông tin bác bỏ trực diện tin gốc.
+  + Ở Vòng 1: Biến này sẽ trống. Mục tiêu là tìm thông tin bác bỏ bỏ trực tiếp tin gốc hoặc hỗ trợ bạn chứng minh tin gốc là sai lệch. 
   + Ở Vòng 2+: Biến này chứa các nhận định D* (của đối phương cần bạn phản bác) hoặc C* (của chính bạn cần bảo vệ).
 - executed_queries: Danh sách các truy vấn đã được tìm kiếm trong các vòng trước. TUYỆT ĐỐI KHÔNG lặp lại các truy vấn này.
 
@@ -401,9 +401,11 @@ JUDGE_PROMPT_BASE = """Bạn là JUDGE (Thẩm phán tối cao).
 Nhiệm vụ của bạn là đưa ra phán quyết cuối cùng xem bản tin gốc là ĐÚNG hay SAI LỆCH dựa trên toàn bộ quá trình tranh luận giữa DEFENDER (Bảo vệ tin) và CHALLENGER (Bác bỏ tin) cũng như kho dữ liệu được cung cấp.
 
 Tiêu chí Phán quyết (Qualitative-first):
-- Cần đánh giá khách quan, không thiên vị.
-- Số lượng nguồn (số lượng source) không phải là yếu tố quyết định, quan trọng là chất lượng (chất lượng source).
-- Xem xét chất lượng nhận định và lập luật của đối phương, không thuận theo bên tranh luận cố chấp, đánh tráo khái niệm, rời xa bản chất, cần tập trung vào logic và mỗi quan hệ cốt lõi của nhận định với tin tức gốc.
+- Cần đánh giá khách quan, không thiên vị, dựa trên sự thật thay vì niềm tin chủ quan ban đầu.
+- BẮT LỖI NGỤY TẠO (Hallucination Penalty): Nếu một bên trích dẫn nguồn [Sx] nhưng nội dung nguồn đó trống rỗng (content="") hoặc không hề chứa thông tin họ khẳng định, hãy PHẠT NẶNG bên đó.
+- BẮT LỖI LẶP LẠI (Parroting Penalty): Nếu một bên chỉ lặp lại nhận định ở các vòng trước mà không đưa ra Dẫn chứng mới hoặc không trả lời được chất vấn của đối phương, phe đó thua ở luận điểm đó.
+- Đánh giá chênh lệch Trust Score: Luận điểm dựa trên nguồn HIGH/MEDIUM sẽ áp đảo hoàn toàn luận điểm dựa trên nguồn LOW/UNTRUSTED (như Reddit, Twitter cá nhân, YouTube không chính thống).
+- Không thuận theo bên cố chấp đánh tráo khái niệm (ví dụ: mở rộng chủ thể bài báo một cách vô lý).
 Giải thích thông tin đầu vào (Input):
 - original_news: Bản tin gốc là đối tượng của phiên tòa này.
 - knowledge_base: Kho dữ liệu chứa toàn bộ các nguồn (sources) đã được trích xuất cùng với điểm Trust Score của chúng. Nguồn có Trust Score cao có trọng lượng lớn hơn.

@@ -9,20 +9,7 @@ from prompts.templates import (
     DEFENDER_SPEAK_ROUND2_PROMPT,
 )
 from agents.evaluator import parse_json_robust, format_knowledge_base
-
-
-def _safe_invoke(llm, messages, max_retries=3, delay=2):
-    for i in range(max_retries):
-        try:
-            return llm.invoke(messages)
-        except Exception as e:
-            if "429" in str(e) and i < max_retries - 1:
-                logging.warning(f"Rate limit hit. Retrying in {delay}s... (Attempt {i+1}/{max_retries})")
-                time.sleep(delay)
-                delay *= 2
-                continue
-            raise e
-    return None
+from utils.rate_limit import safe_invoke
 
 
 def defend(state: dict, llm) -> dict:
@@ -40,7 +27,7 @@ def defend(state: dict, llm) -> dict:
             original_news=news_text,
             knowledge_base_with_scores=kb_text,
         )
-        response = _safe_invoke(llm, [HumanMessage(content=prompt)])
+        response = safe_invoke(llm, [HumanMessage(content=prompt)])
         data = parse_json_robust(response.content)
         interactions = data.get("interactions", [])
         overall_summary = data.get("overall_summary", "").strip()
@@ -70,7 +57,7 @@ def defend(state: dict, llm) -> dict:
             full_history=str(history)
         )
         
-        response = _safe_invoke(llm, [HumanMessage(content=prompt)])
+        response = safe_invoke(llm, [HumanMessage(content=prompt)])
         data = parse_json_robust(response.content)
         interactions = data.get("interactions", [])
         overall_summary = data.get("overall_summary", "").strip()

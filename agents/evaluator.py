@@ -8,20 +8,7 @@ from typing import Any
 from langchain_core.messages import HumanMessage
 
 from prompts.templates import EVALUATOR_PROMPT, SOURCE_SCORER_PROMPT
-
-
-def _safe_invoke(llm, messages, max_retries=3, delay=2):
-    for i in range(max_retries):
-        try:
-            return llm.invoke(messages)
-        except Exception as e:
-            if "429" in str(e) and i < max_retries - 1:
-                logging.warning(f"Rate limit hit. Retrying in {delay}s... (Attempt {i+1}/{max_retries})")
-                time.sleep(delay)
-                delay *= 2
-                continue
-            raise e
-    return None
+from utils.rate_limit import safe_invoke
 
 
 def parse_json_robust(text: Any) -> dict:
@@ -69,7 +56,7 @@ def score_sources(state: dict, llm) -> dict:
         new_sources=new_sources_text,
     )
 
-    response = _safe_invoke(llm, [HumanMessage(content=prompt)])
+    response = safe_invoke(llm, [HumanMessage(content=prompt)])
     data = parse_json_robust(response.content)
 
     new_scores = {}
@@ -107,7 +94,7 @@ def evaluate_round(state: dict, llm) -> dict:
 
     seeded = _seed_claim_decisions(defender_claims, challenger_claims)
 
-    response = _safe_invoke(llm, [HumanMessage(content=prompt)])
+    response = safe_invoke(llm, [HumanMessage(content=prompt)])
     ruling = parse_json_robust(response.content)
     ruling["round_number"] = current_round
 

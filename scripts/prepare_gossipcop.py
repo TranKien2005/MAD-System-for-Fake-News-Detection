@@ -7,6 +7,7 @@ from langchain_openai import ChatOpenAI
 from langchain_core.messages import HumanMessage
 import sys
 import time
+from utils.rate_limit import safe_invoke
 
 # Thiết lập đường dẫn
 BASE_DIR = Path(__file__).parent.parent
@@ -60,7 +61,7 @@ Tiêu đề: "{title}"
 Trả lời (CHỈ 'YES' hoặc 'NO'):"""
     
     try:
-        res = llm.invoke([HumanMessage(content=prompt)])
+        res = safe_invoke(llm, [HumanMessage(content=prompt)])
         content = res.content
         if isinstance(content, list):
             answer = "".join([c.get("text", "") for c in content if isinstance(c, dict)])

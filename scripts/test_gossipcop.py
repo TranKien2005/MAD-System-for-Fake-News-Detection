@@ -16,6 +16,7 @@ if str(BASE_DIR) not in sys.path:
     sys.path.append(str(BASE_DIR))
 
 from main import run_mad, create_llms
+from utils.rate_limit import safe_invoke
 
 # PROMPT NÂNG CẤP: GIỚI THIỆU CHI TIẾT NGỮ CẢNH
 EVALUATION_PROMPT = """Bạn là một chuyên gia thẩm định tin tức (News Verifier) chuyên nghiệp. 
@@ -52,7 +53,7 @@ def get_base_llm_score(llm, claim: str) -> float:
 Tiêu đề cần thẩm định: "{claim}"
 """
     try:
-        res = llm.invoke([HumanMessage(content=prompt)])
+        res = safe_invoke(llm, [HumanMessage(content=prompt)])
         content = res.content
         if isinstance(content, list):
             score_str = "".join([c.get("text", "") for c in content if isinstance(c, dict)])

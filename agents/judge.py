@@ -7,6 +7,7 @@ from langchain_core.messages import HumanMessage
 
 from prompts.templates import JUDGE_PROMPT_BASE, DEFAULT_JUDGE_OUTPUT_INSTRUCTIONS
 from agents.evaluator import format_knowledge_base
+from utils.rate_limit import safe_invoke
 
 
 def judge(state: dict, llm) -> dict:
@@ -26,7 +27,7 @@ def judge(state: dict, llm) -> dict:
         output_format_instructions=output_instructions
     )
 
-    response = llm.invoke([HumanMessage(content=prompt)])
+    response = safe_invoke(llm, [HumanMessage(content=prompt)])
     verdict = _parse_verdict(response.content)
 
     return {"verdict": verdict}

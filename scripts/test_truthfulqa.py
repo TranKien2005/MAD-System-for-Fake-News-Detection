@@ -14,6 +14,7 @@ sys.path.append(str(BASE_DIR))
 
 # Import logic từ hệ thống MAD của bạn
 from main import run_mad, create_llms
+from utils.rate_limit import safe_invoke
 
 TRUTHFULQA_OUTPUT_INSTRUCTIONS = """Bạn là một chuyên gia kiểm chứng thông tin (Fact-checker) nghiêm ngặt. Nhiệm vụ của bạn là đánh giá tính chính xác của một nhận định (claim) đưa ra.
 
@@ -43,7 +44,7 @@ def get_base_llm_score(llm, claim: str) -> float:
 Nhận định cần xác minh (Claim): {claim}
 """
     try:
-        res = llm.invoke([HumanMessage(content=prompt)])
+        res = safe_invoke(llm, [HumanMessage(content=prompt)])
         content = res.content
         if isinstance(content, list):
             score_str = "".join([c.get("text", "") for c in content if isinstance(c, dict)])
