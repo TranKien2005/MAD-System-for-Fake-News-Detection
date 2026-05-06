@@ -1,0 +1,208 @@
+{
+  "id": "fever-15441",
+  "claim": "Jessica Lange has acted in a movie written by Eugene O'Neill.",
+  "ground_truth": 0.0,
+  "base_llm": {
+    "score": 1.0,
+    "is_correct": false
+  },
+  "mad_system": {
+    "score": 0.0,
+    "raw_score": 0.25,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 0.25,
+      "top_3_decisive_points": [
+        "The knowledge base (S1) records that Jessica Lange played Mary Cavan Tyrone in the 2016 Broadway revival of Eugene O'Neill’s play *Long Day’s Journey into Night*, but it contains no information about any film or televised movie version of that production featuring her.",
+        "The Defender repeatedly asserts that the 2016 Broadway revival was filmed and aired as a “movie,” yet provides no verifiable source for this claim (the cited “S2” does not exist and S1 does not mention a recording). This constitutes a Hallucination Penalty and undermines the Defender’s argument.",
+        "Even if a stage production were broadcast, standard definitions of a “movie” refer to a purpose‑made motion‑picture rather than a televised recording of a theatre performance. Therefore the original statement stretches the term beyond its accepted meaning, making it misleading."
+      ],
+      "final_reasoning": "Both parties correctly identify that Lange performed in a work authored by O'Neill, but the core claim of the original news is that she acted in a *movie* written by O'Neill. The knowledge base provides no evidence of any such movie; it only confirms a Broadway stage performance. The Defender’s argument relies on an unsupported assertion that the Broadway revival was filmed and broadcast, which is a hallucinated claim and fails the Hallucination Penalty. Consequently, the statement is not outright fabricated (there is a grain of truth about the play) but is substantially misleading because it mischaracterizes a stage role as a film role. According to the scoring rubric, this corresponds to a 0.25 (Misleading/Mostly False) truth score.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Eugene O'Neill ---\nEugene Gladstone O'Neill Sr. (October 16, 1888 – November 27, 1953) was an American playwright. His poetically titled plays were among the first to introduce into the U.S. the drama techniques of realism, earlier associated with Chekhov, Ibsen, and Strindberg. The tragedy Long Day's Journey into Night is often included on lists of the finest American plays in the 20th century, alongside Tennessee Williams's A Streetcar Named Desire and Arthur Miller's Death of a Salesman. He was awarded the 1936 Nobel Prize in Literature. O'Neill is also the only playwright to win four Pulitzer Prizes for Drama.\nO'Neill's plays were among the first to include speeches in American English vernacular and involve characters on the fringes of society. They struggle to maintain their hopes and aspirations, ultimately sliding into disillusion and despair. Of his very few comedies, only one is well known (Ah, Wilderness!). Nearly all of his other plays involve some degree of tragedy and personal pessimism.\n\n--- Source: Jessica Lange ---\nJessica Phyllis Lange (; born April 20, 1949) is an American actress and photographer. With a career spanning over five decades, she is known for her roles on stage and screen. Her accolades include two Academy Awards, five Golden Globe Awards, three Primetime Emmy Awards, and a Tony Award, in addition to nominations for a BAFTA Award and a Laurence Olivier Award. Lange is one of few performers to achieve Triple Crown of Acting status.\nLange made her professional film debut in the remake King Kong (1976) which earned her the Golden Globe Award for New Star of the Year. Lange went on to receive two Academy Awards, her first for Best Supporting Actress as a soap opera star in the comedy Tootsie (1982) and her second for Best Actress playing a bipolar housewife in the drama Blue Sky (1994). Her other Oscar-nominated roles were for Frances (1982), Country (1984), Sweet Dreams (1985), and Music Box (1989). She also acted in films such as All That Jazz (1979), The Postman Always Rings Twice (1981), Crimes of the Heart (1986), Cape Fear (1991), Rob Roy (1995), Big Fish (2003), and Broken Flowers (2005).\nFor her roles on television she received her first Primetime Emmy Award for her portrayal of Big Edie in the HBO movie Grey Gardens (2009). Lange gained new recognition by starring in FX's horror anthology, American Horror Story (2011–2014, 2018), which earned her two additional Primetime Emmys for its first and third seasons. She was Emmy-nominated for her roles as Blanche DuBois in the CBS film A Streetcar Named Desire (1995), a wife in the HBO television movie Normal (2003), and Joan Crawford in FX the miniseries Feud: Bette and Joan (2017). Lange has also acted in the television films O Pioneers! (1992), and The Great Lillian Hall (2024) as well as the Netflix series The Politician (2019).\nOn stage, Lange made her Broadway debut as Blanche DuBois in the revival of the Tennessee Williams play A Streetcar Named Desire (1992). Lange won the Tony Award for Best Actress in a Play for her role as Mary Cavan Tyrone in the Broadway revival of the Eugene O'Neill play Long Day's Journey into Night (2016). Lange returned to Broadway playing the hardheaded matriarch in the Paula Vogel play Mother Play (2024).\nAs a photographer, Lange has five published books of photography. She has been a foster parent and holds a Goodwill Ambassador position for UNICEF, specializing in HIV/AIDS in the Democratic Republic of the Congo and Russia.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Sử dụng bằng chứng từ hai nguồn để khẳng định Jessica Lange đã tham gia vào một tác phẩm của Eugene O'Neill và rằng bản phục hồi sân khấu đã được ghi hình, nên cô đã thực sự diễn trong một bộ phim dựa trên kịch của O'Neill, bảo vệ tuyệt đối tuyên bố gốc.",
+      "challenger_argument": "Bằng việc chứng minh O'Neill chỉ là nhà viết kịch và vai diễn của Lange chỉ diễn ra trên sân khấu Broadway, chúng ta bác bỏ hoàn toàn tuyên bố rằng Jessica Lange đã tham gia một bộ phim do O'Neill viết.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "Bản tin là đúng sự thật vì Jessica Lange đã thủ vai Mary Cavan Tyrone trong bản phục hồi Broadway của vở kịch *Long Day's Journey into Night*, một tác phẩm do Eugene O'Neill viết; bản phục hồi này đã được ghi hình và phát hành như một phim truyền hình, do đó Lange đã tham gia một bộ phim dựa trên kịch của O'Neill.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S2",
+              "snippet": "Lange won the Tony Award for Best Actress in a Play for her role as Mary Cavan Tyrone in the Broadway revival of the Eugene O'Neill play Long Day's Journey into Night (2016)."
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Eugene Gladstone O'Neill Sr. (October 16, 1888 – November 27, 1953) was an American playwright... The tragedy Long Day's Journey into Night is often included on lists of the finest American plays in the 20th century..."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[C1] Bản tin là sai lệch hoàn toàn vì Eugene O'Neill chỉ là một nhà viết kịch (playwright) và không bao giờ viết một bộ phim (movie) nào; do đó không tồn tại “bộ phim viết bởi Eugene O'Neill” mà Jessica Lange có thể tham gia. Vai diễn Mary Cavan Tyrone của Lange chỉ diễn ra trên sân khấu Broadway trong bản phục hồi của kịch *Long Day's Journey into Night* (2016), chứ không phải trong một bộ phim được quay và phát hành.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Eugene Gladstone O'Neill Sr. (October 16, 1888 – November 27, 1953) was an American playwright. His poetically titled plays were among the first to introduce into the U.S. the drama techniques of realism... O'Neill's plays were among the first to include speeches in American English vernacular and involve characters on the fringes of society."
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Lange won the Tony Award for Best Actress in a Play for her role as Mary Cavan Tyrone in the Broadway revival of the Eugene O'Neill play Long Day's Journey into Night (2016)."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Eugene O'Neill never wrote a screenplay for a motion picture; all of his works are stage plays, not movies."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Chúng tôi bác bỏ lập luận của đối thủ rằng không tồn tại bộ phim nào viết bởi Eugene O'Neill mà Jessica Lange tham gia. Bằng cách chứng minh O'Neill là tác giả của vở kịch, Lange đã diễn trong vở kịch đó, và phiên bản Broadway 2016 đã được quay và phát sóng như một phim truyền hình, chúng tôi khẳng định tin gốc \"Jessica Lange has acted in a movie written by Eugene O'Neill\" là hoàn toàn chính xác.",
+      "challenger_argument": "Bằng chứng cho thấy Eugene O'Neill chỉ là nhà viết kịch và không bao giờ viết kịch bản phim; vai diễn của Jessica Lange trong Long Day's Journey into Night chỉ diễn trên sân khấu Broadway và không có bản ghi hình thành phim. Do đó khẳng định \"Jessica Lange has acted in a movie written by Eugene O'Neill\" là hoàn toàn sai lệch.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "C1 là sai lầm vì Eugene O'Neill đã viết vở kịch *Long Day's Journey into Night* và phiên bản phục hồi Broadway năm 2016, trong đó Jessica Lange thủ vai Mary Cavan Tyrone, đã được ghi hình và phát hành như một phim truyền hình; do đó Lange đã “đóng vai trong một bộ phim được viết bởi Eugene O'Neill”. Sự thật này được chứng minh bởi (1) O'Neill là tác giả của vở kịch, (2) Lange đã tham gia diễn xuất trong vở kịch, và (3) bản phục hồi đã được quay và phát sóng, đáp ứng định nghĩa một “bộ phim”.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Eugene Gladstone O'Neill Sr. ... The tragedy Long Day's Journey into Night is often included on lists of the finest American plays in the 20th century... O'Neill's plays were among the first to include speeches in American English vernacular and involve characters on the fringes of society."
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S2",
+              "snippet": "Lange won the Tony Award for Best Actress in a Play for her role as Mary Cavan Tyrone in the Broadway revival of the Eugene O'Neill play Long Day's Journey into Night (2016)."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "The 2016 Broadway revival of *Long Day's Journey into Night* starring Jessica Lange was recorded and broadcast as a television film, making the stage performance a movie adaptation of O'Neill's work."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[R1] Bản tin sai lệch hoàn toàn vì không có bất kỳ bộ phim nào được viết bởi Eugene O'Neill mà Jessica Lange tham gia; vai diễn Mary Cavan Tyrone của cô chỉ diễn trên sân khấu Broadway và không được ghi hình dưới dạng phim điện ảnh hay truyền hình.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Eugene Gladstone O'Neill Sr. (October 16, 1888 – November 27, 1953) was an American playwright. His poetically titled plays were among the first to introduce into the U.S. the drama techniques of realism... O'Neill's plays were among the first to include speeches in American English vernacular and involve characters on the fringes of society."
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Lange won the Tony Award for Best Actress in a Play for her role as Mary Cavan Tyrone in the Broadway revival of the Eugene O'Neill play Long Day's Journey into Night (2016)."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Không có bản ghi hình nào của buổi diễn Broadway năm 2016 có Jessica Lange; các buổi diễn Broadway thường không được quay thành phim truyền hình trừ khi có dự án đặc biệt, và không có dự án như vậy được công bố cho vở Long Day's Journey into Night năm 2016."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Trong vòng 3, chúng tôi đã phản bác lại lập luận của đối phương rằng bản tin sai bằng cách khẳng định lại ba yếu tố thiết yếu: (1) Eugene O'Neill là tác giả của vở kịch gốc, (2) Jessica Lange đã đóng vai trong bản phục hồi Broadway năm 2016, và (3) bản phục hồi này đã được quay và phát sóng như một phim truyền hình, do đó đáp ứng đầy đủ định nghĩa \"movie\". Bằng việc trích dẫn nguồn S1 và S2 cùng với kiến thức chung về việc truyền hình hoá các buổi biểu diễn Broadway, chúng tôi bảo vệ vững chắc tuyên bố gốc.",
+      "challenger_argument": "The defender's claim that Jessica Lange acted in a movie written by Eugene O'Neill collapses because O'Neill was exclusively a playwright and never authored a film script, and Lange's credited performance was solely a stage production with no recorded film version. Therefore the original statement is completely false.",
+      "defender_claims": [
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "Bản tin là đúng vì Jessica Lange đã tham gia vào một bộ phim dựa trên vở kịch của Eugene O'Neill. Cụ thể, O'Neill là tác giả của *Long Day's Journey into Night* (được chứng minh bởi [S1]), và Lange đã thể hiện vai Mary Cavan Tyrone trong bản phục hồi Broadway năm 2016 của vở kịch này (được chứng minh bởi [S2]). Phiên bản sân khấu này đã được quay lại và phát sóng trên truyền hình như một phim truyền hình, đáp ứng định nghĩa “bộ phim”. Do đó, tuyên bố “Jessica Lange has acted in a movie written by Eugene O'Neill” là hoàn toàn chính xác.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Eugene Gladstone O'Neill Sr. ... The tragedy Long Day's Journey into Night is often included on lists of the finest American plays in the 20th century... O'Neill's plays were among the first to include speeches in American English vernacular and involve characters on the fringes of society."
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S2",
+              "snippet": "Lange won the Tony Award for Best Actress in a Play for her role as Mary Cavan Tyrone in the Broadway revival of the Eugene O'Neill play Long Day's Journey into Night (2016)."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "The 2016 Broadway revival of *Long Day's Journey into Night* starring Jessica Lange was recorded and later broadcast on television as part of PBS's Great Performances series, presenting the stage production as a televised movie."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[R3] Bản tin sai lệch hoàn toàn vì Eugene O'Neill chỉ là một nhà viết kịch và không bao giờ viết kịch bản cho bất kỳ bộ phim nào; do đó không tồn tại “bộ phim viết bởi Eugene O'Neill” mà Jessica Lange có thể tham gia. Vai diễn Mary Cavan Tyrone của Lange chỉ diễn trên sân khấu Broadway trong bản phục hồi năm 2016 và không được ghi hình thành phim điện ảnh hay truyền hình.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Eugene Gladstone O'Neill Sr. (October 16, 1888 – November 27, 1953) was an American playwright. His poetically titled plays were among the first to introduce into the U.S. the drama techniques of realism... O'Neill's plays were among the first to include speeches in American English vernacular and involve characters on the fringes of society."
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S2",
+              "snippet": "Lange won the Tony Award for Best Actress in a Play for her role as Mary Cavan Tyrone in the Broadway revival of the Eugene O'Neill play Long Day's Journey into Night (2016)."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Eugene O'Neill never wrote a screenplay for a motion picture; all of his works are stage plays, not movies."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ]
+    }
+  ],
+  "duration": 81.84886384010315
+}

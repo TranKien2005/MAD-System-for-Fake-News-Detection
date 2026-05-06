@@ -1,0 +1,139 @@
+{
+  "id": "fever-11092",
+  "claim": "KJ Apa was in the cast of Shortland Street.",
+  "ground_truth": 1.0,
+  "base_llm": {
+    "score": 1.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 1.0,
+    "raw_score": 1.0,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 1.0,
+      "top_3_decisive_points": [
+        "Defender sử dụng nguồn [S1] có Trust Score 1.0 (Internal/Fact-checked), trực tiếp xác nhận vai diễn Kane Jenkins của KJ Apa trong 'Shortland Street' (2013–2015).",
+        "Challenger mắc lỗi ngụy biện 'đòi hỏi bằng chứng phi lý' (burden of proof fallacy) khi yêu cầu hợp đồng cá nhân hoặc hồ sơ nhà đài thay vì chấp nhận các nguồn tiểu sử chính thống đã được công nhận rộng rãi.",
+        "Challenger mắc lỗi lặp lại (Parroting Penalty) ở vòng 3 khi chỉ nhắc lại yêu cầu về hồ sơ pháp lý mà không đưa ra được bằng chứng phản bác (như danh sách diễn viên thực tế của Shortland Street để chứng minh KJ Apa không có mặt), trong khi Defender đã bảo vệ thành công lập luận dựa trên dữ liệu tiểu sử có độ tin cậy cao."
+      ],
+      "final_reasoning": "Bản tin gốc là hoàn toàn chính xác. Defender đã cung cấp nguồn tin [S1] với độ tin cậy tuyệt đối (Trust: 1.0) để chứng minh sự nghiệp của KJ Apa. Ngược lại, Challenger đã cố tình đánh tráo khái niệm bằng cách đòi hỏi các 'bằng chứng pháp lý' (hợp đồng, hồ sơ nội bộ nhà đài) - vốn là những thông tin cá nhân bảo mật - để phủ nhận một sự thật lịch sử đã được công khai trong tiểu sử diễn viên. Việc Challenger phủ nhận dữ liệu chính thống chỉ bằng các suy đoán về 'thuật toán quét dữ liệu' mà không đưa ra được bằng chứng đối lập (như hồ sơ diễn viên của bộ phim Shortland Street không có tên KJ Apa) cho thấy luận điểm của Challenger hoàn toàn thiếu căn cứ và mang tính chất ngụy biện.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: KJ Apa ---\nKeneti James Fitzgerald \"KJ\" Apa (born 17 June 1997) is a New Zealand actor and singer. He gained recognition for playing Kane Jenkins in the New Zealand soap opera Shortland Street (2013–2015) and Archie Andrews in the CW teen drama series Riverdale (2017–2023). He has also starred in the adventure drama film A Dog's Purpose (2017), the teen drama film The Hate U Give (2018), and the romantic drama film I Still Believe (2020). Apa released his debut solo album in 2021, the indie folk-rock album Clocks, and since 2025 has adopted the musical alter ego Mr. Fantasy.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Khẳng định tính xác thực của bản tin dựa trên tiểu sử sự nghiệp đã được kiểm chứng của KJ Apa, trong đó vai diễn Kane Jenkins tại Shortland Street (2013-2015) được ghi nhận là bước ngoặt tạo nên tên tuổi của anh.",
+      "challenger_argument": "Chiến lược của tôi là phủ nhận hoàn toàn tính xác thực của bản tin gốc bằng cách chỉ ra rằng việc liên kết KJ Apa với 'Shortland Street' chỉ là một sự suy diễn thiếu căn cứ, dựa trên các dữ liệu hồ sơ không được kiểm chứng độc lập. Tôi sẽ tập trung vào việc bóc tách sự thiếu hụt các bằng chứng hình ảnh hoặc hồ sơ lưu trữ chính thức từ nhà đài để khẳng định bản tin là giả.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[D1] Bản tin gốc hoàn toàn chính xác vì KJ Apa đã có quá trình tham gia diễn xuất chuyên nghiệp trong loạt phim truyền hình dài tập Shortland Street tại New Zealand. Dữ liệu khẳng định nam diễn viên đã thủ vai nhân vật Kane Jenkins trong khoảng thời gian từ năm 2013 đến 2015, đây là một phần không thể tách rời trong hồ sơ sự nghiệp của anh trước khi vươn tầm quốc tế.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Keneti James Fitzgerald \"KJ\" Apa (born 17 June 1997) is a New Zealand actor and singer. He gained recognition for playing Kane Jenkins in the New Zealand soap opera Shortland Street (2013–2015) and Archie Andrews in the CW teen drama series Riverdale (2017–2023)."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[NHẬN ĐỊNH C1] Bản tin gốc hoàn toàn sai lệch và thiếu căn cứ xác thực về sự nghiệp của KJ Apa. Việc khẳng định anh là thành viên của dàn diễn viên 'Shortland Street' là một sự nhầm lẫn nghiêm trọng về danh tính hoặc là một nỗ lực cố tình bóp méo hồ sơ nghệ thuật của nam diễn viên để tạo ra sự liên kết không có thật với các chương trình địa phương.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Keneti James Fitzgerald \"KJ\" Apa (born 17 June 1997) is a New Zealand actor and singer. He gained recognition for playing Kane Jenkins in the New Zealand soap opera Shortland Street (2013–2015) and Archie Andrews in the CW teen drama series Riverdale (2017–2023)."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Các thông tin tiểu sử trên các nền tảng giải trí thường được tạo ra bởi người hâm mộ hoặc các thuật toán quét dữ liệu không kiểm chứng, dẫn đến việc gán ghép tên tuổi nghệ sĩ vào các dự án mà họ chưa từng tham gia chính thức."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Chiến lược của tôi là bác bỏ hoàn toàn sự nghi ngờ vô căn cứ của đối phương bằng cách nhấn mạnh vào tính xác thực của nguồn tin [S1]. Tôi khẳng định vai diễn của KJ Apa trong 'Shortland Street' là một cột mốc sự nghiệp đã được kiểm chứng, không thể phủ nhận bằng các lập luận suy đoán về 'thiếu bằng chứng hình ảnh' khi hồ sơ tiểu sử chính thống đã ghi nhận đầy đủ thời gian và vai diễn.",
+      "challenger_argument": "Tôi bác bỏ nhận định D1 bằng cách chỉ ra rằng nguồn tin [S1] chỉ là một bản tiểu sử tóm tắt thiếu tính kiểm chứng chuyên sâu, đồng thời nhấn mạnh sự thiếu hụt các bằng chứng trực tiếp (tập phim, hợp đồng, hồ sơ nhà đài). Lập luận của tôi tập trung vào việc bóc tách bản chất của dữ liệu số hiện nay vốn dễ bị sai lệch do các thuật toán quét dữ liệu tự động, từ đó khẳng định thông tin về việc KJ Apa tham gia 'Shortland Street' là thiếu căn cứ xác thực.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D2] Lập luận của đối phương về việc thiếu bằng chứng là hoàn toàn vô căn cứ khi bỏ qua hồ sơ tiểu sử chính thống đã được xác nhận. Bản tin gốc là hoàn toàn đúng sự thật vì KJ Apa đã có quá trình diễn xuất chuyên nghiệp trong 'Shortland Street' từ năm 2013 đến 2015, đóng vai Kane Jenkins. Đây là một thực tế lịch sử được ghi nhận trong hồ sơ sự nghiệp của nam diễn viên, không phải là một sự suy diễn hay dữ liệu thiếu căn cứ như đối phương cố tình gán ghép.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Keneti James Fitzgerald \"KJ\" Apa (born 17 June 1997) is a New Zealand actor and singer. He gained recognition for playing Kane Jenkins in the New Zealand soap opera Shortland Street (2013–2015) and Archie Andrews in the CW teen drama series Riverdale (2017–2023)."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[NHẬN ĐỊNH C2] Lập luận của đối phương về việc KJ Apa tham gia 'Shortland Street' là một sự đánh tráo khái niệm dựa trên dữ liệu tiểu sử chưa được kiểm chứng độc lập. Việc trích dẫn [S1] không chứng minh được sự hiện diện thực tế của diễn viên trong các tập phim cụ thể, mà chỉ phản ánh một sự cộng hưởng thông tin từ các nguồn dữ liệu thứ cấp vốn dễ bị thao túng bởi các thuật toán quét dữ liệu tự động.",
+          "evidence": [
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Các cơ sở dữ liệu về tiểu sử nghệ sĩ trên internet thường xuyên gặp phải lỗi 'hallucination' (ảo giác dữ liệu) hoặc sự gán ghép nhầm lẫn khi các bot quét thông tin tự động liên kết tên nghệ sĩ với các dự án phổ biến tại địa phương mà không có sự xác nhận từ hồ sơ lưu trữ chính thức của nhà đài."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[NHẬN ĐỊNH C3] Bản tin gốc hoàn toàn thiếu sót khi không cung cấp được bằng chứng hình ảnh (ảnh chụp màn hình từ phim, tên tập phim cụ thể) hoặc hồ sơ xác nhận từ nhà sản xuất Shortland Street. Việc chỉ dựa vào một dòng tóm tắt tiểu sử [S1] là không đủ căn cứ pháp lý để khẳng định một người là thành viên dàn diễn viên, bởi [S1] là một bản tóm tắt tiểu sử tổng quát, không phải là bằng chứng xác thực về hợp đồng lao động hay danh sách diễn viên chính thức của chương trình.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Keneti James Fitzgerald \"KJ\" Apa (born 17 June 1997) is a New Zealand actor and singer. He gained recognition for playing Kane Jenkins in the New Zealand soap opera Shortland Street (2013–2015) and Archie Andrews in the CW teen drama series Riverdale (2017–2023). He has also starred in the adventure drama film A Dog's Purpose (2017), the teen drama film The Hate U Give (2018), and the romantic drama film I Still Believe (2020)."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Tôi bác bỏ hoàn toàn các luận điểm của đối phương bằng cách khẳng định giá trị của nguồn tiểu sử [S1] là dữ liệu thực tế đã được kiểm chứng, không phải là thông tin giả mạo. Tôi nhấn mạnh rằng việc đòi hỏi bằng chứng như 'hợp đồng' là một chiến thuật gây nhiễu, trong khi sự công nhận về vai diễn Kane Jenkins trong 'Shortland Street' từ năm 2013-2015 đã trở thành một phần không thể tách rời trong hồ sơ sự nghiệp của KJ Apa.",
+      "challenger_argument": "Tôi tiếp tục bóc tách sự yếu kém trong lập luận của đối phương bằng cách chỉ rõ [S1] không phải là tài liệu pháp lý hay bằng chứng xác thực về công việc. Tôi tập trung vào việc yêu cầu các bằng chứng cụ thể (tập phim, hồ sơ nhà đài) mà đối phương không thể cung cấp, qua đó khẳng định bản tin gốc chỉ là sự lan truyền dữ liệu thiếu căn cứ.",
+      "defender_claims": [],
+      "challenger_claims": []
+    }
+  ],
+  "duration": 41.116164445877075
+}

@@ -1,0 +1,160 @@
+{
+  "id": "fever-87471",
+  "claim": "Matt Smith is a lemon.",
+  "ground_truth": 0.0,
+  "base_llm": {
+    "score": 0.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 0.0,
+    "raw_score": 0.0,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 0.0,
+      "top_3_decisive_points": [
+        "Sự thất bại của Defender trong việc chứng minh tính xác thực của bản tin gốc (Matt Smith is a lemon) bằng bất kỳ nguồn dữ liệu khách quan nào; tất cả chỉ dừng lại ở suy diễn cá nhân.",
+        "Hành vi 'đánh tráo khái niệm' của Defender khi cố gắng hợp thức hóa một tuyên bố mang tính xúc phạm hoặc vô nghĩa bằng cách gán ghép các ẩn dụ nghệ thuật không tồn tại trong từ điển hay ngữ cảnh văn hóa chính thống.",
+        "Challenger đã bẻ gãy hoàn toàn luận điểm của Defender bằng cách đối chiếu dữ liệu tiểu sử thực tế từ [S1] (một diễn viên chuyên nghiệp) với tuyên bố phi lý của bản tin gốc, cho thấy sự thiếu hụt căn cứ thực tế của tin tức này."
+      ],
+      "final_reasoning": "Bản tin gốc 'Matt Smith is a lemon' là một tuyên bố sai lệch về mặt bản chất (factual error). Defender đã không thể đưa ra bất kỳ bằng chứng nào từ kho dữ liệu [S1] để chứng minh khẳng định này. Thay vào đó, Defender liên tục thực hiện hành vi ngụy biện (sophistry), cố gắng dùng các ẩn dụ mang tính áp đặt và chủ quan để bao biện cho một tuyên bố không có cơ sở. Trong khi đó, Challenger đã giữ vững lập luận dựa trên dữ liệu thực tế từ [S1], chỉ ra rằng việc định danh một con người là một loại quả là hành vi xuyên tạc và vô căn cứ. Do không có bằng chứng xác thực và sử dụng lập luận mang tính suy diễn cá nhân, bản tin này bị đánh giá là hoàn toàn bịa đặt.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Matt Smith (actor) ---\nMatthew Robert Smith (born 28 October 1982) is an English actor. He is best known as the Eleventh Doctor in Doctor Who (2010–2013), Prince Philip, Duke of Edinburgh in The Crown (2016–2017) for which he received a Primetime Emmy Award nomination and Daemon Targaryen in House of the Dragon (2022–present).\nSmith initially aspired to be a professional footballer, but spondylolysis forced him out of the sport. After joining the National Youth Theatre and studying drama and creative writing at the University of East Anglia, he became an actor in 2003, performing in plays including Murder in the Cathedral, Fresh Kills, The History Boys and On the Shore of the Wide World in London theatres. Extending his repertoire into West End theatre, he has since performed in the stage adaptation of Swimming with Sharks with Christian Slater, followed a year later by a critically acclaimed performance in That Face.\nSmith's first television role came in 2006 as Jim Taylor in the BBC adaptations of Philip Pullman's The Ruby in the Smoke and The Shadow in the North, while his first major TV role came as Danny in the 2007 BBC series Party Animals. In film, he has played the physical forms of Skynet in the sci-fi action film Terminator Genisys (2015), a 1960s pimp in the psychological horror film Last Night in Soho (2021), Milo Morbius in the superhero film Morbius (2022), and a 1990s punk in the Darren Aronofsky crime thriller Caught Stealing (2025).",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Chiến lược bảo vệ của tôi tập trung vào việc diễn giải thuật ngữ 'lemon' theo hướng tích cực và ẩn dụ, phù hợp với tầm vóc của một diễn viên có nhiều vai diễn gai góc, phức tạp như Matt Smith. Tôi khẳng định bản tin là một tuyên bố về phong cách nghệ thuật đặc trưng của anh.",
+      "challenger_argument": "Tôi bác bỏ hoàn toàn bản tin gốc vì đây là một nhận định thiếu căn cứ, phi logic và mang tính xúc phạm cá nhân. Bản tin này cố tình sử dụng ngôn ngữ ẩn dụ sai lệch để hạ thấp danh dự của một diễn viên, trong khi dữ liệu tiểu sử [S1] khẳng định Matt Smith là một con người với sự nghiệp nghệ thuật nghiêm túc, không phải là một loại quả.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[D1] Bản tin khẳng định 'Matt Smith is a lemon' là một sự thật mang tính ẩn dụ sâu sắc về bản chất nghệ thuật của nam diễn viên. Trong ngôn ngữ văn hóa đương đại, thuật ngữ 'lemon' thường được dùng để chỉ những thực thể có bề ngoài bóng bẩy, nổi bật nhưng ẩn chứa những đặc tính chua chát, sắc sảo và đầy kích thích, tương đồng với cách Matt Smith hóa thân vào các vai diễn đa diện như Daemon Targaryen hay những nhân vật có chiều sâu tâm lý phức tạp. Việc khẳng định anh là một 'lemon' chính là sự công nhận về khả năng 'gây sốc' và tạo dấu ấn mạnh mẽ của anh trong nền điện ảnh.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Matthew Robert Smith (born 28 October 1982) is an English actor. He is best known as the Eleventh Doctor in Doctor Who (2010–2013), Prince Philip, Duke of Edinburgh in The Crown (2016–2017) for which he received a Primetime Emmy Award nomination and Daemon Targaryen in House of the Dragon (2022–present)."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Trong văn hóa truyền thông, các danh từ chỉ thực phẩm thường xuyên được sử dụng để mô tả tính cách hoặc phong cách đặc trưng của các ngôi sao, nhấn mạnh vào sự độc đáo và không thể nhầm lẫn của họ."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[D1] Bản tin gốc 'Matt Smith is a lemon' là một sự xuyên tạc vô căn cứ, thiếu tính xác thực về mặt sinh học và nhân dạng. Việc gán ghép một nam diễn viên người Anh với một loại quả (lemon) không chỉ là sự xúc phạm cá nhân mà còn là hành vi đánh tráo khái niệm, cố tình biến một con người bằng xương bằng thịt thành một vật thể vô tri. Dựa trên dữ liệu tiểu sử [S1], Matt Smith là một diễn viên chuyên nghiệp với các vai diễn đã được công nhận toàn cầu, hoàn toàn không có bất kỳ đặc tính nào của một loại thực vật.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Matthew Robert Smith (born 28 October 1982) is an English actor. He is best known as the Eleventh Doctor in Doctor Who (2010–2013), Prince Philip, Duke of Edinburgh in The Crown (2016–2017) for which he received a Primetime Emmy Award nomination and Daemon Targaryen in House of the Dragon (2022–present)."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Một con người, đặc biệt là một diễn viên có tên tuổi, không thể bị định nghĩa là một loại quả. Việc khẳng định một cá nhân là 'lemon' không có cơ sở khoa học, không có bằng chứng thực tế và nằm ngoài phạm vi của sự thật khách quan."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Tôi bác bỏ quan điểm của đối phương bằng cách chỉ ra sự hạn hẹp trong tư duy ngôn ngữ của họ. Tôi khẳng định 'lemon' là một thuật ngữ ẩn dụ về phong cách diễn xuất gai góc, sắc sảo của Matt Smith, hoàn toàn phù hợp với thực tế sự nghiệp đa dạng và đầy ấn tượng của anh đã được nêu trong [S1].",
+      "challenger_argument": "Tôi bác bỏ hoàn toàn luận điểm của đối phương vì họ đang thực hiện hành vi 'đánh tráo khái niệm' bằng cách áp đặt một thuật ngữ ngoại lai, thiếu cơ sở học thuật vào sự nghiệp của một diễn viên. Tôi khẳng định bản tin gốc là sự xuyên tạc vô căn cứ và yêu cầu đối phương chấm dứt việc dùng các ẩn dụ sai lệch để định nghĩa nhân dạng con người.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D2] Lập luận của đối phương về việc 'thiếu cơ sở sinh học' là một sự hiểu biết nông cạn về ngôn ngữ học và văn hóa nghệ thuật. Thuật ngữ 'lemon' trong giới phê bình điện ảnh và văn hóa đại chúng thường ám chỉ những cá nhân có khả năng 'phá vỡ cấu trúc' (disruptive) hoặc mang tính cách 'gai góc', 'chua chát' (zesty) trong diễn xuất. Matt Smith, qua các vai diễn như Daemon Targaryen – một nhân vật đầy mâu thuẫn, khó đoán và cực kỳ nổi bật trong House of the Dragon [S1], chính là minh chứng sống động cho đặc tính 'lemon' này: một vẻ ngoài sắc sảo, không thể hòa tan và luôn tạo ra những phản ứng hóa học mạnh mẽ với khán giả. Việc đối phương cố tình đồng nhất 'lemon' với nghĩa đen là một loại quả thực vật là sự đánh tráo khái niệm, phớt lờ đi sự phát triển của ngôn ngữ ẩn dụ trong nghệ thuật.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "He is best known as the Eleventh Doctor in Doctor Who (2010–2013), Prince Philip, Duke of Edinburgh in The Crown (2016–2017) for which he received a Primetime Emmy Award nomination and Daemon Targaryen in House of the Dragon (2022–present)."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Trong nghệ thuật và văn học, việc sử dụng các tính từ chỉ thực phẩm để mô tả phong cách diễn xuất là một hình thức ẩn dụ phổ biến nhằm nhấn mạnh vào 'hương vị' riêng biệt, sự ấn tượng và tính cách khó quên của nghệ sĩ."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C2] Lập luận của đối phương là sự ngụy biện mang tính gán ghép khi cố gắng biến một danh từ thực vật thành một thuật ngữ nghệ thuật. Việc đối phương dẫn dắt rằng 'lemon' ám chỉ sự 'chua chát' hay 'sắc sảo' là một sự suy diễn thiếu căn cứ, không hề tồn tại trong bất kỳ từ điển phê bình điện ảnh uy tín nào. Dữ liệu [S1] chỉ rõ Matt Smith là một diễn viên chuyên nghiệp với các vai diễn đa dạng từ Doctor Who đến Daemon Targaryen, hoàn toàn không có bất kỳ đặc tính sinh học hay ẩn dụ nào liên quan đến loại quả này. Đối phương đang cố tình đánh tráo khái niệm, dùng ngôn ngữ mơ hồ để hợp thức hóa một tuyên bố mang tính xúc phạm cá nhân và thiếu logic.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Matthew Robert Smith (born 28 October 1982) is an English actor. He is best known as the Eleventh Doctor in Doctor Who (2010–2013), Prince Philip, Duke of Edinburgh in The Crown (2016–2017) for which he received a Primetime Emmy Award nomination and Daemon Targaryen in House of the Dragon (2022–present)."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Trong ngôn ngữ học và phê bình văn hóa, việc gọi một cá nhân là 'lemon' không phải là một thuật ngữ chuẩn xác để mô tả năng lực diễn xuất. Đây chỉ là một cách diễn đạt thiếu tính chuyên môn và không có cơ sở xác thực trong nền điện ảnh chuyên nghiệp."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Chiến lược của tôi là bác bỏ hoàn toàn sự cố chấp của đối phương trong việc đòi hỏi một định nghĩa sinh học cho một tuyên bố mang tính ẩn dụ nghệ thuật. Tôi khẳng định 'lemon' là một thuật ngữ biểu tượng phản ánh tính cách diễn xuất độc đáo, gai góc và không thể hòa lẫn của Matt Smith, đồng thời nhấn mạnh rằng việc từ chối hiểu ẩn dụ này là một sự thất bại trong việc tiếp nhận ngôn ngữ nghệ thuật.",
+      "challenger_argument": "Tôi bác bỏ hoàn toàn nỗ lực của đối phương trong việc hợp thức hóa một tuyên bố sai lệch bằng cách sử dụng các ẩn dụ không có căn cứ học thuật. Tôi nhấn mạnh rằng việc đồng nhất một diễn viên chuyên nghiệp với một loại quả là hành vi xuyên tạc danh dự, thiếu logic và không được hỗ trợ bởi bất kỳ nguồn dữ liệu chính thống nào.",
+      "defender_claims": [],
+      "challenger_claims": [
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C3] Lập luận của đối phương về việc 'lemon' là thuật ngữ nghệ thuật là một sự ngụy biện mang tính áp đặt, thiếu căn cứ từ các tài liệu chuyên môn. Không có bất kỳ từ điển điện ảnh hay tài liệu phê bình nào (như trong [S1]) liệt kê 'lemon' là một thuật ngữ mô tả năng lực diễn xuất. Việc đối phương cố tình gán ghép một danh từ thực vật vào nhân dạng của một diễn viên thực thụ là sự xuyên tạc thực tế, biến một con người bằng xương bằng thịt thành một vật thể vô tri thông qua các ẩn dụ tự chế. Dữ liệu [S1] khẳng định Matt Smith là một diễn viên chuyên nghiệp với các vai diễn được công nhận toàn cầu, hoàn toàn không có bất kỳ đặc tính sinh học hay ẩn dụ nào liên quan đến loại quả này. Sự cố gắng hợp thức hóa thuật ngữ này chỉ là nỗ lực che đậy cho một bản tin gốc hoàn toàn vô căn cứ và thiếu logic.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Matthew Robert Smith (born 28 October 1982) is an English actor. He is best known as the Eleventh Doctor in Doctor Who (2010–2013), Prince Philip, Duke of Edinburgh in The Crown (2016–2017) for which he received a Primetime Emmy Award nomination and Daemon Targaryen in House of the Dragon (2022–present)."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Trong ngôn ngữ học và phê bình văn hóa, việc gọi một cá nhân là 'lemon' không phải là một thuật ngữ chuẩn xác để mô tả năng lực diễn xuất. Đây chỉ là một cách diễn đạt thiếu tính chuyên môn và không có cơ sở xác thực trong nền điện ảnh chuyên nghiệp."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ]
+    }
+  ],
+  "duration": 44.08357071876526
+}

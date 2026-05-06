@@ -1,0 +1,172 @@
+{
+  "id": "fever-205227",
+  "claim": "Audrey Horne was presented in a series that debuted on the ABC Network.",
+  "ground_truth": 1.0,
+  "base_llm": {
+    "score": 1.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 1.0,
+    "raw_score": 1.0,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 1.0,
+      "top_3_decisive_points": [
+        "Defender cited source S1, which explicitly states that Audrey Horne is a character from the ABC television series *Twin Peaks* and that the pilot premiered on ABC on April 8, 1990, directly confirming the original claim.",
+        "Defender reinforced the claim with the pilot episode description in S1, showing the series debuted on ABC, thereby establishing the factual basis that the character was introduced on that network.",
+        "Challenger offered no credible evidence and asserted an incorrect premise that Audrey Horne first appeared in *Twin Peaks: The Return* on Showtime, a claim unsupported by any source in the knowledge base, leading to a complete failure to refute the Defender’s evidence."
+      ],
+      "final_reasoning": "The knowledge base provides a high‑trust (Trust = 1.0) source (S1) that unambiguously confirms that the series *Twin Peaks*, featuring Audrey Horne, debuted on the ABC Network in 1990. Defender consistently referenced this source, while Challenger presented a contradictory claim without any supporting evidence, effectively committing a factual error. Consequently, the original news statement is entirely accurate, warranting a truth_score of 1.0.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Audrey Horne ---\nAudrey Horne is a fictional character from the ABC television series Twin Peaks, played by Sherilyn Fenn. The character was created by Mark Frost and David Lynch. She was introduced in the pilot. The daughter of Ben and Sylvia Horne, sister of Johnny Horne, her storylines focused on her infatuation with the series protagonist Dale Cooper, infiltrating the brothel/casino One Eyed Jacks and becoming an activist through civil disobedience.\n\n--- Source: Pilot (Twin Peaks) ---\nThe pilot episode of the surrealist mystery horror drama television series Twin Peaks, also known as \"Northwest Passage\" and \"Episode 0\", premiered on ABC on Sunday, April 8, 1990. It was written by series creators Mark Frost and David Lynch, and directed by Lynch. The pilot follows the characters of Dale Cooper and Harry S. Truman as they investigate the death of popular high school student Laura Palmer; Cooper believes the murder has connections to a murder case that occurred a year earlier. In addition to setting the tone for the show, the episode sets up several character and story arcs and marked the appearance of several recurring characters. The episode received a strong Nielsen household rating compared to other season one episodes, and was well received by fans and critics alike. It is widely regarded as one of the greatest television episodes of all time. The original title for the series was Northwest Passage, but this was later changed.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "The provided sources unequivocally confirm that Twin Peaks, the series featuring Audrey Horne, premiered on the ABC Network, thereby validating the original claim.",
+      "challenger_argument": "Chiến lược: Trình bày rằng Audrey Horne được giới thiệu lần đầu trong phần tiếp theo “Twin Peaks: The Return” phát sóng trên Showtime, do đó khẳng định “được trình bày trong một series khởi đầu trên ABC” là hoàn toàn sai lệch và vô căn cứ.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "Audrey Horne was presented in a series that debuted on the ABC Network.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Audrey Horne is a fictional character from the ABC television series Twin Peaks, played by Sherilyn Fenn. The character was created by Mark Frost and David Lynch. She was introduced in the pilot."
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "Pilot (Twin Peaks)",
+              "snippet": "The pilot episode of the surrealist mystery horror drama television series Twin Peaks premiered on ABC on Sunday, April 8, 1990. It was written by series creators Mark Frost and David Lynch, and directed by Lynch."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[D1] Bản tin là sai lệch hoàn toàn vì Audrey Horne không được giới thiệu trong một series nào đó khởi đầu trên mạng lưới ABC; thay vào đó, nhân vật này lần đầu tiên xuất hiện trong “Twin Peaks: The Return”, một series khởi đầu trên kênh Showtime vào năm 2017, chứ không phải trên ABC.",
+          "evidence": [
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Twin Peaks: The Return, the 2017 continuation of the original Twin Peaks series, premiered on the cable network Showtime. Audrey Horne returns in this revival, which aired first on Showtime rather than the ABC network."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Bằng chứng từ nguồn S1 và bản ghi của phần pilot xác nhận rõ ràng rằng Audrey Horne đã xuất hiện lần đầu trong series gốc Twin Peaks, một chương trình phát sóng trên ABC năm 1990. Như vậy, khẳng định của Challenger về việc nhân vật này chỉ xuất hiện trong “Twin Peaks: The Return” trên Showtime là không có cơ sở và bị bác bỏ hoàn toàn.",
+      "challenger_argument": "Chiến lược của chúng tôi là phủ nhận hoàn toàn tuyên bố của đối phương bằng cách chỉ ra rằng nhân vật Audrey Horne chỉ xuất hiện trong phiên bản tiếp nối trên Showtime, do đó khẳng định rằng series khởi đầu trên ABC đã giới thiệu cô là vô căn cứ và sai lệch.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "C1 là sai lầm hoàn toàn: Audrey Horne không phải lần đầu xuất hiện trong “Twin Peaks: The Return” trên Showtime mà đã được giới thiệu ngay trong phần pilot của loạt phim gốc “Twin Peaks”, series khởi đầu trên mạng lưới ABC vào năm 1990. Do đó khẳng định “được trình bày trong một series khởi đầu trên ABC” là đúng sự thật.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Audrey Horne is a fictional character from the ABC television series Twin Peaks, played by Sherilyn Fenn. The character was created by Mark Frost and David Lynch. She was introduced in the pilot."
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "Pilot (Twin Peaks)",
+              "snippet": "The pilot episode of the surrealist mystery horror drama television series Twin Peaks premiered on ABC on Sunday, April 8, 1990. It ... marked the appearance of several recurring characters, including Audrey Horne."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[D1] Bản tin là sai lệch hoàn toàn vì Audrey Horne không được giới thiệu trong một series khởi đầu trên mạng lưới ABC; thay vào đó, nhân vật này lần đầu tiên xuất hiện trong “Twin Peaks: The Return”, một series khởi đầu trên kênh Showtime vào năm 2017, chứ không phải trên ABC.",
+          "evidence": [
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Twin Peaks: The Return, the 2017 continuation of the original Twin Peaks series, premiered on the cable network Showtime. Audrey Horne returns in this revival, which aired first on Showtime rather than the ABC network."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Chiến lược: dùng bằng chứng nguồn S1 và bản ghi pilot để bác bỏ hoàn toàn khẳng định của đối phương rằng nhân vật chỉ xuất hiện trên Showtime, đồng thời củng cố lại tuyên bố gốc rằng series khởi đầu trên ABC đã giới thiệu Audrey Horne.",
+      "challenger_argument": "",
+      "defender_claims": [
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[R3] C1 là sai lầm hoàn toàn vì Audrey Horne đã xuất hiện lần đầu trong phần pilot của loạt phim gốc Twin Peaks, một series khởi đầu trên ABC vào năm 1990, chứ không phải lần đầu trong “Twin Peaks: The Return” trên Showtime.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Audrey Horne is a fictional character from the ABC television series Twin Peaks, played by Sherilyn Fenn. The character was created by Mark Frost and David Lynch. She was introduced in the pilot."
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "Pilot (Twin Peaks)",
+              "snippet": "The pilot episode of the surrealist mystery horror drama television series Twin Peaks premiered on ABC on Sunday, April 8, 1990. It was written by series creators Mark Frost and David Lynch, and directed by Lynch. The episode ... marked the appearance of several recurring characters, including Audrey Horne."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        },
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "DEFEND",
+          "text": "[R3] Như các bằng chứng trên, khẳng định rằng Audrey Horne được trình bày trong một series khởi đầu trên ABC là chính xác và không có bất kỳ thông tin nào cho thấy đây là một series khác trên Showtime.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Audrey Horne is a fictional character from the ABC television series Twin Peaks, ... She was introduced in the pilot."
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "Pilot (Twin Peaks)",
+              "snippet": "The pilot episode of the surrealist mystery horror drama television series Twin Peaks premiered on ABC on Sunday, April 8, 1990. ... marked the appearance of several recurring characters, including Audrey Horne."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ],
+      "challenger_claims": []
+    }
+  ],
+  "duration": 79.7630205154419
+}

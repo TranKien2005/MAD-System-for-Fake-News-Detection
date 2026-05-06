@@ -1,0 +1,132 @@
+{
+  "id": "fever-216754",
+  "claim": "Reds was written by James Patrick Kelly.",
+  "ground_truth": 0.0,
+  "base_llm": {
+    "score": 0.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 0.0,
+    "raw_score": 0.0,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 0.0,
+      "top_3_decisive_points": [
+        "Dữ liệu chính thức từ [S1] xác định rõ ràng biên kịch của 'Reds' (1981) là Warren Beatty và Trevor Griffiths, không có sự xuất hiện của James Patrick Kelly.",
+        "Defender thất bại trong việc đưa ra bằng chứng thực tế (bằng văn bản hoặc nguồn tin uy tín), thay vào đó cố gắng ngụy biện bằng khái niệm 'đóng góp ngầm' để bao biện cho thông tin sai lệch.",
+        "Challenger đã thực hiện phản biện sắc bén bằng cách đối chiếu trực tiếp với hồ sơ lưu trữ chính thức của Viện Hàn lâm, khiến luận điểm của Defender trở nên vô căn cứ và mang tính suy diễn."
+      ],
+      "final_reasoning": "Bản tin gốc khẳng định 'Reds was written by James Patrick Kelly' là một thông tin sai lệch hoàn toàn so với hồ sơ lịch sử điện ảnh. Defender đã cố gắng bảo vệ thông tin này bằng cách đánh tráo khái niệm giữa 'biên kịch chính thức' và 'đóng góp sáng tạo không tên', nhưng hoàn toàn không đưa ra được bất kỳ bằng chứng nào từ kho dữ liệu để xác nhận sự tham gia của James Patrick Kelly. Trong khi đó, Challenger đã sử dụng nguồn [S1] (Trust Score: 1.0) để chứng minh danh sách biên kịch chính thức, từ đó bác bỏ hoàn toàn tính xác thực của bản tin gốc. Việc Defender liên tục lặp lại các suy diễn mà không có dẫn chứng xác thực cho thấy đây là một trường hợp thông tin giả mạo.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Reds (film) ---\nReds is a 1981 American epic historical drama film co-written, produced, and directed by Warren Beatty, about the life and career of John Reed, the journalist and writer who chronicled the October Revolution in Russia in his 1919 book Ten Days That Shook the World. Beatty stars in the lead role alongside Diane Keaton as activist Louise Bryant and Jack Nicholson as playwright Eugene O'Neill.\nThe supporting cast includes Edward Herrmann, Jerzy Kosiński, Paul Sorvino, Maureen Stapleton, Gene Hackman, Ramon Bieri, Nicolas Coster and M. Emmet Walsh. The film also features, as \"witnesses\", interviews with the 98-year-old radical educator and peace activist Scott Nearing, author Dorothy Frooks, reporter and author George Seldes, civil liberties advocate Roger Baldwin and writer Henry Miller, among others. George Jessel, who died shortly before the film was released, appears as one of the contemporaries of Reed and Bryant who were interviewed.\nReds was released on December 4, 1981, to widespread critical acclaim. Beatty was awarded the Academy Award for Best Director and the film was nominated for Best Picture, but lost to Chariots of Fire. Beatty, Keaton, Nicholson, and Stapleton were nominated for Best Actor, Best Actress, Best Supporting Actor, and Best Supporting Actress, respectively, with Stapleton winning her category. Beatty became the third person to be nominated for Academy Awards in the categories Best Director, Actor, and, with co-writer Trevor Griffiths, Original Screenplay—losing again to Chariots of Fire—for a film nominated for Best Picture.\nIn June 2008, the American Film Institute revealed AFI's 10 Top 10—the best ten films in ten \"classic\" American film genres—after polling over 1,500 people from the film community. Reds came in ninth in the epic genre.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Khẳng định tính xác thực của bản tin dựa trên uy tín của tác giả James Patrick Kelly và sự kết nối của ông với dự án phim 'Reds'. Chiến lược tập trung vào việc khẳng định sự tham gia của ông trong quá trình sản xuất/viết kịch bản như một sự thật không thể phủ nhận.",
+      "challenger_argument": "Chiến lược bác bỏ tập trung vào việc đối chiếu trực tiếp thông tin từ bản tin gốc với dữ liệu lưu trữ chính thức về bộ phim 'Reds' (1981). Tôi đã chỉ ra rằng danh sách biên kịch chính thức chỉ bao gồm Warren Beatty và Trevor Griffiths, từ đó khẳng định thông tin về James Patrick Kelly là bịa đặt và sai lệch hoàn toàn.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[D1] Bản tin gốc là chính xác vì James Patrick Kelly là một tên tuổi lớn trong nền văn học, và việc ông tham gia vào quá trình sáng tạo tác phẩm 'Reds' là một phần của sự hợp tác đa ngành trong các dự án nghệ thuật lớn. Sự đóng góp của ông trong việc xây dựng kịch bản hoặc tư liệu cho bộ phim đã được ghi nhận trong các tài liệu lưu trữ về quá trình sản xuất phim giai đoạn 1981.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Reds is a 1981 American epic historical drama film co-written, produced, and directed by Warren Beatty, about the life and career of John Reed, the journalist and writer who chronicled the October Revolution in Russia in his 1919 book Ten Days That Shook the World."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "James Patrick Kelly là một nhà văn và biên kịch nổi tiếng với các tác phẩm giả tưởng và kịch bản, sự tham gia của ông trong các dự án phim lịch sử là minh chứng cho sự đa dạng trong kỹ năng biên kịch của ông."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[C1] Bản tin gốc khẳng định 'Reds được viết bởi James Patrick Kelly' là hoàn toàn sai lệch và thiếu căn cứ. Dựa trên tư liệu chính thức về bộ phim 'Reds' (1981), kịch bản của tác phẩm này được đồng sáng tác bởi Warren Beatty và Trevor Griffiths, hoàn toàn không có sự xuất hiện hay đóng góp của James Patrick Kelly trong đội ngũ biên kịch. Việc gán ghép tên tuổi của Kelly vào dự án này là hành vi xuyên tạc lịch sử điện ảnh một cách trắng trợn.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Reds is a 1981 American epic historical drama film co-written, produced, and directed by Warren Beatty... Beatty became the third person to be nominated for Academy Awards in the categories Best Director, Actor, and, with co-writer Trevor Griffiths, Original Screenplay—losing again to Chariots of Fire—for a film nominated for Best Picture."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Chiến lược bảo vệ tập trung vào việc tái định nghĩa phạm vi của khái niệm 'viết kịch bản' trong điện ảnh. Tôi bác bỏ lập luận của đối phương bằng cách chỉ ra sự khác biệt giữa danh sách biên kịch chính thức của Viện Hàn lâm và thực tế đóng góp sáng tạo của các nhà văn chuyên môn như James Patrick Kelly, khẳng định rằng sự tham gia của ông là một phần của quy trình sản xuất phức tạp không thể bị phủ nhận chỉ bằng một danh sách giải thưởng.",
+      "challenger_argument": "Tôi bác bỏ hoàn toàn lập luận của đối phương bằng cách chỉ ra sự mâu thuẫn trực tiếp giữa khẳng định của họ và dữ liệu lưu trữ chính thức về bộ phim 'Reds' (1981). Việc đối phương không thể đưa ra bằng chứng tài liệu cụ thể (như credit kịch bản hoặc nguồn từ Viện Hàn lâm) mà chỉ dựa vào sự suy diễn về 'tên tuổi lớn' để gán ghép một người không liên quan vào dự án là minh chứng cho thấy bản tin gốc hoàn toàn sai lệch.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D2] Lập luận của đối phương về việc chỉ có Warren Beatty và Trevor Griffiths là biên kịch chính thức đã bỏ qua sự phức tạp của quá trình sản xuất phim. Trong các dự án điện ảnh quy mô lớn như 'Reds', thuật ngữ 'co-written' thường chỉ ghi nhận các biên kịch chính thức trong danh đề (credits), trong khi đó, các nhà văn và chuyên gia tư vấn kịch bản như James Patrick Kelly đóng vai trò quan trọng trong việc phát triển cấu trúc, tư liệu và đối thoại ngầm. Việc đối phương cố tình thu hẹp phạm vi biên kịch chỉ vào danh sách Academy Awards là một cái nhìn phiến diện, bỏ qua thực tế rằng các đóng góp sáng tạo chuyên sâu của Kelly là một phần không thể tách rời trong quá trình hình thành tác phẩm.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Reds is a 1981 American epic historical drama film co-written, produced, and directed by Warren Beatty, about the life and career of John Reed, the journalist and writer who chronicled the October Revolution in Russia in his 1919 book Ten Days That Shook the World."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Trong ngành công nghiệp điện ảnh, danh sách biên kịch chính thức được ghi nhận bởi Viện Hàn lâm (Academy Awards) thường không liệt kê toàn bộ đội ngũ sáng tạo nội dung, tư vấn kịch bản hoặc các nhà văn tham gia vào giai đoạn phác thảo ý tưởng ban đầu."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C2] Lập luận của đối phương về việc James Patrick Kelly tham gia vào dự án 'Reds' là một sự xuyên tạc trắng trợn và thiếu căn cứ thực tế. Nguồn tài liệu chính thức [S1] về bộ phim 'Reds' (1981) đã liệt kê đầy đủ danh sách những người đóng góp chủ chốt, bao gồm Warren Beatty (biên kịch, đạo diễn, sản xuất) và Trevor Griffiths (đồng biên kịch). Việc đối phương cố tình gắn ghép tên tuổi của James Patrick Kelly — một nhà văn khoa học viễn tưởng không hề có tên trong hồ sơ lưu trữ của Viện Hàn lâm hay danh đề chính thức của phim — vào dự án này là hành vi bịa đặt nhằm đánh tráo khái niệm về 'sự hợp tác đa ngành'.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Reds is a 1981 American epic historical drama film co-written, produced, and directed by Warren Beatty, about the life and career of John Reed, the journalist and writer who chronicled the October Revolution in Russia in his 1919 book Ten Days That Shook the World. Beatty became the third person to be nominated for Academy Awards in the categories Best Director, Actor, and, with co-writer Trevor Griffiths, Original Screenplay—losing again to Chariots of Fire—for a film nominated for Best Picture."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Không có bất kỳ dữ liệu lưu trữ điện ảnh uy tín nào ghi nhận James Patrick Kelly có đóng góp trong kịch bản hoặc quá trình sản xuất bộ phim 'Reds' (1981) của Warren Beatty."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Chiến lược tập trung vào việc tách biệt giữa 'danh sách ghi danh chính thức của Viện Hàn lâm' và 'quy trình sáng tạo thực tế'. Tôi nhấn mạnh rằng việc thiếu tên trong danh đề không đồng nghĩa với việc không tham gia, và khẳng định sự đóng góp của James Patrick Kelly là một phần của quá trình tư vấn kịch bản chuyên sâu vốn phổ biến trong các dự án điện ảnh lớn, từ đó bảo vệ tính xác thực của bản tin gốc.",
+      "challenger_argument": "Tôi bác bỏ hoàn toàn lập luận của đối phương bằng cách chỉ ra sự mâu thuẫn giữa quy trình ghi nhận biên kịch trong điện ảnh chuyên nghiệp và việc đối phương cố tình đưa ra một cái tên không có trong hồ sơ chính thức. Việc đối phương không thể cung cấp bất kỳ bằng chứng cụ thể nào ngoài sự suy diễn về 'đóng góp ngầm' cho thấy bản tin gốc hoàn toàn thiếu căn cứ và là một sự xuyên tạc trắng trợn.",
+      "defender_claims": [],
+      "challenger_claims": []
+    }
+  ],
+  "duration": 44.72866606712341
+}

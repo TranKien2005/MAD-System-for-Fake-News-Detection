@@ -1,0 +1,205 @@
+{
+  "id": "fever-134947",
+  "claim": "Peyton Manning refused to sign with the Broncos and remained on the Colts.",
+  "ground_truth": 0.0,
+  "base_llm": {
+    "score": 0.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 0.0,
+    "raw_score": 0.0,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 0.0,
+      "top_3_decisive_points": [
+        "Source S1 clearly states that Peyton Manning played for the Indianapolis Colts until he was released after the 2010 season (and after missing 2011 due to neck surgery), and only then signed with the Denver Broncos for the 2012 season. This timeline disproves any claim that he was on the Colts and actively refused a Broncos contract.",
+        "There is no mention in S1—or any other high‑trust source—of Manning turning down an offer from the Broncos while still under contract with the Colts. The only contractual move was his release followed by a new signing, which contradicts the phrasing “refused to sign with the Broncos and remained on the Colts.”",
+        "The Defender’s argument repeatedly re‑phrases the same point without providing new evidence, essentially parroting the idea that “not signing while under contract equals refusal.” This logical misinterpretation fails to address the core claim and is outweighed by the Challenger’s factual timeline."
+      ],
+      "final_reasoning": "The original news item asserts that Manning \"refused to sign with the Broncos and remained on the Colts.\" According to the high‑trust source S1, Manning stayed with the Colts until his release and only after that did he sign with the Broncos. No evidence supports an active refusal while still under contract. The Defender’s repeated claim that the absence of a contract during his Colts tenure constitutes a \"refusal\" is a misreading of the facts and does not negate the factual timeline. Consequently, the statement is entirely false, warranting a truth_score of 0.0 (completely fabricated).",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Peyton Manning ---\nPeyton Williams Manning (born March 24, 1976) is an American former professional football player who was a quarterback in the National Football League (NFL) for 18 seasons. Nicknamed \"the Sheriff\", he spent 14 seasons with the Indianapolis Colts and four with the Denver Broncos. Manning is considered one of the greatest quarterbacks of all time. A member of the Manning football dynasty, he is the second son of former NFL quarterback Archie Manning, older brother of former NFL quarterback Eli Manning, and uncle of Texas Longhorns quarterback Arch Manning. He played college football for the Tennessee Volunteers, winning the Maxwell, Davey O'Brien, and Johnny Unitas Golden Arm awards as a senior en route to victory in the 1997 SEC Championship Game.\nManning was selected first overall in the 1998 NFL draft by the Colts and served as their starting quarterback from 1998 to 2010. He helped transform the struggling Colts franchise into consistent playoff contenders, leading them to 11 playoff appearances, eight division titles, three AFC Championship Games, two Super Bowl appearances, and one championship title in Super Bowl XLI, the franchise's first in over three decades and first since relocating to Indianapolis. Manning was also named Super Bowl MVP in the victory. After undergoing neck surgery that sidelined him for the 2011 season, Manning was released by the Colts and signed with the Broncos. Serving as the Broncos' starting quarterback from 2012 to 2015, he helped them clinch their division each season and reach two Super Bowls. Manning's career ended with a victory in Super Bowl 50, making him the first starting quarterback to win the Super Bowl for more than one franchise.\nManning holds many NFL records, including most MVP awards, quarterback first-team All-Pro selections, 4,000-yard passing seasons, single-season passing yards, and single-season passing touchdowns. He is also third in career passing yards and career passing touchdowns. Helping lead both the Colts and Broncos to two Super Bowl appearances each, Manning is the only quarterback with multiple Super Bowl starts for different franchises. He was inducted to the College Football Hall of Fame in 2017 and the Pro Football Hall of Fame in 2021.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Chiến lược bảo vệ tin gốc tập trung vào việc chứng minh rằng Peyton Manning đã ở lại với Colts cho tới khi bị giải phóng, và trong suốt thời gian đó anh không ký hợp đồng nào với Broncos, do đó khẳng định rằng anh đã 'từ chối ký với Broncos' và 'vẫn ở lại Colts' cho đến khi chuyển sang đội khác.",
+      "challenger_argument": "Dựa trên nguồn S1 và kiến thức chung, Peyton Manning không từ chối ký hợp đồng với Denver Broncos; thay vào đó, sau khi Colts thải anh, Manning đã ký và chơi cho Broncos, chứng minh bản tin gốc hoàn toàn sai sự thật.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "Bản tin là đúng sự thật vì Peyton Manning đã ở lại với Indianapolis Colts cho tới khi anh bị giải phóng và chỉ sau đó mới ký hợp đồng với Denver Broncos, nghĩa là trong suốt thời gian anh là cầu thủ của Colts, Manning đã từ chối ký hợp đồng với Broncos và duy trì vị trí của mình tại Colts.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Manning was selected first overall in the 1998 NFL draft by the Colts and served as their starting quarterback from 1998 to 2010. After undergoing neck surgery that sidelined him for the 2011 season, Manning was released by the Colts and signed with the Broncos."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Peyton Manning played his entire early career with the Indianapolis Colts before moving to the Denver Broncos."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[A1] Bản tin khẳng định Peyton Manning đã từ chối ký hợp đồng với Denver Broncos và ở lại Indianapolis Colts là sai lệch hoàn toàn, vì thực tế Manning đã bị Indianapolis Colts thải và sau đó ký hợp đồng với Denver Broncos.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "After undergoing neck surgery that sidelined him for the 2011 season, Manning was released by the Colts and signed with the Broncos. Serving as the Broncos' starting quarterback from 2012 to 2015, he helped them clinch their division each season and reach two Super Bowls."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Peyton Manning's move from the Indianapolis Colts to the Denver Broncos in 2012 is a well‑documented event in NFL history."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Bản tin gốc được bảo vệ bằng cách nhấn mạnh rằng Peyton Manning đã ở lại Colts cho tới khi bị giải phóng và trong thời gian còn là cầu thủ của Colts, anh không ký hợp đồng nào với Broncos – do đó anh đã 'từ chối' ký với Broncos trong giai đoạn này. Các bằng chứng từ S1 chứng minh anh phục vụ cho Colts tới 2010 và chỉ sau khi bị giải phóng mới ký với Broncos, xác nhận tính chính xác của tuyên bố gốc.",
+      "challenger_argument": "Những bằng chứng từ nguồn S1 và kiến thức chung cho thấy Manning đã bị Colts giải phóng trước khi ký với Broncos, do đó khẳng định ông \"từ chối\" ký hợp đồng trong khi vẫn còn là cầu thủ của Colts là hoàn toàn sai lầm. Bản tin gốc không phản ánh đúng chuỗi sự kiện lịch sử và vì vậy phải bị bác bỏ.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[R1] Bản tin gốc vẫn đúng vì nó mô tả hành vi của Peyton Manning trong thời kỳ còn đang là cầu thủ của Indianapolis Colts: anh đã ở lại đội Colts cho tới khi bị giải phóng và trong suốt thời gian này không ký bất kỳ hợp đồng nào với Denver Broncos, nghĩa là anh đã ‘từ chối ký với Broncos’ cho đến khi không còn là thành viên Colts nữa. Điều này không mâu thuẫn với việc anh sau khi bị giải phóng mới ký với Broncos; tuy nhiên, tuyên bố gốc không khẳng định rằng anh sẽ không bao giờ ký, mà chỉ nhấn mạnh việc anh đã từ chối đề nghị (hoặc không tham gia đàm phán) khi vẫn còn hợp đồng với Colts, và rằng anh duy trì vị trí của mình tại Colts cho tới khi bị giải phóng.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Manning was selected first overall in the 1998 NFL draft by the Colts and served as their starting quarterback from 1998 to 2010. After undergoing neck surgery that sidelined him for the 2011 season, Manning was released by the Colts and signed with the Broncos."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Peyton Manning played his entire early career with the Indianapolis Colts before moving to the Denver Broncos."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[R1] Bản tin gốc là sai lệch hoàn toàn vì Peyton Manning không từng \"từ chối ký hợp đồng với Denver Broncos\" trong thời gian còn là cầu thủ của Indianapolis Colts; thay vào đó, sau khi bị Indianapolis Colts giải phóng vào năm 2011, Manning đã ký hợp đồng với Denver Broncos và chơi cho đội này từ mùa giải 2012. Vì Manning đã không còn là thành viên của Colts khi đề nghị ký hợp đồng từ Broncos, nên khẳng định ông \"từ chối\" trong khi vẫn còn ở Colts là vô căn cứ và mâu thuẫn với thực tế lịch sử.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "After undergoing neck surgery that sidelined him for the 2011 season, Manning was released by the Colts and signed with the Broncos. Serving as the Broncos' starting quarterback from 2012 to 2015, he helped them clinch their division each season and reach two Super Bowls."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Peyton Manning's move from the Indianapolis Colts to the Denver Broncos in 2012 is a well‑documented event in NFL history."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Bằng chứng lịch sử cho thấy Manning chỉ ký với Denver Broncos sau khi Colts giải phóng, nghĩa là trong thời gian còn là cầu thủ Colts, anh không ký và do đó đã 'từ chối' ký với Broncos. Quy định NFL ngăn cản việc ký đồng thời, củng cố tính đúng đắn của bản tin gốc.",
+      "challenger_argument": "Hai lập luận phản bác trên đã chứng minh rằng tuyên bố \"Peyton Manning refused to sign with the Broncos and remained on the Colts\" là hoàn toàn sai lầm. Nguồn S1 cho thấy Manning chỉ ký với Broncos sau khi được Colts giải phóng, và quy tắc NFL ngăn cản việc ký hợp đồng trong thời gian còn ràng buộc, do đó không có hành động \"từ chối\" nào xảy ra. Bản tin gốc đã xuyên tạc sự kiện lịch sử và không có căn cứ thực tế.",
+      "defender_claims": [
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "DEFEND",
+          "text": "[D1-DEFEND] Bản tin là đúng sự thật vì Peyton Manning đã ở lại đội Indianapolis Colts cho tới khi bị giải phóng và trong suốt thời gian còn là cầu thủ của Colts, anh không ký bất kỳ hợp đồng nào với Denver Broncos, do đó đã \"từ chối\" ký với Broncos. Quy định NFL cấm cầu thủ ký hợp đồng với đội khác khi còn đang ràng buộc hợp đồng với đội hiện tại; vì Manning chỉ ký với Broncos sau khi Colts giải phóng anh, việc không ký trong thời gian còn là thành viên Colts chính là việc từ chối ký với Broncos. Điều này được khẳng định bởi các dữ liệu lịch sử.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Peyton Williams Manning (born March 24, 1976) is an American former professional football player ... He was selected first overall in the 1998 NFL draft by the Colts and served as their starting quarterback from 1998 to 2010. After undergoing neck surgery that sidelined him for the 2011 season, Manning was released by the Colts and signed with the Broncos. Serving as the Broncos' starting quarterback from 2012 to 2015, he helped them clinch their division each season and reach two Super Bowls."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Trong NFL, một cầu thủ không thể ký hợp đồng với đội khác khi vẫn còn ràng buộc hợp đồng với đội hiện tại; họ chỉ có thể ký sau khi được đội hiện tại giải phóng hoặc hợp đồng hết hạn."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[R1] Bản tin gốc là sai lệch hoàn toàn vì không có bằng chứng nào cho thấy Peyton Manning đã \"từ chối\" ký hợp đồng với Denver Broncos trong thời kỳ còn là cầu thủ của Indianapolis Colts. Nguồn S1 chỉ ghi rõ rằng Manning đã bị Indianapolis Colts giải phóng sau mùa giải 2011 và *sau đó* mới ký hợp đồng với Denver Broncos, chứ không hề đề cập tới bất kỳ đề nghị nào từ Broncos trong thời gian anh còn đang ràng buộc hợp đồng với Colts. Do các quy định của NFL cấm cầu thủ ký hợp đồng với đội khác khi vẫn đang có hợp đồng hiện hành, việc nói rằng Manning \"từ chối\" là vô căn cứ và mâu thuẫn với thực tế lịch sử.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "After undergoing neck surgery that sidelined him for the 2011 season, Manning was released by the Colts and signed with the Broncos. Serving as the Broncos' starting quarterback from 2012 to 2015..."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "NFL rules prohibit a player who is under contract with one team from signing a contract with another team until he is released or his contract expires."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[R2] Ngay cả khi giả sử có một lời mời từ Denver Broncos, việc Manning không ký trong thời gian còn là thành viên Colts không thể được gọi là \"từ chối\" mà chỉ là không thể ký do ràng buộc hợp đồng. Câu nói \"từ chối ký\" gợi ý một quyết định chủ động phản hồi một đề nghị, nhưng S1 không cung cấp bất kỳ thông tin nào về một đề nghị như vậy; nó chỉ nói Manning đã *được giải phóng* rồi mới ký. Do đó, bản tin đã thổi phóng và sai sự thật về hành động của Manning.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Manning was selected first overall in the 1998 NFL draft by the Colts and served as their starting quarterback from 1998 to 2010. After undergoing neck surgery that sidelined him for the 2011 season, Manning was released by the Colts and signed with the Broncos."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "When a player is under contract, any external offers are merely speculative; the player cannot legally accept them until he becomes a free agent."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ]
+    }
+  ],
+  "duration": 68.20905709266663
+}

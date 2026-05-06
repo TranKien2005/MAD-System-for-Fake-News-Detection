@@ -1,0 +1,181 @@
+{
+  "id": "fever-95593",
+  "claim": "Elementary has a cast.",
+  "ground_truth": 1.0,
+  "base_llm": {
+    "score": 1.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 1.0,
+    "raw_score": 1.0,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 1.0,
+      "top_3_decisive_points": [
+        "Defender đã chứng minh thành công sự tồn tại của dàn diễn viên thông qua danh sách cụ thể các diễn viên (Jonny Lee Miller, Lucy Liu, v.v.) được liệt kê chi tiết trong nguồn [S1].",
+        "Challenger đã mắc lỗi ngụy biện 'đánh tráo khái niệm' khi cố gắng gán ghép thuật ngữ 'cast' (dàn diễn viên) với các yêu cầu về 'tư cách pháp nhân' hoặc 'đơn vị sản xuất thống nhất', vốn không liên quan đến định nghĩa thông thường của từ này.",
+        "Defender đã bẻ gãy lập luận của Challenger bằng cách chỉ ra mối quan hệ nhân quả logic: sự tồn tại của các màn trình diễn (performances) được giới phê bình công nhận trong [S1] là bằng chứng không thể chối cãi về sự tồn tại của dàn diễn viên."
+      ],
+      "final_reasoning": "Bản tin gốc 'Elementary has a cast' là một khẳng định sự thật hiển nhiên (tautology) đối với bất kỳ tác phẩm truyền hình nào. Nguồn [S1] cung cấp đầy đủ bằng chứng về các diễn viên đảm nhận vai chính và phụ. Challenger đã thất bại trong việc bác bỏ vì họ cố chấp áp đặt các tiêu chuẩn pháp lý/cấu trúc không cần thiết vào một thuật ngữ ngôn ngữ thông thường. Lập luận của Challenger mang tính chất cố tình gây nhiễu, trong khi Defender dựa trên dữ liệu thực tế từ [S1] để bảo vệ luận điểm một cách logic và chặt chẽ.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Elementary (TV series) ---\nElementary is an American procedural comedy-drama television series that presented a contemporary update of Arthur Conan Doyle's character Sherlock Holmes. Created by Robert Doherty and starring Jonny Lee Miller as Sherlock Holmes and Lucy Liu as Dr. Joan Watson, the series aired on CBS for seven seasons from September 27, 2012, and ended on August 15, 2019, after 154 episodes. The series was set and filmed primarily in New York City, and, by the end of season two, Miller became the actor who had portrayed Sherlock Holmes in the most episodes on television or in film.\nThe show follows Holmes, a recovering drug addict and former consultant to Scotland Yard, as he assists the New York City Police Department in solving crimes. His indifference to police procedure often leads to conflict with Captain Thomas Gregson (Aidan Quinn), although the two still remain respectful of one another. Holmes is accompanied by Dr. Joan Watson (Lucy Liu), who initially acts as his sober companion. She is a former surgeon and was hired by Sherlock's father to help him in his rehabilitation. They eventually work together on his cases; in time she becomes Holmes's apprentice and later his professional partner. The series also features Holmes's ongoing conflict with his nemesis and former lover Jamie Moriarty (Natalie Dormer). Other supporting roles include Jon Michael Hill as Detective Marcus Bell, Rhys Ifans as Sherlock's brother Mycroft Holmes, and John Noble as Sherlock's father Morland Holmes.\nBefore the series premiered, it was met with some criticism, as it followed closely on the heels of the BBC's modern adaptation Sherlock. After the premiere, it was picked up for a full season and later an extra two episodes. The season two premiere was partly filmed on location in London. The series was well-received by critics, who praised the performances, writing, and novel approach to the source material. The seventh and final season, which consists of 13 episodes, premiered on May 23, 2019, and concluded on August 15, 2019.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Chiến lược bảo vệ tập trung vào việc khẳng định sự tồn tại tất yếu của dàn diễn viên (cast) thông qua việc dẫn chứng trực tiếp các tên tuổi diễn viên cụ thể (Jonny Lee Miller, Lucy Liu, Jon Michael Hill, v.v.) và sự ghi nhận chuyên môn về diễn xuất từ nguồn dữ liệu [S1], từ đó xác lập tính chân thực tuyệt đối của bản tin gốc.",
+      "challenger_argument": "Chiến lược của tôi là bác bỏ tính xác thực của bản tin gốc bằng cách tấn công vào sự mơ hồ của thuật ngữ 'cast'. Tôi khẳng định rằng bản tin này là một sự đơn giản hóa quá mức, không phản ánh đúng bản chất kỹ thuật và cấu trúc sản xuất phức tạp của một bộ phim truyền hình, từ đó phủ nhận giá trị thông tin của bản tin gốc.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[D1] Bản tin gốc là hoàn toàn chính xác vì bộ phim truyền hình 'Elementary' sở hữu một dàn diễn viên (cast) chuyên nghiệp và cụ thể đã được liệt kê chi tiết trong hồ sơ dữ liệu. Việc tồn tại một dàn diễn viên là yếu tố tiên quyết để một tác phẩm truyền hình có thể sản xuất và phát sóng suốt 154 tập phim.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Created by Robert Doherty and starring Jonny Lee Miller as Sherlock Holmes and Lucy Liu as Dr. Joan Watson, the series aired on CBS for seven seasons from September 27, 2012, and ended on August 15, 2019, after 154 episodes. ... Other supporting roles include Jon Michael Hill as Detective Marcus Bell, Rhys Ifans as Sherlock's brother Mycroft Holmes, and John Noble as Sherlock's father Morland Holmes."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        },
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[D2] Sự tồn tại của dàn diễn viên trong 'Elementary' không chỉ là nhận định mà là một sự thật khách quan được chứng minh qua các giải thưởng về diễn xuất và sự ghi nhận của giới phê bình đối với các vai diễn cụ thể trong phim.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "The series was well-received by critics, who praised the performances, writing, and novel approach to the source material."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[C1] Bản tin gốc 'Elementary has a cast' là một sự đánh tráo khái niệm nguy hiểm và thiếu căn cứ chuyên môn. Việc sử dụng thuật ngữ 'cast' (dàn diễn viên) một cách mơ hồ không thể được coi là một thông tin xác thực về mặt sản xuất, bởi lẽ 'Elementary' là một tác phẩm được tạo ra từ sự kết hợp của nhiều yếu tố kỹ thuật, hậu kỳ và kịch bản, chứ không chỉ đơn thuần là tập hợp các cá nhân diễn viên như bản tin ám chỉ.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Elementary is an American procedural comedy-drama television series that presented a contemporary update of Arthur Conan Doyle's character Sherlock Holmes. Created by Robert Doherty and starring Jonny Lee Miller as Sherlock Holmes and Lucy Liu as Dr. Joan Watson, the series aired on CBS for seven seasons from September 27, 2012, and ended on August 15, 2019, after 154 episodes."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        },
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[C2] Nhận định về sự tồn tại của một 'dàn diễn viên' (cast) trong bản tin gốc là vô căn cứ vì nó bỏ qua bản chất của một 'procedural comedy-drama' (phim truyền hình thủ tục hài kịch-chính kịch). Bản tin này cố tình đơn giản hóa sự phức tạp của dự án truyền hình này thành một khái niệm 'cast' lỗi thời, nhằm che đậy sự thiếu hụt các bằng chứng về hợp đồng lao động cụ thể hoặc sự liên kết pháp lý giữa các cá nhân được nhắc tên với tư cách là một đơn vị sản xuất thống nhất.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "The series was set and filmed primarily in New York City, and, by the end of season two, Miller became the actor who had portrayed Sherlock Holmes in the most episodes on television or in film. The show follows Holmes, a recovering drug addict and former consultant to Scotland Yard, as he assists the New York City Police Department in solving crimes."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C2"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Chiến lược bảo vệ của tôi tập trung vào việc bóc trần sự ngụy biện về thuật ngữ của đối phương. Tôi khẳng định rằng 'cast' là một thực thể thực tế, được xác nhận bởi các vai diễn cụ thể và sự ghi nhận về diễn xuất trong nguồn dữ liệu [S1], đồng thời bác bỏ nỗ lực phức tạp hóa vấn đề của Challenger nhằm che đậy sự thật hiển nhiên rằng một bộ phim truyền hình bắt buộc phải có dàn diễn viên.",
+      "challenger_argument": "Tôi bác bỏ hoàn toàn lập luận của đối phương bằng cách chỉ ra sự nhầm lẫn giữa 'danh sách diễn viên cá nhân' và khái niệm 'dàn diễn viên' (cast) như một thực thể sản xuất thống nhất. Bản tin gốc là một sự đơn giản hóa thô thiển, thiếu bằng chứng pháp lý hoặc cấu trúc để khẳng định sự tồn tại của một 'cast', đồng thời việc lạm dụng sự khen ngợi của giới phê bình không thể thay thế cho bằng chứng về tư cách pháp nhân của dàn diễn viên.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D3] Lập luận cho rằng thuật ngữ 'cast' là mơ hồ là một sự nhầm lẫn về mặt thuật ngữ học trong công nghiệp sản xuất truyền hình. Trong ngành sản xuất, 'cast' (dàn diễn viên) là một thực thể nhân sự cốt lõi và định danh, được xác lập thông qua hợp đồng lao động và sự phân vai cụ thể (như Jonny Lee Miller trong vai Sherlock Holmes). Việc 'Elementary' là một tác phẩm phức tạp không hề phủ nhận sự tồn tại của dàn diễn viên; trái lại, chính dàn diễn viên là thành phần thiết yếu để hiện thực hóa kịch bản và quá trình hậu kỳ mà đối phương đã nhắc đến.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Created by Robert Doherty and starring Jonny Lee Miller as Sherlock Holmes and Lucy Liu as Dr. Joan Watson, the series aired on CBS for seven seasons from September 27, 2012, and ended on August 15, 2019, after 154 episodes. ... Other supporting roles include Jon Michael Hill as Detective Marcus Bell, Rhys Ifans as Sherlock's brother Mycroft Holmes, and John Noble as Sherlock's father Morland Holmes."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        },
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D4] Việc đối phương cố gắng phủ nhận sự tồn tại của dàn diễn viên bằng cách viện dẫn bản chất 'procedural comedy-drama' là một sự ngụy biện. Bản chất của thể loại phim không thay đổi sự thật rằng các cá nhân như Jonny Lee Miller và Lucy Liu đã tham gia diễn xuất trong 154 tập phim. Các giải thưởng và sự phê bình tích cực về 'performances' (diễn xuất) trong [S1] là bằng chứng không thể chối cãi về sự tồn tại và vai trò của dàn diễn viên, bất kể các cấu trúc pháp lý hay hợp đồng phức tạp mà đối phương đòi hỏi một cách phi lý.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "The series was well-received by critics, who praised the performances, writing, and novel approach to the source material. The seventh and final season, which consists of 13 episodes, premiered on May 23, 2019, and concluded on August 15, 2019."
+            }
+          ],
+          "target_claim_ids": [
+            "C2"
+          ],
+          "claim_id": "C2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C3] Việc khẳng định 'Elementary có một dàn diễn viên' dựa trên danh sách tên tuổi là một sự ngụy biện về mặt cấu trúc. Bản tin gốc đã đánh tráo khái niệm 'dàn diễn viên' (cast) – một thực thể pháp lý và hợp đồng phức tạp – với việc liệt kê danh sách nhân sự tham gia sản xuất. Dữ liệu [S1] chỉ cung cấp tên của các diễn viên đóng vai cụ thể, hoàn toàn không có bằng chứng về một 'hợp đồng dàn diễn viên' thống nhất hay một đơn vị pháp lý được gọi là 'cast' như bản tin gốc ám chỉ. Do đó, việc dùng danh sách nhân sự để kết luận sự tồn tại của một 'cast' là bước nhảy vọt logic thiếu căn cứ.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Created by Robert Doherty and starring Jonny Lee Miller as Sherlock Holmes and Lucy Liu as Dr. Joan Watson, the series aired on CBS for seven seasons from September 27, 2012, and ended on August 15, 2019, after 154 episodes. ... Other supporting roles include Jon Michael Hill as Detective Marcus Bell, Rhys Ifans as Sherlock's brother Mycroft Holmes, and John Noble as Sherlock's father Morland Holmes."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C4] Nhận định của đối phương về 'sự thật khách quan' thông qua 'sự ghi nhận của giới phê bình' là một sự suy diễn sai lệch. Việc giới phê bình khen ngợi diễn xuất không đồng nghĩa với việc tồn tại một 'dàn diễn viên' theo nghĩa cấu trúc sản xuất mà bản tin gốc cố gắng khẳng định. Bản tin gốc đã cố tình lờ đi thực tế rằng 'Elementary' là một sản phẩm kỹ thuật, nơi các diễn viên xuất hiện trong các tập phim khác nhau với tư cách cá nhân, không phải là một tập thể cố định. Sự khen ngợi của giới phê bình là dành cho 'performances' (các màn trình diễn) cá lẻ, không phải là bằng chứng cho sự tồn tại của một thực thể 'cast' thống nhất như bản tin gốc tuyên bố.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "The series was well-received by critics, who praised the performances, writing, and novel approach to the source material. The seventh and final season, which consists of 13 episodes, premiered on May 23, 2019, and concluded on August 15, 2019."
+            }
+          ],
+          "target_claim_ids": [
+            "D2"
+          ],
+          "claim_id": "D2"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Chiến lược bảo vệ tập trung vào việc khẳng định sự tồn tại của 'cast' không phải là một khái niệm trừu tượng mà là một thực tế sản xuất tất yếu. Tôi đã bác bỏ nỗ lực tách rời 'diễn xuất' khỏi 'dàn diễn viên' của Challenger bằng cách làm rõ mối quan hệ nhân quả: không có dàn diễn viên thì không thể có các màn trình diễn (performances) được giới phê bình công nhận, đồng thời nhấn mạnh rằng danh sách diễn viên trong [S1] là bằng chứng xác thực về thực thể sản xuất này.",
+      "challenger_argument": "Tôi tiếp tục bác bỏ sự tồn tại của khái niệm 'cast' như một thực thể pháp lý hoặc đơn vị sản xuất thống nhất. Đối phương liên tục nhầm lẫn giữa việc liệt kê danh sách nhân sự (dựa trên [S1]) và sự tồn tại của một đơn vị 'cast' có tư cách pháp nhân. Việc sử dụng các giải thưởng diễn xuất cá nhân làm bằng chứng cho một 'tập thể cast' là một sự suy diễn sai lệch, không có giá trị chứng minh cho tính xác thực của bản tin gốc.",
+      "defender_claims": [],
+      "challenger_claims": []
+    }
+  ],
+  "duration": 48.88236427307129
+}

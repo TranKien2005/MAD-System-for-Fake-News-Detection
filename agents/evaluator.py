@@ -46,7 +46,7 @@ def score_sources(state: dict, llm) -> dict:
 
     new_sources_text = "\n".join(
         [
-            f"📖 {s['id']} {s['title']} (Domain: {s['domain']})\n   {s['content'][:300]}..."
+            f"📖 {s['id']} {s['title']} (Domain: {s['domain']})\n   {s['content']}..."
             for s in new_sources_list
         ]
     )
@@ -255,8 +255,10 @@ def format_knowledge_base(knowledge_base: list, source_scores: dict | None = Non
         relevance = entry.get("relevance_score", 0.5)
         trust = source_scores.get(tid, "Chưa giám định")
 
+        # Đảm bảo mọi dòng của nội dung đều được lùi vào để LLM dễ nhận diện thuộc về source nào
+        indented_content = "\n".join([f"   {line}" for line in content.split("\n")])
         lines.append(f"📖 {tid} {title} (Trust: {trust} | Domain: {domain} | Relevance: {relevance:.2f})")
-        lines.append(f"   {content[:400]}")
+        lines.append(indented_content)
         lines.append("")
     return "\n".join(lines)
 

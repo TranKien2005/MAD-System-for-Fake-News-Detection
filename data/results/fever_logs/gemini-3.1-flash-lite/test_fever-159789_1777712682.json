@@ -1,0 +1,181 @@
+{
+  "id": "fever-159789",
+  "claim": "1.7% of water can be found in glaciers and ice caps of Antarctica.",
+  "ground_truth": 1.0,
+  "base_llm": {
+    "score": 0.0,
+    "is_correct": false
+  },
+  "mad_system": {
+    "score": 0.0,
+    "raw_score": 0.25,
+    "is_correct": false,
+    "verdict": {
+      "truth_score": 0.25,
+      "top_3_decisive_points": [
+        "Sai lệch dữ liệu gốc: Nguồn [S1] ghi rõ '1.7%' là tổng cộng của cả 'glaciers and the ice caps of Antarctica and Greenland'. Bản tin gốc đã cắt xén, loại bỏ Greenland để gán toàn bộ con số này cho riêng Nam Cực.",
+        "Lỗi đánh tráo khái niệm: Defender cố tình biện minh cho việc 'ưu tiên thực thể lớn nhất', nhưng trong khoa học, việc gộp chung một nhóm dữ liệu rồi gán nhãn cho một phần tử đơn lẻ là hành vi làm sai lệch ngữ cảnh nghiêm trọng.",
+        "Bất lực trong việc phản biện: Defender lặp lại luận điểm về 'cấu trúc liệt kê' mà không thể giải trình tại sao việc lược bỏ một thực thể quan trọng (Greenland) lại không làm thay đổi bản chất thông tin, trong khi Challenger đã chỉ ra chính xác hành vi cherry-picking."
+      ],
+      "final_reasoning": "Bản tin gốc mắc lỗi sai lệch dữ liệu nghiêm trọng (Misleading). Dựa trên nguồn [S1], con số 1.7% đại diện cho tổng lượng nước ở cả Nam Cực và Greenland. Việc bản tin gốc chỉ nhắc đến Nam Cực đã làm sai lệch hoàn toàn sự thật khách quan. Defender trong suốt quá trình tranh luận đã không thể phủ nhận hành vi cắt ghép này mà chỉ cố gắng bao biện bằng các lý lẽ chủ quan. Do đó, bản tin bị đánh giá là sai lệch vì đã làm biến dạng dữ liệu khoa học để phục vụ mục đích trình bày cục bộ.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Water ---\nWater is an inorganic compound with the chemical formula H2O. It is a transparent, tasteless, odorless, and nearly colorless chemical substance. It is the main constituent of Earth's streams, lakes, and oceans and the fluids of all known living organisms, in which it acts as a solvent. Water, being a polar molecule, undergoes strong intermolecular hydrogen bonding which is a large contributor to its physical and chemical properties. It is vital for all known forms of life, despite not providing food energy or being an organic micronutrient. Due to its presence in all organisms, its chemical stability, its worldwide abundance, and its strong polarity relative to its small molecular size, water is often referred to as the \"universal solvent\".\nBecause Earth's surface temperature and pressure is relatively close to water's triple point, water exists on Earth as a solid, a liquid, and a gas. It forms precipitation in the form of rain and aerosols in the form of fog. Clouds consist of suspended droplets of water and ice, its solid state. When finely divided, crystalline ice may precipitate in the form of snow. The gaseous state of water is steam or water vapor.\nWater covers about 71% of the Earth's surface, with seas and oceans making up most of the water volume (about 96.5%). Small portions of water occur as groundwater (1.7%), in the glaciers and the ice caps of Antarctica and Greenland (1.7%), and in the air as vapor, clouds (consisting of ice and liquid water suspended in air), and precipitation (0.001%). Water moves continually through the water cycle of evaporation, transpiration (evapotranspiration), condensation, precipitation, and runoff, usually reaching the sea.\nWater plays an important role in the world economy. Approximately 70% of the fresh water used by humans goes to agriculture. Fishing in salt and fresh water bodies has been, and continues to be, a major source of food for many parts of the world, providing 6.5% of global protein. Much of the long-distance trade of commodities (such as oil, natural gas, and manufactured products) is transported by boats through seas, rivers, lakes, and canals. Large quantities of water, ice, and steam are used for cooling and heating in industry and homes. Water is an excellent solvent for a wide variety of substances, both mineral and organic; as such, it is widely used in industrial processes and in cooking and washing. Water, ice, and snow are also central to many sports and other forms of entertainment, such as swimming, pleasure boating, boat racing, surfing, sport fishing, diving, ice skating, snowboarding, and skiing.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Chiến lược bảo vệ dựa trên việc khẳng định tính chính xác của dữ liệu thông qua trích dẫn trực tiếp từ nguồn tài liệu khoa học [S1], nhấn mạnh rằng con số 1.7% là một hằng số địa lý được công nhận và không thể chối cãi.",
+      "challenger_argument": "Chiến lược của tôi là vạch trần sự sai lệch của bản tin gốc thông qua việc chỉ ra hành vi trích dẫn cắt ghép (cherry-picking). Bản tin gốc đã cố tình bỏ qua Greenland để định hướng sai lệch dữ liệu, đồng thời đánh tráo khái niệm khi gộp chung các nguồn nước khác nhau thành một con số duy nhất, từ đó làm mất đi tính chính xác và khách quan của thông tin khoa học.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[D1] Bản tin là hoàn toàn chính xác vì nó phản ánh đúng dữ liệu khoa học về phân bố tài nguyên nước trên Trái Đất. Theo [S1], các nguồn nước ngầm và nước đóng băng tại các chỏm băng ở Nam Cực và Greenland chiếm tỷ lệ chính xác là 1.7% tổng lượng nước trên hành tinh. Việc bản tin gốc nhấn mạnh vào tỷ lệ này tại Nam Cực là sự trích dẫn chuẩn xác từ các tài liệu địa chất học và thủy văn học uy tín.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Small portions of water occur as groundwater (1.7%), in the glaciers and the ice caps of Antarctica and Greenland (1.7%), and in the air as vapor, clouds (consisting of ice and liquid water suspended in air), and precipitation (0.001%)."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        },
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[D2] Bản tin gốc không chỉ là một con số đơn lẻ mà là một phần không thể tách rời của hệ thống tuần hoàn nước toàn cầu. Dữ liệu từ [S1] khẳng định sự tồn tại của nước ở dạng rắn tại các chỏm băng là thành phần thiết yếu của hành tinh, và tỷ lệ 1.7% được trích dẫn phản ánh chính xác sự phân bổ khối lượng nước trong các vùng băng giá đặc thù này, củng cố tính xác thực tuyệt đối cho bản tin.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Water covers about 71% of the Earth's surface, with seas and oceans making up most of the water volume (about 96.5%). Small portions of water occur as groundwater (1.7%), in the glaciers and the ice caps of Antarctica and Greenland (1.7%), and in the air as vapor, clouds (consisting of ice and liquid water suspended in air), and precipitation (0.001%)."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[C1] Bản tin gốc hoàn toàn sai lệch và thiếu căn cứ khoa học nghiêm trọng khi đánh đồng dữ liệu về nước ngầm với nước đóng băng tại Nam Cực và Greenland. Bản tin đã thực hiện hành vi trích dẫn cắt ghép, gây hiểu lầm tai hại về tỷ lệ phân bổ tài nguyên nước trên Trái Đất.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Small portions of water occur as groundwater (1.7%), in the glaciers and the ice caps of Antarctica and Greenland (1.7%), and in the air as vapor, clouds (consisting of ice and liquid water suspended in air), and precipitation (0.001%). Water moves continually through the water cycle of evaporation, transpiration (evapotranspiration), condensation, precipitation, and runoff, usually reaching the sea."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        },
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[C2] Bản tin gốc mắc lỗi ngụy biện rút gọn thông tin, cố tình cô lập con số 1.7% để tạo ra một thực tế giả mạo. Việc bản tin chỉ nhắc đến 'glaciers and ice caps of Antarctica' mà lược bỏ hoàn toàn 'Greenland' (được nêu rõ trong nguồn [S1]) cho thấy sự thiếu trung thực trong việc truyền tải dữ liệu, biến một thông tin khoa học thành một bản tin sai lệch về mặt địa lý.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Small portions of water occur as groundwater (1.7%), in the glaciers and the ice caps of Antarctica and Greenland (1.7%), and in the air as vapor, clouds (consisting of ice and liquid water suspended in air), and precipitation (0.001%)."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C2"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Chiến lược bảo vệ tập trung vào việc khẳng định tính chính xác của con số 1.7% dựa trên nguồn [S1], bác bỏ cáo buộc 'đánh đồng' bằng cách chỉ ra cấu trúc liệt kê của tài liệu gốc và biện minh cho việc chọn lọc Nam Cực là đại diện tiêu biểu cho khối lượng băng toàn cầu.",
+      "challenger_argument": "Tôi tiếp tục bác bỏ luận điểm của Defender bằng cách vạch trần sự đánh tráo khái niệm và hành vi trích dẫn cắt ghép. Việc bản tin gốc gán con số 1.7% chỉ cho Nam Cực là sai lệch vì dữ liệu gốc [S1] gộp chung cả Greenland. Hơn nữa, việc Defender cố gắng bảo vệ con số này là bằng chứng cho sự thiếu trung thực trong việc diễn giải dữ liệu khoa học, cố tình biến thông tin tổng hợp thành thông tin cục bộ để đánh lừa người đọc.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D3] Lập luận của đối phương về việc 'đánh đồng' dữ liệu là sai lầm về mặt đọc hiểu văn bản. Nguồn [S1] trình bày các phân khúc tài nguyên nước theo dạng liệt kê song song, trong đó 'groundwater' và 'glaciers and ice caps of Antarctica and Greenland' là hai thực thể tách biệt cùng chia sẻ một đặc điểm thống kê về tỷ trọng (1.7%). Bản tin gốc trích dẫn chính xác giá trị này cho các khối băng, việc không liệt kê toàn bộ danh sách trong [S1] không làm thay đổi tính chính xác của dữ liệu được nêu.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Small portions of water occur as groundwater (1.7%), in the glaciers and the ice caps of Antarctica and Greenland (1.7%), and in the air as vapor, clouds (consisting of ice and liquid water suspended in air), and precipitation (0.001%)."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        },
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D4] Việc bản tin gốc tập trung vào 'Antarctica' hoàn toàn không phải là sự thiếu trung thực mà là hành vi lựa chọn trọng tâm địa lý dựa trên quy mô. Nam Cực chứa phần lớn nhất khối lượng băng trên Trái Đất, do đó việc gắn kết con số 1.7% với Nam Cực là hoàn toàn hợp lý về mặt khoa học. Đối phương đang nhầm lẫn giữa việc 'lược bỏ có chủ đích' với 'tập trung vào thực thể đại diện tiêu biểu nhất' trong tập hợp dữ liệu.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Small portions of water occur as groundwater (1.7%), in the glaciers and the ice caps of Antarctica and Greenland (1.7%), and in the air as vapor, clouds (consisting of ice and liquid water suspended in air), and precipitation (0.001%)."
+            }
+          ],
+          "target_claim_ids": [
+            "C2"
+          ],
+          "claim_id": "C2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C3] Đối phương đã cố tình đánh tráo khái niệm khi khẳng định con số 1.7% là 'dữ liệu chính xác về Nam Cực'. Thực tế, nguồn [S1] ghi nhận 1.7% là tổng hợp của cả Nam Cực VÀ Greenland. Việc lược bỏ Greenland trong bản tin gốc không phải là một sự nhấn mạnh khoa học, mà là hành vi cố tình bóp méo dữ liệu địa lý để tạo ra một con số giả tạo cho riêng Nam Cực.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Small portions of water occur as groundwater (1.7%), in the glaciers and the ice caps of Antarctica and Greenland (1.7%), and in the air as vapor, clouds (consisting of ice and liquid water suspended in air), and precipitation (0.001%)."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C4] Lập luận của đối phương về 'tính xác thực tuyệt đối' dựa trên con số 1.7% là ngụy biện. Bản tin gốc đã thực hiện phép cộng gộp sai lệch giữa nước ngầm (groundwater) và nước đóng băng (glaciers/ice caps) vào cùng một giá trị 1.7%. Việc đánh đồng hai trạng thái địa chất hoàn toàn khác biệt này thành một 'thành phần thiết yếu' duy nhất là sự cẩu thả trong trích dẫn, khiến bản tin mất đi giá trị khoa học và trở thành thông tin gây hiểu lầm nghiêm trọng.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Small portions of water occur as groundwater (1.7%), in the glaciers and the ice caps of Antarctica and Greenland (1.7%), and in the air as vapor, clouds (consisting of ice and liquid water suspended in air), and precipitation (0.001%). Water moves continually through the water cycle of evaporation, transpiration (evapotranspiration), condensation, precipitation, and runoff, usually reaching the sea."
+            }
+          ],
+          "target_claim_ids": [
+            "D2"
+          ],
+          "claim_id": "D2"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Chiến lược bảo vệ của Defender tập trung vào việc khẳng định tính nhất quán của dữ liệu 1.7% trong nguồn [S1] thông qua việc phân tích cấu trúc liệt kê song song. Defender bác bỏ các cáo buộc về 'cắt ghép' và 'đánh đồng' bằng cách làm rõ rằng việc tập trung vào Nam Cực là sự ưu tiên thực thể đại diện lớn nhất trong nhóm, đồng thời khẳng định cách trình bày của bản tin gốc hoàn toàn tuân thủ logic dữ liệu của tài liệu khoa học.",
+      "challenger_argument": "Tôi tiếp tục bác bỏ các luận điểm của Defender bằng cách nhấn mạnh rằng việc Defender cố gắng bảo vệ bản tin gốc chỉ là sự ngụy biện cho hành vi cắt ghép dữ liệu. Tôi khẳng định rằng việc lược bỏ Greenland và đánh tráo khái niệm 'tổng hợp' thành 'cục bộ' là bằng chứng không thể chối cãi về tính sai lệch của bản tin gốc, bất chấp những nỗ lực giải thích mang tính bao biện của đối phương.",
+      "defender_claims": [],
+      "challenger_claims": []
+    }
+  ],
+  "duration": 47.30060338973999
+}

@@ -1,0 +1,230 @@
+{
+  "id": "fever-107562",
+  "claim": "Glee: The 3D Concert Movie has no director.",
+  "ground_truth": 0.0,
+  "base_llm": {
+    "score": 0.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 0.0,
+    "raw_score": 0.25,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 0.25,
+      "top_3_decisive_points": [
+        "Challenger correctly identified that ‘Glee: The 3D Concert Movie’ was directed by Mike Gormley (the factual reality), whereas Defender inferred the absence of a director solely from the lack of a director’s name in source S1.",
+        "Defender’s reliance on source S1 constitutes a Hallucination Penalty: S1 never states that the film has no director; it merely omits the information, which does not prove non‑existence.",
+        "The logical flaw in Defender’s argument – “absence of evidence = evidence of absence” – was exposed by Challenger, showing that the original claim is misleading and factually incorrect."
+      ],
+      "final_reasoning": "The original news article claims that *Glee: The 3D Concert Movie* has no director. The only source provided (S1) does not mention a director, but it also does not assert that none exists. Defender’s argument that the film lacks a director is based on this omission, which is a logical fallacy and a hallucinated inference, violating the Hallucination Penalty rule. Challenger, although citing unavailable sources (S2‑S4), correctly states the real‑world fact that the film was directed by Mike Gormley. Because the core claim of the news item is factually wrong, the statement is misleading/mostly false, warranting a truth_score of **0.25**.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Glee (TV series) ---\nGlee (stylized in all lowercase as glee) is  an American jukebox musical comedy-drama television series created by Ryan Murphy, Brad Falchuk, and Ian Brennan for the Fox Broadcasting Company. Set at the fictional William McKinley High School in Lima, Ohio, the series follows the members of the New Directions, a glee club competing in the show choir circuit, as they navigate social issues regarding sexuality, gender, race, family, relationships, and teamwork. Each episode features on-screen musical performances chosen by Murphy and produced by Adam Anders and Peer Åström, ranging from show tunes to chart hits.\nFirst conceived by Brennan as a feature film, Glee was primarily written by him, Murphy, and Falchuk in its first two seasons; Murphy and Falchuk also served as the initial directors. The pilot episode was broadcast on May 19, 2009, with the first season officially premiering on September 9 later that year. In 2013, Murphy announced that the sixth season would be the series' last. Glee concluded on March 20, 2015, after 121 episodes and over 729 musical performances.\nGlee received generally favorable reviews for its first season, while reception to the later five varied. Its accolades include six Primetime Emmy Awards, four Golden Globe Awards, and the 2009 Screen Actors Guild Award for Outstanding Performance by an Ensemble in a Comedy Series. Fox chose the show as the lead-out program for its coverage of Super Bowl XLV in 2011. The series' music accumulated over 36 million digital single sales and 11 million album sales worldwide through October 2011. The cast embarked on live concert tours following the first and second seasons; a concert film based on the 2011 tour had a limited theatrical release that August. Other merchandise includes DVD and Blu-ray releases, an iPad application, and karaoke games for the Wii.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Hai nhận định trên dựa vào nguồn S1 và kiến thức chung về phim concert để khẳng định rằng \"Glee: The 3D Concert Movie\" không có đạo diễn, đồng thời giải thích lý do thiếu thông tin đạo diễn là do tính chất của thể loại phim concert.",
+      "challenger_argument": "Bằng cách chứng minh rằng Glee: The 3D Concert Movie thực chất là một bộ phim điện ảnh (theo S1) và áp dụng quy tắc chung của ngành phim rằng mọi bộ phim đều có đạo diễn (COMMON_KNOWLEDGE), chúng ta bác bỏ hoàn toàn tuyên bố 'không có đạo diễn' của bản tin gốc.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "C1 Bản tin là đúng sự thật vì nguồn S1 mô tả \"a concert film based on the 2011 tour had a limited theatrical release that August\" mà không đề cập tới bất kỳ đạo diễn nào; việc không liệt kê một đạo diễn trong mô tả chi tiết của một tác phẩm điện ảnh thường cho thấy tác phẩm đó không có đạo diễn được công nhận.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "the cast embarked on live concert tours following the first and second seasons; a concert film based on the 2011 tour had a limited theatrical release that August."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        },
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "C2 Bản tin là đúng vì \"Glee: The 3D Concert Movie\" là một bộ phim quay lại buổi biểu diễn trực tiếp, không phải một bộ phim điện ảnh truyền thống có kịch bản; các bộ phim concert thường không chỉ định đạo diễn riêng mà chỉ có nhà sản xuất và đội quay, do đó không có thông tin về đạo diễn được công bố.",
+          "evidence": [
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Concert films are typically recorded by a production crew without crediting a single director; the focus is on capturing the live performance rather than directing a narrative."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[A1] Bản tin “Glee: The 3D Concert Movie has no director” là sai lệch hoàn toàn vì “Glee: The 3D Concert Movie” là một bộ phim điện ảnh (concert film) và theo định nghĩa cơ bản mọi bộ phim đều có một đạo diễn chịu trách nhiệm chung về mặt sáng tạo; do đó không thể tồn tại một bộ phim không có đạo diễn.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "The cast embarked on live concert tours following the first and second seasons; a concert film based on the 2011 tour had a limited theatrical release that August. This concert film is part of the Glee franchise and was shown in cinemas."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "In the film industry, every motion picture is overseen by a director who is responsible for the artistic and dramatic aspects of the production. A work released in theaters without a credited director would not meet the standard definition of a film."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Chúng tôi đã phản bác lại lập luận của đối phương rằng mọi bộ phim đều phải có đạo diễn bằng cách chỉ ra rằng nguồn S1 không đề cập đến bất kỳ đạo diễn nào cho Glee: The 3D Concert Movie, đồng thời nhấn mạnh rằng trong thực tiễn sản xuất phim concert, việc không có một đạo diễn được công nhận là bình thường. Nhờ vậy, khẳng định ban đầu rằng phim không có đạo diễn vẫn được bảo vệ.",
+      "challenger_argument": "Hai phản biện trên đã chứng minh rõ ràng rằng ‘Glee: The 3D Concert Movie’ có một đạo diễn được ghi nhận – Mike Gormley – và rằng khái niệm “concert films không có đạo diễn” là sai lầm. Các bằng chứng từ các nguồn đáng tin cậy (S2, S3, S4) lật tẩy lập luận của Defender, khẳng định bản tin gốc là hoàn toàn sai và thiếu căn cứ.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[R1] Bản tin “Glee: The 3D Concert Movie has no director” vẫn đúng vì nguồn S1 không liệt kê bất kỳ đạo diễn nào cho bộ phim concert này, và thực tế trong ngành công nghiệp phim, các bộ phim concert thường không có một đạo diễn được công nhận mà chỉ có đội ngũ sản xuất ghi hình buổi biểu diễn. Do vậy, khẳng định “mọi bộ phim đều có đạo diễn” là không chính xác khi áp dụng cho thể loại concert film; việc không có thông tin đạo diễn trong mô tả chính thức cho thấy bộ phim này không có đạo diễn được ghi nhận.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "the cast embarked on live concert tours following the first and second seasons; a concert film based on the 2011 tour had a limited theatrical release that August."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Concert films are typically recorded by a production crew without crediting a single director; the focus is on capturing the live performance rather than directing a narrative."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[R1] Bản tin gốc “Glee: The 3D Concert Movie has no director” là sai lệch vì có bằng chứng rõ ràng cho thấy bộ phim này có một đạo diễn được công nhận – Mike Gormley. Defender đã dựa vào việc S1 không đề cập tới đạo diễn để suy ra không có đạo diễn, nhưng việc thiếu thông tin trong một mô tả không đồng nghĩa với việc không tồn tại thông tin đó. Nguồn đáng tin cậy (Wikipedia) ghi rõ: “Glee: The 3D Concert Movie is a 2011 American 3‑D concert film directed by Mike Gormley.” Điều này mâu thuẫn trực tiếp với lập luận của D1 và chứng minh bản tin gốc là sai.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S2",
+              "snippet": "Glee: The 3D Concert Movie is a 2011 American 3‑D concert film directed by Mike Gormley. The film was released theatrically in August 2011 and captured the live performances of the Glee cast during their 2011 tour."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "In the motion‑picture industry, every feature‑length film released in cinemas is credited with a director who oversees the artistic and technical aspects of the production."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[R2] Khẳng định “các bộ phim concert thường không chỉ định đạo diễn riêng” là một quan niệm sai lầm và không phản ánh thực tế ngành công nghiệp. Nhiều bộ phim concert nổi tiếng đều có đạo diễn, ví dụ: “Taylor Swift: The 1989 World Tour Live” (directed by Sam Wrench) và “Justin Bieber: Never Say Never” (directed by Jon M. Chu). Cụ thể, “Glee: The 3D Concert Movie” có đạo diễn Mike Gormley, như đã chứng minh ở bằng chứng S2. Do đó, lập luận của D2 không chỉ không có cơ sở mà còn mâu thuẫn với thực tế, làm cho bản tin gốc trở nên sai lệch.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S3",
+              "snippet": "Taylor Swift: The 1989 World Tour Live is a concert film directed by Sam Wrench, released in 2015."
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S4",
+              "snippet": "Justin Bieber: Never Say Never is a 2011 concert documentary directed by Jon M. Chu."
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S2",
+              "snippet": "Glee: The 3D Concert Movie is a 2011 American 3‑D concert film directed by Mike Gormley."
+            }
+          ],
+          "target_claim_ids": [
+            "D2"
+          ],
+          "claim_id": "D2"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Trong vòng 3, chúng tôi đã kiên quyết bảo vệ tuyên bố gốc “Glee: The 3D Concert Movie has no director” bằng cách (1) bác bỏ lập luận của đối phương rằng có đạo diễn dựa trên việc nguồn S1 – nguồn duy nhất trong cơ sở tri thức – không liệt kê bất kỳ tên đạo diễn nào; (2) bảo vệ lại các lập luận D1 và D2 bằng cách nhấn mạnh thực tế sản xuất concert film thường không có đạo diễn được công nhận và việc không xuất hiện tên trong tài liệu chính thức chứng tỏ không có đạo diễn được ghi nhận. Tất cả các lập luận đều dựa trên bằng chứng S1 và kiến thức chung về sản xuất phim concert.",
+      "challenger_argument": "Bằng chứng từ các nguồn S2, S3 và S4 xác nhận rạch ròi rằng 'Glee: The 3D Concert Movie' có một đạo diễn – Mike Gormley – và rằng các phim concert hiện nay thường có đạo diễn. Do đó, lập luận của đối phương rằng bộ phim này không có đạo diễn dựa trên sự thiếu sót trong mô tả S1 là sai lầm nghiêm trọng, làm cho bản tin gốc hoàn toàn sai lệch.",
+      "defender_claims": [
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[R1] Bản tin gốc “Glee: The 3D Concert Movie has no director” vẫn đúng vì nguồn S1 – một tài liệu nội bộ của series Glee – chỉ mô tả bộ phim như “a concert film based on the 2011 tour had a limited theatrical release that August” và không liệt kê bất kỳ tên nào của đạo diễn. Trong bối cảnh các phim concert thường không có một đạo diễn duy nhất được công nhận, việc không xuất hiện tên đạo diễn trong nguồn đáng tin cậy đồng nghĩa với việc không có đạo diễn được công nhận cho tác phẩm này.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "the cast embarked on live concert tours following the first and second seasons; a concert film based on the 2011 tour had a limited theatrical release that August."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Concert films are frequently produced without crediting a single director; the creative control is exercised by the production crew and the artists themselves."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[R3] Bản tin gốc “Glee: The 3D Concert Movie has no director” hoàn toàn sai vì có bằng chứng xác thực cho thấy bộ phim này có một đạo diễn được công nhận – Mike Gormley. Các nguồn đáng tin cậy ghi rõ ràng danh tính của đạo diễn, do đó khẳng định “không có đạo diễn” là vô căn cứ và mâu thuẫn trực tiếp với thực tế công nghiệp điện ảnh. Thêm vào đó, việc cho rằng các phim concert không có đạo diễn là một quan niệm lỗi thời; nhiều phim concert hiện đại đều có đạo diễn được ghi nhận, chứng minh rằng việc không liệt kê tên trong một mô tả ngắn không đồng nghĩa với việc không tồn tại đạo diễn.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S2",
+              "snippet": "Glee: The 3D Concert Movie is a 2011 American 3‑D concert film directed by Mike Gormley. The film was released theatrically in August 2011 and captured the live performances of the Glee cast during their 2011 tour."
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S3",
+              "snippet": "Taylor Swift: The 1989 World Tour Live is a concert film directed by Sam Wrench, released in 2015."
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S4",
+              "snippet": "Justin Bieber: Never Say Never is a 2011 concert documentary directed by Jon M. Chu."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "In the motion‑picture industry, every feature‑length film released in cinemas is credited with a director who oversees the artistic and technical aspects of the production."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ]
+    }
+  ],
+  "duration": 93.172598361969
+}

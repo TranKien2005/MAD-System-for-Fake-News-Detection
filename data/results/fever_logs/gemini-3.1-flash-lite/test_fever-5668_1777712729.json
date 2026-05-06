@@ -1,0 +1,166 @@
+{
+  "id": "fever-5668",
+  "claim": "The Wild Thornberrys is a film.",
+  "ground_truth": 0.0,
+  "base_llm": {
+    "score": 1.0,
+    "is_correct": false
+  },
+  "mad_system": {
+    "score": 0.0,
+    "raw_score": 0.25,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 0.25,
+      "top_3_decisive_points": [
+        "Sự đánh tráo khái niệm của Defender: Defender cố gắng đánh đồng một thương hiệu (franchise) đa hình thái với một định dạng sản phẩm cụ thể (phim điện ảnh), trong khi bản chất cốt lõi của 'The Wild Thornberrys' theo [S1] là một series truyền hình 91 tập.",
+        "Bằng chứng từ [S1]: Nguồn dữ liệu xác định rõ ràng 'The Wild Thornberrys' là một series truyền hình (animated television series), các phim điện ảnh chỉ là sản phẩm phái sinh (feature film/crossover), không phải là định nghĩa bao trùm cho toàn bộ tác phẩm.",
+        "Lỗi logic của Defender: Defender không thể bác bỏ được lập luận của Challenger về việc định danh sai bản chất. Việc tồn tại các ngoại lệ (phim điện ảnh) không làm thay đổi bản chất của thực thể gốc, khiến bản tin gốc mang tính sai lệch ngữ cảnh nghiêm trọng."
+      ],
+      "final_reasoning": "Bản tin gốc 'The Wild Thornberrys is a film' là một sự đơn giản hóa quá mức dẫn đến sai lệch bản chất (Misleading). Mặc dù có tồn tại các phim điện ảnh thuộc thương hiệu này (như đã trích dẫn trong [S1]), nhưng việc dùng danh từ 'a film' để định nghĩa cho một series truyền hình dài 91 tập, kéo dài 5 mùa là không chính xác về mặt định danh thể loại. Challenger đã thực hiện tốt việc chỉ ra lỗi ngụy biện đánh tráo khái niệm của Defender. Defender đã thất bại trong việc chứng minh rằng 'a film' là một cách gọi đúng đắn cho toàn bộ thực thể, thay vào đó chỉ cố gắng bao biện bằng cách mở rộng khái niệm thương hiệu một cách khiên cưỡng. Do đó, bản tin gốc bị đánh giá là sai lệch nghiêm trọng.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: The Wild Thornberrys ---\nThe Wild Thornberrys is an American animated television series created by Arlene Klasky, Gábor Csupó, Steve Pepoon, David Silverman, and Stephen Sustarsic for Nickelodeon. It was produced by Klasky Csupo and Nickelodeon Animation Studio. \nThe series portrays the zany hijinks of a family of nomadic wildlife documentary filmmakers known as the Thornberrys, which consist of the nature documentary television host Nigel, his wife and camera operator Marianne, their 16-year-old daughter Debbie, their younger daughter Eliza, their adopted son Donnie, and a chimpanzee named Darwin. The series focuses particularly on Eliza, who has a magical ability to communicate with animals. The Thornberry family travels to every continent and wildlife environment in the ComVee, a recreational vehicle equipped with safety mechanisms to handle any terrain or body of water, to document their journeys in detail. Episodes typically involve Eliza befriending an animal and subsequently finding herself in peril.\nOriginally pitched by Klasky Csupo as an adult animated sitcom for Fox, the series was then retooled as a family-friendly animated series for Nickelodeon and premiered on September 1, 1998, as the eleventh Nicktoon and the third overall produced by the studio following Rugrats and Aaahh!!! Real Monsters. It ran for 5 seasons containing 91 episodes in total, with the final episode airing on June 11, 2004.\nThe series' fourth season premiere, \"The Origin of Donnie\", is a television special focusing on Donnie Thornberry's life before he was adopted by the family. A feature film, The Wild Thornberrys Movie, in which Eliza embarks on a quest to save a cheetah cub from poachers, was theatrically released on December 20, 2002. Rugrats Go Wild, a crossover feature film with Rugrats, was released in theaters on June 13, 2003. Spin-off media include DVD releases and three video games.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Khẳng định tính đúng đắn của bản tin bằng cách xác nhận sự tồn tại của các tác phẩm điện ảnh (feature films) thuộc thương hiệu The Wild Thornberrys, chứng minh rằng bản tin gốc không chỉ là một nhận định đơn lẻ mà là một sự thật đã được kiểm chứng qua lịch sử phát hành phim.",
+      "challenger_argument": "Tôi bác bỏ hoàn toàn bản tin gốc vì đã đánh tráo khái niệm từ 'animated television series' (phim truyền hình dài tập) sang 'film' (phim điện ảnh). Việc lấy các sản phẩm phụ (spin-off/feature film) để định nghĩa cho toàn bộ thương hiệu là một lỗi logic cơ bản, phủ nhận thực tế rằng đây là một chương trình truyền hình có 91 tập phim kéo dài qua 5 mùa.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[D1] Bản tin 'The Wild Thornberrys is a film' là hoàn toàn chính xác và phản ánh đúng thực tế vì thương hiệu này đã được chuyển thể thành các tác phẩm điện ảnh công chiếu tại rạp. Cụ thể, 'The Wild Thornberrys Movie' đã được phát hành vào ngày 20 tháng 12 năm 2002, và một bộ phim điện ảnh khác là 'Rugrats Go Wild' cũng đã ra mắt vào năm 2003, xác nhận sự tồn tại của các tác phẩm điện ảnh thuộc thương hiệu này.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "A feature film, The Wild Thornberrys Movie, in which Eliza embarks on a quest to save a cheetah cub from poachers, was theatrically released on December 20, 2002. Rugrats Go Wild, a crossover feature film with Rugrats, was released in theaters on June 13, 2003."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[C1] Bản tin gốc 'The Wild Thornberrys is a film' là một sự sai lệch nghiêm trọng về phân loại thể loại (category error) và cố tình đánh tráo khái niệm giữa một 'series truyền hình' với một 'tác phẩm điện ảnh'. Dựa trên dữ liệu gốc [S1], bản chất cốt lõi của The Wild Thornberrys là một loạt phim hoạt hình truyền hình (animated television series) được sản xuất cho Nickelodeon, chứ không phải là một bộ phim điện ảnh.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "The Wild Thornberrys is an American animated television series created by Arlene Klasky, Gábor Csupó, Steve Pepoon, David Silverman, and Stephen Sustarsic for Nickelodeon. It was produced by Klasky Csupo and Nickelodeon Animation Studio."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        },
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[C2] Việc khẳng định 'The Wild Thornberrys is a film' là vô căn cứ vì nó bỏ qua toàn bộ lịch sử phát sóng kéo dài 5 mùa với 91 tập phim truyền hình. Việc tồn tại các sản phẩm phái sinh như phim điện ảnh vào năm 2002 hay 2003 không thể thay đổi bản chất định danh của thương hiệu này là một chương trình truyền hình dài tập. Bản tin gốc đã cố tình giản lược sai lệch một di sản truyền hình đồ sộ thành một danh từ 'film' duy nhất nhằm gây hiểu lầm cho người đọc.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "It ran for 5 seasons containing 91 episodes in total, with the final episode airing on June 11, 2004. The series' fourth season premiere, \"The Origin of Donnie\", is a television special focusing on Donnie Thornberry's life before he was adopted by the family."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C2"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Tôi bác bỏ lập luận của đối phương bằng cách chỉ ra rằng 'The Wild Thornberrys' là một thương hiệu đa hình thái. Việc đối phương cố gắng giới hạn thương hiệu này chỉ trong khuôn khổ 'series truyền hình' là một sai lầm logic, vì sự tồn tại của các tác phẩm điện ảnh (feature films) đã được kiểm chứng là bằng chứng hiển nhiên khẳng định bản tin gốc là đúng đắn về mặt thực tế.",
+      "challenger_argument": "Tôi bác bỏ luận điểm của Defender bằng cách chỉ ra lỗi ngụy biện đánh tráo khái niệm giữa 'thương hiệu truyền hình' và 'phim điện ảnh'. Việc tồn tại các tác phẩm phái sinh không làm thay đổi bản chất định danh của The Wild Thornberrys là một series truyền hình dài 91 tập. Mọi nỗ lực định nghĩa thương hiệu này là 'một bộ phim' đều là sự sai lệch bản chất và thiếu căn cứ logic.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D2] Lập luận của đối phương mắc lỗi ngụy biện 'tổng quát hóa sai lệch' (hasty generalization) khi cố gắng định nghĩa một thương hiệu bằng một hình thái duy nhất. Thực tế, 'The Wild Thornberrys' là một thương hiệu đa phương tiện (multimedia franchise). Việc tồn tại các tác phẩm điện ảnh như 'The Wild Thornberrys Movie' và 'Rugrats Go Wild' chính thức xác lập thương hiệu này dưới tư cách là 'film'. Trong ngành công nghiệp giải trí, một tác phẩm được phát hành tại rạp với thời lượng dài và cốt truyện độc lập được định nghĩa là phim điện ảnh, và việc thương hiệu này có tồn tại dưới dạng series truyền hình không hề phủ nhận hay xóa bỏ tư cách 'film' của các tác phẩm điện ảnh thuộc cùng thương hiệu đó.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "A feature film, The Wild Thornberrys Movie, in which Eliza embarks on a quest to save a cheetah cub from poachers, was theatrically released on December 20, 2002. Rugrats Go Wild, a crossover feature film with Rugrats, was released in theaters on June 13, 2003."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        },
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D3] Đối phương đang cố tình áp đặt một định nghĩa hẹp hòi nhằm loại bỏ tính xác thực của bản tin gốc. Bản tin 'The Wild Thornberrys is a film' không hề phủ nhận sự tồn tại của series truyền hình, mà khẳng định bản chất thương hiệu thông qua các tác phẩm điện ảnh đã được công chiếu. Việc đối phương cho rằng chỉ có thể gọi là 'series' mà không được gọi là 'film' là một sự áp đặt chủ quan, bỏ qua thực tế là các tác phẩm điện ảnh của thương hiệu này đã đạt được sự công nhận độc lập tại các rạp chiếu phim, hoàn toàn phù hợp với định danh 'film'.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "A feature film, The Wild Thornberrys Movie, in which Eliza embarks on a quest to save a cheetah cub from poachers, was theatrically released on December 20, 2002. Rugrats Go Wild, a crossover feature film with Rugrats, was released in theaters on June 13, 2003."
+            }
+          ],
+          "target_claim_ids": [
+            "C2"
+          ],
+          "claim_id": "C2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C3] Lập luận của đối phương mắc lỗi ngụy biện 'đánh tráo khái niệm' (equivocation) khi cố tình đồng nhất một thương hiệu truyền hình dài tập với sản phẩm phái sinh của nó. Việc một thương hiệu có sản xuất phim điện ảnh (spin-off) không biến toàn bộ thương hiệu đó trở thành 'một bộ phim'. Nếu theo logic này, thì bất kỳ series truyền hình nào có phim điện ảnh đi kèm (như 'The Simpsons' hay 'SpongeBob SquarePants') cũng sẽ bị định nghĩa sai lệch là 'phim'. Bản tin gốc và luận điểm D1 đã cố tình bỏ qua bản chất thực thể là một 'animated television series' được xác nhận bởi chính nguồn [S1].",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "The Wild Thornberrys is an American animated television series created by Arlene Klasky, Gábor Csupó, Steve Pepoon, David Silverman, and Stephen Sustarsic for Nickelodeon. It was produced by Klasky Csupo and Nickelodeon Animation Studio. ... Originally pitched by Klasky Csupo as an adult animated sitcom for Fox, the series was then retooled as a family-friendly animated series for Nickelodeon and premiered on September 1, 1998"
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C4] Đối phương đang cố tình giản lược sai lệch di sản truyền hình 91 tập phim để hợp thức hóa một tiêu đề sai sự thật. Nguồn [S1] khẳng định rõ ràng đây là một 'series' kéo dài 5 mùa, không phải là một tác phẩm điện ảnh đơn lẻ. Việc sử dụng các tác phẩm phái sinh (The Wild Thornberrys Movie, Rugrats Go Wild) để định nghĩa cho toàn bộ thương hiệu là hành vi bóp méo thực tế, nhằm mục đích gây hiểu lầm rằng toàn bộ nội dung của thương hiệu này nằm gói gọn trong khuôn khổ của một bộ phim điện ảnh.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "It ran for 5 seasons containing 91 episodes in total, with the final episode airing on June 11, 2004. The series' fourth season premiere, \"The Origin of Donnie\", is a television special focusing on Donnie Thornberry's life before he was adopted by the family. A feature film, The Wild Thornberrys Movie, in which Eliza embarks on a quest to save a cheetah cub from poachers, was theatrically released on December 20, 2002."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Chiến lược của Defender là khẳng định 'The Wild Thornberrys' là một thương hiệu đa hình thái. Việc bác bỏ các cáo buộc của đối phương dựa trên thực tế rằng các tác phẩm điện ảnh (feature films) đã được phát hành rộng rãi, do đó việc gọi thương hiệu này là 'a film' là một cách định danh chính xác về mặt nội dung và thương mại, không vi phạm bất kỳ logic nào.",
+      "challenger_argument": "Tôi tiếp tục bác bỏ luận điểm của đối phương bằng cách làm rõ sự khác biệt giữa 'thương hiệu' và 'định dạng sản phẩm'. Việc đối phương cố gắng đánh đồng toàn bộ thương hiệu với một vài sản phẩm điện ảnh phái sinh là lỗi ngụy biện nghiêm trọng. Tôi khẳng định bản tin gốc là sai lệch vì nó định nghĩa sai thể loại của một series truyền hình 91 tập bằng một danh từ duy nhất không đại diện cho bản chất cốt lõi của tác phẩm.",
+      "defender_claims": [],
+      "challenger_claims": []
+    }
+  ],
+  "duration": 45.16397309303284
+}

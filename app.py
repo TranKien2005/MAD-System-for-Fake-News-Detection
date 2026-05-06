@@ -9,7 +9,7 @@ from langchain_openai import ChatOpenAI
 import gradio as gr
 
 from config.settings import config
-from graph.workflow import build_workflow
+from graph.workflow import build_workflow, build_non_search_workflow
 from graph.state import build_initial_state
 
 load_dotenv()
@@ -32,21 +32,31 @@ def create_llms():
     )
     return llm_main, llm_light
 
-def run_analysis(news_text: str, max_rounds: int):
+def run_analysis(news_text: str, initial_context: str, debate_mode: str, max_rounds: int):
     if not news_text.strip():
         yield "⚠️ Vui lòng nhập tin tức.", "", "", ""
         return
 
+    if debate_mode == "Non-Search" and not initial_context.strip():
+        yield "⚠️ Chế độ Non-Search yêu cầu cung cấp ngữ cảnh ban đầu.", "", "", ""
+        return
+
     config.debate.max_rounds = int(max_rounds)
     llm_main, llm_light = create_llms()
-    app = build_workflow(llm_main, llm_light)
+    
+    if debate_mode == "Non-Search":
+        app = build_non_search_workflow(llm_main)
+    else:
+        app = build_workflow(llm_main, llm_light)
 
     initial_state = build_initial_state(
         news_text=news_text,
+        initial_context=initial_context if debate_mode == "Non-Search" else None,
+        debate_mode="non_search" if debate_mode == "Non-Search" else "search",
         max_rounds=config.debate.max_rounds,
     )
 
-    progress_log = "🚀 **Khởi động hệ thống MAD...**\n\n"
+    progress_log = f"🚀 **Khởi động hệ thống MAD ({debate_mode})...**\n\n"
     research_display = "### 📚 PHÒNG NGHIÊN CỨU\n*Chưa có dữ liệu...*"
     debate_display = "### ⚔️ LUỒNG TRANH LUẬN\n*Đang chờ lượt đầu tiên...*"
     verdict_display = "### ⚖️ PHÁN QUYẾT\n*Chờ kết thúc tranh luận...*"
@@ -60,8 +70,15 @@ def run_analysis(news_text: str, max_rounds: int):
     for event in app.stream(initial_state, stream_mode="updates"):
         for node_name, node_output in event.items():
             
-            if node_name == "prepare_round":
-                progress_log += f"🧭 **Vòng {node_output.get('current_round', '?')}**: Đang lập kế hoạch tìm kiếm...\n"
+            if node_name in ["prepare_round", "prepare"]:
+                if node_name == "prepare" and debate_mode == "Non-Search":
+                    new_kb = node_output.get("knowledge_base", [])
+                    if new_kb:
+                        kb_entries.extend(new_kb)
+                        research_display = _build_research_view(kb_entries, [])
+                        progress_log += "ℹ️ **System**: Đã nạp bối cảnh ban đầu [S1].\n"
+                
+                progress_log += f"🧭 **Vòng {node_output.get('current_round', '?') if node_name == 'prepare_round' else '1'}**: Đang chuẩn bị lập luận...\n"
                 yield progress_log, research_display, debate_display, verdict_display
 
             elif "search" in node_name:
@@ -134,10 +151,19 @@ def _build_debate_thread_view(registry: dict):
         text += f"{side_emoji} <strong style='color:{color}'>{side_name}</strong> <code>{label}</code><br><br>\n"
         text += f"<div style='color: inherit; line-height: 1.5;'>{h['text']}</div>\n\n"
         
-        # Sources
-        source_ids = [e.get('source_id') for e in h.get('evidence', []) if e.get('evidence_type') == 'SOURCE']
-        if source_ids:
-            text += f"<br><em style='color: #6b7280; font-size: 0.9em;'>(Nguồn: {', '.join(source_ids)})</em>\n"
+        # Sources with Snippets
+        evidence_list = h.get('evidence', [])
+        source_items = [e for e in evidence_list if e.get('evidence_type') == 'SOURCE']
+        if source_items:
+            text += "<div style='margin-top: 8px; border-top: 1px dashed #e2e8f0; padding-top: 8px;'>"
+            for item in source_items:
+                sid = item.get('source_id', '?')
+                snippet = item.get('snippet', '').strip()
+                text += f"<div style='margin-bottom: 5px;'><strong style='font-size: 0.85em; color: #6b7280;'>Nguồn {sid}:</strong>"
+                if snippet:
+                    text += f"<blockquote style='margin: 5px 0 0 10px; padding: 5px 10px; border-left: 2px solid #cbd5e1; font-style: italic; font-size: 0.9em; color: #475569;'>\"{snippet}\"</blockquote>"
+                text += "</div>"
+            text += "</div>"
         
         text += "</div>\n"
             
@@ -210,8 +236,24 @@ with gr.Blocks(title="MAD System", theme=custom_theme) as demo:
                     placeholder="📰 Dán nội dung bản tin, bài viết hoặc tin đồn bạn muốn kiểm chứng vào đây...", 
                     lines=5
                 )
+                
+                mode_radio = gr.Radio(
+                    ["Search", "Non-Search"], 
+                    value="Search", 
+                    label="Chế độ hoạt động",
+                    info="Search: Tìm kiếm web trực tiếp. Non-Search: Sử dụng ngữ cảnh tĩnh được cung cấp."
+                )
+                
+                context_input = gr.Textbox(
+                    label="📄 Ngữ cảnh ban đầu (Context)",
+                    placeholder="Dán tài liệu, bằng chứng hoặc bối cảnh để AI đối chiếu (Bắt buộc với Non-Search)...",
+                    lines=10,
+                    visible=True,
+                    interactive=True
+                )
+
                 with gr.Row():
-                    rounds_slider = gr.Slider(1, 5, 3, step=1, label="Số vòng tranh luận", info="Nhiều vòng hơn cho kết quả sâu hơn nhưng tốn thời gian hơn.")
+                    rounds_slider = gr.Slider(1, 5, 3, step=1, label="Số vòng tranh luận", info="Nhiều vòng hơn cho kết quả sâu hơn.")
                     run_btn = gr.Button("🚀 Phân tích & Kiểm chứng", variant="primary", size="lg")
             
             with gr.Accordion("📡 Bảng điều khiển hệ thống", open=True):
@@ -229,7 +271,7 @@ with gr.Blocks(title="MAD System", theme=custom_theme) as demo:
 
     run_btn.click(
         fn=run_analysis,
-        inputs=[news_input, rounds_slider],
+        inputs=[news_input, context_input, mode_radio, rounds_slider],
         outputs=[status_box, research_box, debate_box, verdict_box]
     )
 

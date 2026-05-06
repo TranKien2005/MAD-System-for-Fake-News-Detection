@@ -1,0 +1,157 @@
+{
+  "id": "fever-62395",
+  "claim": "Janet Varney refused to voice a character in The Legend of Korra.",
+  "ground_truth": 0.0,
+  "base_llm": {
+    "score": 0.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 0.0,
+    "raw_score": 0.0,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 0.0,
+      "top_3_decisive_points": [
+        "High‑trust source S1 explicitly states that Janet Varney *voiced* the character Korra in The Legend of Korra, directly contradicting the claim that she ‘refused to voice a character’ in that series.",
+        "Defender offers no verifiable evidence; their argument rests on the possibility that she might have refused a different, unspecified role, which is pure speculation and does not address the concrete fact that she did voice Korra.",
+        "Challenger correctly cites the authoritative source (S1) and demonstrates that the original statement is factually inconsistent with the documented record, leaving no room for the claim to be true."
+      ],
+      "final_reasoning": "The claim \"Janet Varney refused to voice a character in The Legend of Korra\" is directly falsified by a HIGH‑trust source that confirms she *did* voice the lead character Korra. Defender's reliance on speculation without any supporting source fails to counter this evidence. Consequently, the original news item is completely false, warranting a truth_score of 0.0.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Janet Varney ---\nJanet Varney is an American actress, comedian, writer and producer. She is known for voicing the character of Korra in the Nickelodeon animated television series The Legend of Korra, co-starring as Sheriff Evie Barret in the television series Stan Against Evil, and a recurring role as Becca Barbara in You're the Worst.\nVarney has hosted The JV Club podcast since 2012 and is also the co-host of the Avatar: Braving the Elements podcast along with Dante Basco. She is the co-founder, creative director and producer of the long-running comedy festival SF Sketchfest in San Francisco.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "",
+      "challenger_argument": "Dựa trên nguồn tin cậy S1 và kiến thức chung, chúng ta chứng minh rằng Janet Varney không từ chối mà ngược lại đã lồng tiếng cho Korra trong The Legend of Korra, do đó bản tin gốc là hoàn toàn sai lệch.",
+      "defender_claims": [],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[A1] Bản tin khẳng định “Janet Varney refused to voice a character in The Legend of Korra” là hoàn toàn sai lệch vì Janet Varney thực tế đã nhận lời và thực hiện việc lồng tiếng cho nhân vật chính Korra trong loạt phim hoạt hình này.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Janet Varney is an American actress, comedian, writer and producer. She is known for **voicing the character of Korra in the Nickelodeon animated television series The Legend of Korra**, co‑starring as Sheriff Evie Barret in the television series Stan Against Evil, and a recurring role as Becca Barbara in You're the Worst."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "The Legend of Korra là series hoạt hình nổi tiếng của Nickelodeon, trong đó nhân vật chính Korra được lồng tiếng bởi Janet Varney, điều này được công nhận rộng rãi trong các tài liệu phim và các trang thông tin giải trí."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Bảo vệ bản tin gốc bằng cách bác bỏ lập luận của đối thủ rằng bản tin hoàn toàn sai. Chúng tôi chỉ ra rằng bằng chứng hiện có chỉ chứng minh Varney lồng tiếng cho Korra, không phủ nhận khả năng cô từng từ chối lồng tiếng cho một nhân vật khác trong cùng series. Do đó, khẳng định của C1 là không đủ cơ sở và bản tin gốc vẫn có khả năng đúng.",
+      "challenger_argument": "Dựa trên bằng chứng từ nguồn S1 và tri thức chung, chúng tôi khẳng định rằng Janet Varney không từ chối mà đã thực hiện việc lồng tiếng cho Korra, do đó bản tin gốc hoàn toàn sai lệch.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[R1] C1 khẳng định rằng bản tin gốc \"Janet Varney refused to voice a character in The Legend of Korra\" là hoàn toàn sai lệch vì Janet Varney đã lồng tiếng cho nhân vật Korra. Tuy nhiên, bằng chứng trong nguồn S1 chỉ xác nhận rằng Varney **đã** lồng tiếng cho Korra; nó không cung cấp bất kỳ thông tin nào về việc cô có từng từ chối lồng tiếng cho một nhân vật khác trong cùng dự án. Do đó, việc khẳng định rằng bản tin gốc là hoàn toàn sai là quá mức. Một tuyên bố \"refused to voice a character\" không nhất thiết phải chỉ về Korra; nó có thể đề cập đến một vai trò phụ hoặc một nhân vật khác mà Varney đã từ chối. Vì nguồn S1 không phủ nhận khả năng này, nên khẳng định của C1 là không chính xác và không đủ căn cứ để bác bỏ bản tin gốc.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Janet Varney is an American actress, comedian, writer and producer. She is known for voicing the character of Korra in the Nickelodeon animated television series The Legend of Korra, co‑starring as Sheriff Evie Barret in the television series Stan Against Evil, and a recurring role as Becca Barbara in You're the Worst."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "DEFEND",
+          "text": "[C1] Bản tin khẳng định “Janet Varney refused to voice a character in The Legend of Korra” là hoàn toàn sai lệch vì các nguồn đáng tin cậy xác nhận rằng Janet Varney đã nhận lời và thực sự lồng tiếng cho nhân vật chính Korra trong loạt phim hoạt hình này.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Janet Varney is an American actress, comedian, writer and producer. She is known for voicing the character of Korra in the Nickelodeon animated television series The Legend of Korra, co‑starring as Sheriff Evie Barret in the television series Stan Against Evil, and a recurring role as Becca Barbara in You're the Worst."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "The Legend of Korra là series hoạt hình nổi tiếng của Nickelodeon, trong đó nhân vật chính Korra được lồng tiếng bởi Janet Varney, thông tin này được công nhận rộng rãi trong các tài liệu phim và các trang thông tin giải trí."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Chúng tôi đã phản bác lập luận của đối thủ rằng bản tin gốc là sai hoàn toàn bằng cách chỉ ra rằng nguồn S1 chỉ chứng minh Varney đã lồng tiếng cho Korra, nhưng không phủ nhận khả năng cô đã từ chối một nhân vật khác. Khi không có bằng chứng ngược lại, tuyên bố \"refused to voice a character\" vẫn có thể đúng, do đó bản tin gốc không bị bác bỏ.",
+      "challenger_argument": "Bằng chứng duy nhất và đáng tin cậy (S1) khẳng định Janet Varney đã chấp nhận và lồng tiếng cho Korra, không có bất kỳ vai phụ nào khác được ghi nhận. Lập luận của bên phòng thủ dựa trên khả năng suy đoán không có bằng chứng thực tế, vì vậy tuyên bố “refused to voice a character in The Legend of Korra” không chỉ thiếu căn cứ mà còn trái ngược trực tiếp với thông tin xác thực, chứng minh bản tin gốc là hoàn toàn sai lệch.",
+      "defender_claims": [
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[R2] C1 khẳng định bản tin gốc \"Janet Varney refused to voice a character in The Legend of Korra\" là hoàn toàn sai lệch vì Varney đã lồng tiếng cho Korra. Tuy nhiên, lời khẳng định của C1 dựa trên việc suy đoán rằng \"a character\" chỉ đề cập tới Korra, trong khi bản tin gốc không xác định nhân vật nào. Nguồn S1 chỉ chứng minh Varney **đã** lồng tiếng cho Korra, nhưng không đề cập tới việc cô có từng từ chối bất kỳ vai diễn nào khác trong cùng series. Vì vậy, khẳng định của C1 rằng bản tin gốc là sai hoàn toàn là không có cơ sở: không có bằng chứng nào bác bỏ việc Varney có thể đã từ chối một vai phụ hoặc một nhân vật phụ khác. Khi một tuyên bố không được phản bác bằng chứng ngược lại, nó vẫn có thể đúng. Do đó, bản tin gốc vẫn có khả năng đúng và không bị bác bỏ.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Janet Varney is an American actress, comedian, writer and producer. She is known for voicing the character of Korra in the Nickelodeon animated television series The Legend of Korra, co‑starring as Sheriff Evie Barret in the television series Stan Against Evil, and a recurring role as Becca Barbara in You're the Worst."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Trong ngành hoạt hình, các diễn viên lồng tiếng thường được mời thử vai cho nhiều nhân vật khác nhau trong cùng một series; việc từ chối một vai phụ không hiếm gặp và thường không được ghi lại trong các nguồn công cộng."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[R3] C1 khẳng định rằng bằng chứng S1 chỉ chứng minh Varney đã lồng tiếng cho Korra và không loại trừ khả năng cô từng từ chối một vai phụ khác. Điều này là không chính xác vì không có bất kỳ vai phụ nào của Varney trong The Legend of Korra được ghi nhận; danh sách các nhân vật do cô lồng tiếng duy nhất là Korra. Do đó, việc cho rằng “a character” có thể là một vai diễn phụ là suy đoán vô căn cứ. Nguồn S1 xác nhận rõ ràng rằng Varney đã nhận lời và thực hiện việc lồng tiếng cho Korra, nghĩa là cô không hề từ chối vai này và không tồn tại vai nào khác mà cô có thể đã từ chối. Khi không có bằng chứng nào cho thấy cô từng từ chối bất kỳ vai diễn nào trong series, tuyên bố “refused to voice a character” không có cơ sở và do đó bản tin gốc là sai lệch hoàn toàn.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Janet Varney is an American actress, comedian, writer and producer. She is known for voicing the character of Korra in the Nickelodeon animated television series The Legend of Korra, co‑starring as Sheriff Evie Barret in the television series Stan Against Evil, and a recurring role as Becca Barbara in You're the Worst."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "The Legend of Korra only lists Janet Varney as the voice actor for the title character Korra; no other credited roles for her exist in the series."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ]
+    }
+  ],
+  "duration": 63.17049288749695
+}

@@ -1,0 +1,47 @@
+================================================================================
+🧪 BÁO CÁO PHÂN TÍCH HIỆU NĂNG MÔ HÌNH (MAD VS BASE)
+================================================================================
+
+⏰ Thời gian chạy: 2026-05-02 16:33:23
+🤖 Model: gemini-3.1-flash-lite
+📊 Tổng số mẫu: 40
+⚡ Tốc độ trung bình: 42.10 giây/mẫu
+
+--- CHỈ SỐ CHI TIẾT ---
+Metric          | Base LLM        | MAD System      | Improvement    
+-----------------------------------------------------------------
+Accuracy        |          80.00% |          85.00% |           5.00%
+Precision       |           0.89  |           1.00  |           0.11
+Recall          |           0.85  |           0.85  |           0.00
+F1-Score        |           0.87  |           0.92  |           0.05
+
+--- PHÂN TÍCH THẤT BẠI (MAD FAILED CASES) ---
+Dưới đây là các câu mà MAD System đã phán quyết SAI so với nhãn gốc:
+
+1. [ID: fever-159789] - FALSE NEGATIVE (Lẽ ra là ĐÚNG)
+   📝 Claim: 1.7% of water can be found in glaciers and ice caps of Antarctica.
+   ⚖️ Kết quả: Base=0.0 | MAD=0.0 | GroundTruth=1.0
+----------------------------------------
+2. [ID: fever-173954] - FALSE POSITIVE (Lẽ ra là SAI)
+   📝 Claim: Vera Farmiga is only an actress.
+   ⚖️ Kết quả: Base=0.0 | MAD=None | GroundTruth=0.0
+----------------------------------------
+3. [ID: fever-104779] - FALSE NEGATIVE (Lẽ ra là ĐÚNG)
+   📝 Claim: Frank Ocean was in a poll.
+   ⚖️ Kết quả: Base=0.0 | MAD=0.0 | GroundTruth=1.0
+----------------------------------------
+4. [ID: fever-166562] - FALSE POSITIVE (Lẽ ra là SAI)
+   📝 Claim: Christine Daaé is a character by Victor Hugo.
+   ⚖️ Kết quả: Base=0.0 | MAD=None | GroundTruth=0.0
+----------------------------------------
+5. [ID: fever-134947] - FALSE POSITIVE (Lẽ ra là SAI)
+   📝 Claim: Peyton Manning refused to sign with the Broncos and remained on the Colts.
+   ⚖️ Kết quả: Base=0.0 | MAD=None | GroundTruth=0.0
+----------------------------------------
+6. [ID: fever-123589] - FALSE NEGATIVE (Lẽ ra là ĐÚNG)
+   📝 Claim: Keegan-Michael Key played Murray in the film Hotel Transylvania 2.
+   ⚖️ Kết quả: Base=0.0 | MAD=0.0 | GroundTruth=1.0
+----------------------------------------
+
+================================================================================
+Log chi tiết từng mẫu được lưu tại: D:\My Works\Coding\MAD-System-for-Fake-News-Detection\data\results\fever_logs\gemini-3.1-flash-lite

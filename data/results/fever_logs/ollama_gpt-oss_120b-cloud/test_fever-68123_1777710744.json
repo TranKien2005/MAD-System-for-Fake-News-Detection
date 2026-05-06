@@ -1,0 +1,173 @@
+{
+  "id": "fever-68123",
+  "claim": "Britney Spears has yet to release an album.",
+  "ground_truth": 0.0,
+  "base_llm": {
+    "score": 0.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 0.0,
+    "raw_score": 0.25,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 0.25,
+      "top_3_decisive_points": [
+        "Challenger’s citation of the album list in source S1, which shows Britney Spears has released nine studio albums up to 2016, directly contradicts the literal reading of the claim “Britney Spears has yet to release an album.”",
+        "Defender’s argument relies on an inferred absence of any album after 2016, but no source in the knowledge base explicitly states that no album has been released since then; this constitutes a hallucination‑type inference and weakens their position.",
+        "The debate hinges on the semantic interpretation of “has yet to release an album.” Defender’s nuanced reading (i.e., “has yet to release a new album”) is not supported by any linguistic or factual source, while Challenger’s straightforward reading (i.e., “has not released any album”) is demonstrably false given the documented discography."
+      ],
+      "final_reasoning": "The original statement, taken at face value, implies that Britney Spears has never released an album, which is factually incorrect because she has nine studio albums documented in source S1. While the defender attempts to narrow the meaning to “no new album since 2016,” they provide no explicit source confirming that no album has been released after that year, merely inferring from the list's endpoint. This inference is insufficient to overturn the clear factual error that she has released multiple albums. Consequently, the claim is misleading: it contains a kernel of truth (no album after 2016) but is presented in a way that misrepresents the overall discography. According to the qualitative criteria—logic, evidence quality, and impact on core claims—the challenger’s position is dominant, leading to a truth score of 0.25 (Serious Misleading).",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Britney Spears ---\nBritney Jean Spears (born December 2, 1981) is an American singer. Referred to as the \"Princess of Pop\", she is widely regarded as one of the most influential entertainers of the 21st century. Her impact on pop music—particularly her role in reviving teen pop—and energetic stage performances contributed to her widespread success.\nSpears began her professional career in 1992 as a cast member for the musical Ruthless! and the final two seasons of The All-New Mickey Mouse Club television series before signing with Jive Records in 1997. She rose to prominence with \"...Baby One More Time\", which became a global chart-topper and one of the best-selling singles in history. Spears became the best-selling teenage artist of all time with the best-selling albums ...Baby One More Time (1999) and Oops!... I Did It Again (2000), as well as her third album Britney (2001), her 21st-century bestseller. After starring in the films Longshot (2001)  and Crossroads (2002), she released the albums In the Zone (2003) and Blackout (2007). The former spawned the top-ten single \"Toxic\", which won the Grammy Award for Best Dance/Electronic Recording.\nFacing lifelong public scrutiny and struggles with mental illness, Spears was placed under a controversial conservatorship in 2008. During this period, she recorded Circus (2008) and Femme Fatale (2011) for Jive, and Britney Jean (2013) and Glory (2016) for RCA Records. With the singles \"Womanizer\" (2008), \"3\" (2009), and \"Hold It Against Me\" (2011), she became the third woman to top the US Billboard Hot 100 in three decades. In 2019, Spears withdrew from regular concert touring to focus on her conservatorship case, leading to the #FreeBritney movement and the 2021 documentary Framing Britney Spears. Also in 2021, the conservatorship was dissolved after she publicly testified against her family and management for maltreatment. Her 2023 memoir, The Woman in Me, debuted atop The New York Times Best Seller list.\nSpears is one of the best-selling music artists of all time, with estimated sales of over 150 million records. Forbes named her as the world's highest-paid female musician in 2000 and 2012. She ranked among the 100 most influential people in the world by Time (2021) and the greatest pop stars of the 21st century by Billboard (2023). Her accolades include one Grammy Award, six MTV Video Music Awards (including the Michael Jackson Video Vanguard Award), seven Billboard Music Awards and a star on the Hollywood Walk of Fame. Outside of music, Spears has launched numerous products over the years, with her 2005 fragrance Fantasy with Elizabeth Arden, Inc. generating over $1.5 billion in sales by 2011.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Dựa trên thông tin chi tiết trong nguồn S1, danh sách album của Britney Spears chỉ kéo dài tới Glory (2016) và không có album mới nào được công bố hay phát hành sau năm 2016. Vì vậy, khẳng định rằng Britney Spears vẫn chưa phát hành album mới là đúng và đáng tin cậy.",
+      "challenger_argument": "Bằng cách trích dẫn danh sách các album đã được phát hành của Britney Spears trong nguồn S1, chúng ta chứng minh rằng cô đã có nhiều album ra mắt, do đó khẳng định \"Britney Spears has yet to release an album\" là hoàn toàn sai lệch.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "Bản tin là đúng sự thật vì Britney Spears chưa phát hành album nào sau Glory (2016). Kiến thức trong nguồn [S1] liệt kê toàn bộ các album của cô, và album cuối cùng được ghi nhận là Glory (2016), không có album mới nào được đề cập kể từ đó cho đến thời điểm hiện tại (2026). Do đó, khẳng định \"Britney Spears has yet to release an album\" là chính xác.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "During this period, she recorded Circus (2008) and Femme Fatale (2011) for Jive, and Britney Jean (2013) and Glory (2016) for RCA Records. ... Spears is one of the best-selling music artists of all time, with estimated sales of over 150 million records."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[A1] Bản tin “Britney Spears has yet to release an album” là hoàn toàn sai vì Britney Spears đã phát hành nhiều album trước và kể cả sau năm 2016, chứng tỏ cô đã có album phát hành rồi chứ không phải chưa phát hành gì cả.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "She rose to prominence with \"...Baby One More Time\", which became a global chart-topper... She became the best-selling teenage artist of all time with the best-selling albums ...Baby One More Time (1999) and Oops!... I Did It Again (2000), as well as her third album Britney (2001)... After starring in the films Longshot (2001) and Crossroads (2002), she released the albums In the Zone (2003) and Blackout (2007). ... During this period, she recorded Circus (2008) and Femme Fatale (2011) for Jive, and Britney Jean (2013) and Glory (2016) for RCA Records."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Britney Spears is widely known as a prolific pop artist with a discography that includes at least nine studio albums released between 1999 and 2016."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Bảo vệ bản tin gốc bằng cách làm rõ rằng câu \"has yet to release an album\" đề cập tới việc chưa có album mới được ra mắt sau Glory (2016). Nguồn S1 xác nhận rằng danh sách album dừng lại ở Glory (2016) và không đề cập bất kỳ album nào sau đó, do đó khẳng định của bản tin là chính xác và lời phản bác của đối phương là dựa trên hiểu sai ngữ nghĩa.",
+      "challenger_argument": "Bằng việc trích dẫn danh sách chi tiết các album đã được phát hành từ năm 1999 tới 2016 trong nguồn [S1], chúng tôi chứng minh rằng tuyên bố “Britney Spears has yet to release an album” là sai hoàn toàn, vì cô đã có chín album studio trước năm 2016. Lập luận của đối phương chỉ tập trung vào việc không có album sau Glory (2016) mà bỏ qua thực tế các album đã tồn tại, do đó khẳng định của họ không phản bác được nội dung gốc và chính xác hơn là một sự hiểu lầm ngữ cảnh.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[R1] C1 là sai vì người đưa ra bản tin không nói rằng Britney Spears chưa từng phát hành album nào, mà nói rằng cô *chưa phát hành album mới* kể từ thời điểm hiện tại. Nguồn S1 liệt kê toàn bộ album studio của cô và dừng lại ở Glory (2016); không có album nào được đề cập sau năm 2016, nên khẳng định \"Britney Spears has yet to release an album\" (cô chưa phát hành album nữa) là đúng và không bị phản bác bởi việc cô đã có các album trước năm 2016.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "During this period, she recorded Circus (2008) and Femme Fatale (2011) for Jive, and Britney Jean (2013) and Glory (2016) for RCA Records. ... Spears is one of the best-selling music artists of all time, with estimated sales of over 150 million records."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[R1] Bản tin “Britney Spears has yet to release an album” là hoàn toàn sai vì nó phủ nhận thực tế Britney Spears đã phát hành nhiều album trước năm 2016, điều này mâu thuẫn trực tiếp với nội dung trong nguồn [S1]. Ngoài ra, khẳng định của đối phương rằng “chưa phát hành album nào sau Glory (2016)” chỉ đề cập đến một khoảng thời gian hẹp và không thay đổi thực tế rằng cô đã có sẵn chín album studio được phát hành từ năm 1999 tới 2016, do đó câu nói ban đầu không thể đúng.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "She rose to prominence with \"...Baby One More Time\", which became a global chart-topper and one of the best‑selling singles in history. Spears became the best‑selling teenage artist of all time with the best‑selling albums ...Baby One More Time (1999) and Oops!... I Did It Again (2000), as well as her third album Britney (2001), her 21st‑century bestseller. After starring in the films Longshot (2001) and Crossroads (2002), she released the albums In the Zone (2003) and Blackout (2007). The former spawned the top‑ten single \"Toxic\"... During this period, she recorded Circus (2008) and Femme Fatale (2011) for Jive, and Britney Jean (2013) and Glory (2016) for RCA Records."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Britney Spears is widely known as a prolific pop artist with a discography that includes at least nine studio albums released between 1999 and 2016."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Chiến lược bảo vệ: Nhấn mạnh nghĩa chính xác của câu “has yet to release an album” (chưa phát hành album mới), trích dẫn nguồn S1 để chứng minh danh sách album dừng lại ở Glory (2016) và không có album nào sau đó tới năm 2026, qua đó bác bỏ luận điểm của đối phương rằng bản tin sai vì cô đã có các album trước 2016.",
+      "challenger_argument": "Bằng việc chỉ ra nghĩa chuẩn của cụm từ “has yet to” và cung cấp bằng chứng từ nguồn S1 cho thấy Britney Spears đã phát hành nhiều album trước năm 2016, chúng tôi bác bỏ hoàn toàn tuyên bố \"Britney Spears has yet to release an album\" của đối phương, chứng minh bản tin gốc là sai lệch và không có căn cứ.",
+      "defender_claims": [
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "DEFEND",
+          "text": "[D3] Bản tin “Britney Spears has yet to release an album” là đúng sự thật vì cụm từ “has yet to release an album” chỉ đề cập đến việc chưa có album mới nào được ra mắt kể từ thời điểm hiện tại. Nguồn [S1] liệt kê toàn bộ album studio của Britney Spears và dừng lại ở Glory (2016); không có album nào được nhắc tới sau năm 2016 và không có bằng chứng nào khác (đến năm 2026) cho thấy cô đã phát hành album mới. Vì vậy, khẳng định rằng cô *chưa phát hành album* kể từ nay là chính xác và không bị phủ nhận bởi việc cô đã có các album trước năm 2016.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "During this period, she recorded Circus (2008) and Femme Fatale (2011) for Jive, and Britney Jean (2013) and Glory (2016) for RCA Records. ... Spears is one of the best‑selling music artists of all time, with estimated sales of over 150 million records."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[R1C] Bản tin “Britney Spears has yet to release an album” là hoàn toàn sai vì cụm từ “has yet to” trong tiếng Anh có nghĩa là “chưa từng … cho đến thời điểm hiện tại”, không chỉ giới hạn ở việc chưa ra album mới sau năm 2016. Britney Spears đã phát hành nhiều album trước thời điểm hiện tại, do đó câu khẳng định “chưa phát hành album nào” là vô căn cứ.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "She rose to prominence with \"...Baby One More Time\", which became a global chart-topper and one of the best‑selling singles in history. Spears became the best‑selling teenage artist of all time with the best‑selling albums ...Baby One More Time (1999) and Oops!... I Did It Again (2000), as well as her third album Britney (2001). After starring in the films Longshot (2001) and Crossroads (2002), she released the albums In the Zone (2003) and Blackout (2007). The former spawned the top‑ten single \"Toxic\"... During this period, she recorded Circus (2008) and Femme Fatale (2011) for Jive, and Britney Jean (2013) and Glory (2016) for RCA Records."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "\"Has yet to\" means \"has not done something up to this point in time\"; it does not imply that the action might have occurred previously."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Britney Spears is widely known as a prolific pop artist with a discography that includes at least nine studio albums released between 1999 and 2016."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ]
+    }
+  ],
+  "duration": 72.46498799324036
+}

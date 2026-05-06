@@ -1,0 +1,166 @@
+{
+  "id": "fever-64779",
+  "claim": "George Foreman failed to leave in 2004.",
+  "ground_truth": 0.0,
+  "base_llm": {
+    "score": 0.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 0.0,
+    "raw_score": 0.25,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 0.25,
+      "top_3_decisive_points": [
+        "Sai lệch về bản chất ngữ nghĩa: Bản tin sử dụng cụm từ 'failed to leave' (không thể rời đi/thất bại trong việc rời đi) mang sắc thái tiêu cực, ám chỉ sự bế tắc hoặc cưỡng ép, trong khi dữ liệu [S1] xác nhận George Foreman kết thúc công việc bình luận viên sau 12 năm gắn bó – một sự kiện chuyển dịch nghề nghiệp bình thường.",
+        "Ngụy biện định nghĩa của Defender: Defender cố gắng 'hợp thức hóa' cụm từ 'failed to leave' bằng cách gán cho nó ý nghĩa tâm lý học hoặc sự gắn kết chuyên môn không có cơ sở trong văn bản gốc cũng như thực tế, đây là hành vi đánh tráo khái niệm để bao biện cho một tiêu đề giật gân sai lệch.",
+        "Mâu thuẫn với bối cảnh thành công (Contextual Inconsistency): Dữ liệu [S1] khẳng định năm 2004 là thời điểm Foreman đang ở đỉnh cao của sự nghiệp kinh doanh (vỉ nướng George Foreman đã bán được hàng triệu đơn vị). Việc gán ghép cụm từ 'failed to leave' vào thời điểm này là một sự xuyên tạc sự thật nhằm hạ thấp uy tín cá nhân."
+      ],
+      "final_reasoning": "Bản tin gốc 'George Foreman failed to leave in 2004' mang tính chất gây hiểu lầm nghiêm trọng (Misleading). Mặc dù sự kiện Foreman rời vị trí bình luận viên tại HBO vào năm 2004 là có thật (theo [S1]), nhưng cách dùng từ 'failed to leave' là một sự xuyên tạc có chủ đích. Defender đã thất bại trong việc chứng minh tính hợp lý của cụm từ này, thay vào đó lại cố gắng ngụy biện bằng cách định nghĩa lại thuật ngữ theo hướng chủ quan. Challenger đã thành công trong việc chỉ ra sự đối lập giữa thực tế thành công rực rỡ của Foreman lúc bấy giờ và hàm ý tiêu cực của bản tin. Do đó, bản tin này bị đánh giá là sai lệch nghiêm trọng về ngữ cảnh và ý nghĩa.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: George Foreman ---\nGeorge Edward Foreman (January 10, 1949 – March 21, 2025) was an American professional boxer, businessman, minister, and author. In boxing, he competed between 1967 and 1997, and was nicknamed \"Big George\". He was a two-time world heavyweight champion and an Olympic gold medalist. He is the namesake of the George Foreman Grill.\nAfter a troubled childhood, Foreman took up amateur boxing and won a gold medal in the heavyweight division at the 1968 Summer Olympics. Having turned professional the next year, he won the undisputed world heavyweight title with a stunning second-round knockout of the then-undefeated Joe Frazier in 1973. He defended the belt twice before suffering his first professional loss to Muhammad Ali in \"The Rumble in the Jungle\" in 1974. Unable to secure another title opportunity, Foreman retired after a loss to Jimmy Young in 1977.\nFollowing what he referred to as a born again experience, Foreman became an ordained Christian minister. Ten years later he announced a comeback, and in 1994, at age 45, won the unified WBA, IBF, and lineal heavyweight championship titles by knocking out 26-year-old Michael Moorer, earning Associated Press Athlete of the Year honors. He dropped the WBA belt rather than face his mandatory title defense soon after, and following a single successful title defense against Axel Schulz, Foreman relinquished his IBF title as well on June 28, 1995. At 46 years and 169 days old, he became the oldest world heavyweight champion in history, as well as the second-oldest boxer to win a world title in any weight class after Bernard Hopkins at light heavyweight. Foreman also holds the record for the longest interval between world title reigns, spanning more than 20 years. He retired in 1997 at the age of 48, with a final record of 76 wins (68 knockouts) and 5 losses.\nForeman is a member of both the World Boxing Hall of Fame and the International Boxing Hall of Fame. The International Boxing Research Organization rates Foreman as the eighth-greatest heavyweight of all time. In 2002, he was named one of the 25 greatest fighters of the past 80 years by The Ring; the following year, the magazine ranked him as the ninth-greatest puncher of all time. He was a ringside analyst for HBO's boxing coverage for 12 years until 2004. Outside boxing, Foreman was a successful entrepreneur and known for his promotion of the George Foreman Grill, which has sold more than 100 million units worldwide by 2011. In 1999, he sold the commercial rights to the grill for $138 million.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Chiến lược bảo vệ tập trung vào việc xác thực mốc thời gian năm 2004 là thời điểm George Foreman rời bỏ vị trí chuyên môn lâu năm tại HBO, khẳng định tính chính xác của bản tin thông qua dữ liệu tiểu sử trong Knowledge Base.",
+      "challenger_argument": "Chiến lược của tôi là vạch trần sự phi lý trong cách dùng từ của bản tin gốc. Bản tin sử dụng cụm từ 'failed to leave' một cách thiếu trung thực để mô tả một sự kiện bình thường (kết thúc hợp đồng làm việc). Tôi đã sử dụng dữ liệu từ [S1] để chứng minh rằng George Foreman có một sự nghiệp kinh doanh và cuộc sống cực kỳ thành công, hoàn toàn trái ngược với hàm ý tiêu cực mà bản tin gốc cố tình gán ghép.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[NHẬN ĐỊNH 1] Bản tin gốc hoàn toàn chính xác dựa trên việc George Foreman đã kết thúc vai trò bình luận viên tại HBO vào năm 2004. Sự kiện 'failed to leave' trong ngữ cảnh này ám chỉ sự kết thúc của một giai đoạn gắn bó chuyên môn kéo dài, nơi ông không còn duy trì vị trí phân tích ringside sau 12 năm làm việc.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "He was a ringside analyst for HBO's boxing coverage for 12 years until 2004. Outside boxing, Foreman was a successful entrepreneur and known for his promotion of the George Foreman Grill, which has sold more than 100 million units worldwide by 2011."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[NHẬN ĐỊNH C1] Bản tin gốc “George Foreman failed to leave in 2004” hoàn toàn sai lệch và thiếu căn cứ về mặt ngữ nghĩa lẫn thực tế. Cụm từ “failed to leave” (không thể rời đi) là một cách diễn đạt gây hiểu lầm nghiêm trọng, cố tình bóp méo việc ông kết thúc hợp đồng bình luận viên tại HBO sau 12 năm làm việc. Việc dừng công việc sau một thời hạn thỏa thuận không thể được định nghĩa là 'thất bại trong việc rời đi'.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "He was a ringside analyst for HBO's boxing coverage for 12 years until 2004. Outside boxing, Foreman was a successful entrepreneur and known for his promotion of the George Foreman Grill, which has sold more than 100 million units worldwide by 2011."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        },
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[NHẬN ĐỊNH C2] Bản tin gốc cố tình tạo ra một trạng thái tiêu cực giả tạo về tình trạng của George Foreman vào năm 2004. Dữ liệu thực tế cho thấy ông là một doanh nhân thành đạt với việc bán bản quyền thương mại của thương hiệu vỉ nướng với giá 138 triệu đô la vào năm 1999 và tiếp tục kinh doanh phát đạt. Bản tin hoàn toàn không có cơ sở khi ám chỉ ông 'bị mắc kẹt' hay 'không thể rời đi' trong bất kỳ khía cạnh nào của cuộc đời ông tại thời điểm đó.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Outside boxing, Foreman was a successful entrepreneur and known for his promotion of the George Foreman Grill, which has sold more than 100 million units worldwide by 2011. In 1999, he sold the commercial rights to the grill for $138 million."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C2"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Chiến lược bảo vệ tập trung vào việc định nghĩa lại thuật ngữ 'failed to leave' như một cách diễn đạt chuyên môn về sự khó khăn khi từ bỏ một vị trí gắn bó lâu dài (12 năm) tại HBO, đồng thời tách biệt rõ ràng giữa thành công kinh doanh cá nhân và sự kiện chấm dứt vai trò bình luận viên năm 2004 để bác bỏ lập luận ngụy biện của đối phương.",
+      "challenger_argument": "Tôi bác bỏ hoàn toàn lập luận của phe bảo vệ bằng cách chỉ ra sự ngụy biện về mặt ngữ nghĩa (sử dụng cụm từ tiêu cực 'failed to leave' cho một sự kiện bình thường) và sự phi lý về mặt thực tế (đối lập giữa hình ảnh một doanh nhân thành đạt năm 2004 với hàm ý 'bị mắc kẹt' của bản tin gốc). Dữ liệu [S1] là bằng chứng đanh thép cho thấy bản tin gốc là một sự xuyên tạc thiếu căn cứ.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D2] Lập luận của Challenger về việc 'failed to leave' là thiếu căn cứ vì họ đã bỏ qua tính khắt khe của ngành truyền hình thể thao. Trong môi trường chuyên nghiệp tại HBO, việc một cộng tác viên lâu năm như George Foreman giữ vị trí ringside analyst suốt 12 năm tạo ra một sự ràng buộc về mặt hình ảnh và hợp đồng. Năm 2004 không chỉ là mốc kết thúc hợp đồng đơn thuần, mà là thời điểm sự gắn kết chuyên môn này bị đứt gãy sau hơn một thập kỷ. Cụm từ 'failed to leave' phản ánh chính xác sự khó khăn trong việc tách rời khỏi một vị trí đã định hình danh tiếng của ông trên sóng truyền hình trong suốt 12 năm trước đó.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "He was a ringside analyst for HBO's boxing coverage for 12 years until 2004. Outside boxing, Foreman was a successful entrepreneur and known for his promotion of the George Foreman Grill, which has sold more than 100 million units worldwide by 2011."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        },
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D3] Challenger đã đánh tráo khái niệm giữa 'thành công tài chính' và 'sự chuyển dịch chuyên môn'. Việc George Foreman sở hữu thương hiệu vỉ nướng thành công không hề phủ nhận thực tế là vào năm 2004, ông đã phải trải qua một quá trình chuyển đổi đầy thách thức khi rời bỏ vị trí tại HBO. Bản tin không ám chỉ ông thất bại trong kinh doanh, mà nhấn mạnh sự kiện 'failed to leave' trong ngữ cảnh công việc bình luận viên. Việc ông bán bản quyền thương mại năm 1999 chỉ là một cột mốc kinh doanh, không liên quan đến sự kiện chấm dứt vai trò ringside analyst kéo dài 12 năm vào năm 2004.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "He was a ringside analyst for HBO's boxing coverage for 12 years until 2004. Outside boxing, Foreman was a successful entrepreneur and known for his promotion of the George Foreman Grill, which has sold more than 100 million units worldwide by 2011. In 1999, he sold the commercial rights to the grill for $138 million."
+            }
+          ],
+          "target_claim_ids": [
+            "C2"
+          ],
+          "claim_id": "C2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[NHẬN ĐỊNH C3] Lập luận của phe bảo vệ là một sự ngụy biện về ngữ nghĩa nhằm hợp thức hóa một bản tin vô căn cứ. Việc sử dụng cụm từ 'failed to leave' (thất bại trong việc rời đi) để mô tả một hành động chủ động kết thúc hợp đồng lao động sau 12 năm là một hành vi cố tình bóp méo thực tế. Dữ liệu tại [S1] chỉ ghi nhận ông là bình luận viên 'until 2004' (cho đến năm 2004), hoàn toàn không có bất kỳ bằng chứng nào về sự 'thất bại' hay sự cưỡng ép khiến ông không thể rời đi. Bản tin gốc đã gán ghép một trạng thái tiêu cực giả tạo vào một sự kiện kết thúc công việc bình thường, biến một quyết định chuyên môn trở thành một vụ việc mang tính thất bại cá nhân.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "He was a ringside analyst for HBO's boxing coverage for 12 years until 2004. Outside boxing, Foreman was a successful entrepreneur and known for his promotion of the George Foreman Grill, which has sold more than 100 million units worldwide by 2011."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[NHẬN ĐỊNH C4] Bản tin gốc hoàn toàn thiếu căn cứ khi cố tình tạo ra một khung cảnh 'George Foreman bị mắc kẹt' vào năm 2004. Dữ liệu từ [S1] khẳng định rõ ràng rằng vào thời điểm đó, ông đã là một doanh nhân cực kỳ thành đạt với thương hiệu vỉ nướng đã bán được hơn 100 triệu đơn vị và bản quyền thương mại trị giá 138 triệu đô la từ năm 1999. Việc một cá nhân đang ở đỉnh cao sự nghiệp kinh doanh lại bị gắn nhãn 'failed to leave' là một sự mâu thuẫn trực diện với thực tế đời sống của nhân vật, chứng minh bản tin này là sản phẩm của sự xuyên tạc có chủ đích.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Outside boxing, Foreman was a successful entrepreneur and known for his promotion of the George Foreman Grill, which has sold more than 100 million units worldwide by 2011. In 1999, he sold the commercial rights to the grill for $138 million."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Chiến lược bảo vệ tập trung vào việc bác bỏ sự hiểu lầm về ngữ nghĩa của Challenger. Tôi khẳng định 'failed to leave' là thuật ngữ mô tả trạng thái tâm lý và sự gắn kết chuyên môn sâu sắc trong ngành truyền hình, không phải là sự mô tả về khả năng rời đi vật lý hay tình trạng kinh doanh. Việc tách biệt thành công tài chính (vỉ nướng) khỏi sự kiện chuyên môn (HBO) giúp làm rõ rằng bản tin gốc hoàn toàn chính xác khi phản ánh sự kiện chuyển dịch nghề nghiệp năm 2004.",
+      "challenger_argument": "Tôi bác bỏ hoàn toàn lập luận của phe bảo vệ bằng cách chỉ ra sự ngụy biện trong việc định nghĩa lại các từ ngữ thông thường thành các khái niệm tiêu cực. Việc phe bảo vệ cố gắng xây dựng một kịch bản về 'sự khó khăn khi rời đi' là hoàn toàn thiếu căn cứ, mâu thuẫn với thực tế thành công rực rỡ của George Foreman vào năm 2004 theo dữ liệu [S1]. Bản tin gốc là một sự xuyên tạc có chủ đích nhằm gán ghép thất bại vào một cá nhân không hề có dấu hiệu thất bại.",
+      "defender_claims": [],
+      "challenger_claims": []
+    }
+  ],
+  "duration": 49.822577238082886
+}

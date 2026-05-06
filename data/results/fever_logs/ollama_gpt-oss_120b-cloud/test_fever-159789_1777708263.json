@@ -1,0 +1,170 @@
+{
+  "id": "fever-159789",
+  "claim": "1.7% of water can be found in glaciers and ice caps of Antarctica.",
+  "ground_truth": 1.0,
+  "base_llm": {
+    "score": 0.0,
+    "is_correct": false
+  },
+  "mad_system": {
+    "score": 0.0,
+    "raw_score": 0.25,
+    "is_correct": false,
+    "verdict": {
+      "truth_score": 0.25,
+      "top_3_decisive_points": [
+        "Challenger correctly identified that source S1 states the 1.7 % figure applies to the combined glaciers and ice caps of Antarctica **and** Greenland, not to Antarctica alone.",
+        "Defender mis‑interpreted S1, asserting that the same 1.7 % figure can be attributed solely to Antarctica, which is not supported by the source text.",
+        "No source in the knowledge base provides a separate 1.7 % figure for Antarctica; therefore the original claim is misleading because it isolates a portion of a combined statistic without justification."
+      ],
+      "final_reasoning": "The knowledge base (S1) explicitly says that 1.7 % of the world's water is stored in the glaciers and ice caps of **Antarctica and Greenland together**. The original news article claims that this 1.7 % is found **in Antarctica alone**, a statement that is not backed by any evidence and contradicts the wording of S1. Defender repeatedly relied on the same source but mis‑read it, while Challenger consistently highlighted the correct interpretation. Because the claim rests on a mis‑representation of a combined statistic, it is misleading rather than entirely false (the figure is real, but applied to the wrong region). Accordingly, the appropriate qualitative rating is 0.25 – ‘Misleading/Mostly False’.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Water ---\nWater is an inorganic compound with the chemical formula H2O. It is a transparent, tasteless, odorless, and nearly colorless chemical substance. It is the main constituent of Earth's streams, lakes, and oceans and the fluids of all known living organisms, in which it acts as a solvent. Water, being a polar molecule, undergoes strong intermolecular hydrogen bonding which is a large contributor to its physical and chemical properties. It is vital for all known forms of life, despite not providing food energy or being an organic micronutrient. Due to its presence in all organisms, its chemical stability, its worldwide abundance, and its strong polarity relative to its small molecular size, water is often referred to as the \"universal solvent\".\nBecause Earth's surface temperature and pressure is relatively close to water's triple point, water exists on Earth as a solid, a liquid, and a gas. It forms precipitation in the form of rain and aerosols in the form of fog. Clouds consist of suspended droplets of water and ice, its solid state. When finely divided, crystalline ice may precipitate in the form of snow. The gaseous state of water is steam or water vapor.\nWater covers about 71% of the Earth's surface, with seas and oceans making up most of the water volume (about 96.5%). Small portions of water occur as groundwater (1.7%), in the glaciers and the ice caps of Antarctica and Greenland (1.7%), and in the air as vapor, clouds (consisting of ice and liquid water suspended in air), and precipitation (0.001%). Water moves continually through the water cycle of evaporation, transpiration (evapotranspiration), condensation, precipitation, and runoff, usually reaching the sea.\nWater plays an important role in the world economy. Approximately 70% of the fresh water used by humans goes to agriculture. Fishing in salt and fresh water bodies has been, and continues to be, a major source of food for many parts of the world, providing 6.5% of global protein. Much of the long-distance trade of commodities (such as oil, natural gas, and manufactured products) is transported by boats through seas, rivers, lakes, and canals. Large quantities of water, ice, and steam are used for cooling and heating in industry and homes. Water is an excellent solvent for a wide variety of substances, both mineral and organic; as such, it is widely used in industrial processes and in cooking and washing. Water, ice, and snow are also central to many sports and other forms of entertainment, such as swimming, pleasure boating, boat racing, surfing, sport fishing, diving, ice skating, snowboarding, and skiing.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Sử dụng bằng chứng trực tiếp từ nguồn Water (S1) để khẳng định rằng 1.7% lượng nước toàn cầu tồn tại trong các sông băng và chỏm băng của Nam Cực, qua đó bảo vệ hoàn toàn tính đúng đắn và đáng tin cậy của bản tin gốc.",
+      "challenger_argument": "Bằng cách chỉ ra rằng nguồn S1 mô tả 1.7% là tỷ lệ tổng lượng nước trong sông băng của cả Nam Cực và Greenland, chứ không phải riêng Nam Cực, chúng ta chứng minh bản tin gốc sai lệch và thiếu căn cứ.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "C1 Bản tin là đúng sự thật vì nguồn Water (S1) cho biết rằng một phần nhỏ của toàn bộ nước trên Trái Đất, chiếm 1.7%, nằm trong các sông băng và chỏm băng của Nam Cực và Greenland. Điều này xác nhận rằng 1.7% lượng nước có thể được tìm thấy trong các sông băng và chỏm băng của Nam Cực, phù hợp với nội dung bản tin gốc.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Water covers about 71% of the Earth's surface, with seas and oceans making up most of the water volume (about 96.5%). Small portions of water occur as groundwater (1.7%), in the glaciers and the ice caps of Antarctica and Greenland (1.7%), and in the air as vapor, clouds (consisting of ice and liquid water suspended in air), and precipitation (0.001%)."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "A1 Bản tin là sai lệch hoàn toàn vì nguồn S1 chỉ nêu rằng 1.7% là tỷ lệ tổng lượng nước toàn cầu nằm trong các sông băng và chỏm băng của **Nam Cực và Greenland**, chứ không phải chỉ ở Nam Cực. Ngoài ra, S1 không khẳng định rằng 1.7% là lượng nước riêng lẻ của Nam Cực, mà là phần trăm của **toàn bộ** nguồn nước trên Trái Đất. Do đó, tuyên bố \"1.7% of water can be found in glaciers and ice caps of Antarctica\" là sai sự thật và gây hiểu lầm.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Small portions of water occur as groundwater (1.7%), in the glaciers and the ice caps of Antarctica and Greenland (1.7%), and in the air as vapor, clouds (consisting of ice and liquid water suspended in air), and precipitation (0.001%)."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Chiến lược bảo vệ: chúng tôi phản bác lại luận điểm của người thách thức bằng cách chỉ ra rằng nguồn S1 xác định các sông băng và chỏm băng (trong đó có Nam Cực) chiếm 1.7% tổng lượng nước, vì vậy khẳng định \"1.7% of water can be found in glaciers and ice caps of Antarctica\" là đúng và không gây hiểu lầm.",
+      "challenger_argument": "Bằng cách chỉ ra rằng nguồn S1 chỉ đưa ra tỷ lệ 1.7% cho tổng lượng nước trong các sông băng và chỏm băng của cả Nam Cực và Greenland, chứ không phải riêng Nam Cực, chúng ta bác bỏ hoàn toàn lập luận của D1 và chứng minh bản tin gốc là sai lệch.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[R1] Bản tin là đúng sự thật vì nguồn Water (S1) khẳng định rằng \"in the glaciers and the ice caps of Antarctica and Greenland (1.7%)\" – tức là các sông băng và chỏm băng của Nam Cực (cùng với Greenland) chiếm 1.7% tổng lượng nước trên Trái Đất. Câu này không nói rằng 1.7% chỉ áp dụng cho toàn bộ hai khu vực cộng lại, mà xác định rằng **phần** các sông băng và chỏm băng, trong đó có Nam Cực, chiếm 1.7% khối lượng nước toàn cầu. Vì vậy, việc khẳng định \"1.7% of water can be found in glaciers and ice caps of Antarctica\" là hoàn toàn chính xác – đó là một phần của nhóm nước được mô tả trong S1. Người thách thức đã hiểu sai ý nghĩa của đoạn trích, cho rằng nguồn chỉ đề cập tới tổng cộng Antarctica + Greenland, trong khi thực tế đoạn văn chỉ định rằng các sông băng và chỏm băng (gồm Nam Cực) chiếm 1.7% tổng nước, nên tuyên bố của bản tin không gây hiểu lầm.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Small portions of water occur as groundwater (1.7%), in the glaciers and the ice caps of Antarctica and Greenland (1.7%), and in the air as vapor, clouds (consisting of ice and liquid water suspended in air), and precipitation (0.001%)."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "C1 D1 sai lệch hoàn toàn vì nguồn S1 không khẳng định 1.7% lượng nước toàn cầu nằm riêng biệt trong các sông băng và chỏm băng của Nam Cực. S1 chỉ nêu rằng 1.7% nước toàn cầu tồn tại trong các sông băng và chỏm băng **của Nam Cực và Greenland chung**; không có bất kỳ số liệu nào tách riêng cho Nam Cực. Do đó việc D1 diễn giải S1 thành \"1.7% of water can be found in glaciers and ice caps of Antarctica\" là một sự diễn giải sai lệch và gây hiểu lầm, khiến bản tin gốc trở nên không chính xác.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Water covers about 71% of the Earth's surface, with seas and oceans making up most of the water volume (about 96.5%). Small portions of water occur as groundwater (1.7%), in the glaciers and the ice caps of Antarctica and Greenland (1.7%), and in the air as vapor, clouds (consisting of ice and liquid water suspended in air), and precipitation (0.001%)."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "The defender upholds the original claim by highlighting that the source S1 attributes the 1.7 % water proportion to the glaciers and ice caps located in Antarctica (as part of the combined group with Greenland). The defender rebuts the challenger’s interpretation, emphasizing that the statement is not false or misleading because Antarctica supplies the bulk of that water portion, making the claim accurate.",
+      "challenger_argument": "Những lập luận trên cho thấy Defender đã diễn giải sai nguồn S1, biến một con số chung (1.7 % cho cả Antarctica và Greenland) thành một con số riêng cho Antarctica. Không có bằng chứng nào trong S1 hỗ trợ việc tách riêng 1.7 % cho Nam Cực, do đó tuyên bố gốc là sai lệch hoàn toàn.",
+      "defender_claims": [
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "DEFEND",
+          "text": "D1 The original statement is correct because the source S1 explicitly reports that “in the glaciers and the ice caps of Antarctica and Greenland (1.7%)” a total of 1.7 % of Earth’s water is stored in those ice bodies. The wording does not require the percentage to be divided equally between Antarctica and Greenland; it simply states the proportion of water found in the glaciers and ice caps that are located in Antarctica (as part of that group). Since Antarctica contains the overwhelming majority of the world’s land ice, it is accurate to say that 1.7 % of water can be found in Antarctica’s glaciers and ice caps.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Water covers about 71% of the Earth's surface, with seas and oceans making up most of the water volume (about 96.5%). Small portions of water occur as groundwater (1.7%), in the glaciers and the ice caps of Antarctica and Greenland (1.7%), and in the air as vapor, clouds (consisting of ice and liquid water suspended in air), and precipitation (0.001%)."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "C1 The challenger’s claim that the 1.7 % figure applies only to the combined ice of Antarctica + Greenland and therefore makes the original statement misleading is a misreading of the source. S1 groups the glaciers and ice caps of Antarctica and Greenland together because they together constitute a single “small portion” of Earth’s total water, amounting to 1.7 %. This does not preclude stating the figure for Antarctica alone, since Antarctica provides the dominant share of that portion. Consequently, saying “1.7 % of water can be found in glaciers and ice caps of Antarctica” is a true statement about a subset of the cited group and is not deceptive.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Small portions of water occur as groundwater (1.7%), in the glaciers and the ice caps of Antarctica and Greenland (1.7%), and in the air as vapor, clouds (consisting of ice and liquid water suspended in air), and precipitation (0.001%)."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[R1] Bản tin hoàn toàn sai lệch vì tuyên bố \"1.7% of water can be found in glaciers and ice caps of Antarctica\" là một diễn giải gây hiểu lầm của nguồn S1. Đoạn trích S1 nói rõ \"... in the glaciers and the ice caps of Antarctica and Greenland (1.7%) ...\" – tức là 1.7 % là tỷ lệ **của toàn bộ các sông băng và chỏm băng của cả hai khu vực cộng lại**, chứ không phải toàn bộ 1.7 % dành riêng cho Nam Cực. Nguồn không cung cấp bất kỳ số liệu nào tách biệt cho Nam Cực, vì vậy việc khẳng định 1.7 % chỉ thuộc Nam Cực là không có căn cứ và gây nhầm lẫn cho người đọc.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Water covers about 71% of the Earth's surface, with seas and oceans making up most of the water volume (about 96.5%). Small portions of water occur as groundwater (1.7%), in the glaciers and the ice caps of Antarctica and Greenland (1.7%), and in the air as vapor, clouds (consisting of ice and liquid water suspended in air), and precipitation (0.001%)."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ]
+    }
+  ],
+  "duration": 78.33407235145569
+}

@@ -1,0 +1,186 @@
+{
+  "id": "fever-203223",
+  "claim": "The English Civil War ended in 1651 in London.",
+  "ground_truth": 0.0,
+  "base_llm": {
+    "score": 0.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 0.0,
+    "raw_score": 0.25,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 0.25,
+      "top_3_decisive_points": [
+        "Sai lệch địa lý nghiêm trọng: Bản tin gốc khẳng định cuộc chiến kết thúc tại London, trong khi các nguồn dữ liệu lịch sử [S1] và [S2] xác nhận trận đánh quyết định và sự kết thúc của các chiến dịch quân sự diễn ra tại Worcester.",
+        "Ngụy biện đánh tráo khái niệm: Defender cố gắng giải thích hành vi 'kết thúc cuộc chiến' bằng các quyết định chính trị tại London để biện minh cho bản tin gốc, nhưng đây là sự suy diễn thiếu căn cứ, trong khi bản tin gốc đưa ra một mệnh đề lịch sử mang tính khẳng định về địa điểm.",
+        "Sai lệch phạm vi thời gian: Bản tin gốc bỏ qua bối cảnh rộng hơn của 'Wars of the Three Kingdoms' (kéo dài đến 1653) và các cuộc chiến Anglo-Scottish (đến 1652), làm cho khẳng định 'cuộc chiến kết thúc năm 1651' trở nên thiếu chính xác về mặt học thuật."
+      ],
+      "final_reasoning": "Bản tin gốc mắc lỗi sai lệch nghiêm trọng về địa lý và đơn giản hóa quá mức các sự kiện lịch sử phức tạp. Mặc dù mốc thời gian 1651 có cơ sở từ trận Worcester, nhưng việc khẳng định cuộc chiến kết thúc 'tại London' là sai sự thật về mặt lịch sử. Defender đã cố gắng thực hiện hành vi 'đánh tráo khái niệm' (moving the goalposts) bằng cách chuyển từ bối cảnh quân sự sang diễn giải chính trị để hợp thức hóa địa điểm London, nhưng không có dẫn chứng nào trong [S1] hay [S2] hỗ trợ cho việc định danh London là nơi kết thúc cuộc chiến. Challenger đã thành công trong việc chỉ ra sự thiếu chính xác này và bác bỏ các lập luận ngụy biện của Defender.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: English Civil War ---\nThe English Civil War or Great Rebellion was a series of civil wars and political machinations between Royalists and Parliamentarians in the Kingdom of England from 1642 to 1651. Part of the wider 1639 to 1653 Wars of the Three Kingdoms, the struggle consisted of the First English Civil War and the Second English Civil War. The Anglo-Scottish war of 1650 to 1652 is sometimes referred to as the Third English Civil War.\nWhile the conflicts in the three kingdoms of England, Scotland and Ireland had similarities, each had its own specific issues and objectives. The First English Civil War was fought primarily over the correct balance of power between Parliament and Charles I. It ended in June 1646 with Royalist defeat and the king in custody.\nHowever, victory exposed Parliamentarian divisions over the nature of the political settlement. The vast majority went to war in 1642 to assert Parliament's right to participate in government, not abolish the monarchy, which meant Charles' refusal to make concessions led to a stalemate. Concern over the political influence of radicals within the New Model Army like Oliver Cromwell led to an alliance between moderate Parliamentarians and Royalists, supported by the Covenanter Scots. Royalist defeat in the 1648 Second English Civil War resulted in the execution of Charles I in January 1649, and the establishment of the Commonwealth of England.\nIn 1650, Charles II was crowned King of Scotland, in return for agreeing to create a Presbyterian church in both England and Scotland. The subsequent Anglo-Scottish war ended with Parliamentarian victory at Worcester on 3 September 1651. Both Ireland and Scotland were incorporated into the Commonwealth, and the British Isles became a unitary state. This arrangement ultimately proved both unpopular and unviable in the long term, and was dissolved upon the Stuart Restoration in 1660. The outcome of the civil wars effectively set England and Scotland on course towards a parliamentary monarchy form of government.\n\n--- Source: Battle of Worcester ---\nThe Battle of Worcester took place on 3 September 1651 in and around the city of Worcester, England and was the last major battle of the 1642 to 1651 Wars of the Three Kingdoms. A Parliamentarian army of around 28,000 under Oliver Cromwell defeated a largely Scottish Royalist force of 16,000 led by Charles II of England and Scotland.\nThe Royalists took up defensive positions in and around the city of Worcester. The area of the battle was bisected by the River Severn, with the River Teme forming an additional obstacle to the south-west of Worcester. Cromwell divided his army into two main sections, divided by the Severn, in order to attack from both the east and south-west. There was fierce fighting at river crossing points and two dangerous sorties by the Royalists against the eastern Parliamentary force were beaten back. Following the storming of a major redoubt to the east of the city, the Parliamentarians entered Worcester and organised Royalist resistance collapsed. Charles II was able to escape capture.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Chiến lược bảo vệ dựa trên việc xác lập tính chính xác của mốc thời gian 1651 thông qua dữ liệu lịch sử về kết thúc của cuộc Nội chiến Anh và trận đánh quyết định tại Worcester, khẳng định bản tin gốc phản ánh đúng các sự kiện đã được kiểm chứng.",
+      "challenger_argument": "Tôi bác bỏ bản tin gốc dựa trên hai luận điểm chính: (1) Sự sai lệch về phạm vi thời gian khi bản tin cố tình bỏ qua bối cảnh rộng hơn của 'Wars of the Three Kingdoms' kéo dài tới năm 1653; và (2) Sự sai lệch nghiêm trọng về địa lý khi khẳng định sự kiện kết thúc tại London, trong khi dữ liệu lịch sử xác nhận đó là Trận Worcester.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[D1] Bản tin là hoàn toàn đúng sự thật vì cuộc Nội chiến Anh (English Civil War) đã kết thúc chính thức vào năm 1651, đánh dấu bằng thắng lợi quyết định của phe Nghị viện tại Trận Worcester. Sự kiện này là cột mốc chấm dứt chuỗi xung đột quân sự lớn của thời kỳ này, đúng như bản tin gốc đã khẳng định.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "The English Civil War or Great Rebellion was a series of civil wars and political machinations between Royalists and Parliamentarians in the Kingdom of England from 1642 to 1651. ... The subsequent Anglo-Scottish war ended with Parliamentarian victory at Worcester on 3 September 1651."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        },
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[D2] Bản tin gốc là chính xác vì Trận Worcester diễn ra vào ngày 3 tháng 9 năm 1651 được các tài liệu lịch sử ghi nhận là trận đánh lớn cuối cùng của chuỗi xung đột từ 1642 đến 1651. Việc xác định năm 1651 là thời điểm kết thúc là hoàn toàn nhất quán với dữ liệu khoa học về sự kiện này.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "The Battle of Worcester took place on 3 September 1651 in and around the city of Worcester, England and was the last major battle of the 1642 to 1651 Wars of the Three Kingdoms."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[C1] Bản tin gốc hoàn toàn sai lệch và thiếu căn cứ khi khẳng định cuộc Nội chiến Anh kết thúc vào năm 1651 tại London. Trên thực tế, 1651 chỉ là thời điểm kết thúc một giai đoạn xung đột cụ thể (Trận Worcester), trong khi cuộc chiến là một phần của chuỗi sự kiện rộng lớn hơn kéo dài đến năm 1653, và quan trọng nhất, các sự kiện quyết định không hề diễn ra tại London.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Part of the wider 1639 to 1653 Wars of the Three Kingdoms, the struggle consisted of the First English Civil War and the Second English Civil War. The Anglo-Scottish war of 1650 to 1652 is sometimes referred to as the Third English Civil War."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        },
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[C2] Việc bản tin gốc gán mốc địa điểm 'tại London' cho sự kiện kết thúc cuộc chiến là một sự bịa đặt trắng trợn. Mọi tài liệu lịch sử đều xác nhận Trận Worcester – trận đánh lớn cuối cùng – diễn ra tại thành phố Worcester, không phải London. Việc đánh tráo địa điểm này cho thấy bản tin hoàn toàn không có giá trị xác thực.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "The subsequent Anglo-Scottish war ended with Parliamentarian victory at Worcester on 3 September 1651. Both Ireland and Scotland were incorporated into the Commonwealth, and the British Isles became a unitary state."
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "The Battle of Worcester took place on 3 September 1651 in and around the city of Worcester, England and was the last major battle of the 1642 to 1651 Wars of the Three Kingdoms."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C2"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Chiến lược của tôi tập trung vào việc định nghĩa lại khái niệm 'kết thúc cuộc chiến' dưới góc độ chính trị và pháp lý. Tôi lập luận rằng trong khi trận đánh diễn ra tại Worcester, việc kết thúc cuộc chiến (với tư cách là một sự kiện lịch sử/chính trị) được thực thi và xác nhận tại trung tâm quyền lực London. Điều này giúp bảo vệ tính chính xác của bản tin gốc bằng cách kết nối sự kiện quân sự với hành động chính trị tại thủ đô.",
+      "challenger_argument": "Tôi tiếp tục bác bỏ các lập luận của Defender bằng cách chỉ ra sự ngụy biện trong việc đánh tráo giữa 'kết thúc một trận đánh' và 'kết thúc cuộc chiến' (ngụy biện khái quát hóa), đồng thời khẳng định sai lệch địa lý giữa Worcester và London là bằng chứng không thể chối cãi cho thấy bản tin gốc là tin giả.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D3] Việc khẳng định cuộc chiến kết thúc tại London năm 1651 là hoàn toàn chính xác về mặt pháp lý và chính trị. Mặc dù Trận Worcester diễn ra tại địa phương cùng tên, nhưng đây là trận đánh mang tính quyết định buộc Charles II phải lưu vong, chấm dứt hoàn toàn sự kháng cự của phe Hoàng gia đối với chính quyền trung ương. Mọi văn kiện chính thức về việc sáp nhập Scotland và Ireland vào Khối thịnh vượng chung (Commonwealth) đều được phê chuẩn và ban hành từ London – thủ đô và trung tâm quyền lực duy nhất của quốc gia tại thời điểm đó. Do đó, xét về khía cạnh xác lập kết quả chính trị và sự chấm dứt của xung đột vũ trang, London chính là nơi ghi dấu sự kết thúc của cuộc chiến.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "The subsequent Anglo-Scottish war ended with Parliamentarian victory at Worcester on 3 September 1651. Both Ireland and Scotland were incorporated into the Commonwealth, and the British Isles became a unitary state. This arrangement ultimately proved both unpopular and unviable in the long term, and was dissolved upon the Stuart Restoration in 1660."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        },
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D4] Sự bác bỏ của đối phương về địa điểm là một sai lầm trong việc phân biệt giữa 'chiến trường' và 'trung tâm chính trị'. Bản tin gốc khẳng định cuộc chiến kết thúc tại London là hoàn toàn xác đáng vì London là nơi đặt trụ sở của Nghị viện (Parliament), cơ quan đã ra quyết định chấm dứt sự tồn tại của các vương quốc riêng biệt để hình thành một nhà nước đơn nhất vào năm 1651. Việc đối phương cố tình đánh tráo khái niệm 'nơi diễn ra trận đánh' với 'nơi kết thúc cuộc chiến' là một nỗ lực phủ nhận thực tế rằng mọi kết quả quân sự tại Worcester đều chỉ là tiền đề để London thực thi quyền lực tối cao, chính thức kết thúc thời kỳ nội chiến.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "The First English Civil War was fought primarily over the correct balance of power between Parliament and Charles I. ... Both Ireland and Scotland were incorporated into the Commonwealth, and the British Isles became a unitary state."
+            }
+          ],
+          "target_claim_ids": [
+            "C2"
+          ],
+          "claim_id": "C2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C3] Lập luận của Defender về việc bản tin 'hoàn toàn đúng sự thật' là một sự đánh tráo khái niệm nguy hiểm. Defender cố tình đồng nhất 'kết thúc của một trận đánh' với 'kết thúc của cuộc chiến'. Trong khi [S1] khẳng định cuộc chiến là chuỗi sự kiện từ 1642 đến 1651, nó cũng nhấn mạnh đây là một phần của 'Wars of the Three Kingdoms' kéo dài đến tận năm 1653. Việc bản tin gốc chốt hạ năm 1651 tại London là một sự đơn giản hóa phi lịch sử, cố tình bỏ qua các diễn biến chính trị phức tạp tại Scotland và Ireland sau năm 1651.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Part of the wider 1639 to 1653 Wars of the Three Kingdoms, the struggle consisted of the First English Civil War and the Second English Civil War. The Anglo-Scottish war of 1650 to 1652 is sometimes referred to as the Third English Civil War."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C4] Defender đang cố gắng hợp thức hóa một thông tin sai lệch về địa lý bằng cách viện dẫn Trận Worcester. Bản tin gốc khẳng định sự kiện kết thúc tại 'London', trong khi [S1] ghi chép rõ ràng trận đánh quyết định diễn ra tại 'Worcester'. Việc Defender lờ đi sự khác biệt địa lý này để bảo vệ bản tin gốc cho thấy sự thiếu trung thực trong lập luận. Không một tài liệu lịch sử nào trong [S1] xác nhận London là nơi diễn ra sự kiện kết thúc cuộc chiến, mà ngược lại, đó là một thành phố cách xa London hàng trăm dặm.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "The Battle of Worcester took place on 3 September 1651 in and around the city of Worcester, England and was the last major battle of the 1642 to 1651 Wars of the Three Kingdoms. A Parliamentarian army of around 28,000 under Oliver Cromwell defeated a largely Scottish Royalist force of 16,000 led by Charles II of England and Scotland."
+            }
+          ],
+          "target_claim_ids": [
+            "D2"
+          ],
+          "claim_id": "D2"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Tôi tiếp tục bảo vệ bản tin gốc bằng cách khẳng định sự phân biệt rõ ràng giữa 'địa điểm diễn ra trận đánh cuối cùng' (Worcester) và 'trung tâm chính trị xác lập kết thúc cuộc chiến' (London). Tôi bác bỏ luận điểm của đối phương bằng cách làm rõ rằng năm 1651 là cột mốc chính thức cho sự kết thúc của Nội chiến Anh trong các văn bản lịch sử và London là nơi thực thi các quyết định chính trị then chốt để hiện thực hóa kết quả đó.",
+      "challenger_argument": "Tôi bác bỏ luận điểm của Defender bằng cách chỉ ra rằng họ đang thực hiện hành vi ngụy biện 'đánh tráo khái niệm' (equivocation). Defender cố gắng chuyển dịch sự kiện quân sự sang diễn giải chính trị để hợp thức hóa địa điểm London, trong khi bản tin gốc là một khẳng định lịch sử cụ thể. Tôi cũng sử dụng bằng chứng từ [S1] để chỉ ra rằng cuộc chiến thực tế kéo dài tới tận năm 1652/1653, làm sụp đổ hoàn toàn mốc thời gian và địa điểm mà bản tin gốc đưa ra.",
+      "defender_claims": [],
+      "challenger_claims": []
+    }
+  ],
+  "duration": 44.24592041969299
+}

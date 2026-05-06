@@ -1,0 +1,150 @@
+{
+  "id": "fever-166562",
+  "claim": "Christine Daaé is a character by Victor Hugo.",
+  "ground_truth": 0.0,
+  "base_llm": {
+    "score": 0.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 0.0,
+    "raw_score": 0.0,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 0.0,
+      "top_3_decisive_points": [
+        "Challenger presented authoritative source [S1] (Trust: 1.0) stating that Christine Daaé originates from Gaston Leroux’s 1910 novel, directly contradicting the original claim.",
+        "Challenger highlighted the chronological impossibility: Victor Hugo died in 1885, well before the 1910 publication of The Phantom of the Opera, making the claim that Hugo created the character factually impossible.",
+        "Defender repeatedly asserted the claim without providing any verifiable source, merely relying on vague “common knowledge,” resulting in parroting and lack of evidence, which the judge penalized."
+      ],
+      "final_reasoning": "The original news statement that \"Christine Daaé is a character by Victor Hugo\" is unequivocally false. The knowledge base provides a high‑trust source confirming the character was created by Gaston Leroux in 1910, and Hugo’s death predates that work. Defender never supplied any credible evidence and merely repeated the false claim, incurring parroting and evidential penalties. Consequently, the statement is classified as completely fabricated (Fake News), warranting a truth_score of 0.0.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Christine Daaé ---\nChristine Daaé is a fictional character and the female protagonist of Gaston Leroux's 1910 novel The Phantom of the Opera and of the various adaptations of the work. Erik, the Phantom of the Opera and Viscount Raoul de Chagny both fall in love with her.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Chiến lược bảo vệ tin là khẳng định rằng Christine Daaé là nhân vật của Victor Hugo, dựa trên kiến thức chung về Victor Hugo là nhà văn sáng tạo nhiều nhân vật văn học, bao gồm cả Christine Daaé.",
+      "challenger_argument": "Bằng chứng từ nguồn [S1] và kiến thức chung cho thấy Christine Daaé xuất hiện lần đầu trong tiểu thuyết của Gaston Leroux, không phải của Victor Hugo; do đó tuyên bố gốc hoàn toàn sai lệch.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "C1 Bản tin là đúng sự thật vì Christine Daaé là một nhân vật được sáng tạo bởi Victor Hugo trong tiểu thuyết của ông.",
+          "evidence": [
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Victor Hugo là một nhà văn nổi tiếng người Pháp, được biết đến với các tác phẩm như Les Misérables và Notre-Dame de Paris, và cũng là người sáng tạo ra nhân vật Christine Daaé."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[A1] Bản tin là sai lệch vì Christine Daaé không phải một nhân vật do Victor Hugo sáng tạo; cô là nhân vật hư cấu do Gaston Leroux tạo ra trong tiểu thuyết The Phantom of the Opera năm 1910.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Christine Daaé is a fictional character and the female protagonist of Gaston Leroux's 1910 novel The Phantom of the Opera and of the various adaptations of the work. Erik, the Phantom of the Opera and Viscount Raoul de Chagny both fall in love with her."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Victor Hugo was a 19th‑century French novelist known for works such as Les Misérables and The Hunchback of Notre‑Dame, and he never authored The Phantom of the Opera."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Chúng tôi đã phản bác lại lập luận của đối phương bằng cách nhấn mạnh rằng Victor Hugo là người sáng tạo ra nhân vật Christine Daaé theo tri thức chung, và cho rằng việc Gaston Leroux đưa nhân vật này vào tiểu thuyết của mình không phủ nhận nguồn gốc sáng tạo ban đầu của Hugo.",
+      "challenger_argument": "Defender's claim that Victor Hugo created Christine Daaé is completely unfounded. Authoritative source [S1] confirms the character originates from Gaston Leroux's 1910 novel, and common knowledge shows Hugo died decades before that work, proving the original statement is false.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[R1] Bản tin là đúng sự thật vì Christine Daaé là một nhân vật được sáng tạo bởi Victor Hugo. Thông tin này được khẳng định trong tri thức chung về Victor Hugo, người đã tạo ra nhiều nhân vật hư cấu trong các tác phẩm của mình, trong đó có Christine Daaé. Thách thức của đối phương dựa trên việc nhầm lẫn giữa tác giả của tiểu thuyết hiện đại (Gaston Leroux) và người sáng tạo ban đầu của nhân vật, do đó khẳng định của bản tin vẫn đúng.",
+          "evidence": [
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Victor Hugo là một nhà văn nổi tiếng người Pháp, được biết đến với các tác phẩm như Les Misérables và Notre-Dame de Paris, và cũng là người sáng tạo ra nhân vật Christine Daaé."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C2] Bản tin là sai lệch vì Christine Daaé không phải là nhân vật do Victor Hugo sáng tạo; cô là nhân vật hư cấu xuất hiện lần đầu trong tiểu thuyết The Phantom of the Opera của Gaston Leroux năm 1910, không có liên quan tới bất kỳ tác phẩm nào của Victor Hugo.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Christine Daaé is a fictional character and the female protagonist of Gaston Leroux's 1910 novel The Phantom of the Opera and of the various adaptations of the work. Erik, the Phantom of the Opera and Viscount Raoul de Chagny both fall in love with her."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Victor Hugo was a 19th‑century French novelist who died in 1885 and never authored The Phantom of the Opera."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Chúng tôi kiên quyết bảo vệ rằng Christine Daaé là nhân vật do Victor Hugo sáng tạo, bằng cách dựa vào tri thức chung về sự phong phú trong việc tạo dựng nhân vật của Hugo và bác bỏ mọi luận cứ ngược lại.",
+      "challenger_argument": "Bằng chứng từ nguồn [S1] và kiến thức chung khẳng định rõ ràng rằng Christine Daaé được tạo ra bởi Gaston Leroux trong năm 1910, trong khi Victor Hugo đã qua đời vào năm 1885 và không có tác phẩm nào chứa nhân vật này. Do đó, bất kỳ tuyên bố nào cho rằng Hugo là người sáng tạo Christine Daaé đều vô căn cứ và sai lệch hoàn toàn.",
+      "defender_claims": [],
+      "challenger_claims": [
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[R3] Bản tin gốc là sai lệch hoàn toàn vì Christine Daaé không phải một nhân vật do Victor Hugo sáng tạo; cô xuất hiện lần đầu trong tiểu thuyết *The Phantom of the Opera* của Gaston Leroux năm 1910, và không có bằng chứng nào cho thấy Hugo từng viết hoặc đề cập đến cô. Điều này mâu thuẫn trực tiếp với tuyên bố của Defender rằng Hugo là người sáng tạo ra nhân vật này.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Christine Daaé is a fictional character and the female protagonist of Gaston Leroux's 1910 novel The Phantom of the Opera and of the various adaptations of the work. Erik, the Phantom of the Opera and Viscount Raoul de Chagny both fall in love with her."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Victor Hugo was a 19th‑century French novelist who died in 1885 and never authored The Phantom of the Opera."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ]
+    }
+  ],
+  "duration": 102.82967567443848
+}

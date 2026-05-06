@@ -1,0 +1,182 @@
+{
+  "id": "fever-67845",
+  "claim": "Alia Bhatt is only an actress.",
+  "ground_truth": 0.0,
+  "base_llm": {
+    "score": 0.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 0.0,
+    "raw_score": 0.25,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 0.25,
+      "top_3_decisive_points": [
+        {
+          "side": "CHALLENGER",
+          "point": "Source S1 (Trust 1.0) lists multiple verified roles for Alia Bhatt beyond acting – film producer, founder of a production company and a clothing brand, singer, and philanthropist – directly contradicting the absolute claim that she is \"only\" an actress."
+        },
+        {
+          "side": "CHALLENGER",
+          "point": "The word \"only\" conveys exclusivity. Because the source documents concrete activities in other domains, the statement \"Alia Bhatt is only an actress\" is factually inaccurate and misleading, regardless of her primary profession."
+        },
+        {
+          "side": "DEFENDER",
+          "point": "The defender’s argument hinges on a semantic narrowing of \"only\" to mean \"main profession\" and cites the phrase \"predominantly works as an actress\" from S1, but this does not negate the existence of other verified occupations, making the defence insufficient to rescue the claim."
+        }
+      ],
+      "final_reasoning": "The high‑trust source S1 confirms that Alia Bhatt is indeed a prominent actress, but it also unequivocally records her extensive activities as a film producer, entrepreneur, singer, and philanthropist. The original statement \"Alia Bhatt is only an actress\" asserts exclusivity, which is contradicted by these facts. The defender’s reliance on the word \"predominantly\" does not override the factual inaccuracy introduced by the absolute term \"only\". Consequently, the claim is misleading: it contains a grain of truth (her acting career) but omits significant, well‑documented aspects of her professional life. According to the scoring rubric, this places the news item at the \"Misleading/Mostly False\" level, corresponding to a truth_score of 0.25.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Alia Bhatt ---\nAlia Bhatt (; born 15 March 1993) is a British actress of Indian descent who predominantly works in Hindi films. Known for her portrayals of women in challenging circumstances, she has received several accolades, including a National Film Award and seven Filmfare Awards. She is one of India's highest-paid actresses. Time awarded her with the Time100 Impact Award in 2022 and named her one of the 100 most influential people in the world in 2024.\nBorn into the Bhatt family, she is a daughter of filmmaker Mahesh Bhatt and actress Soni Razdan. After making her acting debut as a child in the 1999 thriller film Sangharsh, she played her first leading role in Karan Johar's teen film Student of the Year (2012). She won the Filmfare Critics Award for Best Actress for playing a kidnapping victim in the road drama Highway (2014) and went on to establish herself with starring roles in several romantic films produced by Johar's studio Dharma Productions.\nBhatt won Filmfare Awards for Best Actress for playing a victim of drug abuse in the crime drama Udta Punjab (2016), an undercover spy in the thriller Raazi (2018), a possessive girlfriend in the musical drama Gully Boy (2019), and the title role of a prostitute in the biopic Gangubai Kathiawadi (2022). The last of these also earned her the National Film Award for Best Actress. She expanded to film production with the black comedy Darlings (2022) and had her biggest commercial success in the fantasy film Brahmāstra: Part One – Shiva (2022) and the romantic comedy Rocky Aur Rani Kii Prem Kahaani (2023). The last of these earned her a fifth Best Actress award at Filmfare, followed by a record-setting sixth for her performance in the action thriller Jigra (2024), which she also co-produced.\nIn addition to acting, Bhatt supports various charities and is an investor and prominent brand endorser. She founded an ecological initiative, CoExist, in 2017, a production company, Eternal Sunshine Productions, in 2019, and a sustainable clothing brand, Ed-a-Mamma, in 2022. Bhatt has sung eight of her film songs, including the single \"Samjhawan Unplugged\" in 2014. She is married to actor Ranbir Kapoor, with whom she has a daughter.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Chiến lược bảo vệ tập trung vào việc khẳng định Alia Bhatt là một actress, dựa trên mô tả rõ ràng trong nguồn S1 và nhận thức công chúng rằng cô được biết đến chủ yếu vì vai trò diễn viên, do đó khẳng định \"Alia Bhatt is only an actress\" là đúng.",
+      "challenger_argument": "Bằng chứng từ nguồn S1 cho thấy Alia Bhatt thực hiện nhiều vai trò ngoài diễn xuất: cô là nhà sản xuất, nhà sáng lập các dự án kinh doanh, ca sĩ và nhà từ thiện. Do đó khẳng định cô \"chỉ là một actress\" là hoàn toàn sai lệch và thiếu căn cứ.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "Bản tin là đúng sự thật vì Alia Bhatt là một diễn viên (actress) và mọi hoạt động của cô đều gắn liền với vai trò diễn viên, do đó cô chỉ là một actress.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Alia Bhatt (; born 15 March 1993) is a British actress of Indian descent who predominantly works in Hindi films. Known for her portrayals of women in challenging circumstances, she has received several accolades, including a National Film Award and seven Filmfare Awards."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Alia Bhatt is widely recognized worldwide primarily for her acting career in Hindi cinema."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[A1] Bản tin “Alia Bhatt is only an actress” là sai lệch hoàn toàn vì Alia Bhatt không chỉ là một diễn viên mà còn là nhà sản xuất phim, nhà sáng lập doanh nghiệp, ca sĩ, nhà từ thiện và nhà đầu tư thương hiệu.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "In addition to acting, Bhatt supports various charities and is an investor and prominent brand endorser. She founded an ecological initiative, CoExist, in 2017, a production company, Eternal Sunshine Productions, in 2019, and a sustainable clothing brand, Ed-a-Mamma, in 2022. Bhatt has sung eight of her film songs, including the single \"Samjhawan Unplugged\" in 2014."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Chiến lược bảo vệ bản tin gốc tập trung vào việc giải thích nghĩa của từ \"only\" trong câu: nó chỉ đề cập đến nghề nghiệp chính và nhận dạng công chúng của Alia Bhatt – diễn viên.  Bằng chứng từ S1 cho thấy cô \"predominantly works\" như một actress, trong khi các hoạt động khác được trình bày dưới dạng phụ trợ (\"In addition to acting...\").  Do đó, tuy cô có tham gia nhiều lĩnh vực phụ, nhưng câu gốc vẫn đúng vì nó mô tả đúng vai trò chủ đạo của cô.",
+      "challenger_argument": "Bằng chứng từ nguồn S1 chứng minh Alia Bhatt đã đa dạng hoá hoạt động sang sản xuất phim, khởi nghiệp, ca hát và hoạt động từ thiện, do đó khẳng định cô \"only an actress\" là hoàn toàn sai lệch và thiếu căn cứ.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[R1] Bản tin gốc \"Alia Bhatt is only an actress\" vẫn đúng vì trong ngữ cảnh này \"only\" chỉ tới nghề nghiệp chính và nhận dạng công chúng của cô – diễn viên.  Nguồn S1 mô tả rõ ràng: “Alia Bhatt … is a British actress of Indian descent who predominantly works in Hindi films.” Câu này khẳng định rằng công việc chính và phần lớn thời gian của cô là diễn xuất.  Các hoạt động phụ như thành lập công ty sản xuất, sáng lập dự án sinh thái, làm nhà đầu tư, ca sĩ hay nhà từ thiện được đề cập chỉ như “In addition to acting…” – tức là chúng là bổ trợ, không thay đổi thực tế rằng nghề nghiệp chủ đạo của cô là diễn viên.  Vì vậy việc nhấn mạnh rằng cô “cũng làm những việc khác” không phủ nhận được tính đúng của câu gốc; câu gốc chỉ nói về vai trò chính của Alia Bhatt, và bằng chứng từ S1 chứng minh rằng vai trò chính ấy là diễn viên.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Alia Bhatt (; born 15 March 1993) is a British actress of Indian descent who predominantly works in Hindi films. ... In addition to acting, Bhatt supports various charities and is an investor and prominent brand endorser. She founded an ecological initiative, CoExist, in 2017, a production company, Eternal Sunshine Productions, in 2019, and a sustainable clothing brand, Ed-a-Mamma, in 2022."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Alia Bhatt is widely recognized worldwide primarily for her acting career in Hindi cinema."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[R1 C] Bản tin “Alia Bhatt is only an actress” hoàn toàn sai lệch vì Alia Bhatt không chỉ là một diễn viên mà còn là nhà sản xuất phim, nhà sáng lập doanh nghiệp, ca sĩ và nhà từ thiện. Trong nguồn S1 được trích dẫn, có ghi rõ rằng cô đã mở rộng sang sản xuất điện ảnh với bộ phim “Darlings” (2022) và đồng sản xuất “Jigra” (2024), đồng thời thành lập công ty sản xuất Eternal Sunshine Productions vào năm 2019. Ngoài ra, cô đã sáng lập sáng kiến sinh thái CoExist (2017), thương hiệu thời trang bền vững Ed‑a‑Mamma (2022) và là nhà đầu tư, người ủng hộ các hoạt động từ thiện. Cô cũng đã thu âm và phát hành tám ca khúc trong phim, trong đó có đĩa đơn “Samjhawan Unplugged” (2014). Những vai trò này chứng minh rõ ràng rằng Alia Bhatt không chỉ là một actress mà là một đa tài với nhiều lĩnh vực hoạt động, do đó khẳng định “only an actress” là vô căn cứ và sai lầm.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "She expanded to film production with the black comedy Darlings (2022) and had her biggest commercial success in the fantasy film Brahmāstra: Part One – Shiva (2022) and the romantic comedy Rocky Aur Rani Kii Prem Kahaani (2023). The last of these earned her a fifth Best Actress award at Filmfare, followed by a record-setting sixth for her performance in the action thriller Jigra (2024), which she also co‑produced.\nIn addition to acting, Bhatt supports various charities and is an investor and prominent brand endorser. She founded an ecological initiative, CoExist, in 2017, a production company, Eternal Sunshine Productions, in 2019, and a sustainable clothing brand, Ed‑a‑Mamma, in 2022. Bhatt has sung eight of her film songs, including the single \"Samjhawan Unplugged\" in 2014."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Trong vòng 3, chúng tôi đã phản bác lại lập luận của đối phương rằng câu \"Alia Bhatt is only an actress\" là sai bằng cách nhấn mạnh nghĩa hạn chế của từ \"only\" tới nghề nghiệp chính của cô. Bằng chứng từ S1 cho thấy cô \"predominantly works\" như một actress, trong khi các vai trò khác chỉ được liệt kê như những hoạt động phụ \"in addition to acting\". Do đó, tuy có nhiều hoạt động bổ sung, định danh chính của Alia Bhatt vẫn là diễn viên, xác nhận tính đúng của bản tin gốc.",
+      "challenger_argument": "Bằng chứng từ S1 cho thấy Alia Bhatt thực hiện nhiều vai trò ngoài diễn viên; do từ “only” mang tính tuyệt đối, khẳng định cô \"only an actress\" là sai trái và thiếu căn cứ. Chúng tôi đã phản bác quyết liệt lập luận của bên bảo vệ bằng cách nêu bật các hoạt động sản xuất, khởi nghiệp, ca hát và từ thiện của cô.",
+      "defender_claims": [
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[R2] Bản tin “Alia Bhatt is only an actress” vẫn đúng vì trong ngữ cảnh từ “only” được dùng để chỉ nghề nghiệp chính và danh tính công chúng của cô – diễn viên. Nguồn S1 mô tả rõ ràng: “Alia Bhatt … is a British actress of Indian descent who predominantly works in Hindi films.” Cụm “predominantly works” chứng tỏ phần lớn thời gian và danh tính nghề nghiệp của cô là diễn viên. Các hoạt động khác được giới thiệu bằng “In addition to acting…”, tức là những việc phụ trợ, không thay đổi định danh chính. Do vậy câu gốc không phủ nhận các vai trò phụ mà chỉ nhấn mạnh vai trò chính, nên luôn đúng.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Alia Bhatt (; born 15 March 1993) is a British actress of Indian descent who predominantly works in Hindi films. ... In addition to acting, Bhatt supports various charities and is an investor and prominent brand endorser. She founded an ecological initiative, CoExist, in 2017, a production company, Eternal Sunshine Productions, in 2019, and a sustainable clothing brand, Ed-a-Mamma, in 2022."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Alia Bhatt is widely recognized worldwide primarily for her acting career in Hindi cinema."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[R3 C] Bản tin “Alia Bhatt is only an actress” hoàn toàn sai lệch vì trong nguồn S1 có chứng cứ rõ ràng cho thấy Alia Bhatt không chỉ là một diễn viên mà còn là nhà sản xuất phim, nhà sáng lập doanh nghiệp, ca sĩ, nhà từ thiện và nhà đầu tư thương hiệu. Từ “only” mang nghĩa tuyệt đối; khi cô thực hiện bất kỳ vai trò nào khác ngoài diễn viên, khẳng định “only an actress” đã bị phá vỡ. Do đó câu gốc thiếu căn cứ và gây hiểu lầm.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "She expanded to film production with the black comedy Darlings (2022) and had her biggest commercial success in the fantasy film Brahmāstra: Part One – Shiva (2022) and the romantic comedy Rocky Aur Rani Kii Prem Kahaani (2023). The last of these earned her a fifth Best Actress award at Filmfare, followed by a record-setting sixth for her performance in the action thriller Jigra (2024), which she also co‑produced.\nIn addition to acting, Bhatt supports various charities and is an investor and prominent brand endorser. She founded an ecological initiative, CoExist, in 2017, a production company, Eternal Sunshine Productions, in 2019, and a sustainable clothing brand, Ed‑a‑Mamma, in 2022. Bhatt has sung eight of her film songs, including the single \"Samjhawan Unplugged\" in 2014."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Alia Bhatt is widely known not only for her acting but also for her work as a film producer, entrepreneur, singer, and philanthropist."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ]
+    }
+  ],
+  "duration": 79.60929131507874
+}

@@ -17,8 +17,9 @@ from langchain_core.messages import HumanMessage
 from tavily import TavilyClient
 
 from config.settings import config
-from prompts.templates import DEFENDER_QUERY_PLANNER_PROMPT, CHALLENGER_QUERY_PLANNER_PROMPT
+from prompts.templates import DEFENDER_PROMPT, CHALLENGER_PROMPT
 from utils.rate_limit import safe_invoke
+from agents.evaluator import parse_json_robust, format_knowledge_base
 
 
 def parse_json_robust(text: Any) -> dict:
@@ -53,21 +54,63 @@ def get_tavily_client():
         return None
 
 
+def _build_targets_from_registry(registry, prefix):
+    """Internal helper to build target list from registry."""
+    targets = []
+    for cid, history in registry.items():
+        if cid.startswith(prefix):
+            targets.append({
+                "claim_id": cid,
+                "history": history
+            })
+    return targets
+
+
+def _format_targets_for_llm(targets):
+    """Internal helper to format targets for prompt."""
+    if not targets:
+        return "(Không có)"
+    lines = []
+    for t in targets:
+        cid = t["claim_id"]
+        history = t["history"]
+        lines.append(f"Claim {cid}:")
+        for h in history:
+            lines.append(f"  - R{h['round']} {h['side']} [{h['action_type']}]: {h['text']}")
+    return "\n".join(lines)
+
+
 def plan_round_queries(state: dict, llm, side: str) -> dict:
     """Plan search queries for a specific side at the start of a round."""
     news_text = state["original_news"]
     current_round = state.get("current_round", 1)
     executed = state.get("executed_queries", [])
-    focused_targets = state.get("focused_targets", {}).get(side, {})
+    focused_targets_state = state.get("focused_targets", {}).get(side, {})
+    kb_text = format_knowledge_base(state.get("knowledge_base", []), state.get("source_scores", {}))
+    history = state.get("debate_history", [])
+    registry = state.get("claims_registry", {})
 
-    planner_prompt = DEFENDER_QUERY_PLANNER_PROMPT if side == "DEFENDER" else CHALLENGER_QUERY_PLANNER_PROMPT
+    # Use unified prompts
+    prompt_template = DEFENDER_PROMPT if side == "DEFENDER" else CHALLENGER_PROMPT
     intent_default = "support_defender" if side == "DEFENDER" else "support_challenger"
 
-    prompt = planner_prompt.format(
+    # Format targets for the unified prompt
+    opp_prefix = "C" if side == "DEFENDER" else "D"
+    own_prefix = "D" if side == "DEFENDER" else "C"
+    
+    rebut_targets = _build_targets_from_registry(registry, opp_prefix)
+    defend_targets = _build_targets_from_registry(registry, own_prefix)
+
+    prompt = prompt_template.format(
+        phase="QUERY_PLANNING",
+        round_number=current_round,
         original_news=news_text,
-        current_round=current_round,
-        focused_targets=str(focused_targets),
+        full_history=str(history) if history else "(Chưa có lịch sử)",
+        knowledge_base_with_scores=kb_text or "(Kho dữ liệu trống)",
+        focused_targets=str(focused_targets_state),
         executed_queries=str(executed),
+        rebut_targets=_format_targets_for_llm(rebut_targets),
+        defend_targets=_format_targets_for_llm(defend_targets)
     )
 
     response = safe_invoke(llm, [HumanMessage(content=prompt)])
@@ -76,6 +119,7 @@ def plan_round_queries(state: dict, llm, side: str) -> dict:
     planned_intents = data.get("planned_queries", [])
     
     target_ids = []
+    focused_targets = state.get("focused_targets", {}).get(side, {})
     for bucket in (focused_targets.get("rebut_targets", []), focused_targets.get("defend_targets", [])):
         for t in bucket:
             cid = t.get("claim_id")

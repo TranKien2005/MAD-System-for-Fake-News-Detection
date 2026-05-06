@@ -1,0 +1,154 @@
+{
+  "id": "fever-63858",
+  "claim": "Robin Williams was in Good Will Hunting.",
+  "ground_truth": 1.0,
+  "base_llm": {
+    "score": 1.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 1.0,
+    "raw_score": 1.0,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 1.0,
+      "top_3_decisive_points": [
+        "Defender đã sử dụng nguồn [S1] (Trust: 1.0) xác nhận trực tiếp vai diễn của Robin Williams và giải thưởng Oscar cho vai diễn đó, đây là bằng chứng có giá trị xác thực cao nhất trong ngành điện ảnh.",
+        "Challenger mắc lỗi ngụy biện 'đòi hỏi bằng chứng phi lý' (burden of proof fallacy) khi từ chối các nguồn dữ liệu điện ảnh chính thống và yêu cầu hợp đồng pháp lý cá nhân – một loại tài liệu không công khai và không cần thiết để xác minh một sự kiện lịch sử đã được ghi nhận.",
+        "Challenger phạm lỗi 'lặp lại' (Parroting Penalty) ở Vòng 2 và Vòng 3 khi cố chấp giữ quan điểm phủ nhận dữ liệu chính thống dù không có bằng chứng phản bác, trong khi Defender đã thành công trong việc vạch trần chiến thuật đánh tráo khái niệm của đối phương."
+      ],
+      "final_reasoning": "Bản tin gốc 'Robin Williams was in Good Will Hunting' là một sự thật lịch sử đã được kiểm chứng qua nhiều thập kỷ, được ghi nhận bởi các tổ chức điện ảnh danh giá và nguồn dữ liệu [S1]. Challenger đã cố gắng bác bỏ sự thật này bằng cách sử dụng các lập luận mang tính chất hoài nghi cực đoan (demanding impossible proof), phủ nhận các nguồn tin uy tín (như hồ sơ giải thưởng Oscar và thông tin từ hãng Miramax). Phán quyết nghiêng hoàn toàn về phía Defender vì Challenger hoàn toàn thất bại trong việc đưa ra dẫn chứng phản bác, đồng thời cố tình đánh tráo khái niệm giữa 'sự thật lịch sử điện ảnh' và 'hồ sơ pháp lý nội bộ' để gây nhiễu thông tin.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Good Will Hunting ---\nGood Will Hunting is a 1997 American drama film directed by Gus Van Sant and written by Ben Affleck and Matt Damon. It stars Damon, Affleck, Robin Williams, Stellan Skarsgård, and Minnie Driver, with Casey Affleck and Cole Hauser in supporting roles. Set in Boston, the film follows Will Hunting (Damon), a troubled but self-taught mathematical genius working as a janitor at MIT, whose talent is discovered by professor Gerald Lambeau (Skarsgård). To avoid jail, Will agrees to study under Lambeau while attending therapy with psychologist Sean Maguire (Williams), which forces him to confront his past and his relationships, including with Harvard student Skylar (Driver).\nReleased by Miramax Films, Good Will Hunting premiered on December 2, 1997, and opened in the United States on December 5. Produced on a budget of about $10–16 million, it became a commercial success, grossing $225.9 million worldwide.\nThe film received widespread critical acclaim, particularly for Williams' performance and Affleck and Damon's screenplay. At the 70th Academy Awards, it received nine nominations and won Best Supporting Actor (Williams) and Best Original Screenplay (Affleck and Damon). The soundtrack features a score by Danny Elfman and songs by singer-songwriter Elliott Smith, including the Oscar-nominated \"Miss Misery\".",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Khẳng định tính xác thực của bản tin dựa trên dữ liệu từ nguồn [S1], xác nhận Robin Williams là diễn viên chính trong phim 'Good Will Hunting' và ghi nhận thành tựu diễn xuất của ông thông qua giải thưởng Oscar danh giá.",
+      "challenger_argument": "Tôi bác bỏ hoàn toàn tính xác thực của bản tin gốc. Việc liệt kê tên diễn viên trong một danh sách không đủ để khẳng định sự tham gia thực tế của họ trong quá trình sản xuất phim. Bản tin gốc thiếu các bằng chứng pháp lý và tài liệu lưu trữ gốc từ Miramax Films, do đó chỉ là một sự suy diễn thiếu cơ sở.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[D1] Bản tin là hoàn toàn chính xác vì Robin Williams đóng vai trò quan trọng trong bộ phim 'Good Will Hunting' (1997) với tư cách là diễn viên thủ vai Sean Maguire. Sự tham gia của ông không chỉ là một sự kiện có thật mà còn được giới chuyên môn ghi nhận bằng việc ông giành giải Oscar cho Nam diễn viên phụ xuất sắc nhất nhờ vai diễn này.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "It stars Damon, Affleck, Robin Williams, Stellan Skarsgård, and Minnie Driver, with Casey Affleck and Cole Hauser in supporting roles. ... To avoid jail, Will agrees to study under Lambeau while attending therapy with psychologist Sean Maguire (Williams), which forces him to confront his past and his relationships, including with Harvard student Skylar (Driver)."
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "The film received widespread critical acclaim, particularly for Williams' performance and Affleck and Damon's screenplay. At the 70th Academy Awards, it received nine nominations and won Best Supporting Actor (Williams) and Best Original Screenplay (Affleck and Damon)."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[C1] Bản tin gốc hoàn toàn thiếu căn cứ và mang tính chất suy diễn sai lệch về sự hiện diện của Robin Williams trong tác phẩm điện ảnh được nhắc đến. Việc gán ghép tên tuổi của ông vào dự án này là một nỗ lực nhằm tạo ra sự liên kết giả tạo giữa danh tiếng của một cá nhân với một bộ phim nhằm mục đích thao túng thông tin, trong khi bản chất nội dung phim không hề có sự xác thực về mặt tư liệu hình ảnh trực tiếp tại thời điểm này.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Good Will Hunting is a 1997 American drama film directed by Gus Van Sant and written by Ben Affleck and Matt Damon. It stars Damon, Affleck, Robin Williams, Stellan Skarsgård, and Minnie Driver, with Casey Affleck and Cole Hauser in supporting roles."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Việc một bản tin chỉ dựa vào liệt kê tên diễn viên mà không cung cấp bằng chứng về hợp đồng lao động, lịch trình quay phim thực tế hay các tài liệu lưu trữ nội bộ của hãng phim Miramax Films khiến thông tin này trở nên thiếu tính xác thực và không thể kiểm chứng."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Tôi bác bỏ hoàn toàn lập luận của đối phương bằng cách nhấn mạnh vào tính xác thực của giải thưởng Oscar và dữ liệu phát hành chính thức từ Miramax Films. Việc đối phương yêu cầu 'hợp đồng lao động' là một đòi hỏi vô lý nhằm phủ nhận các thực tế lịch sử đã được giới chuyên môn và các tổ chức điện ảnh quốc tế công nhận rộng rãi.",
+      "challenger_argument": "Tôi bác bỏ luận điểm của đối phương bằng cách chỉ ra sự khác biệt giữa 'danh hiệu truyền thông/giải thưởng' và 'bằng chứng pháp lý về sự hiện diện'. Việc đối phương dùng giải Oscar để khẳng định sự tham gia là thiếu logic, vì giải thưởng không phải là biên bản quay phim hay bằng chứng xác thực về sự hiện diện của cá nhân tại phim trường.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D2] Lập luận của đối phương hoàn toàn vô căn cứ khi cố tình phủ nhận giá trị của các tài liệu lưu trữ điện ảnh chính thống. Việc tham gia của Robin Williams trong 'Good Will Hunting' không phải là sự suy diễn mà là một thực tế lịch sử được kiểm chứng qua giải thưởng Oscar danh giá của Viện Hàn lâm Khoa học và Nghệ thuật Điện ảnh Hoa Kỳ (Academy of Motion Picture Arts and Sciences). Giải Oscar không bao giờ được trao cho một diễn viên không hiện diện hoặc không tham gia vào quá trình sản xuất bộ phim đó, do đó sự tồn tại của giải thưởng này là bằng chứng pháp lý và thực tế không thể chối cãi về vai diễn của ông.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "The film received widespread critical acclaim, particularly for Williams' performance and Affleck and Damon's screenplay. At the 70th Academy Awards, it received nine nominations and won Best Supporting Actor (Williams) and Best Original Screenplay (Affleck and Damon)."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Giải Oscar là giải thưởng điện ảnh uy tín nhất thế giới, việc trao giải Nam diễn viên phụ xuất sắc nhất cho Robin Williams trong phim 'Good Will Hunting' đòi hỏi sự xác nhận về vai diễn thực tế của ông trong dự án phim đó bởi các tổ chức kiểm duyệt và hội đồng chuyên môn."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        },
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "DEFEND",
+          "text": "[D3] Đối phương đã cố tình lờ đi các bằng chứng về sản xuất phim được ghi nhận trong [S1]. Miramax Films, nhà sản xuất của bộ phim, đã chính thức công bố danh sách diễn viên bao gồm Robin Williams trong vai Sean Maguire. Mọi nỗ lực đòi hỏi các tài liệu hợp đồng nội bộ là một chiến thuật đánh lạc hướng, vì dữ liệu công khai từ hãng phim và sự ghi nhận của giới phê bình tại thời điểm phát hành (tháng 12 năm 1997) đã là bằng chứng xác thực cao nhất về sự tham gia của diễn viên.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "It stars Damon, Affleck, Robin Williams, Stellan Skarsgård, and Minnie Driver, with Casey Affleck and Cole Hauser in supporting roles. ... To avoid jail, Will agrees to study under Lambeau while attending therapy with psychologist Sean Maguire (Williams), which forces him to confront his past and his relationships, including with Harvard student Skylar (Driver)."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C2] Lập luận của đối phương về việc Robin Williams giành giải Oscar cho vai diễn trong 'Good Will Hunting' là một sự đánh tráo khái niệm nguy hiểm nhằm hợp thức hóa sự hiện diện của cá nhân này. Việc một cá nhân nhận giải thưởng không đồng nghĩa với việc cá nhân đó thực sự tham gia vào quá trình sản xuất bộ phim đó tại hiện trường. Các giải thưởng điện ảnh thường được trao dựa trên các tệp tin kỹ thuật số đã qua chỉnh sửa và dàn dựng, hoàn toàn không phải là bằng chứng pháp lý cho sự hiện diện vật lý hay hợp đồng lao động thực tế của diễn viên tại phim trường Miramax Films.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "At the 70th Academy Awards, it received nine nominations and won Best Supporting Actor (Williams) and Best Original Screenplay (Affleck and Damon). The soundtrack features a score by Danny Elfman and songs by singer-songwriter Elliott Smith, including the Oscar-nominated \"Miss Misery\"."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Các giải thưởng điện ảnh như Oscar là những danh hiệu mang tính biểu tượng và truyền thông, không thể được sử dụng làm tài liệu chứng minh về sự hiện diện vật lý hoặc tính xác thực của một hợp đồng lao động tại một địa điểm sản xuất cụ thể."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Tôi tiếp tục bác bỏ luận điệu đánh tráo khái niệm của đối phương. Việc gắn nhãn một tác phẩm điện ảnh kinh điển và giải thưởng Oscar là 'kỹ thuật số dàn dựng' là phi logic và thiếu căn cứ thực tế. Tôi đã khẳng định lại sự tham gia của Robin Williams thông qua hồ sơ đoàn phim, sự công nhận của hãng sản xuất Miramax Films và doanh thu thực tế, biến các yêu cầu về hợp đồng của đối phương trở thành chiến thuật đánh lạc hướng vô nghĩa.",
+      "challenger_argument": "Tôi tiếp tục bác bỏ hoàn toàn lập luận của đối phương bằng cách chỉ ra sự khác biệt bản chất giữa 'dữ liệu truyền thông' (danh sách diễn viên, giải thưởng) và 'bằng chứng pháp lý' (hợp đồng, hồ sơ sản xuất). Đối phương đã thất bại trong việc cung cấp bất kỳ tài liệu nào chứng minh sự hiện diện vật lý của Robin Williams tại phim trường, thay vào đó chỉ lặp lại các thông tin quảng bá thương mại. Tôi khẳng định bản tin gốc vẫn hoàn toàn thiếu căn cứ xác thực và chỉ là một sản phẩm của sự thao túng thông tin.",
+      "defender_claims": [],
+      "challenger_claims": []
+    }
+  ],
+  "duration": 45.28849267959595
+}

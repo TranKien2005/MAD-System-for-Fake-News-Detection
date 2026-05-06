@@ -10,46 +10,44 @@ from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 
 from config.settings import config
-from graph.workflow import build_workflow
+from graph.workflow import build_workflow, build_non_search_workflow
 from graph.state import build_initial_state
 
 
-def create_llms():
-    """Create LLM instances from config."""
+def get_llm():
+    """Create a single LLM instance from config."""
     api_key = os.getenv("NINEROUTER_API_KEY")
     base_url = os.getenv("NINEROUTER_BASE_URL")
 
-    llm_main = ChatOpenAI(
-        model=config.model.main_model,
+    return ChatOpenAI(
+        model=config.model.model_name,
         temperature=config.model.debate_temperature,
         api_key=api_key,
         base_url=base_url,
     )
-    llm_light = ChatOpenAI(
-        model=config.model.light_model,
-        temperature=config.model.parser_temperature,
-        api_key=api_key,
-        base_url=base_url,
-    )
-    return llm_main, llm_light
 
 
-def run_mad(news_text: str, custom_output_instructions: str | None = None, silent: bool = False) -> dict:
+def run_mad(
+    news_text: str, 
+    initial_context: str | None = None,
+    debate_mode: str = "search",
+    custom_output_instructions: str | None = None, 
+    silent: bool = False
+) -> dict:
     """
-    Run the MAD System on a piece of news.
-
-    Args:
-        news_text: The news article to verify.
-        custom_output_instructions: Optional custom output format instructions to override the default.
-
-    Returns:
-        Final state dict containing verdict and debate history.
+    Run the MAD System on a piece of news using a single unified model.
     """
-    llm_main, llm_light = create_llms()
-    app = build_workflow(llm_main, llm_light)
+    llm = get_llm()
+    
+    if debate_mode == "non_search":
+        app = build_non_search_workflow(llm)
+    else:
+        app = build_workflow(llm)
 
     initial_state = build_initial_state(
         news_text=news_text,
+        initial_context=initial_context,
+        debate_mode=debate_mode,
         max_rounds=config.debate.max_rounds,
         custom_output_instructions=custom_output_instructions,
     )

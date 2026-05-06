@@ -9,11 +9,9 @@ from dataclasses import dataclass, field
 
 @dataclass
 class ModelConfig:
-    """LLM model configuration."""
-    # Model cho các agent phức tạp (Defender, Challenger, Judge, Evaluator)
-    main_model: str = field(default_factory=lambda: os.getenv("NINEROUTER_MAIN_MODEL", "llama3"))
-    # Model cho agent đơn giản (Search Agent, planner)
-    light_model: str = field(default_factory=lambda: os.getenv("NINEROUTER_LIGHT_MODEL", "llama3"))
+    """LLM model configuration (Unified)."""
+    # Model duy nhất dùng cho toàn bộ hệ thống
+    model_name: str = field(default_factory=lambda: os.getenv("NINEROUTER_MODEL", "llama3"))
     # Token giới hạn cho output (Tăng lên để tránh bị cắt output)
     max_tokens: int = 8192
     # Temperature cho từng loại agent

@@ -1,0 +1,139 @@
+{
+  "id": "fever-5668",
+  "claim": "The Wild Thornberrys is a film.",
+  "ground_truth": 0.0,
+  "base_llm": {
+    "score": 0.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 0.0,
+    "raw_score": 0.25,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 0.25,
+      "top_3_decisive_points": [
+        "Source S1 explicitly describes \"The Wild Thornberrys\" as an American animated television series, establishing that the primary referent of that title is a TV show, not a film (Challenger).",
+        "S1 also records the existence of a feature film titled *The Wild Thornberrys Movie*; the official title includes the word “Movie,” indicating that the film is distinct from the series and not correctly identified by the bare title \"The Wild Thornberrys\" (Challenger).",
+        "Defender’s argument relies on an unsubstantiated claim that the film can be “shortened” to \"The Wild Thornberrys\"; no source in the knowledge base or elsewhere is cited to support this shortening, resulting in a hallucination/parroting penalty and weakening the defender’s case."
+      ],
+      "final_reasoning": "The knowledge base makes clear that \"The Wild Thornberrys\" refers to a television series, while the only related film is formally titled *The Wild Thornberrys Movie*. The original statement \"The Wild Thornberrys is a film\" therefore misattributes the series title to a film, which is misleading. Defender’s reliance on an unsupported shorthand for the film’s title fails to meet the evidentiary standards, whereas Challenger accurately cites high‑trust information. Consequently, the claim is judged as a serious misrepresentation rather than a completely false statement, warranting a truth_score of 0.25 (Misleading/Mostly False).",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: The Wild Thornberrys ---\nThe Wild Thornberrys is an American animated television series created by Arlene Klasky, Gábor Csupó, Steve Pepoon, David Silverman, and Stephen Sustarsic for Nickelodeon. It was produced by Klasky Csupo and Nickelodeon Animation Studio. \nThe series portrays the zany hijinks of a family of nomadic wildlife documentary filmmakers known as the Thornberrys, which consist of the nature documentary television host Nigel, his wife and camera operator Marianne, their 16-year-old daughter Debbie, their younger daughter Eliza, their adopted son Donnie, and a chimpanzee named Darwin. The series focuses particularly on Eliza, who has a magical ability to communicate with animals. The Thornberry family travels to every continent and wildlife environment in the ComVee, a recreational vehicle equipped with safety mechanisms to handle any terrain or body of water, to document their journeys in detail. Episodes typically involve Eliza befriending an animal and subsequently finding herself in peril.\nOriginally pitched by Klasky Csupo as an adult animated sitcom for Fox, the series was then retooled as a family-friendly animated series for Nickelodeon and premiered on September 1, 1998, as the eleventh Nicktoon and the third overall produced by the studio following Rugrats and Aaahh!!! Real Monsters. It ran for 5 seasons containing 91 episodes in total, with the final episode airing on June 11, 2004.\nThe series' fourth season premiere, \"The Origin of Donnie\", is a television special focusing on Donnie Thornberry's life before he was adopted by the family. A feature film, The Wild Thornberrys Movie, in which Eliza embarks on a quest to save a cheetah cub from poachers, was theatrically released on December 20, 2002. Rugrats Go Wild, a crossover feature film with Rugrats, was released in theaters on June 13, 2003. Spin-off media include DVD releases and three video games.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "",
+      "challenger_argument": "Bằng chứng từ nguồn S1 và kiến thức chung cho thấy The Wild Thornberrys là một series truyền hình hoạt hình, do đó tuyên bố nó là một bộ phim là vô căn cứ và sai lệch.",
+      "defender_claims": [],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[C1] Bản tin khẳng định “The Wild Thornberrys is a film” là hoàn toàn sai lệch vì The Wild Thornberrys thực chất là một **bộ phim truyền hình hoạt hình** chứ không phải một bộ phim điện ảnh duy nhất.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "The Wild Thornberrys is an American animated television series created by Arlene Klasky, Gábor Csupó, Steve Pepoon, David Silverman, and Stephen Sustarsic for Nickelodeon. It was produced by Klasky Csupo and Nickelodeon Animation Studio. The series portrays the zany hijinks of a family of nomadic wildlife documentary filmmakers known as the Thornberrys..."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "The Wild Thornberrys is widely known as a 1990s Nickelodeon animated TV series, not a standalone film."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Bằng chứng từ nguồn S1 xác nhận sự tồn tại của bộ phim điện ảnh *The Wild Thornberrys Movie* và việc gọi ngắn gọn bộ phim này là “The Wild Thornberrys” là thực tế đã được công nhận rộng rãi. Do đó, khẳng định “The Wild Thornberrys is a film” là chính xác, phản bác lại tuyên bố C1 của đối phương.",
+      "challenger_argument": "Bằng chứng từ nguồn S1 và kiến thức chung cho thấy \"The Wild Thornberrys\" là một series truyền hình hoạt hình; do đó khẳng định nó là một bộ phim là vô căn cứ và sai lệch. Sự tồn tại của bộ phim điện ảnh phụ (The Wild Thornberrys Movie) không thể làm thay đổi bản chất của thực thể gốc.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[R1] Bản tin là đúng sự thật vì “The Wild Thornberrys” không chỉ là một loạt phim truyền hình mà còn tồn tại dưới dạng một bộ phim điện ảnh có tựa đề **The Wild Thornberrys Movie**. Bộ phim này được công chiếu tại các rạp chiếu phim và thường được người hâm mộ và truyền thông rút gọn thành “The Wild Thornberrys”, do đó khẳng định “The Wild Thornberrys is a film” là hợp lệ và không sai lệch.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "The series focuses particularly on Eliza, who has a magical ability to communicate with animals. ... A feature film, **The Wild Thornberrys Movie**, in which Eliza embarks on a quest to save a cheetah cub from poachers, was theatrically released on December 20, 2002."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "The Wild Thornberrys Movie is widely recognized as a theatrical release that belongs to the Wild Thornberrys franchise."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ],
+      "challenger_claims": []
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Bằng chứng từ nguồn S1 xác nhận sự tồn tại và công chiếu của bộ phim điện ảnh The Wild Thornberrys Movie, cùng với kiến thức chung rằng bộ phim này được công nhận là một phát hành rạp, chứng minh rằng việc gọi “The Wild Thornberrys” là một film là hợp lệ. Do đó, khẳng định gốc của bản tin được bảo vệ vững chắc trước các phản biện cho rằng chỉ là series truyền hình.",
+      "challenger_argument": "Bằng chứng từ nguồn S1 và kiến thức chung cho thấy \"The Wild Thornberrys\" là một series truyền hình; bộ phim *The Wild Thornberrys Movie* chỉ là một phần mở rộng độc lập và không làm thay đổi bản chất gốc của thực thể. Do đó, khẳng định \"The Wild Thornberrys is a film\" là hoàn toàn sai lệch và gây hiểu lầm.",
+      "defender_claims": [
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[R2] Bản tin là đúng sự thật vì “The Wild Thornberrys” không chỉ là một series truyền hình mà còn tồn tại dưới dạng một bộ phim điện ảnh có tiêu đề **The Wild Thornberrys Movie**. Bộ phim này được phát hành rộng rãi tại các rạp chiếu phim vào ngày 20‑12‑2002 và thường được người hâm hâm và truyền thông rút gọn thành “The Wild Thornberrys”. Do vậy, khẳng định “The Wild Thornberrys is a film” là chính xác và không gây hiểu lầm.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "The series focuses particularly on Eliza, who has a magical ability to communicate with animals. A feature film, **The Wild Thornberrys Movie**, in which Eliza embarks on a quest to save a cheetah cub from poachers, was theatrically released on December 20, 2002."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "The Wild Thornberrys Movie is widely recognized as a theatrical release that belongs to the Wild Thornberrys franchise."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[R1] Bản tin khẳng định “The Wild Thornberrys is a film” là đúng vì có bộ phim *The Wild Thornberrys Movie* là sai lầm hoàn toàn: nguồn S1 cho thấy *The Wild Thornberrys* là một **series truyền hình hoạt hình** và bộ phim chỉ là một sản phẩm phụ riêng biệt, không thay đổi bản chất gốc của thực thể. Việc rút gọn tiêu đề bộ phim thành “The Wild Thornberrys” gây nhầm lẫn và không phản ánh thực tế mà người công chúng và các tài liệu tham khảo luôn công nhận.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "The Wild Thornberrys is an American animated television series created by Arlene Klasky, Gábor Csupó, Steve Pepoon, David Silverman, and Stephen Sustarsic for Nickelodeon. ... It ran for 5 seasons containing 91 episodes in total, with the final episode airing on June 11, 2004. A feature film, **The Wild Thornberrys Movie**, in which Eliza embarks on a quest to save a cheetah cub from poachers, was theatrically released on December 20, 2002."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "The Wild Thornberrys is widely recognized as a 1990s Nickelodeon animated TV series, not a standalone theatrical film."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ]
+    }
+  ],
+  "duration": 80.01282548904419
+}

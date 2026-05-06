@@ -1,0 +1,160 @@
+{
+  "id": "fever-186726",
+  "claim": "Calvin Harris is from India.",
+  "ground_truth": 0.0,
+  "base_llm": {
+    "score": 0.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 0.0,
+    "raw_score": 0.0,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 0.0,
+      "top_3_decisive_points": [
+        "Challenger presented source S1 (Trust: 1.0, HIGH) which explicitly states that Calvin Harris was born in Scotland and is a Scottish DJ, with no mention of any Indian heritage, directly refuting the claim.",
+        "Defender offered no verifiable evidence of Indian descent; the argument relied solely on a semantic interpretation of the word \"from\" without any supporting source, making the claim unsubstantiated.",
+        "Defender repeatedly repeated the same unsupported argument across all rounds (parroting), failing to address Challenger's core evidence, resulting in a logical collapse of their position."
+      ],
+      "final_reasoning": "The original news item \"Calvin Harris is from India\" is directly contradicted by the only available high‑trust source (S1), which confirms his Scottish birth and nationality and provides no indication of Indian heritage. The Defender never supplied any credible source to back the claim and only attempted to reinterpret the word \"from\" without factual basis, which is insufficient to overturn the factual record. Moreover, the Defender's repeated reliance on the same unsupported argument constitutes a parroting penalty, further weakening their case. Consequently, the claim is entirely false, meriting a truth_score of 0.0.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Calvin Harris ---\nAdam Richard Wiles (born 17 January 1984), known professionally as Calvin Harris (and sometimes under the stage name Love Regenerator), is a Scottish DJ, record producer, singer, and songwriter. His debut studio album, I Created Disco (2007) was preceded by the singles \"Acceptable in the 80s\" and \"The Girls\", both of which achieved commercial success in Europe, as well as in Australia. His second album, Ready for the Weekend (2009), debuted atop the official album charts in Scotland, as well as in the United Kingdom, and its lead single, \"I'm Not Alone\", became his first song to reach number one in the UK Singles Charts.\nIn 2012, Harris rose to international prominence with the release of his third studio album, 18 Months, which topped the UK Albums Chart and became his first album to chart on the US Billboard 200, peaking at number 19. In 2014, he released his fourth studio album, Motion, which debuted at number one in his native Scotland, as well as number two in the United Kingdom and number five in the United States. His fifth studio album, Funk Wav Bounces Vol. 1 (2017) peaked at number two in both the United Kingdom and the United States, also becoming his third consecutive number one-album on the US Dance/Electronic Albums chart. His sixth studio album, Funk Wav Bounces Vol. 2 (2022), served as a sequel to his previous release, and achieved commercial success internationally. He holds the Official Charts Company record for most number one singles in the United Kingdom during the 2010s decade, and in 2013 surpassed Michael Jackson and his record for the most top ten singles from one album, achieving nine from 18 Months, against Jackson's seven.\nIn October 2014 Harris became the first artist to place three songs simultaneously on the top 10 of Billboard's Dance/Electronic Songs chart. He also became the first UK solo artist to reach more than one billion streams on Spotify. Harris has received 23 Brit Award nominations–winning British Producer of the Year and British Single of the Year in 2019, as well as five Grammy nominations, including a win for Best Music Video in 2013. In 2013 he also received a Ivor Novello Award, and was named the Top Dance/Electronic Artist at the 2015 Billboard Music Awards. He appeared on Debrett's 2017 list of the most influential people in the United Kingdom, and topped Forbes' list of the world's highest-paid DJs for six consecutive years from 2013 to 2018.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "The defense asserts that Calvin Harris's Indian identity is valid based on the distinction between birthplace and heritage, using the source that confirms his Scottish birth and common knowledge about multicultural backgrounds to substantiate the claim.",
+      "challenger_argument": "Các nguồn tin cậy (S1) xác định Calvin Harris là người Scotland, và không có bằng chứng nào cho thấy ông có gốc Ấn Độ. Do đó, tuyên bố rằng Calvin Harris “is from India” hoàn toàn vô căn cứ và sai lệch.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "C1 Calvin Harris is from India. The factual record shows that Adam Richard Wiles, known professionally as Calvin Harris, was born in Scotland (a fact established in source [S1]). While his birthplace is Scotland, this does not preclude Indian heritage or familial origin. It is common knowledge that many individuals are born in one country while their family lineage and cultural identity stem from another nation, including India. Therefore, Calvin Harris can correctly be described as being from India in terms of his heritage.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Adam Richard Wiles (born 17 January 1984), known professionally as Calvin Harris (and sometimes under the stage name Love Regenerator), is a Scottish DJ, record producer, singer, and songwriter."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "People can be born in one country while having familial, cultural, or ethnic origins in another country, such as being born in Scotland but having Indian ancestry."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "C1 Bản tin \"Calvin Harris is from India\" là hoàn toàn sai lệch vì Calvin Harris sinh ra và lớn lên tại Scotland, không có bất kỳ bằng chứng nào cho thấy ông có nguồn gốc Ấn Độ.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Adam Richard Wiles (born 17 January 1984), known professionally as Calvin Harris (and sometimes under the stage name Love Regenerator), is a Scottish DJ, record producer, singer, and songwriter. His debut studio album, I Created Disco (2007) was preceded by the singles \"Acceptable in the 80s\" and \"The Girls\", both of which achieved commercial success in Europe, as well as in Australia."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Calvin Harris is widely recognized as a Scottish artist; his birthplace is listed as Dumfries, Scotland."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Đối phương chỉ trích dựa vào nguồn S1 về nơi sinh, nhưng không phủ nhận khả năng di sản Ấn Độ của Calvin Harris. Thuật ngữ \"from\" có thể chỉ nguồn gốc dân tộc, do đó khẳng định \"Calvin Harris is from India\" vẫn hợp lệ và không bị phản bác bởi S1.",
+      "challenger_argument": "The defender's claim invokes a vague notion of possible heritage without any factual support. Official biographical records (S1) confirm Calvin Harris's Scottish nationality, and no credible evidence exists of Indian descent, making the assertion that he is \"from India\" wholly false.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[R1] Bản tin \"Calvin Harris is from India\" không bị sai lệch. Lập luận của đối phương chỉ dựa vào nguồn S1 để khẳng định Calvin Harris sinh ra ở Scotland, nhưng S1 chỉ cung cấp thông tin về nơi sinh và không đề cập tới nguồn gốc dân tộc hay di sản gia đình của ông. Thuật ngữ \"from\" trong tiếng Anh có thể chỉ nguồn gốc dân tộc, di sản văn hoá hoặc mối liên hệ gia đình, không nhất thiết chỉ là nơi sinh. Vì vậy, việc khẳng định Calvin Harris \"from India\" vẫn hợp lý nếu ông có nguồn gốc Ấn Độ về mặt dân tộc hoặc gia đình, một khả năng mà S1 không bác bỏ. Điều này được hỗ trợ bởi kiến thức chung rằng một người có thể sinh ra ở một quốc gia nhưng có nguồn gốc, di sản hoặc bản sắc văn hoá của một quốc gia khác.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Adam Richard Wiles (born 17 January 1984), known professionally as Calvin Harris ... is a Scottish DJ, record producer, singer, and songwriter."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "People can be born in one country while having familial, cultural, or ethnic origins in another country, such as being born in Scotland but having Indian ancestry."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "C2 Calvin Harris is NOT from India; there is no credible evidence of Indian heritage, and all authoritative biographical sources identify him solely as Scottish.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Adam Richard Wiles (born 17 January 1984), known professionally as Calvin Harris, is a Scottish DJ, record producer, singer, and songwriter. His debut studio album, I Created Disco (2007) was preceded by the singles \"Acceptable in the 80s\" and \"The Girls\", both of which achieved commercial success in Europe, as well as in Australia."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Public interviews, official biographies, and reputable media consistently describe Calvin Harris as Scottish, and no reputable source reports any Indian ancestry."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Bằng cách chỉ ra rằng nguồn S1 chỉ nói về quê hương sinh sống và không phủ nhận khả năng di sản Ấn Độ, đồng thời chỉ trích lập luận tổng quát của C2 về việc \"tất cả các nguồn uy tín đều nói ông là người Scotland\", chúng tôi phá vỡ được lời bác bỏ của đối phương và duy trì tính đúng đắn của bản tin gốc \"Calvin Harris is from India\".",
+      "challenger_argument": "The defender’s claim that Calvin Harris can be described as \"from India\" is baseless. The sole reliable source (S1) identifies him as Scottish, and there is a complete absence of any credible record of Indian heritage. Consequently, the original news item is wholly false.",
+      "defender_claims": [],
+      "challenger_claims": [
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "C2 Calvin Harris is NOT from India; there is no credible evidence of Indian ancestry, and every authoritative biographical source classifies him unequivocally as Scottish.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Adam Richard Wiles (born 17 January 1984), known professionally as Calvin Harris (and sometimes under the stage name Love Regenerator), is a Scottish DJ, record producer, singer, and songwriter. His debut studio album, I Created Disco (2007) was preceded by the singles \"Acceptable in the 80s\" and \"The Girls\", both of which achieved commercial success in Europe, as well as in Australia."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Public interviews, official biographies, and reputable media consistently describe Calvin Harris as Scottish, and no reputable source reports any Indian ancestry."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ]
+    }
+  ],
+  "duration": 85.94959545135498
+}

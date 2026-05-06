@@ -1,0 +1,181 @@
+{
+  "id": "fever-104779",
+  "claim": "Frank Ocean was in a poll.",
+  "ground_truth": 1.0,
+  "base_llm": {
+    "score": 0.0,
+    "is_correct": false
+  },
+  "mad_system": {
+    "score": 0.0,
+    "raw_score": 0.25,
+    "is_correct": false,
+    "verdict": {
+      "truth_score": 0.25,
+      "top_3_decisive_points": [
+        "Sự thiếu hụt định danh (Specificity): Bản tin gốc 'Frank Ocean was in a poll' là một khẳng định cực kỳ mơ hồ, thiếu thời gian, địa điểm và tính chất của cuộc bình chọn, khiến nó không có giá trị kiểm chứng thực tế.",
+        "Sai lệch thuật ngữ (Terminology Misalignment): Challenger đã vạch trần thành công sự đánh tráo khái niệm của Defender khi đồng nhất 'danh sách biên tập' (editorial lists như Time 100, Pitchfork) với 'cuộc thăm dò ý kiến' (poll). Đây là hai khái niệm khác biệt về bản chất trong báo chí và truyền thông.",
+        "Thất bại trong việc đưa ra bằng chứng cụ thể: Defender hoàn toàn không trích dẫn được bất kỳ sự kiện 'poll' nào cụ thể trong [S1] mà chỉ cố gắng mở rộng định nghĩa từ vựng để bao biện cho sự thiếu chính xác của bản tin gốc."
+      ],
+      "final_reasoning": "Bản tin gốc mắc lỗi nghiêm trọng về tính minh bạch và độ chính xác của từ ngữ. Trong khi Defender cố gắng bảo vệ bản tin bằng cách mở rộng khái niệm 'poll' để bao hàm mọi danh sách xếp hạng, Challenger đã chỉ ra được sự phi logic và tính thiếu minh bạch của bản tin. Trong báo chí, 'poll' (thăm dò ý kiến) có quy trình khác biệt hoàn toàn với 'editorial ranking' (đánh giá biên tập). Việc Defender cố tình đánh tráo khái niệm này để hợp thức hóa một bản tin mơ hồ cho thấy bản tin gốc không có căn cứ thực tế vững chắc. Do đó, bản tin bị coi là sai lệch nghiêm trọng do sử dụng thuật ngữ không chính xác và thiếu dữ kiện xác minh.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Frank Ocean ---\nFrank Ocean (born Christopher Edwin Breaux; October 28, 1987) is an American singer-songwriter and rapper. His accolades include two Grammy Awards and a Brit Award. He has been credited by several music critics as a pioneer of the alternative R&B genre.\nOcean began his musical career as a ghostwriter before joining the Los Angeles-based hip hop collective Odd Future in 2010. The year prior, he signed with RedZone Entertainment, an imprint of Def Jam Recordings, although his debut mixtape, Nostalgia, Ultra (2011), was released independently. His debut studio album, the eclectic Channel Orange (2012), incorporated elements of R&B and soul music. At the 55th Annual Grammy Awards, the album was nominated for Album of the Year and won Best Urban Contemporary Album; its lead single, \"Thinkin Bout You\", was nominated for Record of the Year. He was named by Time as one of the world's 100 most influential people in 2013.\nAfter a four-year hiatus, Ocean released the visual album Endless (2016) to fulfill contractual obligations with Def Jam. His second studio album, Blonde, was released independently the following day. Expanding on Ocean's experimental approach, Blonde was met with critical acclaim, debuted atop the US Billboard 200, and ranked first on Pitchfork's Best Albums of the 2010s Decade list. After 2017, Ocean has released sporadic singles, worked as a photographer for magazines, launched the fashion brand Homer, and started Homer Radio. 15 of Ocean's songs have entered the Billboard Hot 100, while four of his releases (singles or albums) have received platinum certification by the Recording Industry Association of America (RIAA).",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Chiến lược bảo vệ tập trung vào việc khẳng định Frank Ocean là một thực thể văn hóa nổi bật, người thường xuyên trở thành đối tượng của các cuộc bình chọn (polls) từ các tổ chức truyền thông danh giá như Time và Pitchfork. Việc ông xuất hiện trong các danh sách xếp hạng uy tín chính là bằng chứng xác thực nhất cho bản tin gốc.",
+      "challenger_argument": "Chiến lược của tôi là tập trung vào sự thiếu hụt thông tin trầm trọng của bản tin gốc. Bản tin sử dụng danh từ chung 'a poll' mà không có định danh cụ thể, biến nó thành một khẳng định vô giá trị. Tôi sẽ tấn công vào tính thiếu minh bạch của tin tức và chỉ ra rằng việc gắn tên một nghệ sĩ nổi tiếng vào các mệnh đề mơ hồ là hành vi tung tin thiếu căn cứ.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[D1] Bản tin gốc hoàn toàn chính xác vì Frank Ocean là một nghệ sĩ có tầm ảnh hưởng lớn, thường xuyên xuất hiện trong các cuộc khảo sát (poll) về âm nhạc và văn hóa đại chúng toàn cầu. Việc ông được Time bình chọn là một trong 100 người có ảnh hưởng nhất thế giới vào năm 2013 là bằng chứng đanh thép cho thấy ông là đối tượng thường xuyên của các cuộc thăm dò ý kiến uy tín.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "He was named by Time as one of the world's 100 most influential people in 2013. After 2017, Ocean has released sporadic singles, worked as a photographer for magazines, launched the fashion brand Homer, and started Homer Radio."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        },
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[D2] Bản tin gốc đúng vì trong lĩnh vực nghệ thuật, các tạp chí âm nhạc lớn như Pitchfork thường xuyên thực hiện các cuộc bình chọn (poll) để xếp hạng nghệ sĩ và tác phẩm. Thực tế, Frank Ocean đã đứng đầu danh sách 'Best Albums of the 2010s Decade' của Pitchfork, một cuộc bình chọn mang tính chuyên môn cao, khẳng định vị thế của ông trong các cuộc thăm dò dư luận và giới phê bình.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Expanding on Ocean's experimental approach, Blonde was met with critical acclaim, debuted atop the US Billboard 200, and ranked first on Pitchfork's Best Albums of the 2010s Decade list."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[C1] Bản tin gốc 'Frank Ocean was in a poll' là một thông tin thiếu căn cứ, mơ hồ và mang tính suy diễn, không đạt tiêu chuẩn của một bản tin xác thực. Bản tin hoàn toàn không cung cấp thời gian, địa điểm, hay tên của tổ chức thực hiện cuộc khảo sát (poll). Việc chỉ nêu một mệnh đề chung chung như vậy không thể coi là một sự kiện có thật mà chỉ là sự thêu dệt thông tin từ một thực thể nghệ sĩ nổi tiếng.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "After 2017, Ocean has released sporadic singles, worked as a photographer for magazines, launched the fashion brand Homer, and started Homer Radio. 15 of Ocean's songs have entered the Billboard Hot 100, while four of his releases (singles or albums) have received platinum certification by the Recording Industry Association of America (RIAA)."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        },
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[C2] Sự mơ hồ trong bản tin gốc là cố ý để tạo ra sự nhầm lẫn với các danh hiệu uy tín (như danh sách của Time hay Pitchfork). Dựa trên [S1], Frank Ocean là một nghệ sĩ có sự nghiệp âm nhạc đồ sộ với nhiều giải thưởng Grammy và các bảng xếp hạng uy tín, nhưng tuyệt đối không có bất kỳ dữ liệu nào ghi nhận ông tham gia một 'cuộc khảo sát' (poll) đơn thuần như bản tin đề cập. Bản tin gốc đã đánh tráo khái niệm giữa 'xếp hạng chuyên môn' và 'khảo sát dư luận' nhằm hợp thức hóa một thông tin sai lệch.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "His accolades include two Grammy Awards and a Brit Award. He has been credited by several music critics as a pioneer of the alternative R&B genre. ... He was named by Time as one of the world's 100 most influential people in 2013."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C2"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Tôi bác bỏ các lập luận của đối phương bằng cách chứng minh rằng thuật ngữ 'poll' trong bản tin gốc là một khái niệm bao quát, hoàn toàn tương thích với các danh sách xếp hạng uy tín mà Frank Ocean đã góp mặt. Việc đối phương cố gắng phủ nhận tính xác thực của bản tin dựa trên sự thiếu hụt các chi tiết phụ là một nỗ lực nhằm làm chệch hướng sự thật khách quan rằng nghệ sĩ này là đối tượng thường xuyên của các cuộc bình chọn/xếp hạng tầm cỡ.",
+      "challenger_argument": "Tôi bác bỏ hoàn toàn lập luận của đối phương bằng cách chỉ ra sự đánh tráo khái niệm giữa 'danh sách biên tập chuyên môn' (editorial rankings/lists) và 'cuộc khảo sát/bình chọn' (poll). Bản tin gốc không chỉ mơ hồ về thời gian, địa điểm mà còn cố tình sử dụng từ ngữ không chính xác để gây nhầm lẫn về vị thế của nghệ sĩ, biến các sự kiện đánh giá chuyên môn thành các cuộc khảo sát dư luận không có thật.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D3] Bản tin gốc hoàn toàn khách quan và chính xác về mặt ngữ nghĩa. Việc đối phương tấn công vào sự 'mơ hồ' của từ 'poll' là một sự cố chấp về ngôn ngữ. Trong văn hóa đại chúng, 'poll' không chỉ giới hạn ở các cuộc thăm dò chính trị mà bao hàm rộng rãi các danh sách bình chọn (ranking/list) do các tổ chức uy tín thực hiện. Frank Ocean xuất hiện trong danh sách 'Best Albums of the 2010s Decade' của Pitchfork chính là một dạng 'poll' (bình chọn chuyên môn). Do đó, khẳng định 'Frank Ocean was in a poll' là hoàn toàn có căn cứ thực tế.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Expanding on Ocean's experimental approach, Blonde was met with critical acclaim, debuted atop the US Billboard 200, and ranked first on Pitchfork's Best Albums of the 2010s Decade list."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        },
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D4] Đối phương đang cố tình đánh tráo khái niệm khi cho rằng có sự tách biệt giữa 'xếp hạng chuyên môn' và 'khảo sát dư luận'. Thực tế, các danh sách như của Time (100 người có ảnh hưởng nhất) hay các bảng xếp hạng âm nhạc đều là kết quả của các quy trình bình chọn, lọc và đánh giá (polling/ranking process). Việc Frank Ocean được xướng tên trong các danh sách này chứng minh ông là đối tượng thường xuyên của các 'poll'. Bản tin gốc sử dụng từ ngữ ngắn gọn, súc tích, hoàn toàn không phải là sự thêu dệt mà là cách diễn đạt cô đọng về sự hiện diện của nghệ sĩ trong các bảng xếp hạng uy tín.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "He was named by Time as one of the world's 100 most influential people in 2013. After 2017, Ocean has released sporadic singles, worked as a photographer for magazines, launched the fashion brand Homer, and started Homer Radio."
+            }
+          ],
+          "target_claim_ids": [
+            "C2"
+          ],
+          "claim_id": "C2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C3] Lập luận của đối phương hoàn toàn ngụy biện khi đánh tráo khái niệm 'xếp hạng của tạp chí' (magazine ranking) thành 'cuộc khảo sát' (poll). Việc Time vinh danh Frank Ocean vào danh sách '100 người có ảnh hưởng nhất' là một quyết định biên tập mang tính chủ quan của hội đồng tạp chí, không phải là kết quả của một cuộc bỏ phiếu hay khảo sát công chúng (poll) như bản tin gốc ám chỉ. Sự nhầm lẫn có chủ đích này nhằm hợp thức hóa một tin tức mơ hồ bằng những danh hiệu uy tín không liên quan.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "He was named by Time as one of the world's 100 most influential people in 2013. After 2017, Ocean has released sporadic singles, worked as a photographer for magazines, launched the fashion brand Homer, and started Homer Radio."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C4] Đối phương tiếp tục sai lầm khi dẫn chứng việc Pitchfork xếp hạng album 'Blonde' là minh chứng cho một 'poll'. Trong giới phê bình âm nhạc, các danh sách như 'Best Albums of the 2010s' là sản phẩm của quá trình đánh giá chuyên môn (critical appraisal) từ các biên tập viên, hoàn toàn tách biệt với định nghĩa về các cuộc bình chọn (poll) vốn dựa trên sự tham gia của số đông. Việc gán ghép sự kiện này vào cụm từ 'was in a poll' là hành vi xuyên tạc bản chất của quy trình đánh giá nghệ thuật.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Expanding on Ocean's experimental approach, Blonde was met with critical acclaim, debuted atop the US Billboard 200, and ranked first on Pitchfork's Best Albums of the 2010s Decade list."
+            }
+          ],
+          "target_claim_ids": [
+            "D2"
+          ],
+          "claim_id": "D2"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Chiến lược bảo vệ tập trung vào việc bác bỏ sự chia tách giả tạo giữa 'đánh giá chuyên môn' và 'bình chọn'. Tôi khẳng định rằng các danh sách uy tín như Time 100 hay Pitchfork Best Albums đều là sản phẩm của các quy trình 'polling' (bỏ phiếu/đánh giá), và việc Frank Ocean xuất hiện trong đó xác nhận tính chính xác của bản tin gốc về mặt ngữ nghĩa và thực tế.",
+      "challenger_argument": "Tôi bác bỏ luận điểm của đối phương bằng cách vạch trần sự đánh tráo khái niệm giữa 'danh sách biên tập' (editorial list) và 'cuộc thăm dò ý kiến' (poll). Việc sử dụng từ 'poll' trong bản tin gốc là một hành vi thiếu chính xác, cố tình làm mờ ranh giới giữa thành tựu nghệ thuật và các cuộc khảo sát dư luận nhằm hợp thức hóa một bản tin mơ hồ, không có căn cứ thực chứng.",
+      "defender_claims": [],
+      "challenger_claims": []
+    }
+  ],
+  "duration": 44.3702871799469
+}

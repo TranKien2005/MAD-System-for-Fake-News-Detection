@@ -1,0 +1,153 @@
+{
+  "id": "fever-64779",
+  "claim": "George Foreman failed to leave in 2004.",
+  "ground_truth": 0.0,
+  "base_llm": {
+    "score": 0.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 0.0,
+    "raw_score": 0.0,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 0.0,
+      "top_3_decisive_points": [
+        "Challenger showed that S1 states Foreman was a ringside analyst for HBO “until 2004”, meaning he *left* that prominent role in 2004. This directly contradicts the claim that he “failed to leave in 2004”.",
+        "Defender’s argument re‑defines the ambiguous phrase “failed to leave” to mean “did not die”, citing Foreman’s death in 2025. This is a mis‑interpretation of the idiom and does not address the actual factual context of the 2004 departure.",
+        "S1 provides concrete evidence of both the 2004 end of his analyst duties and his death date in 2025. The former disproves the original statement; the latter, while true, is irrelevant to the claim’s intended meaning."
+      ],
+      "final_reasoning": "The original news item asserts that George Foreman “failed to leave in 2004”. In ordinary English, “failed to leave” means that the person did not depart from something. The only documented event in 2004 concerning Foreman, according to the high‑trust source S1, is the termination of his HBO analyst role (“He was a ringside analyst … until 2004”). This indicates that he *did* leave a major position that year, so the claim that he “failed to leave” is factually incorrect. \n\nDefender’s defence hinges on a semantic stretch, equating “failed to leave” with “did not die”. While it is true that Foreman died in 2025, the phrase in the news item is not about death; it concerns his professional activity. This reinterpretation does not align with standard usage and ignores the concrete evidence about his 2004 career change. \n\nBecause Challenger supplies a direct, high‑trust piece of evidence that directly refutes the core claim, and Defender’s argument is a mis‑reading that fails to address that evidence, the claim is wholly false. Consequently, the appropriate truth score is **0.0** (completely fabricated/false).",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: George Foreman ---\nGeorge Edward Foreman (January 10, 1949 – March 21, 2025) was an American professional boxer, businessman, minister, and author. In boxing, he competed between 1967 and 1997, and was nicknamed \"Big George\". He was a two-time world heavyweight champion and an Olympic gold medalist. He is the namesake of the George Foreman Grill.\nAfter a troubled childhood, Foreman took up amateur boxing and won a gold medal in the heavyweight division at the 1968 Summer Olympics. Having turned professional the next year, he won the undisputed world heavyweight title with a stunning second-round knockout of the then-undefeated Joe Frazier in 1973. He defended the belt twice before suffering his first professional loss to Muhammad Ali in \"The Rumble in the Jungle\" in 1974. Unable to secure another title opportunity, Foreman retired after a loss to Jimmy Young in 1977.\nFollowing what he referred to as a born again experience, Foreman became an ordained Christian minister. Ten years later he announced a comeback, and in 1994, at age 45, won the unified WBA, IBF, and lineal heavyweight championship titles by knocking out 26-year-old Michael Moorer, earning Associated Press Athlete of the Year honors. He dropped the WBA belt rather than face his mandatory title defense soon after, and following a single successful title defense against Axel Schulz, Foreman relinquished his IBF title as well on June 28, 1995. At 46 years and 169 days old, he became the oldest world heavyweight champion in history, as well as the second-oldest boxer to win a world title in any weight class after Bernard Hopkins at light heavyweight. Foreman also holds the record for the longest interval between world title reigns, spanning more than 20 years. He retired in 1997 at the age of 48, with a final record of 76 wins (68 knockouts) and 5 losses.\nForeman is a member of both the World Boxing Hall of Fame and the International Boxing Hall of Fame. The International Boxing Research Organization rates Foreman as the eighth-greatest heavyweight of all time. In 2002, he was named one of the 25 greatest fighters of the past 80 years by The Ring; the following year, the magazine ranked him as the ninth-greatest puncher of all time. He was a ringside analyst for HBO's boxing coverage for 12 years until 2004. Outside boxing, Foreman was a successful entrepreneur and known for his promotion of the George Foreman Grill, which has sold more than 100 million units worldwide by 2011. In 1999, he sold the commercial rights to the grill for $138 million.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Chiến lược bảo vệ tập trung vào việc giải thích “failed to leave” theo nghĩa không qua đời. Bằng chứng từ S1 cho thấy ngày mất của Foreman là 21‑03‑2025, chứng minh rằng ông không rời bỏ cuộc sống vào năm 2004, do đó khẳng định bản tin gốc là đúng.",
+      "challenger_argument": "Dựa trên dữ liệu [S1], George Foreman không chết vào năm 2004 mà vẫn còn sống cho đến năm 2025 và đã kết thúc công việc phân tích truyền hình vào năm 2004, chứng tỏ rằng tuyên bố \"failed to leave in 2004\" là vô căn cứ và sai sự thật.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "Bản tin là đúng sự thật vì George Foreman không rời bỏ (không qua đời) vào năm 2004; ông chỉ mất vào năm 2025, chứng tỏ ông đã “failed to leave” trong năm 2004.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "George Edward Foreman (January 10, 1949 – March 21, 2025) was an American professional boxer, businessman, minister, and author."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[C1] Bản tin \"George Foreman failed to leave in 2004\" là hoàn toàn sai lệch vì George Foreman vẫn còn sống và hoạt động sau năm 2004, trong khi bản tin ngụ ý rằng ông đã không rời (không qua đời) vào năm đó.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "George Edward Foreman (January 10, 1949 – March 21, 2025) was an American professional boxer, businessman, minister, and author. ... He was a ringside analyst for HBO's boxing coverage for 12 years until 2004."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Bằng cách chỉ ra rằng \"failed to leave\" ở đây đề cập đến việc không rời khỏi sự tồn tại (không chết) và cung cấp bằng chứng rõ ràng về ngày mất của Foreman vào năm 2025, chúng tôi bác bỏ hoàn toàn lập luận của C1 và khẳng định bản tin gốc là đúng.",
+      "challenger_argument": "The defender's claim falsely equates “failed to leave” with not dying, ignoring the concrete evidence that Foreman ceased his HBO analyst duties in 2004. By demonstrating that he indeed left a prominent role that year, we expose the original news as a mischaracterization and wholly inaccurate.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[R1] C1 là sai vì nó dựa trên một hiểu sai về cụm từ \"failed to leave\". Ở đây, \"failed to leave\" không có nghĩa là \"chết\" mà chỉ đơn giản là \"không rời khỏi cuộc sống / tồn tại\". Theo nguồn [S1], George Foreman đã sinh ngày 10‑01‑1949 và mất vào ngày 21‑03‑2025, chứng tỏ ông không rời bỏ (không chết) vào năm 2004. Do đó, tuyên bố \"George Foreman failed to leave in 2004\" là đúng khi hiểu \"leave\" là \"rời khỏi cuộc sống\". Thách thức C1 đã lẫn lộn nghĩa của từ và do đó đưa ra kết luận sai lầm.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "George Edward Foreman (January 10, 1949 – March 21, 2025) was an American professional boxer, businessman, minister, and author. He was a ringside analyst for HBO's boxing coverage for 12 years until 2004."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[R1] Defender's assertion that the news is true because George Foreman “failed to leave” in 2004 misinterprets the phrase. The expression “failed to leave” is not about surviving death; it refers to leaving a role or activity. Evidence shows that Foreman actually **did leave** his position as a ringside analyst for HBO in 2004, contradicting the claim that he “failed to leave.” Therefore the original statement “George Foreman failed to leave in 2004” is fact‑ually incorrect and misleading.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "He was a ringside analyst for HBO's boxing coverage for 12 years until 2004. Outside boxing, Foreman was a successful entrepreneur and known for his promotion of the George Foreman Grill, which has sold more than 100 million units worldwide by 2011."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Defender tái khẳng định bản tin đúng bằng cách nhấn mạnh rằng “failed to leave” chỉ đề cập đến việc không rời khỏi sự tồn tại; bằng chứng về ngày mất năm 2025 chứng minh Foreman không chết vào 2004, do đó tuyên bố “failed to leave in 2004” là chính xác.",
+      "challenger_argument": "The defender misinterprets the idiom “failed to leave,” treating it as a euphemism for death, while the factual record shows Foreman actually left his HBO analyst role in 2004. This directly contradicts the defender’s assertion that the original news item is true, proving the claim entirely false and misleading.",
+      "defender_claims": [
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "DEFEND",
+          "text": "[D1] Bản tin là đúng sự thật vì cụm từ “failed to leave” được hiểu là “không rời khỏi cuộc sống / không chết”. George Foreman vẫn sống tới năm 2025, chứng tỏ ông không rời bỏ (không chết) vào năm 2004, do đó tuyên bố “George Foreman failed to leave in 2004” là chính xác.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "George Edward Foreman (January 10, 1949 – March 21, 2025) was an American professional boxer, businessman, minister, and author."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[R1] Defender's claim that the news is true because George Foreman “failed to leave” in 2004 is fundamentally wrong. The phrase “failed to leave” in ordinary English refers to the act of not departing from a position or activity, not to surviving death. Source [S1] clearly states that Foreman’s tenure as a ringside analyst for HBO ended in 2004, meaning he **did** leave that role. Therefore the original statement “George Foreman failed to leave in 2004” is fact‑ually incorrect and deliberately misleading.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "He was a ringside analyst for HBO's boxing coverage for 12 years until 2004. Outside boxing, Foreman was a successful entrepreneur and known for his promotion of the George Foreman Grill, which has sold more than 100 million units worldwide by 2011."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ]
+    }
+  ],
+  "duration": 83.17643857002258
+}

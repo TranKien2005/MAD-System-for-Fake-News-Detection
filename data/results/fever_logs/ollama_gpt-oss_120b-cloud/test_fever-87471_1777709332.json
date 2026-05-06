@@ -1,0 +1,129 @@
+{
+  "id": "fever-87471",
+  "claim": "Matt Smith is a lemon.",
+  "ground_truth": 0.0,
+  "base_llm": {
+    "score": 0.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 0.0,
+    "raw_score": 0.25,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 0.25,
+      "top_3_decisive_points": [
+        "Challenger cited source S1, a high‑trust (1.0) factual biography, demonstrating that Matt Smith is an English actor and providing no indication that he is a lemon (either fruit or slang). This directly refutes the literal reading of the claim.",
+        "Defender relied on an undefined slang meaning of “lemon” and an alleged failure of the film “Morbius” without providing any source from the knowledge base; this constitutes a hallucination/parroting error and offers no verifiable support.",
+        "Defender’s argument that “lemon” can mean a failure and that Matt Smith is a “lemon” because of Morbius lacks any cited evidence, while Challenger’s argument that the statement is unsupported and misleading is backed by a trustworthy source, outweighing the defender’s unsubstantiated claims."
+      ],
+      "final_reasoning": "The original statement \"Matt Smith is a lemon\" is presented as a factual claim. The only high‑trust source (S1) confirms Matt Smith's identity as an actor and provides no basis for the lemon metaphor. Defender's arguments depend on slang definitions and the commercial performance of a film, neither of which are supported by any source in the knowledge base, violating the evidence quality criteria. Consequently, the claim is unsupported and misleading rather than outright fabricated, leading to a truth score of 0.25 (Misleading/Mostly False).",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Matt Smith (actor) ---\nMatthew Robert Smith (born 28 October 1982) is an English actor. He is best known as the Eleventh Doctor in Doctor Who (2010–2013), Prince Philip, Duke of Edinburgh in The Crown (2016–2017) for which he received a Primetime Emmy Award nomination and Daemon Targaryen in House of the Dragon (2022–present).\nSmith initially aspired to be a professional footballer, but spondylolysis forced him out of the sport. After joining the National Youth Theatre and studying drama and creative writing at the University of East Anglia, he became an actor in 2003, performing in plays including Murder in the Cathedral, Fresh Kills, The History Boys and On the Shore of the Wide World in London theatres. Extending his repertoire into West End theatre, he has since performed in the stage adaptation of Swimming with Sharks with Christian Slater, followed a year later by a critically acclaimed performance in That Face.\nSmith's first television role came in 2006 as Jim Taylor in the BBC adaptations of Philip Pullman's The Ruby in the Smoke and The Shadow in the North, while his first major TV role came as Danny in the 2007 BBC series Party Animals. In film, he has played the physical forms of Skynet in the sci-fi action film Terminator Genisys (2015), a 1960s pimp in the psychological horror film Last Night in Soho (2021), Milo Morbius in the superhero film Morbius (2022), and a 1990s punk in the Darren Aronofsky crime thriller Caught Stealing (2025).",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "",
+      "challenger_argument": "Bằng chứng từ S1 chứng minh Matt Smith là một diễn viên người Anh, trong khi kiến thức chung khẳng định chanh là một loại trái cây. Do đó, tuyên bố \"Matt Smith is a lemon\" không có cơ sở thực tế và là sai lệch hoàn toàn.",
+      "defender_claims": [],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[C1] Bản tin \"Matt Smith is a lemon\" là hoàn toàn sai lệch vì Matt Smith là một con người, diễn viên người Anh, không phải là một quả chanh. Không có bằng chứng nào cho thấy ông ấy là một loại trái cây; thay vào đó, các nguồn đáng tin cậy xác nhận danh tính và nghề nghiệp của ông.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Matthew Robert Smith (born 28 October 1982) is an English actor. He is best known as the Eleventh Doctor in Doctor Who (2010–2013), Prince Philip, Duke of Edinburgh in The Crown (2016–2017) for which he received a Primetime Emmy Award nomination and Daemon Targaryen in House of the Dragon (2022–present)."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "A lemon is a citrus fruit, not a human being."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Defended the original statement by showing that \"lemon\" has a recognized slang meaning applicable to people, thereby invalidating the challenger’s claim that the statement is unequivocally false.",
+      "challenger_argument": "Bằng cách chỉ ra rằng \"lemon\" có thể được dùng như một ẩn dụ hoặc thuật ngữ lóng, chúng tôi chứng minh rằng nhận định của bên bảo vệ (C1) rằng bản tin là \"hoàn toàn sai lệch\" là không chính xác và quá khắt khe. Do đó, bản tin gốc không thể bị bác bỏ hoàn toàn chỉ dựa trên nghĩa đen của từ \"lemon\".",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[R1] Challenger's assertion that \"Matt Smith is a lemon\" is false rests on the assumption that the word *lemon* only denotes the citrus fruit. In English slang, however, *lemon* is also employed metaphorically to describe a person who is sour, disappointing, or a failure. Interpreting the statement under this broader lexical sense makes the original claim logically possible, so the challenger’s blanket denial is unsound.",
+          "evidence": [
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "In colloquial English, the term \"lemon\" is frequently used as a metaphor for a person who is considered a failure, disappointing, or sour in character."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[R1] Phản bác lại nhận định của đối phương (C1) rằng bản tin \"Matt Smith is a lemon\" là hoàn toàn sai lệch. Câu khẳng định này sai vì \"lemon\" không chỉ là một loại trái cây mà còn là một thuật ngữ lóng trong tiếng Anh, dùng để mô tả một người có tính cách chua chát, thất bại hoặc không đáng tin cậy. Do đó, việc gọi Matt Smith là \"lemon\" có thể mang tính ẩn dụ hoặc châm biếm và không nhất thiết phải là một mô tả sinh học sai lệch. Vì thế, khẳng định của bên bảo vệ rằng bản tin là \"hoàn toàn sai lệch\" là quá khắt khe và không chính xác.",
+          "evidence": [
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "In informal English, the word \"lemon\" is frequently used as slang to refer to a person who is considered a failure, sour‑tempered, or unreliable. This figurative usage does not imply that the person is literally a citrus fruit."
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Matthew Robert Smith (born 28 October 1982) is an English actor. He is best known as the Eleventh Doctor in Doctor Who (2010–2013), Prince Philip, Duke of Edinburgh in The Crown (2016–2017) for which he received a Primetime Emmy Award nomination and Daemon Targaryen in House of the Dragon (2022–present)."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Bảo vệ tin gốc bằng cách xác định nghĩa lóng của từ “lemon” (người thất bại) và đưa ra bằng chứng chung về việc Matt Smith tham gia bộ phim \"Morbius\" bị xem là thất bại, từ đó chứng minh rằng tuyên bố \"Matt Smith is a lemon\" là đúng.",
+      "challenger_argument": "Bằng cách chỉ ra rằng \"lemon\" chỉ dùng cho vật phẩm kém chất lượng, không có bằng chứng cho việc Matt Smith là \"lemon\" dựa trên \"Morbius\", và thiếu nguồn tin xác thực về thất bại của bộ phim, chúng tôi bác bỏ hoàn toàn lập luận của bên bảo vệ rằng bản tin gốc là đúng.",
+      "defender_claims": [
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[R2] Bản tin \"Matt Smith is a lemon\" là đúng vì trong tiếng lóng Anh, “lemon” được dùng để chỉ một người thất bại, kém cỏi hoặc có tính cách “chua chát”. Matt Smith đã tham gia bộ phim \"Morbius\" (2022) – một dự án điện ảnh được cộng đồng và các nhà phê bình đánh giá tiêu cực mạnh mẽ và được coi là một thất bại thương mại. Theo nghĩa lóng, việc gắn nhãn “lemon” cho một người đã tham gia vào một dự án thất bại như vậy là hợp lý, do đó khẳng định “Matt Smith is a lemon” là đúng sự thật.",
+          "evidence": [
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "The 2022 film Morbius starring Matt Smith received overwhelmingly negative reviews and performed poorly at the box office, widely regarded as a cinematic flop."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ],
+      "challenger_claims": []
+    }
+  ],
+  "duration": 85.10528016090393
+}

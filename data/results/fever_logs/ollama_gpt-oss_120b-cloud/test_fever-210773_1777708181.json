@@ -1,0 +1,149 @@
+{
+  "id": "fever-210773",
+  "claim": "Richard Harris is no longer alive.",
+  "ground_truth": 1.0,
+  "base_llm": {
+    "score": 1.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 1.0,
+    "raw_score": 0.75,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 0.75,
+      "top_3_decisive_points": [
+        {
+          "point": "Defender cited source S1 (Trust: 1.0) which explicitly states that Richard Harris (the well‑known Irish actor) died on 25 October 2002, directly supporting the claim “Richard Harris is no longer alive.”",
+          "side": "DEFENDER"
+        },
+        {
+          "point": "Challenger never provided any source to prove the existence of a living Richard Harris relevant to the statement; their arguments were repeated across rounds without new evidence, incurring a Parroting Penalty and offering no factual counter‑evidence.",
+          "side": "CHALLENGER"
+        },
+        {
+          "point": "Logical interpretation: in the absence of any disambiguating qualifier, a statement about “Richard Harris” is conventionally understood to refer to the most publicly recognised individual with that name—the actor. The presence of other, obscure individuals with the same name does not invalidate the factual correctness of the claim about the famous Richard Harris.",
+          "side": "DEFENDER"
+        }
+      ],
+      "final_reasoning": "The defender’s argument is grounded in a high‑trust source that unambiguously records the death of the famous actor Richard Harris in 2002. The challenger’s contention relies solely on the generic possibility that some other person named Richard Harris is still alive, but offers no verifiable source and merely repeats the same claim each round, resulting in a parroting penalty. Moreover, the logical convention in news and discourse is that a name without further qualification points to the most notable bearer of that name. Consequently, the statement \"Richard Harris is no longer alive\" is factually correct with respect to the widely recognized individual, making the claim mostly true. The ambiguity introduced by the existence of other individuals with the same name is insufficient to overturn the factual accuracy established by the high‑trust evidence.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Richard Harris ---\nRichard St John Francis Harris (1 October 1930 – 25 October 2002) was an Irish actor and singer. Having studied at the London Academy of Music and Dramatic Art, he rose to prominence as an icon of the British New Wave. He received numerous accolades including the Cannes Film Festival Award for Best Actor, a Grammy Award, and a Golden Globe. In 2020 he was listed at number 3 on The Irish Times's list of Ireland's greatest film actors.\nHarris received two Academy Award for Best Actor nominations for his performances in This Sporting Life (1963), and The Field (1990). Other notable roles include in The Guns of Navarone (1961), Red Desert (1964), A Man Called Horse (1970), Cromwell (1970), Unforgiven (1992), Gladiator (2000), and The Count of Monte Cristo (2002). He gained cross-generational acclaim for his role as Albus Dumbledore in the first two Harry Potter films: Harry Potter and the Philosopher's Stone (2001) and Harry Potter and the Chamber of Secrets (2002), the latter of which was his final film role.\nHe portrayed King Arthur in the 1967 film Camelot based on the Lerner and Loewe musical of the same name. For his performance, he received the Golden Globe Award for Best Actor – Motion Picture Musical or Comedy. He reprised the role in the 1981 Broadway musical revival. He received a Laurence Olivier Award for Best Actor nomination for his role in Pirandello's Henry IV (1991).\nHarris received a Primetime Emmy Award for Outstanding Lead Actor in a Limited Series or Movie nomination for his role in The Snow Goose (1971). Harris had a number-one singing hit in Australia, Jamaica and Canada, and a top-ten hit in the United Kingdom, Ireland, and the United States with his 1968 recording of Jimmy Webb's song \"MacArthur Park\". He received a Grammy Award for Best Male Pop Vocal Performance nomination for the song.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Dựa trên thông tin trong nguồn S1, ngày sinh và ngày mất của Richard Harris được nêu rõ, chứng minh rằng ông không còn sống nên tuyên bố \"Richard Harris is no longer alive\" là hoàn toàn chính xác.",
+      "challenger_argument": "Bằng cách chỉ ra sự đa dạng về danh tính của tên Richard Harris và chứng minh tồn tại một cá nhân cùng tên còn sống, chúng tôi bác bỏ hoàn toàn khẳng định rằng “Richard Harris is no longer alive”, do bản tin không cung cấp thông tin xác định đối tượng, nên không thể được coi là đúng sự thật.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "Bản tin là đúng sự thật vì Richard Harris đã qua đời vào ngày 25 tháng 10 năm 2002.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Richard St John Francis Harris (1 October 1930 – 25 October 2002) was an Irish actor and singer. ... The latter of which was his final film role."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[A1] Bản tin là sai lệch hoàn toàn vì câu khẳng định “Richard Harris is no longer alive” không chỉ rõ đối tượng nào; trên thế giới tồn tại nhiều người mang tên Richard Harris, trong đó có những người còn sống như Richard Harris (sinh 1999), cầu thủ bóng bầu dục Ireland hiện đang thi đấu cho Leinster. Do đó, việc khẳng định “Richard Harris không còn sống” là vô căn cứ nếu không xác định rõ danh tính.",
+          "evidence": [
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Richard Harris (born 1999) is an Irish rugby union player who currently plays as a centre for Leinster in the United Rugby Championship and the Ireland national team."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Bằng chứng từ nguồn S1 cho thấy Richard Harris (diễn viên) đã mất vào năm 2002, nên tuyên bố \"Richard Harris is no longer alive\" là đúng. Luận điểm của đối phương dựa trên sự tồn tại của người cùng tên khác không làm suy giảm tính đúng đắn của câu khẳng định, vì câu nói không đề cập tới mọi cá nhân mang tên Richard Harris mà nói tới người nổi tiếng nhất trong bối cảnh được trích dẫn.",
+      "challenger_argument": "Bằng cách chỉ ra sự tồn tại của một Richard Harris còn sống và nhấn mạnh việc không xác định rõ danh tính trong bản tin, chúng tôi cho thấy tuyên bố \"Richard Harris is no longer alive\" là vô căn cứ, thiếu thông tin và do đó sai lệch.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[R1] Bản tin là đúng sự thật vì trong bối cảnh thông tin được cung cấp, \"Richard Harris\" đề cập tới diễn viên và ca sĩ nổi tiếng người Ireland, người đã qua đời vào ngày 25 tháng 10 năm 2002. Điều này được xác nhận rõ ràng trong nguồn S1, do đó khẳng định \"Richard Harris is no longer alive\" là hoàn toàn chính xác. Khi không có chỉ định bổ sung, người nghe sẽ hiểu câu này là nói về nhân vật nổi tiếng này, không phải về mọi cá nhân cùng tên khác như vận động viên rugby, nên phản bác luận điểm của đối phương về tính không xác định của đối tượng.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Richard St John Francis Harris (1 October 1930 – 25 October 2002) was an Irish actor and singer. He gained cross‑generational acclaim for his role as Albus Dumbledore in the first two Harry Potter films, the latter of which was his final film role."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[R1] Bản tin «Richard Harris is no longer alive» là sai lệch hoàn toàn vì nó không chỉ rõ đối tượng nào đang được nhắc tới. Trên thế giới có nhiều người mang tên Richard Harris còn sống, trong đó có Richard Harris (sinh 1999), cầu thủ bóng bầu dục Ireland hiện đang thi đấu cho Leinster. Khi không xác định rõ danh tính, khẳng định “Richard Harris không còn sống” trở nên vô căn cứ và gây hiểu lầm.",
+          "evidence": [
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Richard Harris (born 1999) is an Irish rugby union player who currently plays as a centre for Leinster in the United Rugby Championship and the Ireland national team."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Bằng chứng từ nguồn S1 xác nhận rõ ràng rằng Richard Harris (diễn viên) đã qua đời vào năm 2002, và trong bối cảnh không có chỉ định bổ sung, người nghe sẽ hiểu câu \"Richard Harris is no longer alive\" là nói về nhân vật nổi tiếng này. Sự tồn tại của các cá nhân cùng tên không làm thay đổi thực tế này, vì câu nói không nhằm liệt kê mọi người mang tên Richard Harris mà đề cập tới cá nhân đã được công chúng nhận diện rộng rãi.",
+      "challenger_argument": "Chúng tôi đã chỉ ra rằng bản tin không xác định đối tượng, trong khi có người cùng tên Richard Harris còn sống, do đó tuyên bố \"Richard Harris is no longer alive\" là sai lệch và gây nhầm lẫn.",
+      "defender_claims": [
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "DEFEND",
+          "text": "[D3] Bản tin \"Richard Harris is no longer alive\" là đúng sự thật vì trong bối cảnh thông tin được cung cấp, \"Richard Harris\" đề cập tới diễn viên và ca sĩ người Ireland nổi tiếng, người đã mất vào ngày 25 tháng 10 năm 2002. Điều này được xác nhận rõ ràng trong nguồn S1, nơi liệt kê ngày sinh và ngày mất của ông. Khi không có bất kỳ chỉ định bổ sung nào, người đọc sẽ hiểu câu này là nói về nhân vật nổi tiếng này, không phải về mọi cá nhân cùng tên khác như vận động viên rugby, vì ngữ cảnh và độ nổi tiếng của người được nhắc tới làm cho nó trở nên duy nhất. Vì vậy, lập luận của đối phương dựa trên sự tồn tại của người cùng tên không làm suy giảm tính đúng đắn của tuyên bố.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Richard St John Francis Harris (1 October 1930 – 25 October 2002) was an Irish actor and singer. He gained cross‑generational acclaim for his role as Albus Dumbledore in the first two Harry Potter films, the latter of which was his final film role."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "When a name is presented without qualification, it is conventionally understood to refer to the most prominent individual bearing that name in the relevant cultural context."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ],
+      "challenger_claims": []
+    }
+  ],
+  "duration": 62.92772722244263
+}

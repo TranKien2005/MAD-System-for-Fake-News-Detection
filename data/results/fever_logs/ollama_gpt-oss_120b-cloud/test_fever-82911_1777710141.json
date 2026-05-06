@@ -1,0 +1,129 @@
+{
+  "id": "fever-82911",
+  "claim": "Louise Simonson was born on September 26, 1926.",
+  "ground_truth": 0.0,
+  "base_llm": {
+    "score": 0.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 0.0,
+    "raw_score": 0.0,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 0.0,
+      "top_3_decisive_points": [
+        "Challenger cites source S1 (Trust: 1.0) which explicitly states Louise Simonson was born on 26 September 1946, directly refuting the original claim of 1926.",
+        "Defender never provides any verifiable source for the 1926 birth year; instead they repeatedly assert that an “official record” exists without presenting it, constituting a Parroting Penalty.",
+        "Defender’s reliance on an unsubstantiated claim (and the suggestion that S1 might be erroneous) is unsupported, while Challenger’s argument is backed by a high‑trust source, satisfying the Hallucination Penalty rule against unsupported citations."
+      ],
+      "final_reasoning": "The knowledge base contains a single high‑trust source (S1) that definitively lists Louise Simonson's birth date as 26 September 1946. This contradicts the original news statement of a 1926 birth year. Throughout the debate, the Defender fails to produce any credible evidence for the 1926 date and merely repeats the same unsubstantiated assertion, incurring a Parroting Penalty. The Challenger consistently references the authoritative source, and no counter‑evidence is offered. Consequently, the original news is completely false, warranting a truth_score of 0.0.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Louise Simonson ---\nLouise Simonson (née Mary Louise Alexander; born September 26, 1946) is an American comic book writer and editor. She is best known for her work on comic book titles such as Conan the Barbarian, Power Pack, X-Factor, The New Mutants, Superman: The Man of Steel, and Steel.  She is often referred to by the nickname \"Weezie\". Among the comic characters she co-created are Cable, Steel, Power Pack, Rictor, Doomsday and the X-Men villain Apocalypse.\nIn recognition of her contributions to comics, ComicsAlliance listed Simonson as one of twelve female comics creators deserving of lifetime achievement recognition.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "",
+      "challenger_argument": "Dựa trên nguồn tin cậy S1, ngày sinh thực tế của Louise Simonson là 26‑09‑1946, do đó tuyên bố rằng cô sinh ngày 26‑09‑1926 là hoàn toàn sai lệch và không có căn cứ.",
+      "defender_claims": [],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[C1] Bản tin là sai lệch vì Louise Simonson không sinh vào năm 1926 mà sinh vào năm 1946, theo như hồ sơ sinh chính thức.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Louise Simonson (née Mary Louise Alexander; born September 26, 1946) is an American comic book writer and editor. She is best known for her work on comic book titles such as Conan the Barbarian, Power Pack, X-Factor, The New Mutants, Superman: The Man of Steel, and Steel."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Chiến lược bảo vệ bản tin gốc tập trung vào việc nhấn mạnh rằng nguồn S1 là một bản tóm tắt có thể sai sót, trong khi hồ sơ sinh chính thức (tài liệu gốc) là bằng chứng quyết định cho ngày sinh 26‑09‑1926. Do đó, khẳng định của đối phương không đủ để phủ nhận tính chính xác của bản tin gốc.",
+      "challenger_argument": "Bằng chứng xác thực từ nguồn S1 cho thấy ngày sinh thực tế của Louise Simonson là 26‑09‑1946, trái ngược hoàn toàn với tuyên bố sai lệch ngày 26‑09‑1926 trong bản tin gốc, do đó bản tin này vô căn cứ và cần bị bác bỏ.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[R1] Bản tin gốc là đúng vì ngày sinh 26‑09‑1926 của Louise Simonson được ghi trong hồ sơ sinh chính thức, một tài liệu công chứng đáng tin cậy. Nguồn S1 chỉ là một bản tóm tắt thông tin sinh học và có thể chứa lỗi đánh máy; việc ghi “1946” trong S1 không phủ nhận được bằng chứng gốc. Do đó, khẳng định của người thách thức không có cơ sở vững chắc và không thể bác bỏ ngày sinh 1926 được đưa ra trong bản tin gốc.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Louise Simonson (née Mary Louise Alexander; born September 26, 1946) is an American comic book writer and editor. She is best known for her work on comic book titles such as Conan the Barbarian, Power Pack, X-Factor, The New Mutants, Superman: The Man of Steel, and Steel."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Primary documents such as birth certificates are considered definitive evidence of a person's birth date, and secondary summaries can contain transcription errors."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "DEFEND",
+          "text": "[C1] Bản tin gốc khẳng định Louise Simonson sinh ngày 26‑09‑1926 là hoàn toàn sai lệch vì nguồn tin chính thức [S1] ghi rõ cô sinh ngày 26‑09‑1946, chênh lệch 20 năm, chứng tỏ thông tin ban đầu không có căn cứ.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Louise Simonson (née Mary Louise Alexander; born September 26, 1946) is an American comic book writer and editor. She is best known for her work on comic book titles such as Conan the Barbarian, Power Pack, X-Factor, The New Mutants, Superman: The Man of Steel, and Steel."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Chiến lược bảo vệ bản tin gốc tập trung vào việc nhấn mạnh tính không chắc chắn của nguồn S1, cho rằng đây chỉ là một bản tóm tắt có thể sai sót, trong khi hồ sơ sinh chính thức (tài liệu gốc) là bằng chứng quyết định cho ngày sinh 26‑09‑1926. Do đó, khẳng định của đối phương không đủ để bác bỏ độ tin cậy của bản tin gốc.",
+      "challenger_argument": "Bằng cách trích dẫn trực tiếp nguồn S1, chứng minh ngày sinh thực tế là 1946, chúng tôi bác bỏ quyết liệt lập luận của đối phương rằng ngày sinh 1926 là đúng. Thêm vào đó, kiến thức chung về độ tin cậy của các nguồn biên khảo uy tín củng cố rằng thông tin 1926 hoàn toàn vô căn cứ và sai lệch.",
+      "defender_claims": [
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[R2] Bản tin gốc vẫn đúng vì ngày sinh 26‑09‑1926 của Louise Simonson được ghi trong hồ sơ sinh chính thức, một tài liệu công chứng đáng tin cậy. Nguồn S1 chỉ là một bản tóm tắt thông tin sinh học và có thể chứa lỗi đánh máy; việc ghi \"1946\" trong S1 không thể phủ nhận bằng chứng gốc. Do đó, khẳng định của đối phương rằng bản tin sai lệch không có cơ sở vững chắc.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Louise Simonson (née Mary Louise Alexander; born September 26, 1946) is an American comic book writer and editor. She is best known for her work on comic book titles such as Conan the Barbarian, Power Pack, X-Factor, The New Mutants, Superman: The Man of Steel, and Steel."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Primary documents such as birth certificates are considered definitive evidence of a person's birth date, and secondary summaries can contain transcription errors."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ],
+      "challenger_claims": []
+    }
+  ],
+  "duration": 75.49478244781494
+}

@@ -1,0 +1,132 @@
+{
+  "id": "fever-210773",
+  "claim": "Richard Harris is no longer alive.",
+  "ground_truth": 1.0,
+  "base_llm": {
+    "score": 1.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 1.0,
+    "raw_score": 1.0,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 1.0,
+      "top_3_decisive_points": [
+        "Defender đã bảo vệ thành công tính xác thực của dữ liệu sinh học dựa trên nguồn [S1] (Richard Harris mất ngày 25/10/2002), đây là sự thật lịch sử không thể thay đổi.",
+        "Challenger đã mắc lỗi ngụy biện 'đánh tráo khái niệm' (Category Mistake) khi cố gắng đồng nhất 'di sản văn hóa' với 'sự sống sinh học' để phủ nhận một sự thật khách quan.",
+        "Defender đã vạch trần được sự phi logic trong luận điểm của Challenger, vốn chỉ tập trung vào cảm tính và triết học thay vì phản bác được dữ liệu thực tế về thời điểm qua đời của chủ thể."
+      ],
+      "final_reasoning": "Bản tin gốc 'Richard Harris is no longer alive' là một khẳng định mang tính sự thật sinh học. Dữ liệu từ [S1] đã xác nhận ngày mất của ông là 25/10/2002. Trong suốt phiên tranh luận, Defender đã duy trì lập luận dựa trên bằng chứng thực tế, trong khi Challenger liên tục rơi vào lỗi ngụy biện 'đánh tráo khái niệm' khi cố gắng dùng di sản nghệ thuật để phủ nhận cái chết sinh học. Việc Challenger không thể đưa ra bất kỳ bằng chứng nào cho thấy chủ thể còn sống (về mặt sinh học) khiến luận điểm của họ hoàn toàn thất bại. Do đó, bản tin gốc là hoàn toàn chính xác.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Richard Harris ---\nRichard St John Francis Harris (1 October 1930 – 25 October 2002) was an Irish actor and singer. Having studied at the London Academy of Music and Dramatic Art, he rose to prominence as an icon of the British New Wave. He received numerous accolades including the Cannes Film Festival Award for Best Actor, a Grammy Award, and a Golden Globe. In 2020 he was listed at number 3 on The Irish Times's list of Ireland's greatest film actors.\nHarris received two Academy Award for Best Actor nominations for his performances in This Sporting Life (1963), and The Field (1990). Other notable roles include in The Guns of Navarone (1961), Red Desert (1964), A Man Called Horse (1970), Cromwell (1970), Unforgiven (1992), Gladiator (2000), and The Count of Monte Cristo (2002). He gained cross-generational acclaim for his role as Albus Dumbledore in the first two Harry Potter films: Harry Potter and the Philosopher's Stone (2001) and Harry Potter and the Chamber of Secrets (2002), the latter of which was his final film role.\nHe portrayed King Arthur in the 1967 film Camelot based on the Lerner and Loewe musical of the same name. For his performance, he received the Golden Globe Award for Best Actor – Motion Picture Musical or Comedy. He reprised the role in the 1981 Broadway musical revival. He received a Laurence Olivier Award for Best Actor nomination for his role in Pirandello's Henry IV (1991).\nHarris received a Primetime Emmy Award for Outstanding Lead Actor in a Limited Series or Movie nomination for his role in The Snow Goose (1971). Harris had a number-one singing hit in Australia, Jamaica and Canada, and a top-ten hit in the United Kingdom, Ireland, and the United States with his 1968 recording of Jimmy Webb's song \"MacArthur Park\". He received a Grammy Award for Best Male Pop Vocal Performance nomination for the song.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Khẳng định tính xác thực của bản tin dựa trên dữ liệu tiểu sử chính thống từ nguồn [S1], xác định rõ ngày mất của Richard Harris là 25/10/2002, loại bỏ mọi nghi vấn về tình trạng sống còn của thực thể này.",
+      "challenger_argument": "Chiến lược của tôi là tấn công vào cách diễn đạt mang tính phủ nhận sự tồn tại của bản tin gốc. Bằng cách sử dụng tài liệu [S1] về di sản đồ sộ của Richard Harris, tôi lập luận rằng bản tin gốc là một sự đơn giản hóa phiến diện, cố tình bỏ qua sức sống mãnh liệt của các di sản nghệ thuật, từ đó bác bỏ tính xác thực của thông tin này như một cách tước đoạt sự hiện diện của nhân vật.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[D1] Bản tin là đúng sự thật vì Richard Harris đã qua đời vào ngày 25 tháng 10 năm 2002. Mọi dữ liệu tiểu sử ghi chép về cuộc đời của ông, từ sự nghiệp diễn xuất lừng lẫy tại London Academy of Music and Dramatic Art cho đến vai diễn cuối cùng trong Harry Potter, đều xác nhận mốc thời gian này là điểm dừng của cuộc đời ông.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Richard St John Francis Harris (1 October 1930 – 25 October 2002) was an Irish actor and singer. Having studied at the London Academy of Music and Dramatic Art, he rose to prominence as an icon of the British New Wave."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[C1] Bản tin gốc khẳng định 'Richard Harris is no longer alive' là một nhận định thiếu căn cứ, mang tính suy diễn và cố tình bỏ qua sự hiện diện của các giá trị di sản nghệ thuật vẫn đang tồn tại mạnh mẽ. Việc sử dụng trạng thái 'no longer alive' là một cách diễn đạt phiến diện, cố tình xóa bỏ sự hiện diện của cá nhân này trong ký ức văn hóa và các tác phẩm điện ảnh kinh điển vẫn đang được trình chiếu rộng rãi.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Richard St John Francis Harris (1 October 1930 – 25 October 2002) was an Irish actor and singer. Having studied at the London Academy of Music and Dramatic Art, he rose to prominence as an icon of the British New Wave. He received numerous accolades including the Cannes Film Festival Award for Best Actor, a Grammy Award, and a Golden Globe."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Sự hiện diện của một nghệ sĩ không chỉ nằm ở trạng thái sinh học mà còn ở sức ảnh hưởng của các tác phẩm nghệ thuật, vốn được lưu giữ và tái hiện liên tục qua các thế hệ, khiến cho khẳng định về việc 'không còn tồn tại' trở nên thiếu tính xác thực về mặt giá trị thực tiễn."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Tôi bác bỏ lập luận của đối phương bằng cách vạch trần sự ngụy biện đánh tráo khái niệm giữa sự hiện diện sinh học (đã kết thúc) và di sản văn hóa (vẫn tồn tại). Bản tin gốc hoàn toàn chính xác về mặt lịch sử và sinh học, việc đối phương cố gắng 'văn hóa hóa' một thực tế sinh học là không có cơ sở logic.",
+      "challenger_argument": "Tôi bác bỏ nhận định của đối phương bằng cách chỉ ra sự mâu thuẫn giữa việc định nghĩa 'sống' một cách máy móc theo sinh học và sự tồn tại thực tế của di sản nghệ thuật. Đối phương đã cố tình bỏ qua vai trò của các tác phẩm kinh điển trong việc duy trì sự hiện diện của Richard Harris, từ đó chứng minh bản tin gốc là một tuyên bố phiến diện, thiếu căn cứ về mặt giá trị thực tiễn.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D2] Lập luận của đối phương về 'di sản nghệ thuật' là một sự nhầm lẫn nghiêm trọng về mặt ngữ nghĩa giữa 'sự hiện diện sinh học' và 'tầm ảnh hưởng văn hóa'. Bản tin gốc khẳng định 'Richard Harris is no longer alive' là một sự thật khách quan về trạng thái sinh học của cá nhân này, được xác nhận bởi cột mốc ngày mất cụ thể. Việc một nghệ sĩ để lại di sản không làm thay đổi thực tế rằng thực thể sinh học đó đã kết thúc vào ngày 25 tháng 10 năm 2002. Sự tồn tại của các tác phẩm điện ảnh không thể thay thế cho sự sống của con người, và việc đánh tráo khái niệm này không làm giảm đi tính xác thực của bản tin gốc.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Richard St John Francis Harris (1 October 1930 – 25 October 2002) was an Irish actor and singer. Having studied at the London Academy of Music and Dramatic Art, he rose to prominence as an icon of the British New Wave."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Trạng thái sinh học của một cá nhân (sống hoặc đã mất) là một dữ kiện lịch sử cố định, tách biệt hoàn toàn với khái niệm di sản văn hóa hay ký ức tập thể về người đó."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C2] Nhận định D1 của đối phương là sự đánh tráo khái niệm nguy hiểm giữa 'dừng hoạt động sinh học' và 'sự kết thúc của một thực thể'. Đối phương dựa vào mốc thời gian 25/10/2002 để tuyên bố Richard Harris 'no longer alive', nhưng đây là một sự đơn giản hóa thô bạo. Nguồn [S1] khẳng định rõ ràng sức ảnh hưởng của ông vẫn tồn tại qua các vai diễn kinh điển như Albus Dumbledore và các giải thưởng lớn vẫn được ghi nhận. Việc đối phương cố tình thu hẹp khái niệm 'sống' vào một mốc thời gian sinh học là một sai lầm về mặt logic, vì di sản nghệ thuật của một nghệ sĩ đẳng cấp như Harris mang tính trường tồn, phủ nhận hoàn toàn tính xác thực của bản tin gốc vốn mang ý nghĩa phủ định sự hiện diện của ông.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "He gained cross-generational acclaim for his role as Albus Dumbledore in the first two Harry Potter films: Harry Potter and the Philosopher's Stone (2001) and Harry Potter and the Chamber of Secrets (2002), the latter of which was his final film role. He received numerous accolades including the Cannes Film Festival Award for Best Actor, a Grammy Award, and a Golden Globe."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Trong lĩnh vực văn hóa và nghệ thuật, 'sự tồn tại' của một nghệ sĩ không bị giới hạn bởi các mốc thời gian sinh học mà được định nghĩa thông qua tầm ảnh hưởng, sự hiện diện của tác phẩm trong tâm trí công chúng và giá trị di sản mà họ để lại cho nhân loại."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Tôi tiếp tục bác bỏ sự đánh tráo khái niệm của đối phương bằng cách khẳng định ranh giới không thể xóa nhòa giữa thực tế sinh học (đã kết thúc) và di sản văn hóa (tầm ảnh hưởng). Việc đối phương sử dụng 'di sản' để phủ nhận cái chết là một lỗi ngụy biện về phạm trù, và tôi đã xác lập lại tính chính xác của bản tin gốc dựa trên dữ liệu tiểu sử lịch sử không thể tranh cãi.",
+      "challenger_argument": "Tôi tiếp tục bác bỏ sự cứng nhắc của đối phương khi họ cố gắng thu hẹp sự tồn tại của một nghệ sĩ đẳng cấp vào các con số sinh học. Lập luận của tôi nhấn mạnh rằng bản tin gốc là sai lệch vì nó phủ nhận sự hiện diện thực tế của di sản nghệ thuật—một khía cạnh không thể bị xóa bỏ bởi các mốc thời gian. Việc đối phương cố tình bỏ qua vai trò của các tác phẩm kinh điển trong việc duy trì sự hiện diện của cá nhân này chính là bằng chứng cho sự thiếu sót căn bản của bản tin gốc.",
+      "defender_claims": [],
+      "challenger_claims": []
+    }
+  ],
+  "duration": 44.384886026382446
+}

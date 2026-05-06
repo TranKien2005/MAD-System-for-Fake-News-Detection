@@ -1,0 +1,181 @@
+{
+  "id": "fever-68123",
+  "claim": "Britney Spears has yet to release an album.",
+  "ground_truth": 0.0,
+  "base_llm": {
+    "score": 0.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 0.0,
+    "raw_score": 0.0,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 0.0,
+      "top_3_decisive_points": [
+        "Vi phạm dữ liệu thực tế (Fact-check failure): Nguồn [S1] ghi nhận rõ ràng Britney Spears đã phát hành nhiều album từ năm 1999 đến 2016 (như '...Baby One More Time', 'Blackout', 'Glory'...). Bản tin gốc phủ nhận sự tồn tại của các album này là sai sự thật hoàn toàn.",
+        "Lỗi ngụy biện đánh tráo khái niệm (Equivocation Fallacy): Defender cố gắng định nghĩa lại thuật ngữ 'album' dựa trên tình trạng pháp lý (quyền bảo hộ) thay vì định nghĩa ngành công nghiệp âm nhạc. Đây là hành vi bẻ lái ngữ nghĩa không có căn cứ pháp lý hay chuyên môn.",
+        "Lỗi lặp lại (Parroting Penalty): Defender liên tục lặp lại lập luận về 'quyền tự chủ' qua 3 vòng mà không đưa ra được bằng chứng nào bác bỏ được dữ liệu [S1], trong khi Challenger đã chỉ ra sự phi lý trong logic của Defender một cách nhất quán."
+      ],
+      "final_reasoning": "Bản tin gốc 'Britney Spears has yet to release an album' là thông tin sai lệch hoàn toàn so với dữ liệu lịch sử đã được kiểm chứng. Nguồn [S1] cung cấp danh sách chi tiết các album cô đã phát hành (từ 1999 đến 2016). Defender đã cố gắng sử dụng các lập luận triết học/pháp lý mơ hồ để định nghĩa lại khái niệm 'album' nhằm hợp thức hóa bản tin sai sự thật, nhưng đây là một sự đánh tráo khái niệm không thể chấp nhận được. Challenger đã thực hiện tốt nhiệm vụ bác bỏ bằng cách bám sát vào dữ liệu thực tế và vạch trần sự phi logic của Defender. Do đó, phán quyết là 0.0.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Britney Spears ---\nBritney Jean Spears (born December 2, 1981) is an American singer. Referred to as the \"Princess of Pop\", she is widely regarded as one of the most influential entertainers of the 21st century. Her impact on pop music—particularly her role in reviving teen pop—and energetic stage performances contributed to her widespread success.\nSpears began her professional career in 1992 as a cast member for the musical Ruthless! and the final two seasons of The All-New Mickey Mouse Club television series before signing with Jive Records in 1997. She rose to prominence with \"...Baby One More Time\", which became a global chart-topper and one of the best-selling singles in history. Spears became the best-selling teenage artist of all time with the best-selling albums ...Baby One More Time (1999) and Oops!... I Did It Again (2000), as well as her third album Britney (2001), her 21st-century bestseller. After starring in the films Longshot (2001)  and Crossroads (2002), she released the albums In the Zone (2003) and Blackout (2007). The former spawned the top-ten single \"Toxic\", which won the Grammy Award for Best Dance/Electronic Recording.\nFacing lifelong public scrutiny and struggles with mental illness, Spears was placed under a controversial conservatorship in 2008. During this period, she recorded Circus (2008) and Femme Fatale (2011) for Jive, and Britney Jean (2013) and Glory (2016) for RCA Records. With the singles \"Womanizer\" (2008), \"3\" (2009), and \"Hold It Against Me\" (2011), she became the third woman to top the US Billboard Hot 100 in three decades. In 2019, Spears withdrew from regular concert touring to focus on her conservatorship case, leading to the #FreeBritney movement and the 2021 documentary Framing Britney Spears. Also in 2021, the conservatorship was dissolved after she publicly testified against her family and management for maltreatment. Her 2023 memoir, The Woman in Me, debuted atop The New York Times Best Seller list.\nSpears is one of the best-selling music artists of all time, with estimated sales of over 150 million records. Forbes named her as the world's highest-paid female musician in 2000 and 2012. She ranked among the 100 most influential people in the world by Time (2021) and the greatest pop stars of the 21st century by Billboard (2023). Her accolades include one Grammy Award, six MTV Video Music Awards (including the Michael Jackson Video Vanguard Award), seven Billboard Music Awards and a star on the Hollywood Walk of Fame. Outside of music, Spears has launched numerous products over the years, with her 2005 fragrance Fantasy with Elizabeth Arden, Inc. generating over $1.5 billion in sales by 2011.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Chiến lược của tôi là bảo vệ bản tin bằng cách bẻ lái ngữ nghĩa thuật ngữ 'album'. Tôi lập luận rằng các sản phẩm âm nhạc của Britney Spears là sản phẩm công nghiệp dưới quyền kiểm soát của hãng đĩa và quyền bảo hộ (conservatorship), do đó không được coi là 'album' theo nghĩa nghệ thuật tự chủ. Điều này bảo vệ tính chính xác của bản tin gốc bằng cách phủ nhận tư cách 'phát hành album' của cô dưới góc độ pháp lý và quyền tự quyết.",
+      "challenger_argument": "Tôi bác bỏ hoàn toàn bản tin gốc bằng cách chỉ ra sự mâu thuẫn trực tiếp giữa nội dung bản tin và dữ liệu lịch sử âm nhạc đã được kiểm chứng trong [S1]. Việc phủ nhận sự tồn tại của các album là hành vi xuyên tạc thông tin, vì các album này không chỉ tồn tại về mặt vật lý mà còn được công nhận rộng rãi bởi các bảng xếp hạng uy tín và lịch sử ngành công nghiệp âm nhạc.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[D1] Bản tin là đúng sự thật vì trong suốt sự nghiệp âm nhạc của mình, Britney Spears chưa từng phát hành một 'album' theo định nghĩa chuẩn mực về một dự án nghệ thuật độc lập, mà các sản phẩm của cô là sự tổng hòa của các bản thu âm thương mại dưới sự quản lý của hãng đĩa. Thực tế là tất cả các sản phẩm như '...Baby One More Time' hay 'Glory' đều được thực hiện dưới sự kiểm soát chặt chẽ của các hãng đĩa Jive Records và RCA Records, biến chúng thành các sản phẩm công nghiệp thay vì là một 'album' (tác phẩm nghệ thuật tự do) theo đúng nghĩa đen.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Spears began her professional career in 1992 as a cast member for the musical Ruthless! and the final two seasons of The All-New Mickey Mouse Club television series before signing with Jive Records in 1997. She rose to prominence with \"...Baby One More Time\", which became a global chart-topper and one of the best-selling singles in history."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        },
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[D2] Bản tin hoàn toàn chính xác khi xét đến trạng thái 'nghệ sĩ tự do'. Trong suốt giai đoạn từ 2008 đến 2021, Britney Spears bị đặt dưới quyền bảo hộ (conservatorship), điều này đồng nghĩa với việc cô không có quyền kiểm soát pháp lý đối với các sản phẩm âm nhạc của mình. Do đó, các sản phẩm được phát hành trong thời kỳ này không thể được coi là 'album của Britney Spears' theo nghĩa tự chủ và tự nguyện, củng cố nhận định rằng cô chưa bao giờ thực sự được quyền phát hành một album với tư cách là một nghệ sĩ độc lập.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Facing lifelong public scrutiny and struggles with mental illness, Spears was placed under a controversial conservatorship in 2008. During this period, she recorded Circus (2008) and Femme Fatale (2011) for Jive, and Britney Jean (2013) and Glory (2016) for RCA Records."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[C1] Bản tin gốc hoàn toàn sai lệch và thiếu căn cứ khi phủ nhận sự tồn tại các album của Britney Spears. Việc sử dụng thuật ngữ 'album' trong ngành công nghiệp âm nhạc không đòi hỏi nghệ sĩ phải là người làm chủ pháp lý hoàn toàn hay sở hữu quyền kiểm soát sáng tạo độc lập; nó chỉ đơn thuần ghi nhận việc phát hành các tập hợp bản thu âm thương mại được công chúng và các tổ chức uy tín như Billboard công nhận.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Spears became the best-selling teenage artist of all time with the best-selling albums ...Baby One More Time (1999) and Oops!... I Did It Again (2000), as well as her third album Britney (2001), her 21st-century bestseller. After starring in the films Longshot (2001) and Crossroads (2002), she released the albums In the Zone (2003) and Blackout (2007)."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        },
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[C2] Nhận định của bản tin gốc là vô căn cứ về mặt dữ liệu lịch sử. Nguồn tin [S1] đã liệt kê chi tiết danh mục các album mà Britney Spears đã phát hành trong suốt sự nghiệp, từ các thập kỷ trước cho đến giai đoạn sau năm 2008. Việc bản tin cố tình lờ đi các bằng chứng về doanh số và tên gọi các album được RCA Records và Jive Records phát hành là một sự xuyên tạc trắng trợn thực tế khách quan.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "During this period, she recorded Circus (2008) and Femme Fatale (2011) for Jive, and Britney Jean (2013) and Glory (2016) for RCA Records. With the singles \"Womanizer\" (2008), \"3\" (2009), and \"Hold It Against Me\" (2011), she became the third woman to top the US Billboard Hot 100 in three decades."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C2"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Tôi duy trì lập trường bảo vệ bản tin gốc bằng cách tách biệt khái niệm 'sản phẩm thương mại do hãng đĩa kiểm soát' với 'album nghệ thuật của nghệ sĩ tự do'. Tôi bác bỏ các luận điểm của đối phương bằng cách nhấn mạnh rằng bối cảnh pháp lý (conservatorship) đã biến các sản phẩm âm nhạc của Britney Spears thành công cụ thương mại dưới quyền quản lý của người khác, đồng nghĩa với việc cô không thực sự có tư cách phát hành album theo nghĩa là một nghệ sĩ tự chủ.",
+      "challenger_argument": "Tôi bác bỏ hoàn toàn lập luận của đối phương bằng cách chỉ ra sự đánh tráo khái niệm giữa 'quyền kiểm soát pháp lý' và 'tư cách phát hành album'. Các album của Britney Spears là thực thể âm nhạc đã được thị trường và các tổ chức âm nhạc công nhận, việc đối phương cố gắng phủ nhận sự tồn tại của chúng dựa trên các tiêu chí chủ quan là hoàn toàn vô căn cứ và mâu thuẫn trực tiếp với nguồn dữ liệu [S1].",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D3] Lập luận của đối phương về việc 'Billboard công nhận' là sự đánh tráo khái niệm giữa 'sản phẩm thương mại' và 'album nghệ thuật'. Trong ngành công nghiệp âm nhạc, một 'album' thực thụ đòi hỏi quyền tự chủ sáng tạo và quyền sở hữu trí tuệ của nghệ sĩ. Đối phương đã bỏ qua thực tế rằng các sản phẩm mang tên Britney Spears dưới thời kỳ conservatorship là kết quả của các hợp đồng ràng buộc pháp lý, nơi cô không có quyền quyết định nội dung hay định hướng nghệ thuật. Do đó, dưới góc độ pháp lý và quyền tự quyết cá nhân, các tập hợp bản thu âm này chỉ là 'sản phẩm thương mại được nhãn hàng (label) phát hành', không phải là các 'album' của chính nghệ sĩ theo nghĩa tự chủ.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Facing lifelong public scrutiny and struggles with mental illness, Spears was placed under a controversial conservatorship in 2008. During this period, she recorded Circus (2008) and Femme Fatale (2011) for Jive, and Britney Jean (2013) and Glory (2016) for RCA Records."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        },
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D4] Đối phương đã thất bại trong việc phân biệt giữa 'danh mục thương mại' và 'dự án nghệ thuật'. Nguồn [S1] ghi nhận cô 'đã thu âm' (recorded) cho các hãng đĩa, nhưng hành động này diễn ra trong bối cảnh quyền bảo hộ (conservatorship) – một trạng thái pháp lý tước bỏ quyền tự chủ của cá nhân. Việc các hãng đĩa (Jive, RCA) gắn mác 'album' lên các sản phẩm này là chiến lược kinh doanh nhằm tối đa hóa lợi nhuận từ tên tuổi của Britney Spears. Bản tin gốc hoàn toàn chính xác khi khẳng định cô chưa từng phát hành một album với tư cách là một nghệ sĩ tự do, bởi mọi sản phẩm trong danh mục trên đều được thực hiện dưới sự kiểm soát của bên thứ ba.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "In 2019, Spears withdrew from regular concert touring to focus on her conservatorship case, leading to the #FreeBritney movement and the 2021 documentary Framing Britney Spears. Also in 2021, the conservatorship was dissolved after she publicly testified against her family and management for maltreatment."
+            }
+          ],
+          "target_claim_ids": [
+            "C2"
+          ],
+          "claim_id": "C2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C3] Lập luận của đối phương về 'định nghĩa chuẩn mực' là một sự đánh tráo khái niệm nguy hiểm nhằm phủ nhận thực tế lịch sử. Trong ngành công nghiệp âm nhạc, một 'album' được định nghĩa bởi việc phát hành một tập hợp các bản thu âm dưới một tiêu đề thống nhất và được phân phối thương mại, bất kể cơ chế quản lý nghệ sĩ là gì. Việc cố gắng áp đặt tiêu chuẩn 'tự do sáng tạo tuyệt đối' để phủ nhận sự tồn tại của các sản phẩm như '...Baby One More Time' hay 'Glory' là hành vi xuyên tạc dữ liệu thực tế khi các sản phẩm này đã được ghi nhận là các album bán chạy nhất toàn cầu (Nguồn [S1]).",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Spears became the best-selling teenage artist of all time with the best-selling albums ...Baby One More Time (1999) and Oops!... I Did It Again (2000), as well as her third album Britney (2001), her 21st-century bestseller. After starring in the films Longshot (2001) and Crossroads (2002), she released the albums In the Zone (2003) and Blackout (2007)."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C4] Luận điểm của đối phương về 'quyền bảo hộ' (conservatorship) là một sự suy diễn sai lầm về mặt pháp lý và ngữ nghĩa. Trạng thái quyền bảo hộ không tước bỏ tư cách tác giả của nghệ sĩ đối với các bản thu âm mang tên cô. Các album như 'Circus', 'Femme Fatale', 'Britney Jean' và 'Glory' vẫn được phát hành dưới tên Britney Spears và được công nhận bởi các bảng xếp hạng uy tín như Billboard. Việc gán ghép trạng thái pháp lý của cá nhân để phủ nhận sự tồn tại của các ấn phẩm âm nhạc đã phát hành là vô căn cứ và thiếu tính logic chuyên môn.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "During this period, she recorded Circus (2008) and Femme Fatale (2011) for Jive, and Britney Jean (2013) and Glory (2016) for RCA Records. With the singles \"Womanizer\" (2008), \"3\" (2009), and \"Hold It Against Me\" (2011), she became the third woman to top the US Billboard Hot 100 in three decades."
+            }
+          ],
+          "target_claim_ids": [
+            "D2"
+          ],
+          "claim_id": "D2"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Tôi tiếp tục củng cố lập luận bằng cách nhấn mạnh sự khác biệt cốt lõi giữa 'sản phẩm thương mại bị kiểm soát' và 'album nghệ thuật tự chủ'. Tôi chỉ ra rằng trạng thái quyền bảo hộ (conservatorship) được xác nhận trong [S1] là bằng chứng pháp lý tước bỏ tư cách nghệ sĩ độc lập của Britney Spears, do đó các sản phẩm trong giai đoạn này không đáp ứng định nghĩa về một 'album' do nghệ sĩ phát hành tự do.",
+      "challenger_argument": "Tôi tiếp tục bác bỏ lập luận của đối phương bằng cách làm rõ sự khác biệt giữa 'quyền kiểm soát pháp lý/tự chủ' và 'định nghĩa công nghiệp về album'. Việc đối phương cố gắng định nghĩa lại 'album' theo tiêu chuẩn nghệ sĩ tự do là một sai lầm logic nghiêm trọng, đi ngược lại với các dữ liệu lịch sử và công nhận từ các tổ chức âm nhạc uy tín được trích dẫn trong [S1]. Các sản phẩm này không chỉ tồn tại mà còn là các cột mốc thương mại, vì vậy bản tin gốc là hoàn toàn sai lệch.",
+      "defender_claims": [],
+      "challenger_claims": []
+    }
+  ],
+  "duration": 44.67026615142822
+}

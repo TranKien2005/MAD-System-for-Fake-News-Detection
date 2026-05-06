@@ -1,0 +1,181 @@
+{
+  "id": "fever-73477",
+  "claim": "The English language is commonly spoken.",
+  "ground_truth": 1.0,
+  "base_llm": {
+    "score": 1.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 1.0,
+    "raw_score": 1.0,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 1.0,
+      "top_3_decisive_points": [
+        "Sự xác thực của dữ liệu nguồn [S1]: Nguồn [S1] khẳng định rõ ràng tiếng Anh là 'global lingua franca' và có hơn 1,4 tỷ người nói, xác nhận tính chất 'commonly spoken' là một sự thật hiển nhiên (fact) chứ không phải là nhận định gây tranh cãi.",
+        "Sự ngụy biện của Challenger: Challenger cố tình áp đặt các tiêu chí khắt khe (địa vị pháp lý, tỷ lệ người bản ngữ) lên một mệnh đề mang tính mô tả xã hội chung ('commonly spoken'), dẫn đến việc bác bỏ những sự thật khách quan bằng các tiểu tiết mang tính thủ tục.",
+        "Tính bao quát của khái niệm: 'Commonly spoken' không đòi hỏi một ngôn ngữ phải là ngôn ngữ chính thức về mặt luật pháp tại mọi quốc gia, mà chỉ cần mức độ sử dụng rộng rãi trong đời sống, ngoại giao và công nghệ – điều mà [S1] đã chứng minh đầy đủ."
+      ],
+      "final_reasoning": "Bản tin gốc 'The English language is commonly spoken' là một mệnh đề hoàn toàn chính xác. Defender đã bảo vệ thành công luận điểm này bằng cách dựa vào dữ liệu thực tế từ [S1] (lingua franca, 1,4 tỷ người nói). Challenger đã thất bại trong việc bác bỏ vì rơi vào lỗi ngụy biện 'đánh tráo khái niệm': cố gắng thu hẹp định nghĩa 'commonly spoken' thành 'ngôn ngữ chính thức về mặt pháp lý' hoặc 'ngôn ngữ có nhiều người bản ngữ nhất'. Việc một ngôn ngữ không phải là ngôn ngữ chính thức tại một vài quốc gia (như Mỹ hay Anh theo luật định) không làm thay đổi sự thật là nó vẫn được nói phổ biến tại đó và trên toàn cầu. Challenger đã lặp lại các luận điểm mang tính chất công kích tiểu tiết ở cả 3 vòng mà không đưa ra được bằng chứng nào phủ nhận được vị thế lingua franca của tiếng Anh, do đó lập luận của Challenger không có giá trị bác bỏ bản tin gốc.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: English language ---\nEnglish is a West Germanic language of the Indo-European language family that emerged in early medieval England and has since become a global lingua franca. The namesake of the language is the Angles, one of the Germanic peoples who migrated to Britain after the end of Roman rule. English is the most spoken language in the world, primarily due to the global influences of the former British Empire (succeeded by the Commonwealth of Nations) and the United States. It is the most widely learned second language in the world, with more second-language speakers than native speakers. However, English is only the third-most spoken native language, after Mandarin Chinese and Spanish.\nEnglish is either the official language, or one of the official languages, in 57 sovereign states and 30 dependent territories, making it the most geographically widespread language in the world. In the United Kingdom, the United States, Australia, and New Zealand, it is the dominant language for historical reasons without being explicitly defined by law. It is a co-official language of the United Nations, the European Union, and many other international and regional organisations. It has also become the de facto lingua franca of diplomacy, science, technology, international trade, logistics, tourism, aviation, entertainment, and the Internet. Ethnologue estimated that there were over 1.4 billion speakers worldwide as of 2021.\nOld English emerged from a group of West Germanic dialects spoken by the Anglo-Saxons. Early inscriptions were written with runes before a Latin-based alphabet was adopted for longer texts. Late Old English borrowed some grammar and core vocabulary from Old Norse, a North Germanic language. An evolution of the Latin alphabet, the English alphabet, fully supplanted the runic alphabet by the High Middle Ages, coinciding with the emergence of Middle English in England under Norman control. Middle English borrowed vocabulary extensively from French dialects, which are the source of approximately 28 per cent of Modern English words, and from Latin, which is the source of an additional 28 per cent. While Latin and the Romance languages are thus the source for a majority of its lexicon taken as a whole, English's grammar and phonology remain Germanic, as does most of its basic everyday vocabulary. Finally, Middle English transformed, in part through the Great Vowel Shift, into Modern English, which exists on a dialect continuum with Scots; it is next-most closely related to Low Saxon and Frisian.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Chiến lược bảo vệ tập trung vào việc khẳng định tính xác thực của bản tin thông qua bằng chứng về số lượng người dùng khổng lồ (1,4 tỷ người) và phạm vi ảnh hưởng địa lý rộng khắp (57 quốc gia), chứng minh rằng việc mô tả tiếng Anh là 'thường xuyên được nói' (commonly spoken) là một cách diễn đạt hoàn toàn chính xác và khiêm tốn so với vị thế thực tế của nó.",
+      "challenger_argument": "Chiến lược của tôi là vạch trần sự thiếu chính xác trong lập luận của bản tin gốc bằng cách: 1) Chỉ ra sự nhầm lẫn có chủ đích giữa khái niệm 'ngôn ngữ được học' và 'ngôn ngữ bản ngữ' để hạ thấp vị thế thực tế của tiếng Anh; 2) Phân tích lỗ hổng pháp lý khi khẳng định sự phổ biến của tiếng Anh tại các quốc gia lớn vốn không hề công nhận nó là ngôn ngữ chính thức trong luật pháp.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[D1] Bản tin gốc là hoàn toàn chính xác vì tiếng Anh hiện là ngôn ngữ toàn cầu (lingua franca) với hơn 1,4 tỷ người sử dụng trên khắp thế giới. Sự phổ biến này được củng cố bởi vai trò thống trị của nó trong các lĩnh vực then chốt như ngoại giao, khoa học, thương mại quốc tế và Internet, biến nó thành ngôn ngữ được sử dụng phổ biến nhất trong các hoạt động giao tiếp xuyên quốc gia.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "English is the most spoken language in the world, primarily due to the global influences of the former British Empire (succeeded by the Commonwealth of Nations) and the United States. It is the most widely learned second language in the world, with more second-language speakers than native speakers. ... Ethnologue estimated that there were over 1.4 billion speakers worldwide as of 2021."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        },
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[D2] Bản tin gốc phản ánh đúng thực tế khách quan về mức độ lan tỏa địa lý của tiếng Anh. Với việc là ngôn ngữ chính thức tại 57 quốc gia độc lập và 30 vùng lãnh thổ phụ thuộc, tiếng Anh không chỉ được 'nói phổ biến' mà còn là ngôn ngữ được sử dụng rộng rãi nhất trên quy mô toàn cầu về mặt địa lý.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "English is either the official language, or one of the official languages, in 57 sovereign states and 30 dependent territories, making it the most geographically widespread language in the world."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[C1] Bản tin gốc khẳng định \"Tiếng Anh được nói phổ biến\" là một sự khái quát hóa thiếu căn cứ và sai lệch về bản chất thống kê. Thực tế, khi xét về số lượng người bản ngữ, tiếng Anh thậm chí không nằm trong top 2 ngôn ngữ dẫn đầu, bị xếp sau tiếng Quan Thoại và tiếng Tây Ban Nha. Việc đánh tráo khái niệm giữa \"ngôn ngữ được học nhiều nhất\" và \"ngôn ngữ được nói phổ biến nhất\" là một thủ thuật ngụy biện nhằm thổi phồng tầm ảnh hưởng của nó.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "English is the most widely learned second language in the world, with more second-language speakers than native speakers. However, English is only the third-most spoken native language, after Mandarin Chinese and Spanish."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        },
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[C2] Bản tin gốc hoàn toàn bỏ qua tính chất không chính thức của tình trạng \"phổ biến\" tại các quốc gia trọng yếu. Mặc dù được sử dụng trong ngoại giao và thương mại, tiếng Anh tại các quốc gia như Hoa Kỳ hay Úc không hề được xác lập quyền sở hữu ngôn ngữ chính thức bằng văn bản luật pháp. Sự phổ biến này chỉ là hệ quả của các yếu tố lịch sử và thực dụng, không phải là một đặc tính khách quan, tự nhiên của ngôn ngữ như cách bản tin đang cố gắng định hướng.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "In the United Kingdom, the United States, Australia, and New Zealand, it is the dominant language for historical reasons without being explicitly defined by law. It is a co-official language of the United Nations, the European Union, and many other international and regional organisations."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C2"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Chiến lược bảo vệ tập trung vào việc tái định nghĩa 'sự phổ biến' dựa trên hiệu quả sử dụng thực tế (lingua franca) thay vì các tiêu chí hẹp hòi về số lượng người bản ngữ hay văn bản pháp luật. Tôi đã bác bỏ các luận điểm của đối phương bằng cách làm rõ rằng tầm ảnh hưởng của tiếng Anh trong giao tiếp quốc tế và các lĩnh vực trọng yếu là bằng chứng khách quan nhất cho nhận định 'commonly spoken'.",
+      "challenger_argument": "Chiến lược phản biện tập trung vào việc bóc trần sự đánh tráo khái niệm giữa 'người học ngoại ngữ' và 'người bản ngữ' để thổi phồng tầm ảnh hưởng của tiếng Anh, đồng thời vạch trần lỗ hổng pháp lý khi đối phương sử dụng số lượng quốc gia để chứng minh tính 'phổ biến' mà bỏ qua thực trạng thiếu vắng địa vị pháp lý chính thức tại các cường quốc then chốt.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D3] Lập luận của đối phương về số lượng người bản ngữ là một sự đánh lạc hướng có chủ đích nhằm hạ thấp vị thế của tiếng Anh. Bản tin gốc sử dụng cụm từ 'commonly spoken' (được nói phổ biến) dựa trên thực tế rằng tiếng Anh là ngôn ngữ được học nhiều nhất thế giới (lingua franca) với hơn 1,4 tỷ người sử dụng. Việc một ngôn ngữ không phải là 'tiếng mẹ đẻ' của đa số không làm giảm đi tính 'phổ biến' của nó trong giao tiếp quốc tế; trái lại, chính việc nó được học và sử dụng rộng rãi bởi những người không phải bản ngữ mới là minh chứng đanh thép nhất cho sự phổ biến toàn cầu của nó.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "English is the most spoken language in the world, primarily due to the global influences of the former British Empire (succeeded by the Commonwealth of Nations) and the United States. It is the most widely learned second language in the world, with more second-language speakers than native speakers. ... Ethnologue estimated that there were over 1.4 billion speakers worldwide as of 2021."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        },
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D4] Việc đối phương cố gắng bám víu vào các khía cạnh pháp lý để phủ nhận sự phổ biến của tiếng Anh tại Hoa Kỳ hay Úc là một sự nhầm lẫn giữa 'văn bản luật' và 'thực tế xã hội'. Sự phổ biến của một ngôn ngữ được đo lường bằng mức độ sử dụng thực tế trong các lĩnh vực trụ cột như ngoại giao, thương mại và Internet, chứ không phụ thuộc vào việc nó có được ghi danh trong hiến pháp hay không. Tiếng Anh là ngôn ngữ thống trị tại các quốc gia này vì các lý do lịch sử và thực dụng, điều này xác lập vị thế phổ biến của nó một cách khách quan và không thể chối cãi.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "In the United Kingdom, the United States, Australia, and New Zealand, it is the dominant language for historical reasons without being explicitly defined by law. It is a co-official language of the United Nations, the European Union, and many other international and regional organisations. It has also become the de facto lingua franca of diplomacy, science, technology, international trade, logistics, tourism, aviation, entertainment, and the Internet."
+            }
+          ],
+          "target_claim_ids": [
+            "C2"
+          ],
+          "claim_id": "C2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C3] Lập luận của đối phương về việc tiếng Anh là 'ngôn ngữ toàn cầu' dựa trên con số 1,4 tỷ người là một sự đánh tráo khái niệm nguy hiểm nhằm che đậy thực tế rằng đa số người dùng không sử dụng tiếng Anh như ngôn ngữ bản ngữ. Việc gộp chung người học ngoại ngữ (second-language speakers) vào cùng một nhóm với người bản ngữ để tạo ra con số '1,4 tỷ' là một thủ thuật thống kê thiếu trung thực, cố tình làm lu mờ sự thật rằng tiếng Anh chỉ đứng thứ ba về số lượng người bản ngữ, sau tiếng Quan Thoại và tiếng Tây Ban Nha. Do đó, việc gọi là 'commonly spoken' một cách mơ hồ là sự bóp méo bản chất ngôn ngữ.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "It is the most widely learned second language in the world, with more second-language speakers than native speakers. However, English is only the third-most spoken native language, after Mandarin Chinese and Spanish."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C4] Đối phương sử dụng con số '57 quốc gia' như một lá chắn để khẳng định sự phổ biến, nhưng đây là một sự ngụy biện về mặt pháp lý. Tại các quốc gia có tầm ảnh hưởng lớn như Hoa Kỳ, Anh, Úc và New Zealand, tiếng Anh hoàn toàn không có địa vị pháp lý chính thức (official language) trong luật pháp quốc gia. Việc khẳng định nó 'được nói phổ biến' dựa trên con số quốc gia này là thiếu căn cứ vì nó bỏ qua thực tế là ở nhiều nơi, tiếng Anh chỉ tồn tại như một hệ quả lịch sử thực dụng, không phải là một đặc tính ngôn ngữ được bảo hộ hay xác lập bởi nhà nước.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "In the United Kingdom, the United States, Australia, and New Zealand, it is the dominant language for historical reasons without being explicitly defined by law. It is a co-official language of the United Nations, the European Union, and many other international and regional organisations."
+            }
+          ],
+          "target_claim_ids": [
+            "D2"
+          ],
+          "claim_id": "D2"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Chiến lược bảo vệ tập trung vào việc bác bỏ các lập luận mang tính thủ tục (pháp lý) và thống kê (định nghĩa hẹp về người bản ngữ) của đối phương. Tôi khẳng định rằng 'commonly spoken' phản ánh đúng thực tế tiếng Anh là lingua franca toàn cầu, nơi mức độ sử dụng thực tế trong các lĩnh vực trọng yếu và sự lan tỏa địa lý mới là thước đo chính xác nhất cho vị thế của ngôn ngữ, thay vì các tiêu chí pháp lý hay phân loại người nói.",
+      "challenger_argument": "Tôi tiếp tục bóc trần sự ngụy biện của đối phương thông qua hai luận điểm: Thứ nhất, làm rõ sự đánh tráo khái niệm giữa 'người học' và 'người bản ngữ' để thổi phồng con số 1,4 tỷ người, bác bỏ tính chất 'commonly spoken' theo nghĩa phổ biến tự nhiên. Thứ hai, nhấn mạnh lỗ hổng pháp lý khi đối phương cố tình dùng 'thực tế xã hội' để thay thế cho sự thiếu vắng địa vị pháp lý chính thức tại các quốc gia then chốt, khẳng định bản tin gốc là thiếu căn cứ và sai lệch về bản chất vị thế ngôn ngữ.",
+      "defender_claims": [],
+      "challenger_claims": []
+    }
+  ],
+  "duration": 43.71615672111511
+}

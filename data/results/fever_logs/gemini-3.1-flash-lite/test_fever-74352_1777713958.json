@@ -1,0 +1,181 @@
+{
+  "id": "fever-74352",
+  "claim": "Ryder is also known as a truck rental supplier.",
+  "ground_truth": 1.0,
+  "base_llm": {
+    "score": 1.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 1.0,
+    "raw_score": 0.75,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 0.75,
+      "top_3_decisive_points": [
+        "Defender sử dụng thành công nguồn [S1] (Trust 1.0) để chứng minh 'truck rental' là một trong những mảng kinh doanh chuyên biệt (specializing in) của Ryder, củng cố tính xác thực của thông tin gốc.",
+        "Bản tin gốc sử dụng cụm từ 'is also known as', một cách diễn đạt mang tính liệt kê các vai trò thay vì khẳng định đây là toàn bộ bản chất duy nhất của doanh nghiệp, giúp bác bỏ cáo buộc 'bóp méo thông tin' từ Challenger.",
+        "Challenger thất bại trong việc chứng minh rằng việc gọi Ryder là 'truck rental supplier' là sai sự thật; thay vào đó, Challenger chỉ đang cố gắng mở rộng định nghĩa doanh nghiệp một cách không cần thiết để phản bác một thực tế hiển nhiên."
+      ],
+      "final_reasoning": "Bản tin gốc 'Ryder is also known as a truck rental supplier' hoàn toàn chính xác dựa trên dữ liệu từ nguồn [S1]. Nguồn [S1] xác nhận Ryder chuyên về 'truck rental and leasing'. Việc Challenger cho rằng đây là hành vi 'đánh tráo khái niệm' là không có cơ sở logic, vì cụm từ 'also known as' (cũng được biết đến là) không phủ nhận các mảng kinh doanh khác như logistics hay quản lý chuỗi cung ứng. Defender đã bảo vệ thành công luận điểm bằng cách trích dẫn trực tiếp năng lực cốt lõi từ nguồn tin cậy nhất. Bản tin được đánh giá 0.75 vì đây là thông tin đúng nhưng mang tính rút gọn, không sai lệch nhưng cũng không phản ánh toàn bộ quy mô của tập đoàn.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Ryder ---\nRyder System, Inc. is an American transportation company, specializing in truck rental and leasing, fleet management, supply chain management, and transportation management. It also offers full-service leasing, rental and maintenance, used vehicle sales, transportation management, professional drivers, e-commerce fulfillment, and last-mile delivery services. The company is headquartered in Coral Gables, Florida, and operates in the United States and United Kingdom.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Chiến lược bảo vệ tập trung vào việc khẳng định tính chính xác của bản tin gốc thông qua việc đối chiếu trực tiếp với định nghĩa doanh nghiệp trong nguồn dữ liệu [S1]. Ryder System, Inc. được xác nhận chuyên sâu về 'truck rental and leasing', do đó việc gọi họ là 'truck rental supplier' là hoàn toàn đúng đắn và phản ánh chính xác thực tế vận hành của doanh nghiệp.",
+      "challenger_argument": "Chiến lược bác bỏ tập trung vào việc chỉ ra sự sai lệch về mặt ngữ nghĩa và bản chất doanh nghiệp. Bản tin gốc đã cố tình thu hẹp quy mô của Ryder System, Inc. từ một tập đoàn quản lý chuỗi cung ứng và vận tải đa năng thành một 'nhà cung cấp cho thuê xe' đơn giản, qua đó làm sai lệch hoàn toàn thực tế kinh doanh đã được ghi nhận trong hồ sơ doanh nghiệp.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[D1] Bản tin gốc là hoàn toàn chính xác vì Ryder System, Inc. được định nghĩa trực tiếp bởi hoạt động kinh doanh cốt lõi là cho thuê và cho thuê xe tải (truck rental and leasing). Khẳng định 'Ryder is also known as a truck rental supplier' phản ánh đúng bản chất thương mại và danh mục dịch vụ chính mà công ty này cung cấp trên thị trường quốc tế.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Ryder System, Inc. is an American transportation company, specializing in truck rental and leasing, fleet management, supply chain management, and transportation management. It also offers full-service leasing, rental and maintenance, used vehicle sales, transportation management, professional drivers, e-commerce fulfillment, and last-mile delivery services."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        },
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[D2] Sự chính xác của bản tin được củng cố bởi thực tế rằng Ryder System, Inc. không chỉ là một đơn vị vận tải đơn thuần mà còn là nhà cung cấp giải pháp cho thuê xe (rental) toàn diện. Việc bản tin gọi Ryder là 'truck rental supplier' là cách diễn đạt chính xác và đầy đủ về vai trò của công ty trong chuỗi cung ứng, dựa trên hồ sơ doanh nghiệp đã được xác nhận.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Ryder System, Inc. is an American transportation company, specializing in truck rental and leasing, fleet management, supply chain management, and transportation management. It also offers full-service leasing, rental and maintenance, used vehicle sales, transportation management, professional drivers, e-commerce fulfillment, and last-mile delivery services."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[C1] Bản tin gốc là thiếu căn cứ và sai lệch về bản chất khi cố tình đơn giản hóa Ryder thành một 'truck rental supplier' (nhà cung cấp cho thuê xe tải). Việc sử dụng định nghĩa này là hành vi đánh tráo khái niệm, cố tình bỏ qua quy mô kinh doanh cốt lõi của Ryder System, Inc. vốn là một tập đoàn quản lý vận tải và chuỗi cung ứng đa quốc gia phức tạp.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Ryder System, Inc. is an American transportation company, specializing in truck rental and leasing, fleet management, supply chain management, and transportation management. It also offers full-service leasing, rental and maintenance, used vehicle sales, transportation management, professional drivers, e-commerce fulfillment, and last-mile delivery services."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        },
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[C2] Bản tin gốc mang tính chất gây nhiễu thông tin khi sử dụng cụm từ 'also known as'. Đây là một thủ thuật ngôn từ nhằm định hướng sai lệch dư luận, biến một tập đoàn cung cấp giải pháp chuỗi cung ứng và hậu cần (logistics) chuyên sâu trở thành một đơn vị cho thuê xe tải đơn thuần, làm giảm giá trị thương hiệu và phạm vi hoạt động thực tế của công ty.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Ryder System, Inc. is an American transportation company, specializing in truck rental and leasing, fleet management, supply chain management, and transportation management. It also offers full-service leasing, rental and maintenance, used vehicle sales, transportation management, professional drivers, e-commerce fulfillment, and last-mile delivery services."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C2"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Chiến lược bảo vệ tập trung vào việc khẳng định tính hợp lệ của việc sử dụng các thuật ngữ mô tả năng lực cốt lõi trong kinh doanh. Tôi bác bỏ hoàn toàn cáo buộc 'đánh tráo khái niệm' của đối phương bằng cách chỉ ra rằng việc xác định Ryder là 'truck rental supplier' là dựa trên chính văn bản định nghĩa của doanh nghiệp, đồng thời nhấn mạnh cụm từ 'also known as' là công cụ ngôn ngữ chính xác để làm rõ vai trò của công ty trong mắt người tiêu dùng.",
+      "challenger_argument": "Tôi bác bỏ hoàn toàn lập luận của đối phương bằng cách chỉ ra sự ngụy biện trong việc đơn giản hóa quy mô của một tập đoàn đa quốc gia. Việc gọi Ryder là 'truck rental supplier' không phải là sự chính xác mà là hành vi đánh tráo khái niệm, cố tình bỏ qua các mảng kinh doanh cốt lõi khác như quản lý chuỗi cung ứng và logistics chuyên sâu đã được ghi nhận trong [S1].",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D3] Lập luận của đối phương về việc 'đơn giản hóa' là sai lầm về mặt logic phân loại. Việc gọi Ryder là 'truck rental supplier' không loại trừ các dịch vụ khác, mà chỉ xác định một trong những năng lực cốt lõi (specializing) đã được niêm yết chính thức. Trong ngôn ngữ kinh doanh, việc nhấn mạnh vào một dịch vụ phổ biến như 'cho thuê xe tải' là cách tiếp cận trực diện và chính xác nhất để công chúng nhận diện thương hiệu, hoàn toàn không phải là hành vi đánh tráo khái niệm.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Ryder System, Inc. is an American transportation company, specializing in truck rental and leasing, fleet management, supply chain management, and transportation management. It also offers full-service leasing, rental and maintenance, used vehicle sales, transportation management, professional drivers, e-commerce fulfillment, and last-mile delivery services."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        },
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D4] Cụm từ 'also known as' trong bản tin gốc là hoàn toàn hợp lệ và phản ánh đúng thực tế thị trường. Ryder System, Inc. được công nhận rộng rãi trên toàn cầu thông qua dịch vụ cho thuê xe tải, đây là 'điểm chạm' thương hiệu mạnh nhất đối với khách hàng cá nhân và doanh nghiệp nhỏ. Việc sử dụng 'also known as' không hề gây nhiễu, mà ngược lại, nó bổ trợ thông tin cho người đọc về một vai trò thiết yếu mà Ryder đang cung cấp, giúp định vị thương hiệu một cách cụ thể thay vì chỉ dùng những thuật ngữ chung chung như 'tập đoàn vận tải'.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Ryder System, Inc. is an American transportation company, specializing in truck rental and leasing, fleet management, supply chain management, and transportation management. It also offers full-service leasing, rental and maintenance, used vehicle sales, transportation management, professional drivers, e-commerce fulfillment, and last-mile delivery services."
+            }
+          ],
+          "target_claim_ids": [
+            "C2"
+          ],
+          "claim_id": "C2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C3] Lập luận của đối phương tại [D1] là một sự ngụy biện mang tính rút gọn (reductionist fallacy). Việc cố gắng định nghĩa Ryder System, Inc. chỉ bằng cụm từ 'truck rental supplier' là hành vi bóp méo thực tế kinh doanh, vì nguồn [S1] khẳng định Ryder là một công ty vận tải đa năng với các dịch vụ cốt lõi khác như quản lý chuỗi cung ứng và quản lý vận tải, vốn có quy mô và giá trị kinh tế vượt xa dịch vụ cho thuê xe tải đơn thuần.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Ryder System, Inc. is an American transportation company, specializing in truck rental and leasing, fleet management, supply chain management, and transportation management. It also offers full-service leasing, rental and maintenance, used vehicle sales, transportation management, professional drivers, e-commerce fulfillment, and last-mile delivery services."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C4] Đối phương tại [D2] đã sai lầm khi đánh đồng 'khả năng cung cấp dịch vụ thuê xe' với 'định danh doanh nghiệp'. Bản tin gốc sử dụng cụm từ 'also known as' để gán nhãn Ryder như thể đó là tên gọi thay thế phổ biến, trong khi thực tế Ryder là một tập đoàn quản lý logistics toàn diện. Việc hạ thấp một doanh nghiệp đa ngành thành một nhà cung cấp đơn lẻ là hành vi gây nhiễu thông tin, làm sai lệch nhận thức của người đọc về phạm vi hoạt động của công ty.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Ryder System, Inc. is an American transportation company, specializing in truck rental and leasing, fleet management, supply chain management, and transportation management. It also offers full-service leasing, rental and maintenance, used vehicle sales, transportation management, professional drivers, e-commerce fulfillment, and last-mile delivery services."
+            }
+          ],
+          "target_claim_ids": [
+            "D2"
+          ],
+          "claim_id": "D2"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Tôi bác bỏ các cáo buộc về 'ngụy biện rút gọn' và 'gây nhiễu thông tin'. Bản tin gốc sử dụng ngôn ngữ chính xác, dựa trên năng lực 'specializing in' được trích dẫn trực tiếp từ nguồn [S1]. Việc định danh Ryder là nhà cung cấp dịch vụ cho thuê xe tải là sự thật hiển nhiên, không loại trừ các mảng kinh doanh khác mà là cách tiếp cận trực diện, giúp người đọc nhận diện đúng vai trò thương hiệu của Ryder trên thị trường.",
+      "challenger_argument": "Tôi bác bỏ hoàn toàn lập luận của đối phương vì họ đang cố tình đánh tráo khái niệm giữa 'dịch vụ thành phần' và 'bản chất doanh nghiệp'. Việc dựa vào một phần nhỏ trong danh mục dịch vụ để gán nhãn toàn bộ tập đoàn là sự bóp méo thông tin có hệ thống, không phản ánh đúng thực tế rằng Ryder là một tập đoàn logistics và chuỗi cung ứng phức tạp.",
+      "defender_claims": [],
+      "challenger_claims": []
+    }
+  ],
+  "duration": 41.793702363967896
+}

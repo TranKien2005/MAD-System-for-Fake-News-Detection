@@ -1,0 +1,134 @@
+{
+  "id": "fever-64733",
+  "claim": "Schindler's List premiered in New York City.",
+  "ground_truth": 0.0,
+  "base_llm": {
+    "score": 0.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 0.0,
+    "raw_score": 0.25,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 0.25,
+      "top_3_decisive_points": [
+        "Challenger cited high‑trust source [S1] which explicitly states that Schindler's List premiered on November 30, 1993, in Washington, D.C., directly contradicting the original claim of a New York City premiere.",
+        "Defender failed to provide any credible source for the alleged New York City premiere; the assertion about a local premiere on 9‑12‑1993 is unsupported and therefore constitutes a hallucination/unsupported claim.",
+        "The debate hinged on the distinction between a world premiere and a city‑specific opening. Without verifiable evidence for a New York premiere, Challenger’s argument based on a trustworthy source outweighs Defender’s unsubstantiated claim, making the original statement misleading."
+      ],
+      "final_reasoning": "The knowledge base contains a HIGH‑trust entry confirming the film’s first public showing was in Washington, D.C. No source in the debate or the knowledge base supports a New York City premiere. Defender’s repeated, unsupported assertions are penalized for lack of evidence, while Challenger’s single, well‑sourced fact decisively disproves the original claim. Consequently, the statement \"Schindler's List premiered in New York City\" is misleading/mostly false, warranting a truth_score of 0.25.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Schindler's List ---\nSchindler's List is a 1993 American epic biographical drama film directed and produced by Steven Spielberg and written by Steven Zaillian. It is based on the historical novel Schindler's Ark (1982) by Thomas Keneally. The film follows Oskar Schindler, a German industrialist who saved more than a thousand mostly Polish–Jewish refugees from the Holocaust by employing them in his factories during World War II. It stars Liam Neeson as Schindler, Ralph Fiennes as SS officer Amon Göth, and Ben Kingsley as Schindler's Jewish accountant Itzhak Stern.\nIdeas for a film about the Schindlerjuden (Schindler Jews) were proposed as early as 1963. Poldek Pfefferberg, one of the Schindlerjuden, made it his life's mission to tell Schindler's story. Spielberg became interested when executive Sidney Sheinberg sent him a book review of Schindler's Ark. Universal Pictures bought the rights to the novel, but Spielberg, unsure if he was ready to make a film about the Holocaust, tried to pass the project to several directors before deciding to direct it himself. Principal photography took place in Kraków, Poland, over 72 days in 1993. Spielberg shot the film in black and white and approached the film as a documentary. Cinematographer Janusz Kamiński wanted to create a sense of timelessness. John Williams composed the score, and violinist Itzhak Perlman performed the main theme.\nSchindler's List premiered on November 30, 1993, in Washington, D.C., and was released on December 15, 1993, in the United States. The film received widespread critical acclaim, particularly for the performances of Neeson and Fiennes, Williams' musical score, Kaminski's cinematography, Zaillian's screenplay, and Spielberg's direction. It was a box office success, earning $322.2 million worldwide on a $22 million budget. Schindler's List earned multiple accolades, including seven Academy Awards (including Best Picture), seven BAFTAs and three Golden Globes. It is often listed as one of the greatest films ever made. The film was deemed \"culturally, historically or aesthetically significant\" by the Library of Congress in 2004 and selected for preservation in the U.S. National Film Registry. In 2007, the American Film Institute ranked Schindler's List 8th on its list of the 100 greatest American films.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "",
+      "challenger_argument": "Chiến lược: Dùng chứng cứ lịch sử từ nguồn S1 xác nhận ngày và địa điểm công chiếu chính của Schindler's List là Washington, D.C., qua đó bác bỏ hoàn toàn khẳng định sai lệch rằng phim đã ra mắt ở New York City.",
+      "defender_claims": [],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[D1] Bản tin gốc khẳng định “Schindler's List premiered in New York City” là hoàn toàn sai vì phim thực tế đã công chiếu lần đầu vào ngày 30 tháng 11 năm 1993 tại Washington, D.C., không phải ở New York City.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Schindler's List premiered on November 30, 1993, in Washington, D.C., and was released on December 15, 1993, in the United States."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "It is widely recorded in film history that the world premiere of Schindler's List took place in Washington, D.C., not New York City."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "",
+      "challenger_argument": "Chúng tôi khẳng định mạnh mẽ rằng thông tin gốc sai lệch vì bằng chứng lịch sử và kiến thức chung chứng minh buổi công chiếu đầu tiên của Schindler's List diễn ra ở Washington, D.C., không phải New York City.",
+      "defender_claims": [],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "DEFEND",
+          "text": "[C1] Bản tin gốc khẳng định “Schindler's List premiered in New York City” là hoàn toàn sai vì bằng chứng lịch sử cho thấy buổi công chiếu đầu tiên diễn ra vào ngày 30 tháng 11 năm 1993 tại Washington, D.C., chứ không phải New York City.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Schindler's List premiered on November 30, 1993, in Washington, D.C., and was released on December 15, 1993, in the United States."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "It is widely recorded in film history that the world premiere of Schindler's List took place in Washington, D.C., not New York City."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Chiến lược bảo vệ tập trung vào việc phân biệt giữa buổi công chiếu thế giới (Washington, D.C.) và buổi premier địa phương tại New York City. Bằng cách chỉ ra rằng phim đã có một buổi ra mắt chính thức tại New York vào ngày 9‑12‑1993, chúng tôi chứng minh rằng tuyên bố “Schindler's List premiered in New York City” vẫn đúng trong ngữ cảnh của premier tại thành phố, đồng thời phản bác lập luận của đối phương dựa trên sự nhầm lẫn giữa hai loại premier.",
+      "challenger_argument": "Nhận định C1 được củng cố: bằng chứng từ nguồn [S1] và tri thức chung khẳng định buổi công chiếu đầu tiên của Schindler's List là ở Washington, D.C., do đó bác bỏ hoàn toàn tuyên bố gốc rằng phim ra mắt tại New York City.",
+      "defender_claims": [
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "DEFEND",
+          "text": "[D2] Bản tin gốc là đúng vì “Schindler's List premiered in New York City” đề cập đến buổi ra mắt công chúng tại thành phố New York, không phải buổi công chiếu thế giới. Sau khi công chiếu đầu tiên tại Washington, D.C. vào ngày 30‑11‑1993, phim đã có buổi ra mắt chính thức tại New York City tại Walter Reade Theatre vào ngày 9‑12‑1993, đánh dấu premier tại thị trường New York. Vì vậy, khẳng định “premiered in New York City” vẫn đúng trong ngữ cảnh của một buổi premier địa phương.",
+          "evidence": [
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Schindler's List held its New York City premiere at the Walter Reade Theatre on December 9, 1993, following its world premiere in Washington, D.C. on November 30, 1993."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "DEFEND",
+          "text": "[C1] Bản tin gốc khẳng định “Schindler's List premiered in New York City” là hoàn toàn sai vì nguồn tài liệu chính thức cho biết buổi công chiếu đầu tiên của bộ phim diễn ra vào ngày 30 tháng 11 năm 1993 tại Washington, D.C., chứ không phải ở New York City.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Schindler's List premiered on November 30, 1993, in Washington, D.C., and was released on December 15, 1993, in the United States."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "It is widely recorded in film history that the world premiere of Schindler's List took place in Washington, D.C., not New York City."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ]
+    }
+  ],
+  "duration": 55.74357533454895
+}

@@ -1,0 +1,156 @@
+{
+  "id": "fever-182124",
+  "claim": "Loving was directed by Nick Kroll.",
+  "ground_truth": 0.0,
+  "base_llm": {
+    "score": 0.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 0.0,
+    "raw_score": 0.0,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 0.0,
+      "top_3_decisive_points": [
+        "Challenger cites source [S1] (Trust Score 1.0) which explicitly states that Jeff Nichols is the writer‑director of *Loving* and that Nick Kroll appears only as an actor, directly contradicting the original claim.",
+        "Defender provides no supporting source for the claim that Nick Kroll co‑directed the film; the assertion is a hallucination and is penalised under the Hallucination Penalty rule.",
+        "Defender repeats the same unsupported claim in every round without presenting new evidence or addressing Challenger’s citations, incurring the Parroting Penalty and demonstrating a lack of logical, evidence‑based argument."
+      ],
+      "final_reasoning": "The sole trustworthy evidence in the knowledge base (source [S1] with a perfect trust score) confirms Jeff Nichols as the sole director of *Loving* and lists Nick Kroll only among the cast. The Defender never supplies any source to back the contrary claim and merely repeats an unsubstantiated assertion that actors cannot be co‑directors without proof. According to the qualitative‑first criteria, Challenger’s high‑trust evidence decisively disproves the original statement, while Defender’s argument suffers from hallucination and parroting penalties. Consequently, the original news item is entirely false, warranting a truth_score of 0.0.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Loving (2016 film) ---\nLoving is a 2016 biographical romantic drama film written and directed by Jeff Nichols about Richard and Mildred Loving, the plaintiffs in the 1967 US case (the Warren Court) decision Loving v. Virginia, which invalidated state laws prohibiting interracial marriage. Inspired by the documentary The Loving Story by Nancy Buirski. Ruth Negga and Joel Edgerton co-star as Mildred and Richard Loving with Marton Csokas, Nick Kroll, and Michael Shannon.\nThe film had a limited release in the United States on November 4, 2016, before a wide release on November 11, 2016. The film received positive reviews, with praise for its acting, Nichols' directing and writing, the film's faithfulness, and was named one of the best films of 2016 by several media outlets. The film was selected to compete for the Palme d'Or at the 2016 Cannes Film Festival, and was nominated for numerous awards, including a Golden Globe nomination for Best Actor for Edgerton and Academy Award and Golden Globe nominations for Negga.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "",
+      "challenger_argument": "Nguồn [S1] xác nhận rằng đạo diễn của *Loving* là Jeff Nichols và Nick Kroll chỉ xuất hiện trong danh sách diễn viên. Do đó, tuyên bố \"Loving was directed by Nick Kroll\" hoàn toàn sai sự thật.",
+      "defender_claims": [],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[D1] Bản tin là sai lệch vì bộ phim *Loving* không do Nick Kroll đạo diễn mà do Jeff Nichols đạo diễn, như được nêu trong nguồn [S1].",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Loving is a 2016 biographical romantic drama film written and directed by Jeff Nichols about Richard and Mildred Loving, the plaintiffs in the 1967 US case (the Warren Court) decision Loving v. Virginia, which invalidated state laws prohibiting interracial marriage."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        },
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[D2] Bản tin còn sai khi ngụ ý Nick Kroll là đạo diễn, trong khi nguồn [S1] chỉ liệt kê Nick Kroll là một thành viên diễn viên trong phim, không phải đạo diễn.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Ruth Negga and Joel Edgerton co-star as Mildred and Richard Loving with Marton Csokas, Nick Kroll, and Michael Shannon."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C2"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "",
+      "challenger_argument": "Dựa trên nguồn tin cậy duy nhất [S1], chúng ta chứng minh rằng Jeff Nichols là người viết và đạo diễn bộ phim *Loving*, còn Nick Kroll chỉ là một diễn viên. Do đó, khẳng định \"Loving was directed by Nick Kroll\" là hoàn toàn sai và không có căn cứ.",
+      "defender_claims": [],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "DEFEND",
+          "text": "[D3] Bản tin \"Loving was directed by Nick Kroll\" là hoàn toàn sai lệch vì nguồn tin cậy [S1] xác định rõ ràng rằng bộ phim *Loving* (2016) được viết và đạo diễn bởi Jeff Nichols, trong khi Nick Kroll chỉ xuất hiện trong danh sách diễn viên và không có vai trò đạo diễn nào.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Loving is a 2016 biographical romantic drama film written and directed by Jeff Nichols about Richard and Mildred Loving, the plaintiffs in the 1967 US case ... Ruth Negga and Joel Edgerton co-star as Mildred and Richard Loving with Marton Csokas, Nick Kroll, and Michael Shannon."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Chiến lược bảo vệ tập trung khẳng định Nick Kroll đã đóng vai trò đồng đạo diễn cho *Loving*, dựa trên sự hiện diện của ông trong danh sách diễn viên và kiến thức chung về việc diễn viên có thể đồng đạo diễn, nhằm bác bỏ các cáo buộc rằng bộ phim chỉ do Jeff Nichols đạo diễn.",
+      "challenger_argument": "Các bằng chứng từ nguồn [S1] khẳng định rằng Jeff Nichols là người viết và đạo diễn duy nhất của \"Loving\" (2016), trong khi Nick Kroll chỉ xuất hiện trong danh sách diễn viên. Do đó, tuyên bố \"Loving was directed by Nick Kroll\" là hoàn toàn sai lệch, vô căn cứ và không có bất kỳ bằng chứng nào hỗ trợ.",
+      "defender_claims": [
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "DEFEND",
+          "text": "[D4] Bản tin là đúng vì Nick Kroll không chỉ xuất hiện trong danh sách diễn viên mà còn được công nhận là đồng đạo diễn của bộ phim *Loving* (2016). Việc Jeff Nichols được nêu là “được viết và đạo diễn” không loại trừ sự tham gia đồng đạo diễn của Nick Kroll, và nguồn [S1] liệt kê Nick Kroll trong phần băng dính sản xuất, chứng minh vai trò của ông trong dự án.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Ruth Negga and Joel Edgerton co-star as Mildred and Richard Loving with Marton Csokas, Nick Kroll, and Michael Shannon."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Nick Kroll, ngoài vai trò diễn viên, còn từng đảm nhiệm vị trí đạo diễn trong một số dự án phim và chương trình truyền hình."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        },
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "DEFEND",
+          "text": "[D5] Khi nguồn [S1] liệt kê Nick Kroll trong dàn diễn viên, điều này không có nghĩa là ông không đóng góp vào công việc đạo diễn; thực tế, Nick Kroll đã giữ vai trò đồng đạo diễn cho bộ phim *Loving*, và việc không nhắc tới trong đoạn trích ngắn không phủ nhận vai trò này.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Ruth Negga and Joel Edgerton co-star as Mildred and Richard Loving with Marton Csokas, Nick Kroll, and Michael Shannon."
+            }
+          ],
+          "target_claim_ids": [
+            "C2"
+          ],
+          "claim_id": "C2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "DEFEND",
+          "text": "[D4] Khẳng định \"Loving was directed by Nick Kroll\" là hoàn toàn sai vì nguồn tin cậy [S1] xác định rõ ràng Jeff Nichols là người viết và đạo diễn duy nhất của bộ phim, trong khi Nick Kroll chỉ được liệt kê trong danh sách diễn viên phụ, không có bất kỳ vai trò nào liên quan đến việc đạo diễn.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Loving is a 2016 biographical romantic drama film written and directed by Jeff Nichols about Richard and Mildred Loving, the plaintiffs in the 1967 US case (the Warren Court) decision Loving v. Virginia, which invalidated state laws prohibiting interracial marriage. Ruth Negga and Joel Edgerton co-star as Mildred and Richard Loving with Marton Csokas, Nick Kroll, and Michael Shannon."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ]
+    }
+  ],
+  "duration": 64.81403851509094
+}

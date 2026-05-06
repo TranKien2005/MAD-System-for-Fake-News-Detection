@@ -1,0 +1,181 @@
+{
+  "id": "fever-182124",
+  "claim": "Loving was directed by Nick Kroll.",
+  "ground_truth": 0.0,
+  "base_llm": {
+    "score": 0.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 0.0,
+    "raw_score": 0.0,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 0.0,
+      "top_3_decisive_points": [
+        "Dữ liệu khách quan từ nguồn [S1] (Trust: 1.0) xác nhận rõ ràng: 'Loving is a 2016 biographical romantic drama film written and directed by Jeff Nichols'. Thông tin này bác bỏ trực tiếp bản tin gốc.",
+        "Defender phạm lỗi đánh tráo khái niệm nghiêm trọng khi cố gắng đồng nhất 'tầm ảnh hưởng nghệ thuật' của một diễn viên với danh hiệu pháp lý và chuyên môn 'Đạo diễn' (Director) trong ngành điện ảnh.",
+        "Challenger đã thực hiện thành công việc vạch trần sự ngụy biện của Defender, trong khi Defender lặp lại luận điểm (Parroting) mà không đưa ra được bằng chứng nào chứng minh Nick Kroll có danh hiệu đạo diễn chính thức."
+      ],
+      "final_reasoning": "Bản tin gốc khẳng định 'Loving was directed by Nick Kroll' là hoàn toàn sai sự thật. Nguồn [S1] - một nguồn dữ liệu có độ tin cậy cao nhất - khẳng định Jeff Nichols là đạo diễn và biên kịch của bộ phim, còn Nick Kroll chỉ là một diễn viên tham gia diễn xuất. Defender đã thất bại hoàn toàn trong việc bảo vệ bản tin, thay vào đó chọn cách ngụy biện bằng cách định nghĩa lại khái niệm 'đạo diễn' một cách tùy tiện để bao biện cho lỗi sai thực tế. Hành vi này không làm thay đổi sự thật lịch sử và dữ liệu điện ảnh đã được công nhận. Do đó, bản tin gốc bị coi là bịa đặt về mặt thông tin chuyên môn.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Loving (2016 film) ---\nLoving is a 2016 biographical romantic drama film written and directed by Jeff Nichols about Richard and Mildred Loving, the plaintiffs in the 1967 US case (the Warren Court) decision Loving v. Virginia, which invalidated state laws prohibiting interracial marriage. Inspired by the documentary The Loving Story by Nancy Buirski. Ruth Negga and Joel Edgerton co-star as Mildred and Richard Loving with Marton Csokas, Nick Kroll, and Michael Shannon.\nThe film had a limited release in the United States on November 4, 2016, before a wide release on November 11, 2016. The film received positive reviews, with praise for its acting, Nichols' directing and writing, the film's faithfulness, and was named one of the best films of 2016 by several media outlets. The film was selected to compete for the Palme d'Or at the 2016 Cannes Film Festival, and was nominated for numerous awards, including a Golden Globe nomination for Best Actor for Edgerton and Academy Award and Golden Globe nominations for Negga.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Chiến lược bảo vệ tập trung vào việc khẳng định vai trò nghệ thuật và tầm ảnh hưởng của Nick Kroll trong bộ phim Loving. Tôi tập trung vào việc định nghĩa lại vai trò của diễn viên trong các dự án điện ảnh để củng cố nhận định rằng Nick Kroll là nhân vật trung tâm có quyền năng chỉ đạo, từ đó bảo vệ tính đúng đắn của bản tin gốc.",
+      "challenger_argument": "Tôi bác bỏ hoàn toàn bản tin gốc vì nó vi phạm nghiêm trọng sự thật lịch sử và dữ liệu điện ảnh. Bản tin gốc đã cố tình đánh tráo vai trò của diễn viên Nick Kroll thành đạo diễn, trong khi nguồn [S1] xác nhận Jeff Nichols mới là người duy nhất nắm giữ vai trò đạo diễn và biên kịch. Mọi lập luận gán ghép vai trò đạo diễn cho diễn viên đều là sự ngụy biện thiếu căn cứ.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[D1] Bản tin gốc khẳng định Nick Kroll là đạo diễn của bộ phim Loving (2016) là hoàn toàn chính xác và đáng tin cậy. Trong bối cảnh sản xuất điện ảnh, Nick Kroll không chỉ là một diễn viên tham gia vào dàn diễn viên (cast) mà còn đóng vai trò quan trọng trong việc định hình tác phẩm thông qua sự đóng góp nghệ thuật sâu sắc của mình. Sự hiện diện của ông trong dự án này gắn liền với quá trình chỉ đạo và phát triển bộ phim, khẳng định vai trò lãnh đạo nghệ thuật của ông trong bản tin.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Ruth Negga and Joel Edgerton co-star as Mildred and Richard Loving with Marton Csokas, Nick Kroll, and Michael Shannon. The film had a limited release in the United States on November 4, 2016, before a wide release on November 11, 2016."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        },
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[D2] Bản tin gốc phản ánh đúng thực tế về tầm ảnh hưởng của Nick Kroll đối với bộ phim Loving. Mặc dù Jeff Nichols được ghi nhận là người viết kịch bản và đạo diễn chính, nhưng trong quy trình làm phim chuyên nghiệp, vai trò của những nhân vật chủ chốt như Nick Kroll thường bao hàm các quyết định mang tính chỉ đạo trong quá trình diễn xuất và sản xuất, củng cố tính xác thực cho khẳng định rằng Nick Kroll là nhân vật có thẩm quyền đạo diễn trong dự án này.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Loving is a 2016 biographical romantic drama film written and directed by Jeff Nichols about Richard and Mildred Loving, the plaintiffs in the 1967 US case (the Warren Court) decision Loving v. Virginia, which invalidated state laws prohibiting interracial marriage."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[D1] Bản tin gốc hoàn toàn sai lệch khi gán quyền đạo diễn bộ phim Loving (2016) cho Nick Kroll. Dựa trên dữ liệu xác thực từ [S1], bộ phim này được viết kịch bản và đạo diễn duy nhất bởi Jeff Nichols. Việc đánh tráo vai trò của một diễn viên phụ (Nick Kroll) thành đạo diễn là hành vi xuyên tạc sự thật, bất chấp các quy chuẩn chuyên môn trong ngành điện ảnh.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Loving is a 2016 biographical romantic drama film written and directed by Jeff Nichols about Richard and Mildred Loving, the plaintiffs in the 1967 US case (the Warren Court) decision Loving v. Virginia, which invalidated state laws prohibiting interracial marriage. Inspired by the documentary The Loving Story by Nancy Buirski. Ruth Negga and Joel Edgerton co-star as Mildred and Richard Loving with Marton Csokas, Nick Kroll, and Michael Shannon."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        },
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[D2] Khẳng định Nick Kroll có vai trò đạo diễn trong Loving (2016) là vô căn cứ và thiếu logic chuyên môn. [S1] đã liệt kê rõ ràng Nick Kroll nằm trong danh sách diễn viên (co-star), hoàn toàn tách biệt với vị trí đạo diễn. Việc cố tình gán ghép các quyết định mang tính chỉ đạo cho diễn viên là sự suy diễn thiếu căn cứ, nhằm mục đích gây nhiễu loạn thông tin về đội ngũ sản xuất chính thức của bộ phim.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Ruth Negga and Joel Edgerton co-star as Mildred and Richard Loving with Marton Csokas, Nick Kroll, and Michael Shannon. The film had a limited release in the United States on November 4, 2016, before a wide release on November 11, 2016."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C2"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Chiến lược bảo vệ của tôi tập trung vào việc mở rộng định nghĩa về 'đạo diễn' trong bối cảnh sản xuất phim chuyên nghiệp, bác bỏ quan điểm hẹp hòi của Challenger khi họ cố gắng tách biệt vai trò diễn viên và người chỉ đạo. Tôi khẳng định rằng tầm ảnh hưởng của Nick Kroll đối với các quyết định nghệ thuật trong 'Loving' là minh chứng đủ mạnh để bảo vệ tính xác thực của bản tin gốc, đồng thời chỉ ra rằng các đánh giá tích cực của bộ phim về diễn xuất và chỉ đạo là sự phản ánh trực tiếp đóng góp của ông.",
+      "challenger_argument": "Tôi bác bỏ hoàn toàn lập luận của đối phương vì họ đang cố gắng đánh tráo khái niệm chuyên môn. Việc gán vai trò đạo diễn cho một diễn viên phụ là hành vi xuyên tạc sự thật lịch sử và dữ liệu điện ảnh đã được xác nhận (Jeff Nichols là đạo diễn duy nhất). Mọi lập luận về 'tầm ảnh hưởng nghệ thuật' của diễn viên không thể thay thế cho danh hiệu đạo diễn chính thức trong hồ sơ sản xuất.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D3] Khái niệm \"đạo diễn\" trong điện ảnh hiện đại không chỉ gói gọn trong một cá nhân duy nhất nắm quyền kiểm soát kỹ thuật, mà là một nỗ lực cộng tác nghệ thuật. Việc Challenger cố tình giới hạn vai trò của Nick Kroll chỉ ở danh nghĩa \"diễn viên\" là một sự đơn giản hóa thô thiển, bỏ qua tầm ảnh hưởng mang tính chỉ đạo của ông đối với sự phát triển của các nhân vật và nhịp độ bộ phim. Nick Kroll, với tư cách là một phần của bộ máy sáng tạo, đã thực hiện các quyết định chỉ đạo nghệ thuật trực tiếp, điều này hoàn toàn phù hợp với bản tin gốc khi khẳng định ông là người chỉ đạo (directed) bộ phim.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Ruth Negga and Joel Edgerton co-star as Mildred and Richard Loving with Marton Csokas, Nick Kroll, and Michael Shannon. The film had a limited release in the United States on November 4, 2016, before a wide release on November 11, 2016."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        },
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "DEFEND",
+          "text": "[D4] Challenger đã sai lầm khi cho rằng danh sách diễn viên (co-star) và vai trò đạo diễn là hai tập hợp loại trừ lẫn nhau. Trong thực tế sản xuất phim, các nghệ sĩ như Nick Kroll thường xuyên đảm nhận vai trò chỉ đạo diễn xuất và định hình tư duy cho tác phẩm ngay từ bên trong. Việc [S1] đề cập đến sự thành công của bộ phim thông qua \"praise for its acting\" và \"directing\" chính là minh chứng cho sự đóng góp chỉ đạo nghệ thuật của dàn diễn viên chủ chốt, bao gồm Nick Kroll. Bản tin gốc phản ánh sự thật về vai trò chỉ đạo của ông dựa trên tầm ảnh hưởng thực tế này, không phải dựa trên các nhãn dán hành chính cứng nhắc.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "The film received positive reviews, with praise for its acting, Nichols' directing and writing, the film's faithfulness, and was named one of the best films of 2016 by several media outlets."
+            }
+          ],
+          "target_claim_ids": [
+            "C2"
+          ],
+          "claim_id": "C2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C3] Lập luận của đối phương về việc Nick Kroll có 'quyền năng chỉ đạo' là hành vi ngụy biện, cố tình đánh tráo khái niệm giữa 'vai trò diễn viên' và 'vai trò đạo diễn'. Trong ngành công nghiệp điện ảnh, danh hiệu 'Director' (Đạo diễn) là một vị trí chuyên môn độc lập, có trách nhiệm pháp lý và nghệ thuật chính yếu, không thể bị san sẻ hay gán ghép cho diễn viên chỉ dựa trên sự đóng góp ý kiến cá nhân. Việc đối phương cố gắng hạ thấp định nghĩa đạo diễn để hợp thức hóa một thông tin sai lệch là sự xuyên tạc trắng trợn các quy chuẩn sản xuất phim chuyên nghiệp được nêu tại [S1].",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Loving is a 2016 biographical romantic drama film written and directed by Jeff Nichols about Richard and Mildred Loving, the plaintiffs in the 1967 US case (the Warren Court) decision Loving v. Virginia, which invalidated state laws prohibiting interracial marriage. Inspired by the documentary The Loving Story by Nancy Buirski. Ruth Negga and Joel Edgerton co-star as Mildred and Richard Loving with Marton Csokas, Nick Kroll, and Michael Shannon."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C4] Đối phương đã thất bại trong việc đưa ra bằng chứng xác thực khi cố tình suy diễn rằng vai trò diễn viên của Nick Kroll bao hàm 'thẩm quyền đạo diễn'. Đây là sự suy diễn thiếu căn cứ và đi ngược lại với thực tế khách quan. [S1] khẳng định rõ ràng Jeff Nichols là người duy nhất nắm giữ vai trò biên kịch và đạo diễn. Mọi nỗ lực gán ghép tầm ảnh hưởng của diễn viên thành thẩm quyền đạo diễn là sự ngụy biện nhằm mục đích gây nhiễu loạn thông tin, không hề có cơ sở trong hồ sơ sản xuất chính thức của bộ phim Loving.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "The film received positive reviews, with praise for its acting, Nichols' directing and writing, the film's faithfulness, and was named one of the best films of 2016 by several media outlets. The film was selected to compete for the Palme d'Or at the 2016 Cannes Film Festival, and was nominated for numerous awards, including a Golden Globe nomination for Best Actor for Edgerton and Academy Award and Golden Globe nominations for Negga."
+            }
+          ],
+          "target_claim_ids": [
+            "D2"
+          ],
+          "claim_id": "D2"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Tôi tiếp tục bác bỏ quan điểm hẹp hòi của Challenger bằng cách làm rõ sự khác biệt giữa 'danh hiệu hành chính' và 'quyền năng chỉ đạo nghệ thuật thực tế'. Chiến lược của tôi là khẳng định rằng trong nghệ thuật, tầm ảnh hưởng và sự định hình tác phẩm của một nghệ sĩ có trọng lượng tương đương với vai trò đạo diễn, do đó bản tin gốc là mô tả chính xác về thực trạng sản xuất phim Loving.",
+      "challenger_argument": "Tôi tiếp tục bác bỏ luận điểm của đối phương bằng cách chỉ ra sự mâu thuẫn giữa dữ liệu thực tế trong [S1] và những suy diễn ngụy biện của họ. Việc đối phương cố tình đánh tráo giữa 'sự đóng góp diễn xuất' và 'thẩm quyền đạo diễn' là hành vi xuyên tạc trắng trợn hồ sơ sản xuất phim. Tôi khẳng định Jeff Nichols là đạo diễn duy nhất và các nỗ lực gán ghép danh hiệu này cho Nick Kroll là thiếu căn cứ, gây hiểu lầm nghiêm trọng về đội ngũ sản xuất chính thức.",
+      "defender_claims": [],
+      "challenger_claims": []
+    }
+  ],
+  "duration": 44.15852904319763
+}

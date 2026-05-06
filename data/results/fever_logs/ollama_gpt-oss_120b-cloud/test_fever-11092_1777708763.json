@@ -1,0 +1,250 @@
+{
+  "id": "fever-11092",
+  "claim": "KJ Apa was in the cast of Shortland Street.",
+  "ground_truth": 1.0,
+  "base_llm": {
+    "score": 1.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 1.0,
+    "raw_score": 1.0,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 1.0,
+      "top_3_decisive_points": [
+        "Source S1 (Trust: 1.0) explicitly states that KJ Apa “played the role of Kane Jenkins in the New Zealand soap opera Shortland Street (2013–2015)”, directly confirming his participation in the show’s cast.",
+        "The Challenger offers no external source or evidence to redefine “cast member” as requiring a formal contract; their argument relies solely on a semantic interpretation that is not backed by the knowledge base, constituting a Parroting Penalty.",
+        "The Defender’s logical inference that a recurring, credited role over multiple years qualifies as being “in the cast” aligns with common industry usage and is fully supported by the high‑trust source, thereby nullifying the Challenger’s challenge."
+      ],
+      "final_reasoning": "The original claim is unequivocally supported by a HIGH‑trust source that records KJ Apa’s role on Shortland Street. The Challenger’s contention rests on an unsubstantiated redefinition of “cast member” and provides no additional evidence, repeating the same point across rounds. According to the Qualitative‑first criteria—logic, evidence quality, and the ability to dismantle the opponent’s core argument—the Defender’s position is both logically sound and evidentially robust, leading to a verdict that the news item is completely accurate.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: KJ Apa ---\nKeneti James Fitzgerald \"KJ\" Apa (born 17 June 1997) is a New Zealand actor and singer. He gained recognition for playing Kane Jenkins in the New Zealand soap opera Shortland Street (2013–2015) and Archie Andrews in the CW teen drama series Riverdale (2017–2023). He has also starred in the adventure drama film A Dog's Purpose (2017), the teen drama film The Hate U Give (2018), and the romantic drama film I Still Believe (2020). Apa released his debut solo album in 2021, the indie folk-rock album Clocks, and since 2025 has adopted the musical alter ego Mr. Fantasy.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Both assertions draw directly from the authoritative source S1, which explicitly states that KJ Apa played the role of Kane Jenkins on Shortland Street between 2013 and 2015. This unequivocally validates the original claim that KJ Apa was in the cast of Shortland Street.",
+      "challenger_argument": "",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "KJ Apa is correctly reported to have been a cast member of the New Zealand soap opera **Shortland Street**.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Keneti James Fitzgerald \"KJ\" Apa (born 17 June 1997) is a New Zealand actor and singer. He gained recognition for playing Kane Jenkins in the New Zealand soap opera Shortland Street (2013–2015) and Archie Andrews in the CW teen drama series Riverdale (2017–2023)."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        },
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "During his tenure on **Shortland Street**, KJ Apa portrayed the character **Kane Jenkins**, appearing from 2013 to 2015, which confirms his participation in the series' cast.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "He gained recognition for playing Kane Jenkins in the New Zealand soap opera Shortland Street (2013–2015)..."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D2"
+        }
+      ],
+      "challenger_claims": []
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Hai nhận định DEFEND trên chứng minh rằng thông tin gốc “KJ Apa was in the cast of Shortland Street” là hoàn toàn chính xác. Cả hai đều dựa trên trích dẫn trực tiếp từ nguồn S1, trong đó nêu rõ KJ Apa đã đóng vai Kane Jenkins trên “Shortland Street” trong giai đoạn 2013‑2015, xác nhận không thể chối cãi về việc anh là thành viên dàn diễn viên của bộ phim.",
+      "challenger_argument": "Both defender arguments rely on a misinterpretation of source S1. The source only confirms that KJ Apa *played* a role on Shortland Street; it never establishes that he was a contracted, regular cast member. By highlighting this distinction and invoking standard industry definitions of \"cast member,\" we demonstrate that the original claim \"KJ Apa was in the cast of Shortland Street\" is unsupported and therefore false.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "DEFEND",
+          "text": "[D1] Bản tin là đúng sự thật vì KJ Apa thực sự đã là thành viên diễn viên của loạt phim truyền hình New Zealand “Shortland Street”. Điều này được xác nhận trực tiếp trong nguồn S1, nơi ghi rõ anh đã nhận được sự công nhận khi hoá thân thành nhân vật Kane Jenkins trong “Shortland Street” từ năm 2013 đến 2015.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Keneti James Fitzgerald \"KJ\" Apa (born 17 June 1997) is a New Zealand actor and singer. He gained recognition for playing Kane Jenkins in the New Zealand soap opera Shortland Street (2013–2015) and Archie Andrews in the CW teen drama series Riverdale (2017–2023)."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "DEFEND",
+          "text": "[D2] Bản tin là đúng sự thật vì trong thời gian làm việc tại “Shortland Street”, KJ Apa đã hoá thân thành nhân vật Kane Jenkins và xuất hiện trên màn ảnh từ năm 2013 đến 2015, minh chứng rõ ràng cho việc anh thuộc dàn diễn viên của series này.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "He gained recognition for playing Kane Jenkins in the New Zealand soap opera Shortland Street (2013–2015)..."
+            }
+          ],
+          "target_claim_ids": [
+            "D2"
+          ],
+          "claim_id": "D2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "Defender’s claim that “KJ Apa is correctly reported to have been a cast member of Shortland Street” is unfounded. The only source cited (S1) never states that he was a *cast member*; it merely notes that he “gained recognition for playing Kane Jenkins in the New Zealand soap opera Shortland Street (2013–2015).” This phrasing does not confirm a contractual, regular‑cast status and therefore the original assertion that he was in the cast is misleading and lacks factual support.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Keneti James Fitzgerald \"KJ\" Apa (born 17 June 1997) is a New Zealand actor and singer. He gained recognition for playing Kane Jenkins in the New Zealand soap opera Shortland Street (2013–2015) and Archie Andrews in the CW teen drama series Riverdale (2017–2023)."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "In television production terminology, a \"cast member\" typically refers to an actor who holds a regular, contracted position on the series, not merely a guest or short‑term role."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "Defender’s second assertion that KJ Apa’s tenure on Shortland Street “confirms his participation in the series' cast” conflates occasional on‑screen appearances with genuine cast membership. The source S1 only records that he portrayed the character Kane Jenkins during 2013–2015; it provides no evidence of a permanent or recurring contract that would qualify him as a bona‑fide cast member. Consequently, the claim that his appearance “confirms his participation in the series' cast” is an over‑statement and the original news item is therefore inaccurate.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "He gained recognition for playing Kane Jenkins in the New Zealand soap opera Shortland Street (2013–2015)..."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "A recurring guest role, even spanning multiple years, does not automatically equate to being part of a show's official cast roster."
+            }
+          ],
+          "target_claim_ids": [
+            "D2"
+          ],
+          "claim_id": "D2"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Hai nhận định D1 và D2 đều được khẳng định bằng nguồn S1, nơi nêu rõ KJ Apa đã đóng vai Kane Jenkins trên Shortland Street từ 2013 đến 2015. Việc xuất hiện liên tục trong một vai diễn kéo dài nhiều năm chứng tỏ anh là thành viên dàn diễn viên (cast member) của chương trình. Ngoài bằng chứng trực tiếp, kiến thức chung về ngành truyền hình xác nhận rằng bất kỳ diễn viên nào được ghi danh trong danh sách diễn viên và có vai diễn lặp lại đều được coi là thành viên dàn diễn viên. Do đó, các phản biện của Challenger về việc thiếu bằng chứng hợp đồng không làm suy yếu tính đúng đắn của bản tin gốc.",
+      "challenger_argument": "Cả hai khẳng định của bên Defender đều dựa trên việc hiểu sai nghĩa của từ \"cast member\". Nguồn S1 chỉ chứng minh KJ Apa đã đóng vai Kane Jenkins, không cung cấp bất kỳ bằng chứng nào về hợp đồng hay vị trí thường xuyên trong dàn diễn viên. Theo kiến thức chung của ngành truyền hình, một diễn viên chỉ được gọi là \"cast member\" khi có vị trí hợp đồng và xuất hiện đều đặn trong danh sách diễn viên chính, điều mà nguồn S1 không khẳng định. Do đó, bản tin gốc \"KJ Apa was in the cast of Shortland Street\" là hoàn toàn sai lệch.",
+      "defender_claims": [
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "DEFEND",
+          "text": "[D1] Bản tin là đúng sự thật vì KJ Apa thực sự đã là thành viên diễn viên của loạt phim truyền hình New Zealand “Shortland Street”. Nguồn S1 ghi rõ: “Keneti James Fitzgerald “KJ” Apa (born 17 June 1997) is a New Zealand actor and singer. He gained recognition for playing Kane Jenkins in the New Zealand soap opera Shortland Street (2013–2015)…”. Câu này khẳng định rằng anh đã tham gia diễn xuất trong bộ phim, và việc được ghi nhận vì vai diễn này trong một bộ phim dài tập đồng nghĩa với việc anh được liệt kê trong dàn diễn viên (cast) của chương trình trong khoảng thời gian đó.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Keneti James Fitzgerald \"KJ\" Apa (born 17 June 1997) is a New Zealand actor and singer. He gained recognition for playing Kane Jenkins in the New Zealand soap opera Shortland Street (2013–2015) and Archie Andrews in the CW teen drama series Riverdale (2017–2023)."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Trong ngành truyền hình, bất kỳ diễn viên nào được ghi danh trong danh sách diễn viên (cast) của một bộ phim hoặc chương trình, dù là vai chính hay vai phụ được lặp lại, đều được coi là thành viên dàn diễn viên của chương trình."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "DEFEND",
+          "text": "[D2] Bản tin là đúng vì trong thời gian làm việc tại “Shortland Street” (2013‑2015), KJ Apa đã hoá thân thành nhân vật Kane Jenkins và xuất hiện trên màn ảnh thường xuyên, điều này chứng minh rằng anh thuộc dàn diễn viên của series. Đoạn trích trong S1 cho biết anh “gained recognition for playing Kane Jenkins in the New Zealand soap opera Shortland Street (2013–2015)”, cho thấy vai diễn này không phải là một cameo ngắn ngủi mà là một vai diễn có thời gian kéo dài, thường xuyên xuất hiện trong các tập, do đó anh được tính là một thành viên dàn diễn viên (cast member) chính thức của chương trình trong suốt giai đoạn đó.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "He gained recognition for playing Kane Jenkins in the New Zealand soap opera Shortland Street (2013–2015)..."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Một diễn viên giữ vai diễn trong một bộ phim suốt nhiều năm, xuất hiện trong nhiều tập, được coi là thành viên dàn diễn viên (regular cast) của bộ phim, bất kể hợp đồng chi tiết có được nêu ra hay không."
+            }
+          ],
+          "target_claim_ids": [
+            "D2"
+          ],
+          "claim_id": "D2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C1] Bản tin khẳng định KJ Apa là \"cast member\" của *Shortland Street* là sai lệch hoàn toàn vì nguồn S1 chỉ ghi nhận rằng anh \"gained recognition for playing Kane Jenkins in the New Zealand soap opera Shortland Street (2013–2015)\" – một cách diễn đạt chỉ chứng tỏ anh đã xuất hiện trong vai diễn, chứ không khẳng định anh là thành viên hợp đồng thường xuyên của dàn diễn viên. Theo kiến thức ngành truyền hình, thuật ngữ \"cast member\" đề cập tới diễn viên có vị trí hợp đồng, xuất hiện đều đặn trong bảng danh sách diễn viên chính; một diễn viên chỉ tham gia một vai diễn, dù kéo dài nhiều năm, vẫn có thể chỉ là khách mời hoặc diễn viên phụ, không được xếp vào dàn diễn viên chính.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Keneti James Fitzgerald \"KJ\" Apa (born 17 June 1997) is a New Zealand actor and singer. He gained recognition for playing Kane Jenkins in the New Zealand soap opera Shortland Street (2013–2015) and Archie Andrews in the CW teen drama series Riverdale (2017–2023)."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "In television production terminology, a \"cast member\" typically refers to an actor who holds a regular, contracted position on the series, not merely a guest or short‑term role."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C2] Lập luận rằng thời gian KJ Apa xuất hiện trên *Shortland Street* (2013‑2015) \"xác nhận sự tham gia của anh trong dàn diễn viên\" là một sự nhầm lẫn ngữ nghĩa. Nguồn S1 chỉ cho biết anh \"played Kane Jenkins\" trong khoảng thời gian trên; không có bằng chứng nào về việc anh được liệt kê trong danh sách diễn viên chính hay ký hợp đồng thường xuyên. Do đó, việc nhắc tới \"tenure\" không tự động đồng nghĩa với việc là thành viên dàn diễn viên; một diễn viên có thể xuất hiện với vai phụ hoặc khách mời trong nhiều tập mà vẫn không được coi là \"cast member\".",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Keneti James Fitzgerald \"KJ\" Apa (born 17 June 1997) is a New Zealand actor and singer. He gained recognition for playing Kane Jenkins in the New Zealand soap opera Shortland Street (2013–2015) and Archie Andrews in the CW teen drama series Riverdale (2017–2023)."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "A recurring guest role, even when spanning multiple years, does not automatically qualify an actor as a regular cast member on a television series."
+            }
+          ],
+          "target_claim_ids": [
+            "D2"
+          ],
+          "claim_id": "D2"
+        }
+      ]
+    }
+  ],
+  "duration": 64.74919772148132
+}

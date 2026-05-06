@@ -1,0 +1,166 @@
+{
+  "id": "fever-15441",
+  "claim": "Jessica Lange has acted in a movie written by Eugene O'Neill.",
+  "ground_truth": 0.0,
+  "base_llm": {
+    "score": 0.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 0.0,
+    "raw_score": 0.25,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 0.25,
+      "top_3_decisive_points": [
+        "Sai lệch thuật ngữ cốt lõi: Bản tin gốc khẳng định Jessica Lange đóng trong một 'movie' (phim điện ảnh) được viết bởi Eugene O'Neill, trong khi dữ liệu S1 chỉ xác nhận bà đóng kịch sân khấu (Long Day's Journey into Night) của tác giả này.",
+        "Thất bại trong việc chứng minh bằng chứng: Defender không thể chỉ ra bất kỳ bộ phim điện ảnh (feature film) nào có kịch bản được viết bởi Eugene O'Neill mà Jessica Lange tham gia, dẫn đến việc phải ngụy biện đánh đồng kịch sân khấu với phim điện ảnh.",
+        "Chiến thắng của Challenger về tính chính xác chuyên môn: Challenger đã vạch trần thành công sự khác biệt giữa 'playwright' (nhà soạn kịch) và 'screenwriter' (biên kịch phim), khẳng định bản tin gốc đã sai lệch về bản chất sự nghiệp của diễn viên và tác giả."
+      ],
+      "final_reasoning": "Bản tin gốc mắc lỗi sai lệch nghiêm trọng về mặt định nghĩa hình thức nghệ thuật. Dựa trên nguồn [S1], Jessica Lange thực sự đã đóng trong tác phẩm 'Long Day's Journey into Night' của Eugene O'Neill, nhưng đó là một vở kịch sân khấu (đạt giải Tony), không phải một 'movie' (phim điện ảnh). Trong ngành công nghiệp giải trí, việc phân biệt giữa 'play' (sân khấu) và 'movie' (phim) là bắt buộc. Defender đã cố gắng đánh tráo khái niệm bằng cách mở rộng định nghĩa 'movie' sang cả kịch sân khấu để bảo vệ bản tin, nhưng đây là hành vi ngụy biện. Challenger đã chứng minh thành công rằng không có bộ phim điện ảnh nào được viết bởi O'Neill mà Lange tham gia, khiến bản tin gốc trở thành thông tin sai lệch về bản chất (Misleading/Mostly False).",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Eugene O'Neill ---\nEugene Gladstone O'Neill Sr. (October 16, 1888 – November 27, 1953) was an American playwright. His poetically titled plays were among the first to introduce into the U.S. the drama techniques of realism, earlier associated with Chekhov, Ibsen, and Strindberg. The tragedy Long Day's Journey into Night is often included on lists of the finest American plays in the 20th century, alongside Tennessee Williams's A Streetcar Named Desire and Arthur Miller's Death of a Salesman. He was awarded the 1936 Nobel Prize in Literature. O'Neill is also the only playwright to win four Pulitzer Prizes for Drama.\nO'Neill's plays were among the first to include speeches in American English vernacular and involve characters on the fringes of society. They struggle to maintain their hopes and aspirations, ultimately sliding into disillusion and despair. Of his very few comedies, only one is well known (Ah, Wilderness!). Nearly all of his other plays involve some degree of tragedy and personal pessimism.\n\n--- Source: Jessica Lange ---\nJessica Phyllis Lange (; born April 20, 1949) is an American actress and photographer. With a career spanning over five decades, she is known for her roles on stage and screen. Her accolades include two Academy Awards, five Golden Globe Awards, three Primetime Emmy Awards, and a Tony Award, in addition to nominations for a BAFTA Award and a Laurence Olivier Award. Lange is one of few performers to achieve Triple Crown of Acting status.\nLange made her professional film debut in the remake King Kong (1976) which earned her the Golden Globe Award for New Star of the Year. Lange went on to receive two Academy Awards, her first for Best Supporting Actress as a soap opera star in the comedy Tootsie (1982) and her second for Best Actress playing a bipolar housewife in the drama Blue Sky (1994). Her other Oscar-nominated roles were for Frances (1982), Country (1984), Sweet Dreams (1985), and Music Box (1989). She also acted in films such as All That Jazz (1979), The Postman Always Rings Twice (1981), Crimes of the Heart (1986), Cape Fear (1991), Rob Roy (1995), Big Fish (2003), and Broken Flowers (2005).\nFor her roles on television she received her first Primetime Emmy Award for her portrayal of Big Edie in the HBO movie Grey Gardens (2009). Lange gained new recognition by starring in FX's horror anthology, American Horror Story (2011–2014, 2018), which earned her two additional Primetime Emmys for its first and third seasons. She was Emmy-nominated for her roles as Blanche DuBois in the CBS film A Streetcar Named Desire (1995), a wife in the HBO television movie Normal (2003), and Joan Crawford in FX the miniseries Feud: Bette and Joan (2017). Lange has also acted in the television films O Pioneers! (1992), and The Great Lillian Hall (2024) as well as the Netflix series The Politician (2019).\nOn stage, Lange made her Broadway debut as Blanche DuBois in the revival of the Tennessee Williams play A Streetcar Named Desire (1992). Lange won the Tony Award for Best Actress in a Play for her role as Mary Cavan Tyrone in the Broadway revival of the Eugene O'Neill play Long Day's Journey into Night (2016). Lange returned to Broadway playing the hardheaded matriarch in the Paula Vogel play Mother Play (2024).\nAs a photographer, Lange has five published books of photography. She has been a foster parent and holds a Goodwill Ambassador position for UNICEF, specializing in HIV/AIDS in the Democratic Republic of the Congo and Russia.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Bảo vệ tính xác thực của bản tin dựa trên mối quan hệ nghệ thuật trực tiếp giữa Jessica Lange và tác phẩm của Eugene O'Neill thông qua vai diễn đạt giải Tony của bà. Việc bà thủ vai chính trong một tác phẩm viết bởi O'Neill khẳng định hành động diễn xuất trong kịch bản của ông là một sự thật lịch sử đã được kiểm chứng.",
+      "challenger_argument": "Chiến lược của tôi là vạch trần sự sai lệch về mặt bản chất nghệ thuật của bản tin gốc. Bằng cách chỉ ra sự đánh tráo khái niệm giữa 'phim điện ảnh' (movie) và 'vở kịch sân khấu' (play), tôi khẳng định bản tin gốc là một sự xuyên tạc thô thiển đối với sự nghiệp của Jessica Lange và di sản của Eugene O'Neill.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[D1] Bản tin gốc hoàn toàn chính xác vì nữ diễn viên Jessica Lange đã có màn trình diễn xuất sắc trong vở kịch kinh điển 'Long Day's Journey into Night' của nhà soạn kịch Eugene O'Neill. Việc bà giành giải Tony danh giá cho vai diễn Mary Cavan Tyrone trong tác phẩm này là bằng chứng không thể chối cãi về sự kết nối nghệ thuật giữa Jessica Lange và các tác phẩm do Eugene O'Neill viết.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Lange won the Tony Award for Best Actress in a Play for her role as Mary Cavan Tyrone in the Broadway revival of the Eugene O'Neill play Long Day's Journey into Night (2016)."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[C1] Bản tin gốc hoàn toàn sai lệch và thiếu căn cứ về mặt thuật ngữ chuyên môn. Bản tin khẳng định Jessica Lange đóng trong một 'bộ phim' (movie) do Eugene O'Neill viết, nhưng thực tế, sự hợp tác giữa họ chỉ giới hạn trong lĩnh vực sân khấu kịch nghệ (theatrical stage). Việc đánh tráo khái niệm giữa 'phim điện ảnh' và 'vở kịch' là một hành vi cố tình bóp méo sự thật để gây hiểu lầm cho công chúng.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Lange won the Tony Award for Best Actress in a Play for her role as Mary Cavan Tyrone in the Broadway revival of the Eugene O'Neill play Long Day's Journey into Night (2016). Lange returned to Broadway playing the hardheaded matriarch in the Paula Vogel play Mother Play (2024)."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        },
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[C2] Bản tin gốc đưa ra nhận định mơ hồ nhằm tạo ra sự liên kết không tồn tại. Eugene O'Neill là một nhà soạn kịch (playwright) nổi tiếng với các vở kịch sân khấu, không phải là biên kịch phim điện ảnh (screenwriter). Không có bất kỳ bằng chứng nào trong dữ liệu cho thấy ông từng viết kịch bản cho một bộ phim điện ảnh mà Jessica Lange tham gia. Sự nhầm lẫn tai hại này cho thấy bản tin hoàn toàn thiếu sự kiểm chứng về tiểu sử nghề nghiệp của cả hai nhân vật.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Eugene Gladstone O'Neill Sr. (October 16, 1888 – November 27, 1953) was an American playwright. His poetically titled plays were among the first to introduce into the U.S. the drama techniques of realism, earlier associated with Chekhov, Ibsen, and Strindberg."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C2"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Tôi bảo vệ tính xác thực của bản tin bằng cách bác bỏ sự đánh tráo khái niệm của đối phương. Tôi nhấn mạnh rằng việc Jessica Lange tham gia các bộ phim truyền hình (được ghi nhận trong nguồn S1) cùng với việc bà hiện thực hóa các kịch bản của O'Neill trong các buổi diễn được ghi hình là bằng chứng xác thực cho hành động 'đóng trong một tác phẩm viết bởi O'Neill'. Việc cố gắng tách biệt rạch ròi giữa 'phim' và 'kịch' là thủ thuật ngụy biện nhằm phủ nhận mối quan hệ nghệ thuật thực tế đã được kiểm chứng.",
+      "challenger_argument": "Tôi bác bỏ hoàn toàn lập luận của đối phương bằng cách chỉ ra sự ngụy biện trong việc đánh tráo thuật ngữ 'sân khấu' thành 'phim điện ảnh'. Sự nghiệp của Jessica Lange và di sản của Eugene O'Neill hoàn toàn tách biệt trong lĩnh vực điện ảnh, và việc đối phương cố gắng dùng giải thưởng Tony (sân khấu) để minh chứng cho một 'bộ phim' là bằng chứng đanh thép cho thấy bản tin gốc là sai lệch về mặt bản chất.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D2] Lập luận của phía đối phương về việc phân biệt giữa 'phim' và 'kịch' là một sự cố chấp về ngữ nghĩa nhằm phủ nhận bản chất của nghệ thuật diễn xuất. Trong ngữ cảnh rộng của ngành giải trí, thuật ngữ 'movie' (bộ phim) thường được sử dụng để chỉ các tác phẩm ghi hình (filmed productions) của các vở kịch, một hình thức phổ biến để lưu trữ di sản sân khấu. Jessica Lange đã tham gia đóng vai chính trong các tác phẩm được ghi hình và phát sóng, chẳng hạn như 'A Streetcar Named Desire' (1995) - một bộ phim truyền hình (CBS film). Do đó, sự liên kết giữa diễn xuất của bà và các kịch bản kinh điển là một thực tế hiển nhiên, việc bác bỏ dựa trên ranh giới hẹp của định dạng là thiếu căn cứ.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "She was Emmy-nominated for her roles as Blanche DuBois in the CBS film A Streetcar Named Desire (1995), a wife in the HBO television movie Normal (2003), and Joan Crawford in FX the miniseries Feud: Bette and Joan (2017). Lange has also acted in the television films O Pioneers! (1992), and The Great Lillian Hall (2024) as well as the Netflix series The Politician (2019)."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        },
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D3] Phía đối phương sai lầm khi cho rằng không có sự liên kết giữa O'Neill và các tác phẩm điện ảnh. Mặc dù Eugene O'Neill là nhà soạn kịch, nhưng các tác phẩm của ông là nền tảng cho vô số kịch bản phim chuyển thể. Việc Jessica Lange thủ vai chính trong vở kịch 'Long Day's Journey into Night' của ông - một tác phẩm đã được vinh danh bằng giải Tony - chính là hành động 'diễn xuất' dựa trên văn bản do ông viết. Trong công nghiệp điện ảnh và kịch nghệ, diễn viên 'đóng' (act) trong một kịch bản (written by) là sự mô tả chính xác về quá trình hiện thực hóa ngôn từ của tác giả lên màn ảnh hoặc sân khấu.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Lange won the Tony Award for Best Actress in a Play for her role as Mary Cavan Tyrone in the Broadway revival of the Eugene O'Neill play Long Day's Journey into Night (2016)."
+            }
+          ],
+          "target_claim_ids": [
+            "C2"
+          ],
+          "claim_id": "C2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C3] Lập luận của đối phương hoàn toàn ngụy biện khi cố tình đánh đồng 'diễn xuất trong vở kịch' với 'diễn xuất trong phim điện ảnh' (movie). Bản tin gốc khẳng định Jessica Lange đóng trong một 'movie' do Eugene O'Neill viết, trong khi dữ liệu [S1] xác nhận bà chỉ tham gia vở kịch 'Long Day's Journey into Night' trên sân khấu Broadway. Việc đối phương cố gắng hợp thức hóa thuật ngữ 'movie' bằng một giải thưởng sân khấu (Tony Award) là hành vi xuyên tạc trắng trợn sự thật, nhằm che đậy sự thiếu hụt bằng chứng về bất kỳ bộ phim điện ảnh nào có kịch bản của Eugene O'Neill mà bà Lange từng tham gia.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Lange won the Tony Award for Best Actress in a Play for her role as Mary Cavan Tyrone in the Broadway revival of the Eugene O'Neill play Long Day's Journey into Night (2016). Lange returned to Broadway playing the hardheaded matriarch in the Paula Vogel play Mother Play (2024)."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C4] Bản tin gốc thiếu căn cứ chuyên môn nghiêm trọng khi nhầm lẫn vai trò của Eugene O'Neill. Dữ liệu [S1] khẳng định rõ ràng Eugene O'Neill là một 'playwright' (nhà soạn kịch) nổi tiếng với các vở kịch sân khấu, không phải là một biên kịch phim (screenwriter). Việc gán ghép sự nghiệp của ông vào lĩnh vực phim điện ảnh là sự bóp méo di sản nghệ thuật của ông. Không có bất kỳ bộ phim điện ảnh nào trong danh mục công việc của Jessica Lange (như King Kong, Tootsie, Blue Sky...) được viết kịch bản bởi Eugene O'Neill, do đó khẳng định của bản tin gốc là hoàn toàn sai lệch.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Eugene Gladstone O'Neill Sr. (October 16, 1888 – November 27, 1953) was an American playwright. His poetically titled plays were among the first to introduce into the U.S. the drama techniques of realism, earlier associated with Chekhov, Ibsen, and Strindberg."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Tôi bác bỏ hoàn toàn sự cố chấp về mặt thuật ngữ của đối phương. Bằng cách định nghĩa lại bản chất của việc 'diễn xuất trong một kịch bản', tôi khẳng định rằng mối quan hệ nghệ thuật giữa Jessica Lange và Eugene O'Neill là một thực tế vững chắc, bất kể định dạng là sân khấu hay điện ảnh, vì các tác phẩm của O'Neill là nguồn gốc kịch bản cho các sản phẩm ghi hình mà Lange tham gia.",
+      "challenger_argument": "Tôi tiếp tục bác bỏ sự ngụy biện của đối phương bằng cách nhấn mạnh sự khác biệt giữa 'nhà soạn kịch' (playwright) và 'biên kịch phim' (screenwriter). Việc đối phương cố gắng đánh đồng diễn xuất sân khấu với kịch bản điện ảnh là hành vi xuyên tạc thuật ngữ chuyên môn. Tôi khẳng định bản tin gốc là sai lệch hoàn toàn vì không tồn tại bất kỳ bộ phim điện ảnh nào được viết bởi Eugene O'Neill mà Jessica Lange tham gia.",
+      "defender_claims": [],
+      "challenger_claims": []
+    }
+  ],
+  "duration": 43.29876160621643
+}

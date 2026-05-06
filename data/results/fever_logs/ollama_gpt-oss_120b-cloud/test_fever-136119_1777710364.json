@@ -1,0 +1,205 @@
+{
+  "id": "fever-136119",
+  "claim": "Seattle has been a technology center since the latter half of the 20th century.",
+  "ground_truth": 1.0,
+  "base_llm": {
+    "score": 1.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 1.0,
+    "raw_score": 1.0,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 1.0,
+      "top_3_decisive_points": [
+        "Defender used the high‑trust source S1 which explicitly states that “Beginning in the 1980s, the Seattle area developed into a technology center; Microsoft established its headquarters in the region,” placing the emergence of a modern tech hub squarely within the latter half of the 20th century.",
+        "Defender also highlighted Boeing’s post‑World‑II aerospace manufacturing as an earlier form of high‑technology industry, citing S1’s line that “the city grew after World War II, partly due to the local company Boeing, which established Seattle as a center for its manufacturing of aircraft,” further supporting the claim that Seattle was a technology center during the latter half of the century.",
+        "Challenger offered no additional sources and merely repeated that the statement was “misleading,” which constitutes a parroting penalty and fails to counter the concrete evidence provided by the defender."
+      ],
+      "final_reasoning": "The original claim does not assert that Seattle was a technology center from the very start of the latter half (i.e., 1950); it merely states that it has been a technology center since that period. The knowledge base provides clear, high‑trust evidence that Seattle hosted significant technology industries both in the post‑WWII aerospace sector and, more prominently, from the 1980s onward with the software boom. Defender’s arguments are well‑supported by source S1, while Challenger offers no substantive evidence and repeats the same criticism, resulting in a decisive advantage for the defender. Consequently, the statement is fully accurate, warranting a truth_score of 1.0.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Seattle ---\nSeattle (  see-AT-əl) is the most populous city in the U.S. state of Washington and the Pacific Northwest region of North America. It is the 18th-most populous city in the United States with a population of 780,995 in 2024, while the Seattle metropolitan area at over 4.15 million residents is the 15th-most populous metropolitan area in the nation. The city is the county seat of King County, the most populous county in Washington. Seattle's growth rate of 21.1% between 2010 and 2020 made it one of the country's fastest-growing large cities.\nSeattle is situated on an isthmus between Puget Sound, an inlet of the Pacific Ocean, and Lake Washington. It is the northernmost major city in the United States, located about 100 miles (160 km) south of the Canadian border. A gateway for trade with the Asia-Pacific region, the Port of Seattle is the fourth-largest port in North America in terms of container handling as of 2021.\nThe Seattle area has been inhabited by Native Americans (such as the Duwamish, who had at least 17 villages around Elliott Bay) for at least 4,000 years before the arrival of the first permanent European settlers. Arthur A. Denny and his group of travelers, subsequently known as the Denny Party, arrived from Illinois via Portland, Oregon, on the schooner Exact at Alki Point on November 13, 1851. The settlement was moved to the eastern shore of Elliott Bay in 1852 and named \"Seattle\" in honor of Chief Seattle, a prominent 19th-century leader of the local Duwamish and Suquamish tribes. Seattle has relatively high populations of Native Americans as well as Americans with strong Asian, African, and European ancestry, and, as of 2015, has the fifth-highest percentage of residents who identify as LGBT among major metropolitan areas in the U.S. (4.8 percent).\nLogging was Seattle's first major industry, but by the late 19th century the city had become a commercial and shipbuilding center as a gateway to Alaska during the Klondike Gold Rush. The city grew after World War II, partly due to the local company Boeing, which established Seattle as a center for its manufacturing of aircraft. Beginning in the 1980s, the Seattle area developed into a technology center; Microsoft established its headquarters in the region. Alaska Airlines is based at Seattle–Tacoma International Airport in nearby SeaTac. The rise of new software, biotechnology, and Internet companies led to an economic revival, which increased the city's population by almost 50,000 between 1990 and 2000.\nThe culture of Seattle is heavily defined by its significant musical history. Between 1918 and 1951, nearly 24 jazz nightclubs existed along Jackson Street, from the current Chinatown/International District to the Central District. The jazz scene nurtured the early careers of Ernestine Anderson, Ray Charles, Quincy Jones, and others. In the late 20th and early 21st centuries, the city was the origin of several rock artists and bands, including the Foo Fighters, Heart, and Jimi Hendrix, and the subgenre of grunge and its pioneering bands, including Alice in Chains, Nirvana, Pearl Jam, and Soundgarden.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "The assertion is backed by explicit historical statements from the knowledge base: Seattle’s transformation into a technology center began in the 1980s, squarely within the latter half of the 20th century, highlighted by Microsoft’s headquarters and the earlier aerospace foundation that set the stage for later tech growth.",
+      "challenger_argument": "Bằng chứng lịch sử cho thấy Seattle chỉ trở thành trung tâm công nghệ từ những năm 1980, trong khi khẳng định \"từ nửa sau của thế kỷ 20\" gợi ý một thời gian bắt đầu sớm hơn (khoảng 1950). Do đó, tuyên bố gốc phóng đại và không chính xác.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "Seattle has been a technology center since the latter half of the 20th century.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "The city grew after World War II, partly due to the local company Boeing, which established Seattle as a center for its manufacturing of aircraft. Beginning in the 1980s, the Seattle area developed into a technology center; Microsoft established its headquarters in the region."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "The 1980s mark the start of the modern technology boom in Seattle, with companies like Microsoft, Amazon, and later numerous biotech and internet firms anchoring the region as a major tech hub."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[A1] Bản tin khẳng định Seattle đã là trung tâm công nghệ từ nửa sau của thế kỷ 20 là sai lệch, vì các bằng chứng lịch sử cho thấy khu vực này chỉ bắt đầu phát triển thành trung tâm công nghệ vào những năm 1980, chứ không phải từ đầu nửa sau (khoảng năm 1950‑1979).",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "The city grew after World War II, partly due to the local company Boeing, which established Seattle as a center for its manufacturing of aircraft. Beginning in the 1980s, the Seattle area developed into a technology center; Microsoft established its headquarters in the region."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "The term \"latter half of the 20th century\" generally refers to the period from 1950 onward."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Bằng chứng lịch sử cho thấy Seattle đã có nền công nghệ (Boeing) ngay sau Thế chiến II và bước vào giai đoạn công nghệ hiện đại vào những năm 1980—cả hai đều nằm trong nửa sau của thế kỷ 20. Vì vậy, tuyên bố gốc hoàn toàn chính xác và thách thức của đối phương không có cơ sở.",
+      "challenger_argument": "Bằng chứng lịch sử từ S1 cho thấy Seattle chỉ bước vào thời kỳ công nghệ thực sự vào đầu những năm 1980, trong khi khái niệm \"nửa sau của thế kỷ 20\" bao trùm cả giai đoạn 1950‑1979 khi thành phố vẫn chủ yếu là trung tâm hàng không và công nghiệp gỗ. Do đó, tuyên bố gốc không chỉ không chính xác mà còn gây hiểu lầm nghiêm trọng, nên bị bác bỏ hoàn toàn.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[R1] Bản tin gốc là đúng vì thời kỳ \"nửa sau của thế kỷ 20\" bắt đầu từ năm 1950 và kéo dài đến năm 1999; Seattle đã bắt đầu chuyển mình thành trung tâm công nghệ trong thập niên 1980, một phần của khoảng thời gian này, và thậm chí đã có nền tảng công nghệ từ sau Thế chiến II nhờ Boeing. Do đó, khẳng định Seattle là trung tâm công nghệ từ nửa sau của thế kỷ 20 là chính xác và không phải là một sự phóng đại.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "The city grew after World War II, partly due to the local company Boeing, which established Seattle as a center for its manufacturing of aircraft. Beginning in the 1980s, the Seattle area developed into a technology center; Microsoft established its headquarters in the region."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "The term \"latter half of the 20th century\" generally refers to the period from 1950 onward."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[R1] Bản tin gốc khẳng định Seattle đã là trung tâm công nghệ \"từ nửa sau của thế kỷ 20\" là sai lầm nghiêm trọng vì nguồn tin S1 cho thấy Seattle chỉ bắt đầu chuyển mình thành trung tâm công nghệ vào đầu những năm 1980, chứ không có bất kỳ dấu hiệu nào của một khu công nghệ phát triển trong khoảng thời gian 1950‑1979. Do đó, việc dùng cụm \"từ nửa sau của thế kỷ 20\" (một khái niệm bao phủ từ 1950) là phóng đại và làm sai lệch thực tế lịch sử.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "The city grew after World War II, partly due to the local company Boeing, which established Seattle as a center for its manufacturing of aircraft. Beginning in the 1980s, the Seattle area developed into a technology center; Microsoft established its headquarters in the region."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "The phrase \"latter half of the 20th century\" generally refers to the period from 1950 through 1999."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Both rebuttal and defense demonstrate that Seattle’s technological prominence began well within the latter half of the 20th century—first through Boeing’s post‑WWII aerospace innovations and later through the 1980s software boom led by Microsoft—thereby confirming the original claim as factual and refuting the challenger’s allegation of exaggeration.",
+      "challenger_argument": "Bằng chứng từ S1 cho thấy Seattle chỉ trở thành trung tâm công nghệ thực thụ vào đầu những năm 1980, trong khi khái niệm “nửa sau của thế kỷ 20” bao phủ cả giai đoạn 1950‑1979 khi thành phố vẫn chủ yếu là trung tâm công nghiệp hàng không và gỗ. Do vậy, tuyên bố gốc “Seattle has been a technology center since the latter half of the 20th century” là sai lệch và không phản ánh thực tế lịch sử.",
+      "defender_claims": [
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[R1] Challenger’s assertion that Seattle only became a technology hub in the early 1980s and therefore the statement “since the latter half of the 20th century” is misleading is incorrect. The phrase “latter half of the 20th century” covers the period from 1950 through 1999, and Seattle’s transition into a technology center began well within that interval. Moreover, Seattle already exhibited a technological industrial base after World War II through Boeing’s aircraft manufacturing, which qualifies as a technology‑focused industry. Consequently, the original claim that Seattle has been a technology center since the latter half of the 20th century is fully supported.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "The city grew after World War II, partly due to the local company Boeing, which established Seattle as a center for its manufacturing of aircraft. Beginning in the 1980s, the Seattle area developed into a technology center; Microsoft established its headquarters in the region."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "The term \"latter half of the 20th century\" generally refers to the period from 1950 through 1999."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        },
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "DEFEND",
+          "text": "[D2] The original statement “Seattle has been a technology center since the latter half of the 20th century” is accurate. Seattle’s post‑World‑War II aerospace industry (Boeing) provided an early high‑technology foundation, and the emergence of major software firms such as Microsoft in the 1980s further cemented its status as a technology hub—all occurring within the 1950‑1999 window that defines the latter half of the century.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "The city grew after World War II, partly due to the local company Boeing, which established Seattle as a center for its manufacturing of aircraft. Beginning in the 1980s, the Seattle area developed into a technology center; Microsoft established its headquarters in the region."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "The phrase \"latter half of the 20th century\" encompasses the years 1950‑1999."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[R2] Bản tin gốc sai hoàn toàn vì cụm từ “từ nửa sau của thế kỷ 20” (1950‑1999) ngụ ý Seattle đã là trung tâm công nghệ ngay từ thập niên 1950. Tuy nhiên, bằng chứng lịch sử cho thấy Seattle chỉ bắt đầu chuyển mình thành trung tâm công nghệ hiện đại vào đầu những năm 1980, chứ không có bất kỳ dấu hiệu nào của một khu công nghệ phát triển trong giai đoạn 1950‑1979. Do đó, việc khẳng định Seattle “đã là trung tâm công nghệ từ nửa sau của thế kỷ 20” là phóng đại và sai lầm nghiêm trọng.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "The city grew after World War II, partly due to the local company Boeing, which established Seattle as a center for its manufacturing of aircraft. Beginning in the 1980s, the Seattle area developed into a technology center; Microsoft established its headquarters in the region."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "The phrase “latter half of the 20th century” generally refers to the period from 1950 through 1999."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ]
+    }
+  ],
+  "duration": 62.79145121574402
+}

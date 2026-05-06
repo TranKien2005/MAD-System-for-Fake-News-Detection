@@ -1,0 +1,181 @@
+{
+  "id": "fever-132142",
+  "claim": "Eva Longoria has starred in movies.",
+  "ground_truth": 1.0,
+  "base_llm": {
+    "score": 1.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 1.0,
+    "raw_score": 1.0,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 1.0,
+      "top_3_decisive_points": [
+        "Dữ liệu [S1] (Trust: 1.0) xác nhận Eva Longoria tham gia nhiều phim điện ảnh (The Sentinel, Overboard, v.v.), trực tiếp chứng minh nội dung bản tin gốc là đúng sự thật.",
+        "Challenger thất bại trong việc bác bỏ sự thật khách quan bằng cách cố gắng áp đặt định nghĩa chủ quan ('movie star' - ngôi sao điện ảnh) lên bản tin gốc (chỉ khẳng định 'starred in movies' - đóng phim điện ảnh).",
+        "Defender đã làm rõ sự phân biệt giữa hành động 'đóng phim điện ảnh' và các vai trò khác (sản xuất, đạo diễn), khẳng định rằng việc có tham gia đóng phim điện ảnh là đủ để xác nhận nội dung bản tin là chính xác."
+      ],
+      "final_reasoning": "Bản tin gốc 'Eva Longoria has starred in movies' là một khẳng định mang tính sự kiện (factual claim). Dựa trên kho dữ liệu [S1], Eva Longoria thực tế đã xuất hiện trong nhiều bộ phim điện ảnh như 'The Sentinel', 'Overboard', 'Frontera'... Defender đã cung cấp bằng chứng xác thực từ nguồn có độ tin cậy cao nhất (1.0). Ngược lại, Challenger đã phạm lỗi ngụy biện 'đánh tráo khái niệm' (straw man fallacy) khi cố tình diễn giải cụm từ 'starred in movies' thành 'movie star' (ngôi sao điện ảnh) để bác bỏ. Vì bản tin gốc chỉ khẳng định cô ấy đã đóng phim (một sự thật không thể chối cãi) chứ không khẳng định cô ấy là 'ngôi sao điện ảnh hạng A', lập luận của Challenger hoàn toàn vô giá trị. Phán quyết cuối cùng là bản tin hoàn toàn chính xác.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Eva Longoria ---\nEva Jacqueline Longoria Bastón (née Longoria; born March 15, 1975) is an American actress, producer, director, and businesswoman. After several guest roles on television, she gained popularity for her portrayal of Isabella Braña on the CBS daytime soap opera The Young and the Restless (2001–2003). Her breakthrough role as Gabrielle Solis on the ABC television series Desperate Housewives (2004–2012) earned her two Screen Actors Guild Awards and a Golden Globe nomination. She has appeared in the films The Sentinel (2006), Over Her Dead Body (2008), For Greater Glory (2012), Frontera (2014), Lowriders (2016), and Overboard (2018), winning an Imagen Award for the latter. She guest-starred on the Hulu mystery comedy-drama series Only Murders in the Building (2024), earning her a third Screen Actors Guild Award for Outstanding Performance by an Ensemble in a Comedy Series.\nIn 2005, Longoria founded UnbeliEVAble Entertainment, a film and television production company. In 2023, the company was acquired by Hyphenate Media Group, a production company co-founded by Longoria and Cris Abrego. She also executive produced the Lifetime television series Devious Maids (2013–2016), the short-lived NBC sitcom Telenovela (2015–2016) in which she starred, and the films The Harvest (2010) and Food Chains (2014). Her directorial ventures include the television series Ashley Garcia: Genius in Love (2020), for which she was nominated at the Daytime Creative Arts Emmys, and the Oscar-nominated film Flamin' Hot (2023).\nLongoria received a star on the Hollywood Walk of Fame in 2018. She has appeared in several advertising campaigns, including with L'Oréal, New York & Co, Pepsi, and launched her own fashion and perfumes brand in 2017. Her other business ventures include opening the restaurant Beso in 2008, investing in businesses and films such as John Wick (2014), and publishing a cookbook.\n\n--- Source: The Sentinel (2006 film) ---\nThe Sentinel is a 2006 American political action thriller film directed by Clark Johnson about a veteran United States Secret Service special agent who is suspected of treason after an attempted assassination of the president reveals that someone within the Service is supplying information to the assassins.\nThe film stars Michael Douglas as the veteran agent, Kiefer Sutherland as his protégé, Eva Longoria as a rookie Secret Service agent, and Kim Basinger in the role of the First Lady. It is based on the 2003 novel of the same name by former Secret Service Agent Gerald Petievich. It was filmed in Washington, D.C., and in the Canadian cities of Toronto and Kleinburg, Ontario.\nThe Sentinel was released by 20th Century Fox on April 21, 2006. The film received mixed reviews from critics and grossed $78.8 million against a $60 million budget.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Sử dụng dữ liệu từ [S1] để khẳng định Eva Longoria đã tham gia đóng nhiều phim điện ảnh (The Sentinel, Overboard, v.v.), từ đó bảo vệ tính xác thực của bản tin gốc rằng cô ấy là một diễn viên điện ảnh.",
+      "challenger_argument": "Tôi bác bỏ hoàn toàn bản tin gốc vì nó đánh tráo khái niệm giữa một người nổi tiếng tham gia đóng phim (phần lớn là truyền hình hoặc vai phụ) với danh xưng 'diễn viên điện ảnh'. Bản tin gốc thiếu sự phân biệt rõ ràng giữa các vai diễn truyền hình, vai khách mời và các dự án điện ảnh thực thụ, từ đó đưa ra kết luận thiếu tính học thuật và sai lệch về bản chất sự nghiệp của đối tượng.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[D1] Bản tin gốc hoàn toàn chính xác vì Eva Longoria đã khẳng định vị thế của mình trong ngành công nghiệp điện ảnh thông qua việc tham gia vào hàng loạt bộ phim điện ảnh tiêu biểu từ năm 2006 đến nay. Sự nghiệp của cô không chỉ dừng lại ở truyền hình mà còn trải dài qua nhiều tác phẩm điện ảnh đa dạng thể loại.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "She has appeared in the films The Sentinel (2006), Over Her Dead Body (2008), For Greater Glory (2012), Frontera (2014), Lowriders (2016), and Overboard (2018), winning an Imagen Award for the latter. She guest-starred on the Hulu mystery comedy-drama series Only Murders in the Building (2024), earning her a third Screen Actors Guild Award for Outstanding Performance by an Ensemble in a Comedy Series."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        },
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[D2] Bản tin gốc là sự thật hiển nhiên vì Eva Longoria trực tiếp đóng vai một đặc vụ trong bộ phim điện ảnh 'The Sentinel' (2006), một minh chứng không thể chối cãi cho việc cô là một diễn viên điện ảnh (movie star).",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "The film stars Michael Douglas as the veteran agent, Kiefer Sutherland as his protégé, Eva Longoria as a rookie Secret Service agent, and Kim Basinger in the role of the First Lady. It is based on the 2003 novel of the same name by former Secret Service Agent Gerald Petievich."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[D1] Bản tin gốc hoàn toàn sai lệch và thiếu căn cứ khi đánh đồng các vai diễn khách mời (guest roles) hoặc các vai diễn truyền hình dài tập với tư cách là một 'ngôi sao điện ảnh' (movie star). Việc liệt kê danh sách phim không chứng minh được cô ấy là một diễn viên điện ảnh chuyên nghiệp, mà chỉ cho thấy sự tham gia mang tính chất phụ trợ hoặc thương mại, thiếu đi yếu tố cốt lõi của một sự nghiệp điện ảnh độc lập.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "After several guest roles on television, she gained popularity for her portrayal of Isabella Braña on the CBS daytime soap opera The Young and the Restless (2001–2003). Her breakthrough role as Gabrielle Solis on the ABC television series Desperate Housewives (2004–2012) earned her two Screen Actors Guild Awards and a Golden Globe nomination."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        },
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[D2] Việc khẳng định Eva Longoria là diễn viên điện ảnh dựa trên bộ phim 'The Sentinel' (2006) là một sự suy diễn vô căn cứ. Trong bối cảnh điện ảnh, việc một cá nhân xuất hiện trong một tác phẩm không mặc nhiên biến họ thành 'diễn viên điện ảnh' nếu vai trò đó chỉ là một phần trong chuỗi các hoạt động thương mại và quảng cáo, vốn không phải là trọng tâm nghệ thuật điện ảnh đích thực.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "She has appeared in the films The Sentinel (2006), Over Her Dead Body (2008), For Greater Glory (2012), Frontera (2014), Lowriders (2016), and Overboard (2018), winning an Imagen Award for the latter. She guest-starred on the Hulu mystery comedy-drama series Only Murders in the Building (2024), earning her a third Screen Actors Guild Award for Outstanding Performance by an Ensemble in a Comedy Series."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C2"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Tôi bảo vệ bản tin gốc bằng cách khẳng định rằng việc tham gia đóng phim điện ảnh là tiêu chí đủ để định danh một diễn viên điện ảnh. Tôi bác bỏ lập luận của đối phương bằng cách chỉ ra sự nhầm lẫn giữa 'sự nghiệp đa dạng' và 'thiếu tư cách diễn viên', đồng thời bổ sung bằng chứng về vai trò sản xuất và đạo diễn điện ảnh của Eva Longoria để làm rõ tầm ảnh hưởng của cô trong ngành này.",
+      "challenger_argument": "Tôi bác bỏ hoàn toàn lập luận của đối phương vì họ đã cố tình đánh tráo khái niệm giữa 'diễn viên có tham gia phim điện ảnh' và 'ngôi sao điện ảnh' (movie star). Các bằng chứng từ [S1] chỉ ra cô ấy là một diễn viên truyền hình thành công và nhà sản xuất, việc xuất hiện trong một số ít phim điện ảnh với vai phụ không đủ cơ sở để khẳng định danh xưng 'movie star' như bản tin gốc và đối phương đang cố gắng quảng bá.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D3] Lập luận của đối phương về việc 'đánh tráo khái niệm' là một sự phủ nhận phi lý đối với định nghĩa diễn viên điện ảnh. Trong ngành giải trí, một 'diễn viên điện ảnh' được định nghĩa bởi việc tham gia và đóng vai trong các tác phẩm điện ảnh (theatrical films). Eva Longoria không chỉ tham gia mà còn đóng vai chính và phụ trong các phim điện ảnh như 'The Sentinel' hay 'Overboard', những tác phẩm được phát hành rộng rãi tại rạp. Việc cô có sự nghiệp truyền hình thành công không làm mất đi tư cách diễn viên điện ảnh của cô, mà ngược lại, đó là minh chứng cho sự đa năng của một nghệ sĩ chuyên nghiệp.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "She has appeared in the films The Sentinel (2006), Over Her Dead Body (2008), For Greater Glory (2012), Frontera (2014), Lowriders (2016), and Overboard (2018), winning an Imagen Award for the latter."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        },
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D4] Việc gạt bỏ vai diễn trong 'The Sentinel' là 'suy diễn vô căn cứ' là hành động phớt lờ thực tế sản xuất điện ảnh. Trong bộ phim này, Eva Longoria thủ vai một đặc vụ Secret Service, một vai diễn có lời thoại và tầm ảnh hưởng nhất định đến cốt truyện bên cạnh các ngôi sao lớn như Michael Douglas và Kiefer Sutherland. Trong lịch sử điện ảnh, mọi diễn viên góp mặt trong một bộ phim điện ảnh chính thống đều được công nhận là diễn viên điện ảnh. Hơn nữa, cô còn là nhà sản xuất của các bộ phim điện ảnh như 'The Harvest' (2010), 'Food Chains' (2014) và phim đoạt giải Oscar 'Flamin' Hot' (2023), củng cố vững chắc vị thế của cô trong ngành điện ảnh.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "She also executive produced the Lifetime television series Devious Maids (2013–2016), the short-lived NBC sitcom Telenovela (2015–2016) in which she starred, and the films The Harvest (2010) and Food Chains (2014). Her directorial ventures include the television series Ashley Garcia: Genius in Love (2020), for which she was nominated at the Daytime Creative Arts Emmys, and the Oscar-nominated film Flamin' Hot (2023)."
+            }
+          ],
+          "target_claim_ids": [
+            "C2"
+          ],
+          "claim_id": "C2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C3] Lập luận của đối phương về việc Eva Longoria là 'ngôi sao điện ảnh' dựa trên danh sách các phim đã tham gia là sự ngụy biện về tần suất và quy mô. Việc một diễn viên tham gia một vài dự án điện ảnh với vai phụ hoặc vai khách mời không định nghĩa họ là một 'movie star' (ngôi sao điện ảnh). Sự nghiệp của cô ấy tập trung chủ yếu vào truyền hình (Desperate Housewives) và sản xuất nội dung, không phải là sự nghiệp của một diễn viên điện ảnh chuyên nghiệp với các vai chính (leading roles) mang tính biểu tượng trong lịch sử điện ảnh.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "After several guest roles on television, she gained popularity for her portrayal of Isabella Braña on the CBS daytime soap opera The Young and the Restless (2001–2003). Her breakthrough role as Gabrielle Solis on the ABC television series Desperate Housewives (2004–2012) earned her two Screen Actors Guild Awards and a Golden Globe nomination."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C4] Việc đối phương lấy bộ phim 'The Sentinel' (2006) làm bằng chứng cho danh xưng 'movie star' là một sự phóng đại phi lý. Trong phim này, Eva Longoria chỉ đóng vai một đặc vụ tập sự (rookie agent), một vai diễn phụ trong dàn diễn viên có Michael Douglas và Kiefer Sutherland là những ngôi sao thực thụ. Việc gán ghép danh xưng 'ngôi sao điện ảnh' cho một diễn viên chỉ vì họ xuất hiện trong một tác phẩm điện ảnh là hành vi đánh tráo khái niệm, hạ thấp tiêu chuẩn khắt khe của danh xưng này.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "The film stars Michael Douglas as the veteran agent, Kiefer Sutherland as his protégé, Eva Longoria as a rookie Secret Service agent, and Kim Basinger in the role of the First Lady. It is based on the 2003 novel of the same name by former Secret Service Agent Gerald Petievich."
+            }
+          ],
+          "target_claim_ids": [
+            "D2"
+          ],
+          "claim_id": "D2"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Tôi tiếp tục bảo vệ tính xác thực của bản tin gốc bằng cách khẳng định rằng danh xưng 'diễn viên điện ảnh' được định nghĩa bởi sự tham gia thực tế vào các tác phẩm điện ảnh chính thống. Tôi bác bỏ nỗ lực đánh tráo khái niệm của đối phương bằng cách nhấn mạnh vào bằng chứng kép: cô ấy không chỉ đóng phim điện ảnh (The Sentinel, Overboard) mà còn sở hữu sự nghiệp sản xuất và đạo diễn phim điện ảnh được giới chuyên môn công nhận (Flamin' Hot, đề cử Oscar). Sự đa năng không làm mất đi tư cách diễn viên điện ảnh, mà củng cố vị thế chuyên nghiệp của cô trong ngành.",
+      "challenger_argument": "Tôi bác bỏ hoàn toàn lập luận của đối phương bằng cách chỉ ra sự nhầm lẫn có chủ đích giữa các khái niệm 'diễn viên điện ảnh' (movie star) với 'người tham gia phim', đồng thời vạch trần việc đối phương cố tình gộp chung vai trò sản xuất/đạo diễn để thổi phồng sự nghiệp diễn xuất điện ảnh vốn chỉ ở mức vai phụ của Eva Longoria.",
+      "defender_claims": [],
+      "challenger_claims": []
+    }
+  ],
+  "duration": 40.69606304168701
+}

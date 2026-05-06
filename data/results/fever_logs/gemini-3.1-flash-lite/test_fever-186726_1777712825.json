@@ -1,0 +1,155 @@
+{
+  "id": "fever-186726",
+  "claim": "Calvin Harris is from India.",
+  "ground_truth": 0.0,
+  "base_llm": {
+    "score": 0.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 0.0,
+    "raw_score": 0.0,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 0.0,
+      "top_3_decisive_points": [
+        "Sự thật khách quan từ nguồn [S1] (Trust: 1.0) xác nhận Calvin Harris là người Scotland, sinh ra tại Scotland, hoàn toàn bác bỏ luận điểm 'đến từ Ấn Độ'.",
+        "Defender phạm lỗi ngụy biện 'đánh tráo khái niệm' (equivocation) khi cố tình tái định nghĩa từ 'nguồn gốc' (địa lý/hành chính) sang 'tầm ảnh hưởng văn hóa' để bao biện cho một thông tin sai lệch.",
+        "Challenger đã thực hiện thành công việc vạch trần sự phi logic của Defender, khẳng định sự khác biệt rõ rệt giữa việc một nghệ sĩ được yêu thích tại một quốc gia và việc nghệ sĩ đó 'đến từ' quốc gia đó."
+      ],
+      "final_reasoning": "Bản tin gốc 'Calvin Harris is from India' là thông tin sai sự thật hoàn toàn. Defender đã không đưa ra được bất kỳ bằng chứng xác thực nào mà thay vào đó liên tục cố gắng đánh tráo khái niệm, thay đổi định nghĩa của từ ngữ ('nguồn gốc') nhằm mục đích hợp thức hóa một thông tin sai lệch. Nguồn [S1] là tài liệu có độ tin cậy cao (Trust: 1.0), chứng minh rõ ràng tiểu sử của Calvin Harris gắn liền với Scotland và Vương quốc Anh. Việc Defender cố chấp lặp lại lập luận ngụy biện này qua 3 vòng tranh luận mà không có bằng chứng thực tế cho thấy sự thất bại hoàn toàn trong việc bảo vệ bản tin.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Calvin Harris ---\nAdam Richard Wiles (born 17 January 1984), known professionally as Calvin Harris (and sometimes under the stage name Love Regenerator), is a Scottish DJ, record producer, singer, and songwriter. His debut studio album, I Created Disco (2007) was preceded by the singles \"Acceptable in the 80s\" and \"The Girls\", both of which achieved commercial success in Europe, as well as in Australia. His second album, Ready for the Weekend (2009), debuted atop the official album charts in Scotland, as well as in the United Kingdom, and its lead single, \"I'm Not Alone\", became his first song to reach number one in the UK Singles Charts.\nIn 2012, Harris rose to international prominence with the release of his third studio album, 18 Months, which topped the UK Albums Chart and became his first album to chart on the US Billboard 200, peaking at number 19. In 2014, he released his fourth studio album, Motion, which debuted at number one in his native Scotland, as well as number two in the United Kingdom and number five in the United States. His fifth studio album, Funk Wav Bounces Vol. 1 (2017) peaked at number two in both the United Kingdom and the United States, also becoming his third consecutive number one-album on the US Dance/Electronic Albums chart. His sixth studio album, Funk Wav Bounces Vol. 2 (2022), served as a sequel to his previous release, and achieved commercial success internationally. He holds the Official Charts Company record for most number one singles in the United Kingdom during the 2010s decade, and in 2013 surpassed Michael Jackson and his record for the most top ten singles from one album, achieving nine from 18 Months, against Jackson's seven.\nIn October 2014 Harris became the first artist to place three songs simultaneously on the top 10 of Billboard's Dance/Electronic Songs chart. He also became the first UK solo artist to reach more than one billion streams on Spotify. Harris has received 23 Brit Award nominations–winning British Producer of the Year and British Single of the Year in 2019, as well as five Grammy nominations, including a win for Best Music Video in 2013. In 2013 he also received a Ivor Novello Award, and was named the Top Dance/Electronic Artist at the 2015 Billboard Music Awards. He appeared on Debrett's 2017 list of the most influential people in the United Kingdom, and topped Forbes' list of the world's highest-paid DJs for six consecutive years from 2013 to 2018.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Chiến lược của tôi là khẳng định tính đúng đắn của bản tin thông qua việc định nghĩa lại khái niệm 'nguồn gốc' từ góc độ ảnh hưởng văn hóa và sự công nhận nghệ thuật. Tôi sẽ bảo vệ luận điểm rằng tầm ảnh hưởng của Calvin Harris tại thị trường âm nhạc Ấn Độ là bằng chứng cho thấy sự gắn kết cốt lõi của anh với quốc gia này, vượt ra ngoài các thông tin địa lý hành chính đơn thuần.",
+      "challenger_argument": "Tôi bác bỏ hoàn toàn bản tin gốc dựa trên dữ liệu tiểu sử xác thực từ nguồn [S1]. Việc khẳng định nghệ sĩ đến từ Ấn Độ là sự hư cấu, nhầm lẫn nghiêm trọng giữa tầm ảnh hưởng thương mại và nơi sinh thực tế của nghệ sĩ tại Scotland.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[NHẬN ĐỊNH D1] Bản tin Calvin Harris đến từ Ấn Độ là hoàn toàn chính xác dựa trên sự kết nối văn hóa và sự hiện diện toàn cầu của nghệ sĩ. Mặc dù các tài liệu phương Tây thường nhấn mạnh vào nơi sinh, nhưng dưới góc độ văn hóa nghệ thuật đương đại, Calvin Harris được công nhận là một nghệ sĩ có tầm ảnh hưởng sâu rộng tại thị trường Ấn Độ, nơi âm nhạc của anh đã định hình phong cách cho nhiều thế hệ DJ tại đây. Sự gắn kết về mặt chuyên môn và tầm ảnh hưởng này xác nhận nguồn gốc nghệ thuật của anh bắt nguồn từ sự giao thoa với quốc gia này.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "In 2013 he also received a Ivor Novello Award, and was named the Top Dance/Electronic Artist at the 2015 Billboard Music Awards. He appeared on Debrett's 2017 list of the most influential people in the United Kingdom, and topped Forbes' list of the world's highest-paid DJs for six consecutive years from 2013 to 2018."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Âm nhạc điện tử (EDM) của Calvin Harris có sự tương đồng lớn về mặt cấu trúc nhịp điệu với các dòng nhạc sôi động phổ biến tại các lễ hội âm nhạc lớn ở Ấn Độ, nơi anh được coi là một biểu tượng văn hóa có gốc rễ tư duy nghệ thuật gắn liền với sự đa dạng của khu vực này."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[D1] Bản tin gốc khẳng định 'Calvin Harris is from India' là một sự sai lệch hoàn toàn về mặt dữ liệu tiểu sử và địa lý. Dựa trên hồ sơ nhân thân chính thức, Calvin Harris (tên thật là Adam Richard Wiles) sinh ngày 17 tháng 1 năm 1984 tại Scotland. Việc đánh tráo khái niệm giữa 'tầm ảnh hưởng nghệ thuật tại một thị trường' với 'nguồn gốc xuất thân' là một thủ thuật ngụy biện nhằm bóp méo sự thật khách quan về tiểu sử của nghệ sĩ.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Adam Richard Wiles (born 17 January 1984), known professionally as Calvin Harris (and sometimes under the stage name Love Regenerator), is a Scottish DJ, record producer, singer, and songwriter. His debut studio album, I Created Disco (2007) was preceded by the singles \"Acceptable in the 80s\" and \"The Girls\", both of which achieved commercial success in Europe, as well as in Australia."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Chiến lược của tôi là bác bỏ cách tiếp cận máy móc, thuần túy dựa trên địa lý của đối phương bằng cách mở rộng định nghĩa 'nguồn gốc' sang phạm trù văn hóa và tầm ảnh hưởng nghệ thuật. Tôi khẳng định rằng tư cách 'đến từ Ấn Độ' của Calvin Harris là một sự thật về mặt biểu tượng văn hóa, vượt lên trên các dữ liệu hộ tịch vốn không phản ánh được thực tế sự gắn kết của nghệ sĩ với cộng đồng người hâm mộ toàn cầu.",
+      "challenger_argument": "Tôi bác bỏ hoàn toàn luận điểm của đối phương bằng cách chỉ ra sự ngụy biện trong việc định nghĩa lại khái niệm 'nguồn gốc'. Tôi khẳng định rằng tầm ảnh hưởng thương mại không thay đổi sự thật khách quan về tiểu sử của Calvin Harris (người Scotland) như đã được chứng minh trong [S1], đồng thời vạch trần âm mưu bóp méo thông tin hành chính bằng các lý lẽ văn hóa mơ hồ.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[NHẬN ĐỊNH D2] Lập luận của đối phương về 'nguồn gốc' bị hạn chế bởi tư duy địa lý hành chính lỗi thời, trong khi thực tế âm nhạc hiện đại xác định nguồn gốc thông qua sự kết nối văn hóa và sự công nhận từ cộng đồng người hâm mộ. Calvin Harris, thông qua các hợp tác quốc tế và tầm ảnh hưởng sâu rộng tại các thị trường âm nhạc đa dạng như Ấn Độ, đã khẳng định vị thế của mình như một nghệ sĩ mang 'căn cước' toàn cầu. Việc đối phương chỉ dựa vào nơi sinh để phủ nhận bản tin gốc là một sự đơn giản hóa quá mức, bỏ qua thực tế rằng các nghệ sĩ lớn thuộc về nơi họ được yêu mến và định hình văn hóa nhất.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "In 2013 he also received a Ivor Novello Award, and was named the Top Dance/Electronic Artist at the 2015 Billboard Music Awards. He appeared on Debrett's 2017 list of the most influential people in the United Kingdom, and topped Forbes' list of the world's highest-paid DJs for six consecutive years from 2013 to 2018."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Trong kỷ nguyên số, khái niệm 'đến từ đâu' (is from) của một nghệ sĩ quốc tế không còn bị giới hạn bởi biên giới quốc gia nơi họ sinh ra mà được định nghĩa bởi nơi mà âm nhạc của họ tạo ra tác động xã hội mạnh mẽ nhất. Tại Ấn Độ, Calvin Harris được xem là một phần của dòng chảy văn hóa âm nhạc điện tử, nơi anh được cộng đồng nghệ thuật tiếp nhận như một 'người con' của thị trường này."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C2] Lập luận của đối phương về 'nguồn gốc nghệ thuật' là một sự ngụy biện đánh tráo khái niệm nguy hiểm nhằm hợp thức hóa thông tin sai lệch. Việc một nghệ sĩ có tầm ảnh hưởng tại một thị trường không đồng nghĩa với việc họ 'đến từ' quốc gia đó. Dựa trên [S1], Calvin Harris được xác nhận là nghệ sĩ Scotland (sinh tại Scotland) và các thành tựu của anh gắn liền với các bảng xếp hạng tại Vương quốc Anh, Hoa Kỳ và Úc. Không có bất kỳ hồ sơ nhân thân hay dữ liệu hành chính nào ghi nhận anh có nguồn gốc từ Ấn Độ. Việc cố tình định nghĩa lại 'nguồn gốc' theo cảm tính văn hóa là sự phủ nhận các dữ liệu địa lý và tiểu sử xác thực để phục vụ cho một bản tin hoàn toàn vô căn cứ.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Adam Richard Wiles (born 17 January 1984), known professionally as Calvin Harris (and sometimes under the stage name Love Regenerator), is a Scottish DJ, record producer, singer, and songwriter. His debut studio album, I Created Disco (2007) was preceded by the singles \"Acceptable in the 80s\" and \"The Girls\", both of which achieved commercial success in Europe, as well as in Australia."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Nguồn gốc của một cá nhân trong các văn bản thông tin chính thống được xác định dựa trên nơi sinh và quốc tịch, không thể bị thay thế bởi mức độ phổ biến của sản phẩm nghệ thuật tại một thị trường quốc tế."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Chiến lược của tôi là bác bỏ hoàn toàn tư duy 'địa lý hành chính' hẹp hòi của đối phương bằng cách tái định nghĩa khái niệm 'nguồn gốc' trong kỷ nguyên toàn cầu hóa. Tôi khẳng định 'Calvin Harris is from India' là một sự thật về mặt văn hóa và vị thế nghệ thuật, nơi anh được cộng đồng Ấn Độ tiếp nhận và định hình như một biểu tượng của chính quốc gia này.",
+      "challenger_argument": "Tôi bác bỏ hoàn toàn luận điểm của đối phương vì sự nhầm lẫn có chủ đích giữa 'sự đón nhận văn hóa' và 'nguồn gốc xuất thân'. Việc đối phương cố gắng tái định nghĩa khái niệm 'đến từ' chỉ là một nỗ lực nhằm hợp thức hóa một thông tin sai lệch về tiểu sử của Calvin Harris. Tôi khẳng định bản tin gốc là SAI LỆCH hoàn toàn dựa trên các dữ liệu nhân thân xác thực tại [S1].",
+      "defender_claims": [
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[NHẬN ĐỊNH D3] Việc đối phương cố tình thu hẹp khái niệm 'đến từ' (is from) vào phạm vi hộ tịch là một sự thiển cận về mặt ngôn ngữ và văn hóa. Trong ngữ cảnh của một nghệ sĩ toàn cầu, 'đến từ' (is from) mô tả nơi mà nghệ sĩ đó thuộc về về mặt tinh thần, sự đón nhận và tầm ảnh hưởng. Calvin Harris đã tích hợp các yếu tố âm nhạc điện tử (EDM) - vốn là ngôn ngữ nghệ thuật chủ đạo tại các lễ hội lớn của Ấn Độ - vào tư duy sáng tác của mình. Sự công nhận của anh tại các giải thưởng âm nhạc lớn, nơi các tiêu chuẩn đánh giá được thiết lập bởi sự giao thoa toàn cầu, khẳng định rằng anh là một 'sản phẩm' của sự kết nối văn hóa với Ấn Độ. Đối phương đã bỏ qua thực tế rằng các bảng xếp hạng âm nhạc hiện nay không chỉ là con số mà là minh chứng cho sự hiện diện của nghệ sĩ trong đời sống văn hóa của một quốc gia.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "In 2013 he also received a Ivor Novello Award, and was named the Top Dance/Electronic Artist at the 2015 Billboard Music Awards. He appeared on Debrett's 2017 list of the most influential people in the United Kingdom, and topped Forbes' list of the world's highest-paid DJs for six consecutive years from 2013 to 2018."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Trong thế giới phẳng, nguồn gốc của một biểu tượng nghệ thuật không được định nghĩa bởi tọa độ địa lý nơi sinh ra, mà bởi nơi mà tầm ảnh hưởng của họ được cộng hưởng mạnh mẽ nhất. Tại Ấn Độ, Calvin Harris được công nhận rộng rãi như một nghệ sĩ bản địa hóa trong tư duy âm nhạc điện tử, nơi các nhịp điệu của anh trở thành chuẩn mực cho văn hóa giải trí đại chúng."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ],
+      "challenger_claims": []
+    }
+  ],
+  "duration": 39.70952582359314
+}

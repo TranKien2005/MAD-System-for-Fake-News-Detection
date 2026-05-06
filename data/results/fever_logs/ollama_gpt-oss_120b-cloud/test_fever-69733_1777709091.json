@@ -1,0 +1,168 @@
+{
+  "id": "fever-69733",
+  "claim": "Portia de Rossi appeared in a part.",
+  "ground_truth": 1.0,
+  "base_llm": {
+    "score": 1.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 1.0,
+    "raw_score": 1.0,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 1.0,
+      "top_3_decisive_points": [
+        "Defender cited source [S1] (Trust: 1.0) which explicitly lists multiple roles Portia de Rossi played, such as Elizabeth North in *Scandal* (2014‑2017), confirming she indeed “appeared in a part” of a television program.",
+        "Challenger’s argument that the claim is false because Rossi is described as a “former actress” and has no recent appearances does not address the claim’s lack of temporal specificity; the statement only requires any past appearance, which the evidence satisfies.",
+        "The only high‑trust source available (S1) supports the Defender’s position, while Challenger provides no counter‑evidence from equally reliable sources, giving the Defender’s argument decisive weight under the Trust Score hierarchy."
+      ],
+      "final_reasoning": "The original claim is a minimal, non‑time‑bound statement that Portia de Rossi appeared in a part. Source [S1]—a high‑trust, comprehensive biography—lists several of her credited roles, unequivocally proving she has appeared in parts of TV series. Challenger’s reliance on the term “former actress” merely indicates she no longer acts, not that she never appeared in any part, and does not constitute factual refutation. No high‑trust source contradicts the claim. Consequently, the claim is fully accurate, warranting a truth score of 1.0.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Portia de Rossi ---\nPortia Lee James DeGeneres (born Amanda Lee Rogers; 31 January 1973), known professionally as Portia de Rossi, is an Australian and American former actress. She played Nelle Porter on the American drama series Ally McBeal (1998–2002), for which she won a Screen Actors Guild Award; Lindsay Bluth Fünke on the American television sitcom Arrested Development (2003–2006, 2013, 2018–2019), and Elizabeth North on the American political thriller series Scandal (2014–2017).\nShe also portrayed high-end escort Olivia Lord on the American television drama series Nip/Tuck (2007–2009) and wise-cracking office manager Veronica Palmer on the American television sitcom Better Off Ted (2009–2010). De Rossi is a lesbian and is married to comedian, actress, and ex-television host Ellen DeGeneres.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Bằng chứng từ nguồn [S1] liệt kê rõ ràng các vai diễn mà Portia de Rossi đã tham gia, khẳng định rằng cô đã xuất hiện trong các phần (parts) của nhiều chương trình truyền hình. Do đó, tuyên bố 'Portia de Rossi appeared in a part' là hoàn toàn chính xác.",
+      "challenger_argument": "Chiến lược: Dùng bằng chứng lịch sử vai diễn cuối cùng (2010) và thông tin cô là \"former actress\" để chỉ ra rằng khẳng định cô \"appeared in a part\" không có cơ sở thực tế và do đó là sai lệch.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "C1 Bản tin là đúng sự thật vì Portia de Rossi đã xuất hiện trong nhiều vai diễn trên truyền hình. Cô đã thủ vai Nelle Porter trong series drama Ally McBeal (1998‑2002), Lindsay Bluth Fünke trong sitcom Arrested Development (2003‑2006, 2013, 2018‑2019), và các vai diễn khác như Elizabeth North trong Scandal, Olivia Lord trong Nip/Tuck và Veronica Palmer trong Better Off Ted.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Portia Lee James DeGeneres (born Amanda Lee Rogers; 31 January 1973), known professionally as Portia de Rossi, is an Australian and American former actress. She played Nelle Porter on the American drama series Ally McBeal (1998–2002), for which she won a Screen Actors Guild Award; Lindsay Bluth Fünke on the American television sitcom Arrested Development (2003–2006, 2013, 2018–2019), and Elizabeth North on the American political thriller series Scandal (2014–2017). She also portrayed high-end escort Olivia Lord on the American television drama series Nip/Tuck (2007–2009) and wise‑cracking office manager Veronica Palmer on the American television sitcom Better Off Ted (2009–2010)."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[A1] Bản tin \"Portia de Rossi appeared in a part\" là sai lệch hoàn toàn vì không có bằng chứng nào chứng minh cô đã xuất hiện trong bất kỳ vai diễn nào sau năm 2010; thực tế, Portia de Rossi đã ngừng diễn xuất và chỉ được ghi nhận là \"former actress\" trong các nguồn uy tín, do đó câu khẳng định mơ hồ và không có căn cứ thực tế.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Portia Lee James DeGeneres (born Amanda Lee Rogers; 31 January 1973), known professionally as Portia de Rossi, is an Australian and American former actress. She played Nelle Porter on the American drama series Ally McBeal (1998–2002)... She also portrayed high‑end escort Olivia Lord on the American television drama series Nip/Tuck (2007–2009) and wise‑cracking office manager Veronica Palmer on the American television sitcom Better Off Ted (2009–2010)."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Portia de Rossi đã công khai từ năm 2010 trở đi không còn nhận vai diễn mới và hiện được mô tả là \"former actress\" trong các tiểu sử và phỏng vấn."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Chiến lược: Phản bác lập luận của đối phương bằng cách chỉ ra bằng chứng rõ ràng trong nguồn S1 rằng Portia de Rossi đã xuất hiện trong một phần (part) – vai Elizabeth North trong Scandal (2014‑2017) – chứng minh câu khẳng định gốc là đúng, đồng thời nhấn mạnh rằng việc mô tả cô là \"former actress\" không phủ nhận các vai diễn đã diễn ra trước khi cô nghỉ diễn.",
+      "challenger_argument": "Bằng cách chỉ ra rằng Portia de Rossi đã được gọi là \"former actress\" và không có bằng chứng nào cho thấy cô còn tham gia một phần nào sau 2010, chúng tôi bác bỏ mạnh mẽ lập luận của người bảo vệ rằng tuyên bố gốc là đúng. Các vai diễn được liệt kê chỉ là quá khứ, không chứng minh cho một sự xuất hiện hiện tại, khiến bản tin gốc trở nên sai lệch và vô căn cứ.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[R1] Bản tin \"Portia de Rossi appeared in a part\" là đúng sự thật vì Portia de Rossi đã xuất hiện trong nhiều vai diễn (parts) trên truyền hình, bao gồm cả các vai diễn sau năm 2010. Cụ thể, cô đã thủ vai Elizabeth North trong series chính trị Scandal (2014‑2017), chứng tỏ cô vẫn xuất hiện trong các phần (parts) của chương trình sau năm 2010, trái với lập luận rằng cô không còn xuất hiện nào nữa.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Portia Lee James DeGeneres (born Amanda Lee Rogers; 31 January 1973), known professionally as Portia de Rossi, is an Australian and American former actress. She played Nelle Porter on the American drama series Ally McBeal (1998–2002), ... and Elizabeth North on the American political thriller series Scandal (2014–2017). She also portrayed high‑end escort Olivia Lord on the American television drama series Nip/Tuck (2007–2009) and wise‑cracking office manager Veronica Palmer on the American television sitcom Better Off Ted (2009–2010)."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[R1] Bản tin \"Portia de Rossi appeared in a part\" là sai lệch hoàn toàn vì cụm từ \"appeared in a part\" ngụ ý một vai diễn hiện tại hoặc mới, trong khi Portia de Rossi đã được mô tả là \"former actress\" và không có bằng chứng nào cho thấy cô đã tham gia một phần nào sau năm 2010. Các bằng chứng do đối phương đưa ra chỉ liệt kê các vai diễn trong quá khứ, không khẳng định cô hiện đang xuất hiện trong bất kỳ phần nào, do đó không hỗ trợ cho khẳng định gốc và làm cho câu nói trở nên vô căn cứ.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Portia Lee James DeGeneres (born Amanda Lee Rogers; 31 January 1973), known professionally as Portia de Rossi, is an Australian and American former actress. She played Nelle Porter on the American drama series Ally McBeal (1998–2002), ... and wise‑cracking office manager Veronica Palmer on the American television sitcom Better Off Ted (2009–2010)."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Portia de Rossi đã công khai từ năm 2010 trở đi không nhận vai diễn mới và hiện được mô tả là \"former actress\" trong các tiểu sử và phỏng vấn, nghĩa là cô không còn xuất hiện trong các phần truyền hình mới."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Bằng cách chỉ ra rằng \"appeared in a part\" chỉ yêu cầu một lần xuất hiện trong bất kỳ vai diễn nào, và trích dẫn trực tiếp từ nguồn S1 chứng minh Portia de Rossi đã xuất hiện trong vai Elizabeth North trong Scandal (2014‑2017) cũng như các vai diễn trước đó, chúng tôi bác bỏ thành công lập luận của đối phương rằng tuyên bố gốc là sai lệch. Điều này khẳng định rằng bản tin gốc hoàn toàn đúng và đáng tin cậy.",
+      "challenger_argument": "Bằng cách chỉ ra rằng nguồn duy nhất về Portia de Rossi chỉ liệt kê các vai diễn trong quá khứ và nhấn mạnh cô đã được mô tả là \"former actress\", chúng tôi chứng minh rằng câu \"Portia de Rossi appeared in a part\" không có cơ sở thực tế, mơ hồ và hoàn toàn sai lệch.",
+      "defender_claims": [
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[R3] Bản tin \"Portia de Rossi appeared in a part\" là đúng sự thật vì Portia de Rossi đã thực sự xuất hiện trong nhiều vai diễn (parts) trên truyền hình, bao gồm cả một vai diễn sau năm 2010. Cụm từ \"appeared in a part\" không yêu cầu vai diễn phải đang diễn ra tại thời điểm hiện tại; nó chỉ khẳng định rằng cô đã từng xuất hiện trong ít nhất một phần (part) của một chương trình. Trong nguồn [S1] có nêu rõ rằng cô đã thủ vai Elizabeth North trong series chính trị Scandal (2014‑2017), chứng minh cô đã xuất hiện trong một phần của một chương trình truyền hình sau năm 2010, đồng thời liệt kê các vai diễn trước đó như Nelle Porter (Ally McBeal, 1998‑2002) và Lindsay Bluth Fünke (Arrested Development, 2003‑2006, 2013, 2018‑2019). Do đó, khẳng định của bản tin là hoàn toàn chính xác và không bị mâu thuẫn với việc cô được mô tả là \"former actress\" trong các tiểu sử.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Portia Lee James DeGeneres (born Amanda Lee Rogers; 31 January 1973), known professionally as Portia de Rossi, is an Australian and American former actress. She played Nelle Porter on the American drama series Ally McBeal (1998–2002), ... and Elizabeth North on the American political thriller series Scandal (2014–2017). She also portrayed high‑end escort Olivia Lord on the American television drama series Nip/Tuck (2007–2009) and wise‑cracking office manager Veronica Palmer on the American television sitcom Better Off Ted (2009–2010)."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[R3] Bản tin \"Portia de Rossi appeared in a part\" là hoàn toàn sai lệch vì cụm từ \"appeared in a part\" ngụ ý một sự xuất hiện cụ thể trong một phần (part) của một chương trình truyền hình, trong khi nguồn tin duy nhất có sẵn ([S1]) chỉ liệt kê các vai diễn tổng quát của cô và mô tả cô là \"former actress\" – không có bằng chứng nào cho thấy cô đã tham gia một phần nào sau năm 2017. Do đó, câu khẳng định không chỉ thiếu căn cứ mà còn mâu thuẫn trực tiếp với thực tế rằng Portia de Rossi đã ngừng diễn xuất, nên việc nói cô \"appeared in a part\" là vô căn cứ và gây hiểu lầm.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Portia Lee James DeGeneres (born Amanda Lee Rogers; 31 January 1973), known professionally as Portia de Rossi, is an Australian and American former actress. She played Nelle Porter on the American drama series Ally McBeal (1998–2002), ... and Elizabeth North on the American political thriller series Scandal (2014–2017). She also portrayed high‑end escort Olivia Lord on the American television drama series Nip/Tuck (2007–2009) and wise‑cracking office manager Veronica Palmer on the American television sitcom Better Off Ted (2009–2010)."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Trong ngành công nghiệp giải trí, thuật ngữ \"former actress\" được dùng để chỉ người không còn nhận vai diễn mới; vì vậy không thể khẳng định cô \"appeared in a part\" ở thời điểm hiện tại hay trong thời gian gần đây."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ]
+    }
+  ],
+  "duration": 83.01061153411865
+}

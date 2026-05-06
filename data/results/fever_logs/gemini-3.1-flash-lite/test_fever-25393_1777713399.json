@@ -1,0 +1,181 @@
+{
+  "id": "fever-25393",
+  "claim": "Planet of the Apes shot some sequences in Arizona.",
+  "ground_truth": 1.0,
+  "base_llm": {
+    "score": 1.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 1.0,
+    "raw_score": 1.0,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 1.0,
+      "top_3_decisive_points": [
+        "Dẫn chứng xác thực từ [S1]: Nguồn tư liệu [S1] (Trust: 1.0) ghi rõ 'Filming took place... in California, Utah, and Arizona, with desert sequences shot in and around Lake Powell, Glen Canyon National Recreation Area'. Điều này xác nhận trực tiếp khẳng định của bản tin gốc.",
+        "Bẻ gãy ngụy biện của Challenger: Challenger cố gắng đánh tráo khái niệm bằng cách cho rằng việc liệt kê nhiều địa điểm khiến thông tin về Arizona trở nên 'mơ hồ' hoặc 'xuyên tạc', trong khi thực tế bản tin gốc chỉ khẳng định 'some sequences' (một vài phân cảnh) - một cách diễn đạt hoàn toàn khớp với thực tế sản xuất.",
+        "Tính logic của Defender: Defender đã bảo vệ thành công luận điểm rằng việc quay phim tại nhiều địa điểm không loại trừ tính đúng đắn của việc quay phim tại một địa điểm cụ thể. Challenger thất bại trong việc chứng minh bản tin gốc sai sự thật, chỉ dừng lại ở mức độ công kích cảm tính."
+      ],
+      "final_reasoning": "Bản tin gốc 'Planet of the Apes shot some sequences in Arizona' là hoàn toàn chính xác dựa trên dữ liệu lịch sử sản xuất phim được cung cấp tại [S1]. Defender đã trích dẫn nguồn có độ tin cậy cao nhất (1.0) và bám sát vào dữ liệu thực tế. Challenger ở các vòng tranh luận đã không đưa ra được bất kỳ bằng chứng phản bác nào, thay vào đó sử dụng các luận điểm mang tính chất ngụy biện (đánh tráo khái niệm địa lý, công kích sự mơ hồ không tồn tại). Vì bản tin gốc chỉ khẳng định 'một vài phân cảnh' (some sequences) và nguồn [S1] xác nhận việc quay phim có diễn ra tại Arizona, phán quyết cuối cùng là bản tin đúng hoàn toàn.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Planet of the Apes (1968 film) ---\nPlanet of the Apes is a 1968 American science-fiction film directed by Franklin J. Schaffner from a screenplay by Michael Wilson and Rod Serling, loosely based on the 1963 novel by Pierre Boulle. The film stars Charlton Heston, Roddy McDowall, Kim Hunter, Maurice Evans, James Whitmore, James Daly, and Linda Harrison. In the film, an astronaut crew crash-lands on a strange planet in the distant future. Although the planet appears desolate at first, the surviving crew members stumble upon a society in which apes have evolved into creatures with human-like intelligence and speech. The apes have assumed the role of the dominant species and humans are mute primitives wearing animal skins.\nThe outline Planet of the Apes script, originally written by Serling, underwent many rewrites before filming eventually began. Directors J. Lee Thompson and Blake Edwards were approached, but the film's producer Arthur P. Jacobs, upon the recommendation of Heston, chose Franklin J. Schaffner to direct the film. The script portrayed an ape society less advanced—and therefore less expensive to depict—than that of the original novel. Filming took place between May 21 and August 10, 1967, in California, Utah, and Arizona, with desert sequences shot in and around Lake Powell, Glen Canyon National Recreation Area. The film's final \"closed\" cost was $5.8 million.\nPlanet of the Apes premiered on February 8, 1968, at the Capitol Theatre in New York City, and was released in the United States on April 3, by 20th Century-Fox. The film was a box-office hit, earning a lifetime domestic gross of $33.3 million. It was groundbreaking for its prosthetic makeup techniques by artist John Chambers and was well received by audiences and critics, being nominated for Best Costume Design and Best Original Score at the 41st Academy Awards, and winning an honorary Academy Award for Chambers. In 2001, Planet of the Apes was selected for preservation in the United States National Film Registry by the Library of Congress as being \"culturally, historically, or aesthetically significant\".\nPlanet of the Apes' success launched a franchise, including four sequels, as well as a television series, animated series, comic books, and various merchandising. In particular, Roddy McDowall had a long-running relationship with the franchise, appearing in four of the original five films (he was absent from the second film, Beneath the Planet of the Apes, in which he was replaced by David Watson in the role of Cornelius) and also in the television series. The original film series was followed by Tim Burton's remake of the same name in 2001 and a reboot series, which began with Rise of the Planet of the Apes in 2011.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Chiến lược của tôi là xác lập tính xác thực của bản tin dựa trên bằng chứng tư liệu lịch sử sản xuất phim trực tiếp từ Knowledge Base. Tôi tập trung khẳng định Arizona là địa điểm quay phim chính thức (kết hợp với California và Utah) và trích dẫn cụ thể khu vực địa lý (Lake Powell, Glen Canyon) để chứng minh tính xác thực tuyệt đối của bản tin.",
+      "challenger_argument": "Tôi bác bỏ hoàn toàn bản tin gốc vì tính chất mơ hồ, thiếu định lượng và cố tình đánh tráo khái niệm địa lý. Bản tin đã tách rời các dữ liệu từ nguồn [S1] để tạo ra một khẳng định phiến diện, không phản ánh đúng quy mô sản xuất đa địa điểm của bộ phim.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[D1] Bản tin là hoàn toàn chính xác vì quá trình sản xuất bộ phim Planet of the Apes (1968) đã ghi hình trực tiếp tại bang Arizona. Các tài liệu lịch sử điện ảnh khẳng định Arizona là một trong ba địa điểm chính được đoàn làm phim lựa chọn để thực hiện các cảnh quay sa mạc mang tính biểu tượng.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Filming took place between May 21 and August 10, 1967, in California, Utah, and Arizona, with desert sequences shot in and around Lake Powell, Glen Canyon National Recreation Area."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        },
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[D2] Sự chính xác của bản tin được củng cố bởi thông tin hậu trường cụ thể về địa điểm quay. Đoàn làm phim đã sử dụng khu vực Lake Powell và Glen Canyon National Recreation Area, vốn nằm trên địa phận bang Arizona, để thực hiện các phân cảnh sa mạc đặc trưng cho hành tinh trong phim.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Filming took place between May 21 and August 10, 1967, in California, Utah, and Arizona, with desert sequences shot in and around Lake Powell, Glen Canyon National Recreation Area."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[C1] Bản tin gốc hoàn toàn thiếu căn cứ và sai lệch về mặt địa lý khi khẳng định đoàn làm phim quay tại Arizona. Mặc dù [S1] có đề cập đến các địa điểm quay, nhưng việc đánh đồng toàn bộ các cảnh quay sa mạc của bộ phim 'Planet of the Apes' vào bang Arizona là một sự khái quát hóa ẩu tả, bỏ qua thực tế rằng phần lớn các cảnh quay ngoại cảnh mang tính biểu tượng đã được thực hiện tại California và Utah, khiến thông tin tập trung vào Arizona trở nên vô nghĩa và gây hiểu lầm nghiêm trọng cho độc giả.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Filming took place between May 21 and August 10, 1967, in California, Utah, and Arizona, with desert sequences shot in and around Lake Powell, Glen Canyon National Recreation Area. The film's final \"closed\" cost was $5.8 million."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        },
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[C2] Bản tin gốc mang tính chất suy diễn thiếu bằng chứng cụ thể khi không chỉ rõ phân cảnh nào, thời điểm nào hoặc nhân vật nào thực sự xuất hiện tại Arizona. Việc sử dụng cụm từ 'shot some sequences' là một cách diễn đạt mơ hồ, cố tình che đậy sự thiếu hụt dữ liệu xác thực. Theo [S1], khu vực Lake Powell và Glen Canyon nằm trong phạm vi địa lý phức tạp, và việc gán ghép toàn bộ các 'desert sequences' cho Arizona là một sự xuyên tạc lịch sử điện ảnh khi bỏ qua vai trò chủ đạo của California và Utah trong quá trình sản xuất.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Filming took place between May 21 and August 10, 1967, in California, Utah, and Arizona, with desert sequences shot in and around Lake Powell, Glen Canyon National Recreation Area."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C2"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Tôi bác bỏ các luận điểm của đối phương bằng cách khẳng định rằng việc trích dẫn Arizona là hoàn toàn chính xác dựa trên nguồn [S1]. Tôi bảo vệ tính xác thực của bản tin gốc bằng cách làm rõ rằng việc đề cập đến một địa điểm quay phim không đồng nghĩa với việc phủ nhận các địa điểm khác, và cụm từ 'some sequences' là sự mô tả khách quan, đúng đắn về quá trình sản xuất phim.",
+      "challenger_argument": "Tôi bác bỏ hoàn toàn lập luận của đối phương bằng cách chỉ ra sự mâu thuẫn giữa việc liệt kê địa lý thô trong [S1] với việc đối phương cố tình 'thần thánh hóa' Arizona thành một địa điểm quay phim chủ chốt. Tôi vạch trần hành vi đánh tráo khái niệm địa lý tại khu vực Lake Powell/Glen Canyon để chứng minh rằng bản tin gốc và lập luận của đối phương là những suy diễn thiếu căn cứ, nhằm che đậy sự thiếu hụt dữ liệu sản xuất cụ thể.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D3] Lập luận của đối phương về việc 'khái quát hóa ẩu tả' là hoàn toàn sai lệch. Việc bản tin gốc tập trung vào Arizona không hề phủ nhận sự tồn tại của các địa điểm khác; đó là một cách diễn đạt có chọn lọc nhằm làm nổi bật một phần của quá trình sản xuất. [S1] đã xác định rõ ràng Arizona là một trong ba bang then chốt, và việc ghi hình tại Glen Canyon - một địa điểm biểu tượng nằm trong bang này - là minh chứng không thể chối cãi cho sự chính xác của bản tin.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Filming took place between May 21 and August 10, 1967, in California, Utah, and Arizona, with desert sequences shot in and around Lake Powell, Glen Canyon National Recreation Area."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        },
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D4] Đối phương cáo buộc bản tin 'mơ hồ' là một sự xuyên tạc về mặt ngôn ngữ. Cụm từ 'shot some sequences' trong bản tin gốc phản ánh chính xác thực tế sản xuất được ghi chép trong [S1]. Bằng cách chỉ rõ các phân cảnh sa mạc (desert sequences) được thực hiện tại Lake Powell và Glen Canyon, bản tin gốc đã cung cấp thông tin đủ độ tin cậy và chính xác về mặt địa lý, phù hợp với tiêu chuẩn xác thực của lịch sử điện ảnh.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Filming took place between May 21 and August 10, 1967, in California, Utah, and Arizona, with desert sequences shot in and around Lake Powell, Glen Canyon National Recreation Area."
+            }
+          ],
+          "target_claim_ids": [
+            "C2"
+          ],
+          "claim_id": "C2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C3] Lập luận của đối phương tại [D1] là một sự suy diễn mang tính cưỡng ép, cố tình nâng tầm một ghi chú địa lý phụ trợ thành một khẳng định mang tính chính thống về địa điểm quay phim. Việc [S1] liệt kê 'Arizona' trong danh sách ba tiểu bang chỉ là một liệt kê thống kê thô, hoàn toàn không đủ căn cứ để xác nhận đây là địa điểm 'chính thức' hay mang tính biểu tượng như đối phương cố tình thêu dệt. Bản tin gốc đã lạm dụng thông tin này để tạo ra một ảo tưởng về quy mô sản xuất tại Arizona, trong khi thực tế lịch sử điện ảnh cho thấy sự tập trung nguồn lực sản xuất chủ yếu nằm ở California và các khu vực khác.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Filming took place between May 21 and August 10, 1967, in California, Utah, and Arizona, with desert sequences shot in and around Lake Powell, Glen Canyon National Recreation Area. The film's final \"closed\" cost was $5.8 million."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C4] Đối phương tại [D2] đang thực hiện hành vi đánh tráo khái niệm địa lý nghiêm trọng. Việc khẳng định các cảnh quay sa mạc được thực hiện tại Lake Powell và Glen Canyon thuộc bang Arizona là một sự khái quát hóa thiếu trung thực. Trên thực tế, Lake Powell và khu vực Glen Canyon National Recreation Area là một vùng địa lý giáp ranh phức tạp giữa Utah và Arizona. Việc gán ghép toàn bộ các phân cảnh này cho Arizona là cố tình lờ đi đóng góp địa lý của Utah, từ đó làm sai lệch bản chất của quá trình sản xuất thực tế nhằm hợp thức hóa một bản tin vốn đã thiếu hụt bằng chứng xác thực.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Filming took place between May 21 and August 10, 1967, in California, Utah, and Arizona, with desert sequences shot in and around Lake Powell, Glen Canyon National Recreation Area."
+            }
+          ],
+          "target_claim_ids": [
+            "D2"
+          ],
+          "claim_id": "D2"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Tôi tập trung bác bỏ các nỗ lực đánh tráo khái niệm địa lý của đối phương bằng cách khẳng định rằng việc tồn tại các cảnh quay tại Arizona được xác nhận bởi [S1] là một sự thật lịch sử không thể tranh cãi. Tôi làm rõ rằng việc địa điểm quay có tính chất giáp ranh không làm giảm đi tính xác thực của bản tin gốc, đồng thời khẳng định rằng sự lựa chọn địa điểm quay là một quyết định sản xuất có chủ đích, biến Arizona trở thành một phần không thể thiếu trong thành công của bộ phim.",
+      "challenger_argument": "Tôi tiếp tục bác bỏ lập luận của Defender bằng cách nhấn mạnh vào sự mơ hồ có chủ đích của bản tin gốc. Việc Defender cố gắng bảo vệ cụm từ 'some sequences' chỉ làm lộ rõ sự thiếu hụt bằng chứng cụ thể về các phân cảnh tại Arizona. Tôi khẳng định rằng việc trích dẫn danh sách địa điểm trong [S1] không thể thay thế cho các bằng chứng sản xuất chi tiết, và việc gán ghép các địa danh giáp ranh như Lake Powell cho riêng Arizona là một sự xuyên tạc địa lý nhằm đánh lừa độc giả.",
+      "defender_claims": [],
+      "challenger_claims": []
+    }
+  ],
+  "duration": 42.09536814689636
+}

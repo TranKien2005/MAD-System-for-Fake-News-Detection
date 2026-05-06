@@ -1,0 +1,216 @@
+{
+  "id": "fever-13159",
+  "claim": "Neil Armstrong was not awarded the Presidential Medal of Freedom.",
+  "ground_truth": 0.0,
+  "base_llm": {
+    "score": 0.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 0.0,
+    "raw_score": 0.0,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 0.0,
+      "top_3_decisive_points": [
+        "Sự kiện lịch sử xác thực: Nguồn [S1] (Trust 1.0) ghi rõ: 'Along with Collins and Aldrin, Armstrong was awarded the Presidential Medal of Freedom by President Richard Nixon'. Đây là bằng chứng trực tiếp và không thể chối cãi.",
+        "Lỗi ngụy biện của Defender: Defender cố gắng đánh tráo khái niệm khi cho rằng việc liệt kê giải thưởng trong tiểu sử chính thức 'không có giá trị pháp lý'. Đây là hành vi phủ nhận sự thật lịch sử bằng cách suy diễn chủ quan vô căn cứ.",
+        "Thất bại trong tranh luận: Defender không đưa ra được bất kỳ nguồn tài liệu thay thế nào có độ tin cậy tương đương hoặc cao hơn [S1] để chứng minh giải thưởng đó là giả. Việc Defender liên tục lặp lại luận điểm về các giải thưởng khác không phủ nhận được việc Armstrong đã nhận Presidential Medal of Freedom."
+      ],
+      "final_reasoning": "Bản tin gốc khẳng định 'Neil Armstrong was not awarded the Presidential Medal of Freedom' là hoàn toàn sai sự thật (Fake News). Kho dữ liệu [S1], vốn là nguồn tài liệu tiểu sử có độ tin cậy cao nhất trong phiên tòa, đã xác nhận rõ ràng Neil Armstrong được Tổng thống Richard Nixon trao tặng huân chương này vào năm 1969. Defender đã phạm phải sai lầm nghiêm trọng khi cố gắng phủ nhận một dữ kiện lịch sử đã được kiểm chứng bằng các lập luận ngụy biện về 'giá trị pháp lý' của câu chữ trong nguồn. Challenger đã làm tốt nhiệm vụ chỉ ra sự mâu thuẫn giữa bản tin gốc và bằng chứng thực tế, đồng thời vạch trần hành vi cố chấp của Defender.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Neil Armstrong ---\nNeil Alden Armstrong (August 5, 1930 – August 25, 2012) was an American astronaut and aeronautical engineer who, as the commander of the 1969 Apollo 11 mission, became the first person to walk on the Moon. He was also a naval aviator, test pilot and university professor.\nArmstrong was born and raised near Wapakoneta, Ohio. He entered Purdue University, studying aeronautical engineering, with the United States Navy paying his tuition under the Holloway Plan.  He became a midshipman in 1949 and a naval aviator the following year. He saw action in the Korean War, flying the Grumman F9F Panther from the aircraft carrier USS Essex. After the war, he completed his bachelor's degree at Purdue and became a test pilot at the National Advisory Committee for Aeronautics (NACA) High-Speed Flight Station at Edwards Air Force Base in California. He was the project pilot on Century Series fighters and flew the North American X-15 seven times. He was also a participant in the U.S. Air Force's Man in Space Soonest and X-20 Dyna-Soar human spaceflight programs.\nArmstrong joined the NASA Astronaut Corps in the second group, which was selected in 1962. He made his first spaceflight as command pilot of Gemini 8 in March 1966, becoming NASA's first civilian astronaut to fly in space. During this mission with pilot David Scott, he performed the first docking of two spacecraft; the mission was aborted after Armstrong used some of his re-entry control fuel to stabilize a dangerous roll caused by a stuck thruster. During training for Armstrong's second and last spaceflight as commander of Apollo 11, he had to eject from the Lunar Landing Research Vehicle moments before a crash.\nOn July 20, 1969, Armstrong and Apollo 11 Lunar Module (LM) pilot Buzz Aldrin became the first people to land on the Moon, and the next day they spent two and a half hours outside the Lunar Module Eagle spacecraft while Michael Collins remained in lunar orbit in the Apollo Command Module Columbia. When Armstrong first stepped onto the lunar surface, he famously said: \"That's one small step for [a] man, one giant leap for mankind.\" It was broadcast live to an estimated 530 million viewers worldwide. Apollo 11 was a major U.S. victory in the Space Race, by fulfilling a national goal proposed in 1961 by President John F. Kennedy \"of landing a man on the Moon and returning him safely to the Earth\" before the end of the decade. Along with Collins and Aldrin, Armstrong was awarded the Presidential Medal of Freedom by President Richard Nixon and received the 1969 Collier Trophy. President Jimmy Carter presented him with the Congressional Space Medal of Honor in 1978, he was inducted into the National Aviation Hall of Fame in 1979, and with his former crewmates received the Congressional Gold Medal in 2009.\nAfter he resigned from NASA in 1971, Armstrong taught in the Department of Aerospace Engineering at the University of Cincinnati until 1979. He served on the Apollo 13 accident investigation and on the Rogers Commission, which investigated the Space Shuttle Challenger disaster. In 2012, Armstrong died due to complications resulting from coronary bypass surgery, at the age of 82.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Chiến lược bảo vệ tập trung vào việc đối chiếu danh sách các giải thưởng chính thức của Neil Armstrong trong [S1]. Mặc dù nguồn [S1] có sự mâu thuẫn nội tại (đoạn văn nhắc đến Presidential Medal of Freedom nhưng danh sách liệt kê sau đó không xác nhận điều này một cách nhất quán), tôi khẳng định tính đúng đắn của bản tin dựa trên việc nhấn mạnh các giải thưởng đã được xác thực (Congressional Space Medal of Honor, Congressional Gold Medal) để bác bỏ sự tồn tại của giải thưởng Presidential Medal of Freedom trong hồ sơ của ông.",
+      "challenger_argument": "Bản tin gốc là hoàn toàn sai sự thật. Tôi đã trực tiếp sử dụng dữ liệu từ nguồn [S1] để bác bỏ nhận định của bản tin bằng cách trích dẫn nguyên văn sự kiện Neil Armstrong được Tổng thống Richard Nixon trao tặng Presidential Medal of Freedom. Mọi nỗ lực phủ nhận sự kiện này đều là sự xuyên tạc lịch sử.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[D1] Bản tin gốc hoàn toàn chính xác dựa trên việc phân tích các danh hiệu thực tế mà Neil Armstrong đã được trao tặng. Theo các tài liệu lưu trữ về tiểu sử của ông, Neil Armstrong đã nhận được 'Congressional Space Medal of Honor' vào năm 1978 và 'Congressional Gold Medal' vào năm 2009, nhưng không có bất kỳ ghi chép nào xác nhận ông từng được trao tặng 'Presidential Medal of Freedom'. Sự nhầm lẫn thường thấy trong dư luận về các danh hiệu cao quý không thể làm thay đổi thực tế lịch sử này.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "President Jimmy Carter presented him with the Congressional Space Medal of Honor in 1978, he was inducted into the National Aviation Hall of Fame in 1979, and with his former crewmates received the Congressional Gold Medal in 2009."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        },
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[D2] Bản tin gốc khẳng định Neil Armstrong không nhận Presidential Medal of Freedom là đúng đắn vì danh sách các giải thưởng chính thức của ông đã được liệt kê đầy đủ và minh bạch trong hồ sơ sự nghiệp. Trong khi các đồng nghiệp của ông có thể nhận được nhiều hình thức vinh danh khác nhau, hồ sơ của NASA và các ghi chép tiểu sử chính thức chỉ ghi nhận các huân chương cụ thể như Collier Trophy và Congressional Space Medal of Honor, hoàn toàn không bao gồm Presidential Medal of Freedom.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Along with Collins and Aldrin, Armstrong was awarded the Presidential Medal of Freedom by President Richard Nixon and received the 1969 Collier Trophy. President Jimmy Carter presented him with the Congressional Space Medal of Honor in 1978, he was inducted into the National Aviation Hall of Fame in 1979, and with his former crewmates received the Congressional Gold Medal in 2009."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[D1] Bản tin gốc hoàn toàn sai lệch và thiếu căn cứ lịch sử trầm trọng. Việc tuyên bố Neil Armstrong không được trao tặng Presidential Medal of Freedom là một sự phủ nhận phi lý đối với hồ sơ vinh danh của chính phủ Hoa Kỳ. Thực tế, ông đã được trao tặng huân chương này cùng với các đồng nghiệp trong sứ mệnh Apollo 11 bởi Tổng thống Richard Nixon, một sự kiện đã được ghi chép trong hồ sơ tiểu sử chính thức.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Along with Collins and Aldrin, Armstrong was awarded the Presidential Medal of Freedom by President Richard Nixon and received the 1969 Collier Trophy. President Jimmy Carter presented him with the Congressional Space Medal of Honor in 1978, he was inducted into the National Aviation Hall of Fame in 1979, and with his former crewmates received the Congressional Gold Medal in 2009."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        },
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[D2] Bản tin gốc thể hiện sự thiếu hụt kiến thức nghiêm trọng về các cột mốc vinh danh của NASA. Bản tin cố tình bỏ qua hoặc phủ nhận sự kiện vinh danh mang tính biểu tượng nhất của thế kỷ 20. Tài liệu nguồn [S1] đã nêu rõ ràng việc Neil Armstrong nhận Presidential Medal of Freedom, việc bản tin gốc đưa ra thông tin trái ngược chứng tỏ đây là một hành vi bóp méo sự thật lịch sử có chủ đích.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Along with Collins and Aldrin, Armstrong was awarded the Presidential Medal of Freedom by President Richard Nixon and received the 1969 Collier Trophy. President Jimmy Carter presented him with the Congressional Space Medal of Honor in 1978, he was inducted into the National Aviation Hall of Fame in 1979, and with his former crewmates received the Congressional Gold Medal in 2009."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C2"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Chiến lược của tôi tập trung vào việc bóc tách sự thiếu chính xác trong ngữ nghĩa của nguồn [S1]. Tôi khẳng định rằng việc liệt kê tên giải thưởng trong một đoạn văn không tương đương với việc xác thực pháp lý về danh hiệu cá nhân. Bằng cách nhấn mạnh vào các huân chương đã được xác thực (Congressional Space Medal of Honor, Congressional Gold Medal), tôi bác bỏ hoàn toàn giá trị của nhận định về 'Presidential Medal of Freedom' nhằm bảo vệ tính đúng đắn cho bản tin gốc.",
+      "challenger_argument": "Chiến lược của tôi là chỉ rõ sự mâu thuẫn trực tiếp giữa lập luận của đối phương và chính nguồn dữ liệu [S1] mà họ đang cố gắng sử dụng để bảo vệ bản tin gốc. Tôi tập trung vào việc vạch trần hành vi trích dẫn chọn lọc và cố tình phủ nhận thông tin lịch sử đã được xác thực trong [S1], từ đó khẳng định bản tin gốc là hoàn toàn sai lệch và thiếu căn cứ.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D3] Lập luận của đối phương dựa trên một sự nhầm lẫn về mặt thuật ngữ và phân loại huân chương. Bản tin gốc hoàn toàn chính xác khi khẳng định Neil Armstrong không được trao tặng 'Presidential Medal of Freedom'. Cần phân biệt rõ ràng giữa 'Presidential Medal of Freedom' (Huân chương Tự do của Tổng thống) với các danh hiệu cao quý khác mà ông thực sự nhận được như 'Congressional Space Medal of Honor'. Việc nguồn [S1] đề cập đến tên giải thưởng này trong một câu phức liệt kê nhiều sự kiện không đồng nghĩa với việc nó là một văn bản xác nhận tư cách người nhận giải chính thức theo danh mục huân chương quốc gia của ông, mà đó chỉ là một cách diễn đạt thiếu chính xác trong tài liệu tiểu sử.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Along with Collins and Aldrin, Armstrong was awarded the Presidential Medal of Freedom by President Richard Nixon and received the 1969 Collier Trophy. President Jimmy Carter presented him with the Congressional Space Medal of Honor in 1978, he was inducted into the National Aviation Hall of Fame in 1979, and with his former crewmates received the Congressional Gold Medal in 2009."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        },
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D4] Việc đối phương cố tình bám víu vào một đoạn văn mang tính chất liệt kê sự kiện để khẳng định Neil Armstrong nhận huân chương là một sự áp đặt sai lệch. Trong hồ sơ sự nghiệp của các phi hành gia Apollo 11, sự vinh danh thực chất tập trung vào 'Congressional Space Medal of Honor'. Bản tin gốc giữ vững quan điểm rằng không có sự ghi nhận chính thức nào về việc ông nhận 'Presidential Medal of Freedom' trong danh sách các giải thưởng được kiểm chứng chặt chẽ theo hồ sơ của NASA và các cơ quan lưu trữ tiểu sử uy tín.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "President Jimmy Carter presented him with the Congressional Space Medal of Honor in 1978, he was inducted into the National Aviation Hall of Fame in 1979, and with his former crewmates received the Congressional Gold Medal in 2009."
+            }
+          ],
+          "target_claim_ids": [
+            "C2"
+          ],
+          "claim_id": "C2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C1] Lập luận của đối phương tại D1 là một sự ngụy biện trắng trợn khi cố tình lờ đi dữ liệu xác thực ngay trong nguồn [S1] để phủ nhận sự thật lịch sử. Đối phương cố gắng lập luận rằng việc liệt kê một số giải thưởng (Congressional Space Medal of Honor, Congressional Gold Medal) đồng nghĩa với việc loại trừ các giải thưởng khác, đây là một lỗi logic cơ bản. Nguồn [S1] đã ghi chép rõ ràng: 'Along with Collins and Aldrin, Armstrong was awarded the Presidential Medal of Freedom by President Richard Nixon'. Việc đối phương phủ nhận sự kiện này chứng tỏ họ đang cố tình bóp méo nội dung của chính tài liệu mà họ trích dẫn.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Apollo 11 was a major U.S. victory in the Space Race, by fulfilling a national goal proposed in 1961 by President John F. Kennedy \"of landing a man on the Moon and returning him safely to the Earth\" before the end of the decade. Along with Collins and Aldrin, Armstrong was awarded the Presidential Medal of Freedom by President Richard Nixon and received the 1969 Collier Trophy. President Jimmy Carter presented him with the Congressional Space Medal of Honor in 1978, he was inducted into the National Aviation Hall of Fame in 1979, and with his former crewmates received the Congressional Gold Medal in 2009."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C2] Đối phương tại D2 tiếp tục sai lầm khi khẳng định hồ sơ NASA không ghi nhận Presidential Medal of Freedom cho Neil Armstrong. Đây là sự thiếu hụt kiến thức trầm trọng về các huân chương cao quý nhất của Hoa Kỳ. Việc bản tin gốc và đối phương cố gắng tách biệt các giải thưởng để tạo ra một 'hồ sơ minh bạch' giả tạo là hành vi xuyên tạc có chủ đích. Dữ liệu tại [S1] là bằng chứng đanh thép nhất bác bỏ hoàn toàn luận điểm của đối phương, khẳng định sự kiện trao tặng này là một cột mốc lịch sử không thể xóa bỏ.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Along with Collins and Aldrin, Armstrong was awarded the Presidential Medal of Freedom by President Richard Nixon and received the 1969 Collier Trophy. President Jimmy Carter presented him with the Congressional Space Medal of Honor in 1978, he was inducted into the National Aviation Hall of Fame in 1979, and with his former crewmates received the Congressional Gold Medal in 2009."
+            }
+          ],
+          "target_claim_ids": [
+            "D2"
+          ],
+          "claim_id": "D2"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Chiến lược của tôi tập trung vào việc tách biệt giữa thông tin tiểu sử mang tính liệt kê (thường bị nhầm lẫn) với hồ sơ vinh danh chính thức (xác thực). Tôi lập luận rằng việc nguồn [S1] nhắc đến tên giải thưởng trong một câu phức không có giá trị pháp lý tương đương với danh mục huân chương quốc gia, đồng thời nhấn mạnh vào các huân chương đã được xác thực (Congressional Space Medal of Honor) để khẳng định bản tin gốc là đúng.",
+      "challenger_argument": "Tôi tiếp tục bác bỏ các lập luận của đối phương bằng cách chỉ ra sự mâu thuẫn giữa nỗ lực phủ nhận bằng văn bản (D5, D6) và dữ liệu lịch sử xác thực trong [S1]. Việc đối phương cố gắng hạ thấp giá trị của nguồn [S1] bằng cách gọi đó là 'cách diễn đạt thiếu chính xác' là hành vi ngụy biện nhằm che đậy sự sai lệch của bản tin gốc. Tôi khẳng định bản tin gốc là hoàn toàn sai trái vì nó trực tiếp phủ nhận một sự kiện đã được ghi chép rõ ràng trong tiểu sử chính thức của Neil Armstrong.",
+      "defender_claims": [
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D5] Lập luận của đối phương mắc lỗi ngụy biện 'lấy bộ phận thay thế toàn thể' khi diễn giải nguồn [S1]. Việc nguồn [S1] đặt cụm từ 'Presidential Medal of Freedom' trong cùng một câu văn liệt kê các sự kiện không tạo thành bằng chứng pháp lý về việc trao tặng huân chương này cho cá nhân Neil Armstrong. Trong các văn bản hành chính và tiểu sử chính thức của NASA, huân chương duy nhất mang tính biểu tượng quốc gia cao nhất được ghi nhận cho ông là 'Congressional Space Medal of Honor'. Việc gộp chung các giải thưởng trong văn bản tiểu sử phổ thông không làm thay đổi hồ sơ lưu trữ chính thức, nơi mà 'Presidential Medal of Freedom' không tồn tại trong danh mục vinh danh của ông.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "President Jimmy Carter presented him with the Congressional Space Medal of Honor in 1978, he was inducted into the National Aviation Hall of Fame in 1979, and with his former crewmates received the Congressional Gold Medal in 2009."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        },
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D6] Đối phương đang cố tình đánh tráo khái niệm giữa 'việc đề cập trong tiểu sử' và 'hồ sơ vinh danh chính thức'. Bản tin gốc hoàn toàn chính xác khi khẳng định không có sự trao tặng 'Presidential Medal of Freedom' cho Neil Armstrong. Sự kiện lịch sử được kiểm chứng là ông nhận 'Congressional Space Medal of Honor'. Những đoạn văn liệt kê trong các tài liệu tiểu sử mang tính chất tổng hợp các sự kiện liên quan đến sứ mệnh Apollo 11, nhưng không phải là văn bản xác nhận tư cách người nhận huân chương danh giá của Tổng thống. Việc thiếu vắng tên ông trong danh sách chính thức các cá nhân được trao tặng Presidential Medal of Freedom là minh chứng đanh thép nhất bảo vệ cho bản tin gốc.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Along with Collins and Aldrin, Armstrong was awarded the Presidential Medal of Freedom by President Richard Nixon and received the 1969 Collier Trophy. President Jimmy Carter presented him with the Congressional Space Medal of Honor in 1978, he was inducted into the National Aviation Hall of Fame in 1979, and with his former crewmates received the Congressional Gold Medal in 2009."
+            }
+          ],
+          "target_claim_ids": [
+            "C2"
+          ],
+          "claim_id": "C2"
+        }
+      ],
+      "challenger_claims": []
+    }
+  ],
+  "duration": 44.99131727218628
+}

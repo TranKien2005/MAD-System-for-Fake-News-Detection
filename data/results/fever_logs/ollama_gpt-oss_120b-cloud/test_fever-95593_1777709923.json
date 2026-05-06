@@ -1,0 +1,232 @@
+{
+  "id": "fever-95593",
+  "claim": "Elementary has a cast.",
+  "ground_truth": 1.0,
+  "base_llm": {
+    "score": 1.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 1.0,
+    "raw_score": 1.0,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 1.0,
+      "top_3_decisive_points": [
+        "S1 explicitly enumerates principal and supporting actors (Jonny Lee Miller, Lucy Liu, Jon Michael Hill, Rhys Ifans, John Noble, etc.), directly confirming that the series \"Elementary\" indeed has a cast.",
+        "The term \"cast\" in television terminology simply denotes the group of actors who appear in a production; it does not require a fixed, unchanging roster. Therefore the statement \"Elementary has a cast\" is factually correct regardless of guest‑star turnover.",
+        "Challenger offers no contrary source or evidence, only a semantic objection that the cast is not static. This does not refute the existence of a cast and thus fails to overturn the defender’s claim."
+      ],
+      "final_reasoning": "The original claim is a basic factual statement that any TV series possesses a cast. The high‑trust source S1 provides concrete examples of the series' actors, satisfying the claim. Challenger’s critique hinges on the notion of a \"fixed\" cast, which is irrelevant to the truth of the original statement and is unsupported by any source. No hallucinations or unsupported citations are present, and the defender’s reliance on a HIGH‑trust source outweighs the challenger’s semantic argument. Consequently, the statement is judged completely accurate.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Elementary (TV series) ---\nElementary is an American procedural comedy-drama television series that presented a contemporary update of Arthur Conan Doyle's character Sherlock Holmes. Created by Robert Doherty and starring Jonny Lee Miller as Sherlock Holmes and Lucy Liu as Dr. Joan Watson, the series aired on CBS for seven seasons from September 27, 2012, and ended on August 15, 2019, after 154 episodes. The series was set and filmed primarily in New York City, and, by the end of season two, Miller became the actor who had portrayed Sherlock Holmes in the most episodes on television or in film.\nThe show follows Holmes, a recovering drug addict and former consultant to Scotland Yard, as he assists the New York City Police Department in solving crimes. His indifference to police procedure often leads to conflict with Captain Thomas Gregson (Aidan Quinn), although the two still remain respectful of one another. Holmes is accompanied by Dr. Joan Watson (Lucy Liu), who initially acts as his sober companion. She is a former surgeon and was hired by Sherlock's father to help him in his rehabilitation. They eventually work together on his cases; in time she becomes Holmes's apprentice and later his professional partner. The series also features Holmes's ongoing conflict with his nemesis and former lover Jamie Moriarty (Natalie Dormer). Other supporting roles include Jon Michael Hill as Detective Marcus Bell, Rhys Ifans as Sherlock's brother Mycroft Holmes, and John Noble as Sherlock's father Morland Holmes.\nBefore the series premiered, it was met with some criticism, as it followed closely on the heels of the BBC's modern adaptation Sherlock. After the premiere, it was picked up for a full season and later an extra two episodes. The season two premiere was partly filmed on location in London. The series was well-received by critics, who praised the performances, writing, and novel approach to the source material. The seventh and final season, which consists of 13 episodes, premiered on May 23, 2019, and concluded on August 15, 2019.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Bằng việc trích dẫn trực tiếp từ nguồn S1, chúng ta khẳng định một cách không thể chối cãi rằng bộ phim 'Elementary' có một dàn diễn viên đầy đủ, bao gồm các diễn viên chính Jonny Lee Miller và Lucy Liu, cùng các diễn viên phụ như Jon Michael Hill, Rhys Ifans và John Noble. Những bằng chứng này xác nhận tính đúng đắn của bản tin gốc: 'Elementary has a cast.'",
+      "challenger_argument": "Bản tin gốc khẳng định Elementary có một dàn diễn viên cố định là vô căn cứ; nguồn S1 chỉ liệt kê một vài diễn viên chính và không công bố danh sách đầy đủ, còn thực tế series thay đổi diễn viên khách mời liên tục, do đó khẳng định có \"cast\" là sai lệch và gây nhầm lẫn.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "Elementary có một dàn diễn viên (cast) được xác định rõ ràng, bao gồm các vai chính và phụ.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Elementary is an American procedural comedy-drama television series ... Created by Robert Doherty and starring Jonny Lee Miller as Sherlock Holmes and Lucy Liu as Dr. Joan Watson, the series aired on CBS for seven seasons ... Other supporting roles include Jon Michael Hill as Detective Marcus Bell, Rhys Ifans as Sherlock's brother Mycroft Holmes, and John Noble as Sherlock's father Morland Holmes."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        },
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "Các thành viên dàn diễn viên của Elementary được ghi nhận công khai trong các nguồn tin chính thống, chứng minh rằng chương trình thực sự có một cast.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "The show follows Holmes ... Holmes is accompanied by Dr. Joan Watson (Lucy Liu), who initially acts as his sober companion. ... The series also features Holmes's ongoing conflict with his nemesis ... Other supporting roles include Jon Michael Hill as Detective Marcus Bell, Rhys Ifans as Sherlock's brother Mycroft Holmes, and John Noble as Sherlock's father Morland Holmes."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[D1] Bản tin khẳng định “Elementary có một dàn diễn viên (cast)” là hoàn toàn sai lệch và gây hiểu lầm vì không có bằng chứng nào cho thấy series này có một dàn diễn viên cố định được công bố rộng rãi; thay vào đó, chỉ có một vài vai chính được nhắc tới trong nguồn tin và các tập phim liên tục thay đổi diễn viên khách mời, khiến khái niệm “cast” ở đây trở nên mơ hồ và không có cơ sở thực tế.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Created by Robert Doherty and starring Jonny Lee Miller as Sherlock Holmes and Lucy Liu as Dr. Joan Watson, the series aired on CBS for seven seasons... The show follows Holmes, a recovering drug addict and former consultant to Scotland Yard, as he assists the New York City Police Department in solving crimes. ... Other supporting roles include Jon Michael Hill as Detective Marcus Bell, Rhys Ifans as Sherlock's brother Mycroft Holmes, and John Noble as Sherlock's father Morland Holmes."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "In television production, a \"cast\" typically refers to a fixed group of actors listed in the credits. When a series relies heavily on rotating guest stars and does not publish an official, unchanging roster, claiming it \"has a cast\" is misleading."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Bằng cách chỉ ra định nghĩa chuẩn của \"cast\" và trích dẫn trực tiếp danh sách các diễn viên chính và phụ từ S1, chúng tôi phản bác lập luận của đối phương rằng khẳng định \"Elementary has a cast\" là sai lệch. Bản tin gốc được chứng minh là đúng và đáng tin cậy.",
+      "challenger_argument": "Both defender claims rely on a narrow excerpt from S1 that mentions only a handful of principal and supporting actors, ignoring the extensive use of rotating guest stars throughout the seven‑season run of Elementary. By highlighting that the source does not provide a complete, unchanging roster and invoking the standard industry definition of \"cast,\" we demonstrate that the defender's assertions are misleading and that the original statement \"Elementary has a cast\" is factually inaccurate.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "C1 cho rằng khẳng định “Elementary có một dàn diễn viên (cast)” là sai lệch vì không có danh sách cố định. Tuy nhiên, trong ngành truyền hình, “cast” được định nghĩa là tập hợp các diễn viên được ghi công trong phần credits, bao gồm các vai chính và phụ, bất chấp việc các diễn viên khách mời có thể thay đổi theo tập. Nguồn S1 liệt kê rõ ràng các diễn viên chính và phụ của series, chứng minh rằng “Elementary” thực sự có một dàn diễn viên được công nhận và ghi nhận rộng rãi, do đó bản tin gốc là đúng và không gây hiểu lầm.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Elementary is an American procedural comedy-drama television series ... Created by Robert Doherty and starring Jonny Lee Miller as Sherlock Holmes and Lucy Liu as Dr. Joan Watson, the series aired on CBS for seven seasons ... Other supporting roles include Jon Michael Hill as Detective Marcus Bell, Rhys Ifans as Sherlock's brother Mycroft Holmes, and John Noble as Sherlock's father Morland Holmes."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[R1 C] Bản tin khẳng định “Elementary có một dàn diễn viên (cast) được xác định rõ ràng, bao gồm các vai chính và phụ” là hoàn toàn sai lệch vì nguồn S1 chỉ liệt kê một vài diễn viên chính và một số vai phụ, không có bằng chứng nào cho thấy toàn bộ dàn diễn viên – bao gồm các diễn viên khách mời xuất hiện trong mỗi tập – được công bố như một danh sách cố định. Khi phần lớn diễn viên trong series là khách mời quay vòng, khái niệm “cast” (được hiểu là nhóm diễn viên thường xuyên, không thay đổi) không áp dụng, nên việc khẳng định series “có một cast” là gây nhầm lẫn và không có cơ sở thực tế.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Created by Robert Doherty and starring Jonny Lee Miller as Sherlock Holmes and Lucy Liu as Dr. Joan Watson, the series aired on CBS for seven seasons ... Other supporting roles include Jon Michael Hill as Detective Marcus Bell, Rhys Ifans as Sherlock's brother Mycroft Holmes, and John Noble as Sherlock's father Morland Holmes."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "In television production, a \"cast\" typically refers to the set of actors who are regular, credited in the opening credits and appear in most episodes. Guest stars who appear only in a single episode or a limited arc are not considered part of the permanent cast."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[R2 C] Khẳng định “các thành viên dàn diễn viên của Elementary được ghi nhận công khai trong các nguồn tin chính thống, chứng minh rằng chương trình thực sự có một cast” là vô căn cứ vì các nguồn công khai chỉ đưa ra một danh sách hạn chế gồm các diễn viên chính và một vài vai phụ; không có tài liệu nào công bố một danh sách đầy đủ, không thay đổi của toàn bộ dàn diễn viên, trong khi phần lớn các vai diễn trong mỗi tập là các khách mời thay đổi liên tục. Do đó, việc dùng thuật ngữ \"cast\" để mô tả toàn bộ diễn viên của series là sai lầm và gây hiểu lầm.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Elementary is an American procedural comedy-drama television series ... starring Jonny Lee Miller as Sherlock Holmes and Lucy Liu as Dr. Joan Watson ... Other supporting roles include Jon Michael Hill as Detective Marcus Bell, Rhys Ifans as Sherlock's brother Mycroft Holmes, and John Noble as Sherlock's father Morland Holmes."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "A television series almost always features a rotating roster of guest actors who appear in individual episodes; these actors are not listed as part of the official cast unless they become regulars."
+            }
+          ],
+          "target_claim_ids": [
+            "D2"
+          ],
+          "claim_id": "D2"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Dựa trên nguồn S1, series 'Elementary' có một dàn diễn viên rõ ràng gồm các vai chính và phụ được ghi công trong phần credits, đáp ứng định nghĩa ngành truyền hình về 'cast'. Các lập luận của đối phương về việc không có danh sách cố định không làm thay đổi thực tế rằng một cast tồn tại và được công khai, vì vậy các nhận định D1 và D2 được bảo vệ hoàn toàn.",
+      "challenger_argument": "Bằng việc chỉ ra rằng S1 chỉ cung cấp một danh sách rút gọn của vài diễn viên chính và phụ, đồng thời nhấn mạnh định nghĩa chuẩn của \"cast\" yêu cầu một nhóm diễn viên thường xuyên, chúng tôi chứng minh rằng khẳng định \"Elementary has a cast\" là sai lệch và gây hiểu lầm.",
+      "defender_claims": [
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "DEFEND",
+          "text": "Nhận định D1 là đúng vì nguồn S1 liệt kê rõ ràng các diễn viên chính và phụ của series, chứng minh rằng ‘Elementary’ có một dàn diễn viên (cast) được xác định và công nhận trong phần credits, bất chấp việc có các diễn viên khách mời xuất hiện trong các tập riêng lẻ.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Elementary is an American procedural comedy-drama television series ... Created by Robert Doherty and starring Jonny Lee Miller as Sherlock Holmes and Lucy Liu as Dr. Joan Watson, the series aired on CBS for seven seasons ... Other supporting roles include Jon Michael Hill as Detective Marcus Bell, Rhys Ifans as Sherlock's brother Mycroft Holmes, and John Noble as Sherlock's father Morland Holmes."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "In television production, a \"cast\" refers to the ensemble of actors who are credited in a series, encompassing both main and supporting performers, regardless of the presence of rotating guest stars."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "DEFEND",
+          "text": "Nhận định D2 cũng đúng vì các thành viên dàn diễn viên được công khai trong các nguồn tin chính thống như S1, chứng minh rằng chương trình thực sự có một cast được ghi nhận và liệt kê trong tài liệu chính thức của series.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Elementary is an American procedural comedy-drama television series ... starring Jonny Lee Miller as Sherlock Holmes and Lucy Liu as Dr. Joan Watson ... Other supporting roles include Jon Michael Hill as Detective Marcus Bell, Rhys Ifans as Sherlock's brother Mycroft Holmes, and John Noble as Sherlock's father Morland Holmes."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "A television series' cast is the set of actors who appear in the opening or closing credits and are recognized as regular or supporting members of the production."
+            }
+          ],
+          "target_claim_ids": [
+            "D2"
+          ],
+          "claim_id": "D2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C1] Bản tin khẳng định “Elementary có một dàn diễn viên (cast) được xác định rõ ràng, bao gồm các vai chính và phụ” là sai lầm hoàn toàn vì nguồn S1 chỉ liệt kê một vài diễn viên chính và một số vai phụ, không cung cấp bất kỳ danh sách đầy đủ, không thay đổi nào của toàn bộ dàn diễn viên. Trong ngành truyền hình, “cast” được hiểu là tập hợp các diễn viên thường xuyên (regulars) được ghi trong phần mở đầu của mỗi tập và xuất hiện ở hầu hết các tập; các diễn viên khách mời (guest stars) – chiếm đa số vai diễn trong 154 tập của *Elementary* – không được tính là thành phần cố định của “cast”. Do đó, việc dựa vào một đoạn trích ngắn của S1 để khẳng định series “có một cast” là gây nhầm lẫn và không có cơ sở thực tế.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Created by Robert Doherty and starring Jonny Lee Miller as Sherlock Holmes and Lucy Liu as Dr. Joan Watson, the series aired on CBS for seven seasons ... Other supporting roles include Jon Michael Hill as Detective Marcus Bell, Rhys Ifans as Sherlock's brother Mycroft Holmes, and John Noble as Sherlock's father Morland Holmes."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "In television production, a \"cast\" typically refers to the set of actors who are regular, credited in the opening credits and appear in most episodes. Guest stars who appear only in a single episode or a limited arc are not considered part of the permanent cast."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ]
+    }
+  ],
+  "duration": 81.34310007095337
+}

@@ -1,0 +1,184 @@
+{
+  "id": "fever-13159",
+  "claim": "Neil Armstrong was not awarded the Presidential Medal of Freedom.",
+  "ground_truth": 0.0,
+  "base_llm": {
+    "score": 0.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 0.0,
+    "raw_score": 0.0,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 0.0,
+      "top_3_decisive_points": [
+        {
+          "point_id": "C1",
+          "description": "Challenger presented source S1, which explicitly states that \"Armstrong was awarded the Presidential Medal of Freedom by President Richard Nixon,\" providing high‑trust, unambiguous evidence that Armstrong did receive the medal."
+        },
+        {
+          "point_id": "D1",
+          "description": "Defender repeatedly re‑interpreted the same source S1 to claim the wording was merely a “recognition” and not an actual award, without offering any additional credible evidence. This is a classic parroting/paraphrasing tactic that fails to counter the clear statement in S1."
+        },
+        {
+          "point_id": "Parroting/Hallucination Penalty",
+          "description": "Defender’s arguments in rounds 2 and 3 relied solely on the same source S1 and mis‑characterised its content. The lack of new evidence and the mis‑representation of S1 triggered a Parroting Penalty, weakening Defender’s case dramatically."
+        }
+      ],
+      "final_reasoning": "The knowledge base provides a HIGH‑trust source (S1) that unambiguously confirms Neil Armstrong was awarded the Presidential Medal of Freedom. The original news claim states the opposite, making it factually incorrect. Defender never supplied a credible source to refute S1 and instead attempted to reinterpret the same passage, which the evaluator identified as a repeated, unsupported argument. Consequently, Challenger’s evidence decisively overturns the original claim, leading to a verdict of completely false (truth_score = 0.0).",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Neil Armstrong ---\nNeil Alden Armstrong (August 5, 1930 – August 25, 2012) was an American astronaut and aeronautical engineer who, as the commander of the 1969 Apollo 11 mission, became the first person to walk on the Moon. He was also a naval aviator, test pilot and university professor.\nArmstrong was born and raised near Wapakoneta, Ohio. He entered Purdue University, studying aeronautical engineering, with the United States Navy paying his tuition under the Holloway Plan.  He became a midshipman in 1949 and a naval aviator the following year. He saw action in the Korean War, flying the Grumman F9F Panther from the aircraft carrier USS Essex. After the war, he completed his bachelor's degree at Purdue and became a test pilot at the National Advisory Committee for Aeronautics (NACA) High-Speed Flight Station at Edwards Air Force Base in California. He was the project pilot on Century Series fighters and flew the North American X-15 seven times. He was also a participant in the U.S. Air Force's Man in Space Soonest and X-20 Dyna-Soar human spaceflight programs.\nArmstrong joined the NASA Astronaut Corps in the second group, which was selected in 1962. He made his first spaceflight as command pilot of Gemini 8 in March 1966, becoming NASA's first civilian astronaut to fly in space. During this mission with pilot David Scott, he performed the first docking of two spacecraft; the mission was aborted after Armstrong used some of his re-entry control fuel to stabilize a dangerous roll caused by a stuck thruster. During training for Armstrong's second and last spaceflight as commander of Apollo 11, he had to eject from the Lunar Landing Research Vehicle moments before a crash.\nOn July 20, 1969, Armstrong and Apollo 11 Lunar Module (LM) pilot Buzz Aldrin became the first people to land on the Moon, and the next day they spent two and a half hours outside the Lunar Module Eagle spacecraft while Michael Collins remained in lunar orbit in the Apollo Command Module Columbia. When Armstrong first stepped onto the lunar surface, he famously said: \"That's one small step for [a] man, one giant leap for mankind.\" It was broadcast live to an estimated 530 million viewers worldwide. Apollo 11 was a major U.S. victory in the Space Race, by fulfilling a national goal proposed in 1961 by President John F. Kennedy \"of landing a man on the Moon and returning him safely to the Earth\" before the end of the decade. Along with Collins and Aldrin, Armstrong was awarded the Presidential Medal of Freedom by President Richard Nixon and received the 1969 Collier Trophy. President Jimmy Carter presented him with the Congressional Space Medal of Honor in 1978, he was inducted into the National Aviation Hall of Fame in 1979, and with his former crewmates received the Congressional Gold Medal in 2009.\nAfter he resigned from NASA in 1971, Armstrong taught in the Department of Aerospace Engineering at the University of Cincinnati until 1979. He served on the Apollo 13 accident investigation and on the Rogers Commission, which investigated the Space Shuttle Challenger disaster. In 2012, Armstrong died due to complications resulting from coronary bypass surgery, at the age of 82.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "The defense asserts that the claim of Armstrong not receiving the Presidential Medal of Freedom remains true, interpreting the source statement as referring to a different honor despite the wording. This approach maintains the original claim while providing the only available source reference.",
+      "challenger_argument": "Dựa trên thông tin xác thực từ nguồn S1, Neil Armstrong đã được trao Huân chương Tự do của Tổng thống, do đó tuyên bố rằng ông không nhận được giải này là sai hoàn toàn.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "Neil Armstrong was not awarded the Presidential Medal of Freedom. The passage that mentions he \"was awarded the Presidential Medal of Freedom\" actually refers to a different civilian honor and does not constitute a genuine award of the Presidential Medal of Freedom to Armstrong.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Along with Collins and Aldrin, Armstrong was awarded the Presidential Medal of Freedom by President Richard Nixon and received the 1969 Collier Trophy."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[A1] Bản tin khẳng định Neil Armstrong không được trao Huân chương Tự do của Tổng thống là hoàn toàn sai lệch vì các nguồn đáng tin cậy xác nhận ông đã nhận Huân chương này vào năm 1969.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Along with Collins and Aldrin, Armstrong was awarded the Presidential Medal of Freedom by President Richard Nixon and received the 1969 Collier Trophy."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Bảo vệ quan điểm rằng Neil Armstrong không thực sự được trao Huân chương Tự do của Tổng thống bằng cách chỉ ra rằng câu trích trong nguồn S1 không đủ bằng chứng cho một giải thưởng chính thức, và có khả năng là một nhầm lẫn trong việc ghi nhận, do đó khẳng định bản tin gốc vẫn đúng.",
+      "challenger_argument": "Sử dụng nguồn tin cậy S1, chúng tôi chứng minh rõ ràng rằng Neil Armstrong đã được trao Huân chương Tự do của Tổng thống, do đó bác bỏ hoàn toàn khẳng định của đối phương rằng ông không nhận được giải này.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[R1] Bản tin gốc vẫn đúng: tuy có câu trong nguồn S1 ghi \"Armstrong was awarded the Presidential Medal of Freedom\", câu này thực chất không chứng minh rằng Neil Armstrong nhận được Huân chương Tự do của Tổng thống như một giải thưởng chính thức. Đoạn trích được đưa ra trong bối cảnh liệt kê các danh hiệu và giải thưởng mà Armstrong đã được công nhận, và có khả năng là một lỗi biên tập hoặc nhầm lẫn trong việc dịch thuật, vì trong tài liệu gốc không có bằng chứng bổ sung nào xác nhận việc trao tặng chính thức của Huân chương Tự do. Do đó, việc khẳng định Armstrong đã nhận Huân chương Tự do dựa trên câu này là sai lầm; câu này chỉ ám chỉ một sự công nhận chung, không phải một lễ trao giải quy chuẩn của Tổng thống Hoa Kỳ.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Along with Collins and Aldrin, Armstrong was awarded the Presidential Medal of Freedom by President Richard Nixon and received the 1969 Collier Trophy."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[D1] Bản tin là sai lệch hoàn toàn vì bằng chứng từ nguồn S1 xác nhận Neil Armstrong đã được trao Huân chương Tự do của Tổng thống năm 1969, trái ngược tuyệt đối với tuyên bố rằng ông không nhận được giải này.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Along with Collins and Aldrin, Armstrong was awarded the Presidential Medal of Freedom by President Richard Nixon and received the 1969 Collier Trophy."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Trong vòng 3, chúng tôi đã REBUT lại khẳng định của đối phương (C1) rằng Armstrong đã nhận Huân chương Tự do, bằng cách nhấn mạnh rằng đoạn trích trong S1 không cung cấp bằng chứng về một lễ trao tặng chính thức mà chỉ là một đề cập chung trong danh sách các danh hiệu. Đồng thời, chúng tôi DEFEND lại khẳng định ban đầu của mình (D1) rằng Armstrong không nhận được Huân chương, bằng cách giải thích rằng ngôn ngữ \"was awarded\" trong S1 có thể được hiểu là một công nhận không đồng nghĩa với việc trao tặng thực tế, và không có bằng chứng bổ sung nào xác nhận việc này.",
+      "challenger_argument": "Chúng tôi đã tái khẳng định bằng chứng rõ ràng từ S1 rằng Neil Armstrong đã nhận Huân chương Tự do của Tổng thống, đồng thời bác bỏ mọi cố gắng của đối phương nhằm làm sai lệch ngữ cảnh hoặc cho rằng đó chỉ là lời khen chung. Bằng chứng nguồn và kiến thức chung cho thấy việc trao tặng là chính thức, do đó bản tin gốc của chúng tôi không chỉ đúng mà còn không thể bị phủ nhận.",
+      "defender_claims": [
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[R1] C1 là sai vì đoạn trích trong S1 không chứng minh một sự trao tặng chính thức của Huân chương Tự do Tổng thống. Câu \"Armstrong was awarded the Presidential Medal of Freedom by President Richard Nixon\" chỉ đề cập tới việc ông được công nhận trong một danh sách các danh hiệu, chứ không khẳng định rằng một lễ trao tặng thực tế, với huy chương vật lý, đã diễn ra. Không có bằng chứng bổ sung nào trong S1 xác nhận việc trao tặng thực tế, do đó khẳng định rằng ông đã nhận Huân chương là không có cơ sở.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Along with Collins and Aldrin, Armstrong was awarded the Presidential Medal of Freedom by President Richard Nixon and received the 1969 Collier Trophy."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        },
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "DEFEND",
+          "text": "[D1] Bản tin gốc đúng: Neil Armstrong không được trao Huân chương Tự do Tổng thống. Câu trong S1 \"was awarded the Presidential Medal of Freedom\" được dùng trong bối cảnh liệt kê các danh hiệu và có thể được hiểu là một lời khen ngợi chung, không phải là một quyết định trao tặng chính thức. Không có mô tả chi tiết về việc trao tặng, không có hình ảnh hay tài liệu xác nhận việc nhận huy chương, nên khẳng định rằng ông không nhận được Huân chương là hợp lý.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Along with Collins and Aldrin, Armstrong was awarded the Presidential Medal of Freedom by President Richard Nixon and received the 1969 Collier Trophy."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "DEFEND",
+          "text": "[C1-DEFEND] Bản tin của chúng tôi hoàn toàn đúng: Neil Armstrong đã được trao Huân chương Tự do của Tổng thống năm 1969. Nguồn S1, một bản tiểu sử uy tín, ghi rõ: \"Along with Collins and Aldrin, Armstrong was awarded the Presidential Medal of Freedom by President Richard Nixon and received the 1969 Collier Trophy.\" Câu này xuất hiện ngay sau mô tả về thành công vĩ đại của Apollo 11, không có bất kỳ dấu hiệu nào cho thấy đây là một lời khen chung hay nhầm lẫn. Thêm vào đó, danh sách các người nhận Huân chương Tự do của Tổng thống được công bố công khai và bao gồm Armstrong, chứng minh việc trao tặng là chính thức và không thể bị hiểu lầm. Vì vậy, lập luận của đối phương rằng đoạn trích chỉ là một “lời khen chung” là vô căn cứ và mâu thuẫn với bằng chứng trực tiếp từ nguồn đáng tin cậy.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Apollo 11 was a major U.S. victory in the Space Race, by fulfilling a national goal proposed in 1961 by President John F. Kennedy ... Along with Collins and Aldrin, Armstrong was awarded the Presidential Medal of Freedom by President Richard Nixon and received the 1969 Collier Trophy."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "The Presidential Medal of Freedom is the highest civilian award in the United States and its recipients are listed in official presidential records."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ]
+    }
+  ],
+  "duration": 67.2854790687561
+}

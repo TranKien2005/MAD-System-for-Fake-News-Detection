@@ -1,0 +1,200 @@
+{
+  "id": "fever-104779",
+  "claim": "Frank Ocean was in a poll.",
+  "ground_truth": 1.0,
+  "base_llm": {
+    "score": 0.0,
+    "is_correct": false
+  },
+  "mad_system": {
+    "score": 0.0,
+    "raw_score": 0.25,
+    "is_correct": false,
+    "verdict": {
+      "truth_score": 0.25,
+      "top_3_decisive_points": [
+        "Challenger correctly identified that the only source (S1) mentions Frank Ocean being *named* by Time, which is an editorial accolade, not evidence of a structured poll or survey.",
+        "Defender misrepresented source S1 as proof of a poll, committing a Hallucination Penalty because the source contains no information about any voting process; this undermines the defender’s claim.",
+        "Defender repeatedly repeated the same argument across three rounds without providing new evidence (Parroting Penalty), while Challenger consistently highlighted the lack of any poll‑related evidence, showing a stronger logical and evidential position."
+      ],
+      "final_reasoning": "The original statement \"Frank Ocean was in a poll\" is not supported by the available knowledge. Source S1 only confirms that Time *named* Frank Ocean as one of the 100 most influential people, which is an editorial selection rather than a poll. The defender’s argument relies on a misinterpretation of this source and fails to provide any independent evidence of a poll, violating both the Hallucination and Parroting rules. The challenger’s rebuttal correctly applies the definition of a poll and shows that the claim is misleading. Consequently, the statement is judged as severely misleading (Misleading/Mostly False), meriting a truth_score of 0.25.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Frank Ocean ---\nFrank Ocean (born Christopher Edwin Breaux; October 28, 1987) is an American singer-songwriter and rapper. His accolades include two Grammy Awards and a Brit Award. He has been credited by several music critics as a pioneer of the alternative R&B genre.\nOcean began his musical career as a ghostwriter before joining the Los Angeles-based hip hop collective Odd Future in 2010. The year prior, he signed with RedZone Entertainment, an imprint of Def Jam Recordings, although his debut mixtape, Nostalgia, Ultra (2011), was released independently. His debut studio album, the eclectic Channel Orange (2012), incorporated elements of R&B and soul music. At the 55th Annual Grammy Awards, the album was nominated for Album of the Year and won Best Urban Contemporary Album; its lead single, \"Thinkin Bout You\", was nominated for Record of the Year. He was named by Time as one of the world's 100 most influential people in 2013.\nAfter a four-year hiatus, Ocean released the visual album Endless (2016) to fulfill contractual obligations with Def Jam. His second studio album, Blonde, was released independently the following day. Expanding on Ocean's experimental approach, Blonde was met with critical acclaim, debuted atop the US Billboard 200, and ranked first on Pitchfork's Best Albums of the 2010s Decade list. After 2017, Ocean has released sporadic singles, worked as a photographer for magazines, launched the fashion brand Homer, and started Homer Radio. 15 of Ocean's songs have entered the Billboard Hot 100, while four of his releases (singles or albums) have received platinum certification by the Recording Industry Association of America (RIAA).",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Dựa trên thông tin trong Knowledge Base, Frank Ocean đã xuất hiện trong một cuộc bình chọn danh sách 100 người có ảnh hưởng nhất của Time, do đó khẳng định rằng \"Frank Ocean was in a poll\" là đúng và được chứng minh bằng nguồn S1.",
+      "challenger_argument": "Bằng cách chỉ ra rằng việc Frank Ocean được Time liệt kê không phải là một cuộc thăm dò mà là một lựa chọn biên tập, và không có bằng chứng nào cho thấy ông tham gia bất kỳ poll nào, chúng tôi chứng minh rằng tuyên bố gốc \"Frank Ocean was in a poll\" là vô căn cứ và sai lệch.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "Bản tin là đúng sự thật vì Frank Ocean đã được liệt kê trong một cuộc bình chọn danh sách 100 người có ảnh hưởng nhất thế giới của Time năm 2013, chứng tỏ ông đã từng tham gia một cuộc thăm dò (poll).",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "He was named by Time as one of the world's 100 most influential people in 2013."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[A1] Bản tin \"Frank Ocean was in a poll\" là sai lệch hoàn toàn vì không có bằng chứng nào cho thấy Frank Ocean đã tham gia bất kỳ cuộc thăm dò (poll) nào; nguồn duy nhất đề cập đến ông là việc Time liệt kê ông trong danh sách 100 người có ảnh hưởng nhất thế giới năm 2013, nhưng danh sách này là một lựa chọn biên tập, không phải một cuộc bình chọn dựa trên phiếu bầu.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "He was named by Time as one of the world's 100 most influential people in 2013."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "A poll is a systematic method of collecting votes or opinions from a group of participants, usually involving a voting process or survey. A curated list, such as Time's \"100 Most Influential People,\" is compiled by editors and does not constitute a poll."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Bằng cách chỉ ra rằng danh sách 100 người có ảnh hưởng nhất của Time được tạo ra thông qua một quy trình khảo sát và bình chọn của các biên tập viên, chuyên gia và nhà báo, chúng ta chứng minh rằng Frank Ocean đã thực sự nằm trong một poll. Bằng chứng từ S1 xác nhận việc ông được liệt kê trong danh sách này, đồng thời kiến thức chung giải thích rằng quy trình này đáp ứng tiêu chí của một poll, từ đó bác bỏ lập luận của đối phương rằng đây chỉ là lựa chọn biên tập không có tính chất poll.",
+      "challenger_argument": "The defender's claim conflates an editorial accolade with a genuine poll. The source S1 confirms only that Time *named* Frank Ocean as influential, which is an editor‑driven selection, not a vote‑based poll. Common knowledge defines a poll as a structured voting or survey process, which is absent here. Consequently, the original statement that \"Frank Ocean was in a poll\" is unfounded and misleading.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D2] Bản tin \"Frank Ocean was in a poll\" là đúng vì việc Time đưa Frank Ocean vào danh sách \"100 người có ảnh hưởng nhất thế giới\" năm 2013 thực chất là một cuộc khảo sát (poll) do các biên tập viên và chuyên gia toàn cầu tham gia bình chọn. Danh sách này không phải là một quyết định độc đoán mà dựa trên một quy trình thu thập ý kiến và xếp hạng, do đó đáp ứng tiêu chí của một poll.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "His debut studio album, the eclectic Channel Orange (2012), incorporated elements of R&B and soul music. At the 55th Annual Grammy Awards, the album was nominated for Album of the Year and won Best Urban Contemporary Album; its lead single, \"Thinkin Bout You\", was nominated for Record of the Year. He was named by Time as one of the world's 100 most influential people in 2013."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "A poll is a systematic method of collecting opinions or votes from a group of participants, often involving surveys, questionnaires, or expert panels. When a publication such as Time assembles a list of the \"most influential people\" based on input from editors, journalists, and external experts, the process constitutes a poll."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C2] Bản tin \"Frank Ocean was in a poll\" là sai lệch hoàn toàn vì việc Frank Ocean được Time đưa vào danh sách \"100 người có ảnh hưởng nhất thế giới\" không phải là một cuộc thăm dò (poll) mà là một lựa chọn biên tập nội bộ; không có bằng chứng nào cho thấy ông đã tham gia vào một quy trình thu thập phiếu bầu hay khảo sát công chúng.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "He was named by Time as one of the world's 100 most influential people in 2013."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "A poll is a systematic method of collecting votes or opinions from a group of participants, usually involving a voting process or survey. Editorial lists such as Time's \"100 Most Influential People\" are curated by editors without a public voting mechanism and therefore do not constitute a poll."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Bằng cách khẳng định rằng danh sách Time được tạo ra qua một quy trình thu thập và tổng hợp phiếu của các biên tập viên và chuyên gia, chúng ta chứng minh rằng việc Frank Ocean xuất hiện trong danh sách này là bằng chứng rõ ràng rằng ông đã nằm trong một poll. Điều này phản bác hoàn toàn lập luận của đối phương rằng danh sách chỉ là lựa chọn biên tập và không phải một poll, đồng thời củng cố lại tính đúng đắn của bản tin gốc \"Frank Ocean was in a poll\".",
+      "challenger_argument": "Trong vòng 3, chúng tôi đã dùng REBUT để bác bỏ quyết định sai lầm của đối phương (D1) rằng Frank Ocean đã tham gia một poll, bằng cách chỉ ra rằng nguồn duy nhất chỉ xác nhận việc ông được liệt kê, không có bằng chứng về quá trình bình chọn. Đồng thời, chúng tôi DEFEND lại lập luận ban đầu (C1) bằng cùng bằng chứng, khẳng định mạnh mẽ rằng tuyên bố gốc \"Frank Ocean was in a poll\" là vô căn cứ và sai lệch.",
+      "defender_claims": [
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "DEFEND",
+          "text": "[D3] Bản tin là đúng sự thật vì Frank Ocean đã được đưa vào danh sách \"100 người có ảnh hưởng nhất thế giới\" của Time năm 2013, và quy trình lựa chọn danh sách này đáp ứng đầy đủ các tiêu chí của một cuộc thăm dò (poll). Time thu thập ý kiến từ một nhóm rộng lớn gồm các biên tập viên, nhà báo, và chuyên gia quốc tế, sau đó tổng hợp và xếp hạng các ứng cử viên dựa trên số phiếu được ghi nhận. Do đó, việc Frank Ocean xuất hiện trong danh sách này chứng minh rằng ông đã tham gia (được bao gồm) trong một poll.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "He was named by Time as one of the world's 100 most influential people in 2013."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "A poll is a systematic method of collecting opinions or votes from a group of participants, often involving surveys, questionnaires, or expert panels. When a publication such as Time assembles a list of the \"most influential people\" based on input from editors, journalists, and external experts, the process constitutes a poll."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[R1] Bản tin \"Frank Ocean was in a poll\" là hoàn toàn sai lệch vì bằng chứng duy nhất (S1) chỉ cho biết ông **được Time liệt kê** trong danh sách 100 người có ảnh hưởng nhất thế giới năm 2013, chứ không có bất kỳ dấu hiệu nào cho thấy đây là một cuộc thăm dò (poll) dựa trên việc thu thập phiếu bầu hay khảo sát. Do đó, việc khẳng định Ocean đã \"ở trong một poll\" là vô căn cứ và gây hiểu lầm.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "He was named by Time as one of the world's 100 most influential people in 2013."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "A poll is a systematic method of collecting votes or opinions from a group of participants, usually involving a voting process, questionnaire, or survey. Editorial selections such as Time's \"100 Most Influential People\" are curated by editors and external experts without a public voting mechanism, and therefore do not constitute a poll."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "DEFEND",
+          "text": "[R2] Khẳng định của chúng tôi rằng \"Frank Ocean was in a poll\" là sai là đúng đắn; nguồn S1 chỉ nói rằng ông được Time **đặt tên** trong danh sách, không đề cập tới bất kỳ hình thức bình chọn nào. Định nghĩa chung về poll và quy trình biên tập của Time xác nhận rằng đây là một lựa chọn biên tập, không phải một cuộc thăm dò, nên lập luận của chúng tôi vẫn vững chắc.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "He was named by Time as one of the world's 100 most influential people in 2013."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Editorial lists like Time's \"100 Most Influential People\" are compiled by editors and invited experts, not by a mass voting process; consequently they do not meet the criteria of a poll."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ]
+    }
+  ],
+  "duration": 60.6561815738678
+}

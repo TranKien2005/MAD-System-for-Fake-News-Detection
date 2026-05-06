@@ -1,0 +1,181 @@
+{
+  "id": "fever-67845",
+  "claim": "Alia Bhatt is only an actress.",
+  "ground_truth": 0.0,
+  "base_llm": {
+    "score": 0.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 0.0,
+    "raw_score": 0.25,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 0.25,
+      "top_3_decisive_points": [
+        "Việc sử dụng từ hạn định 'only' (chỉ là) trong bản tin gốc tạo ra một khẳng định mang tính loại trừ tuyệt đối, mâu thuẫn trực tiếp với dữ liệu [S1] về các vai trò đa diện của Alia Bhatt.",
+        "Defender đã sa đà vào lỗi ngụy biện 'quy giản' (reductionism), cố gắng gán ghép các thực thể kinh doanh độc lập (Eternal Sunshine Productions, Ed-a-Mamma) như là 'phụ phẩm' của diễn xuất, điều này không phản ánh đúng thực tế về quyền tự chủ nghề nghiệp của nhân vật.",
+        "Challenger đã chứng minh thành công rằng Alia Bhatt không chỉ là diễn viên mà còn là nhà đầu tư, nhà sáng lập và nhà hoạt động xã hội, khiến khẳng định 'chỉ là' trong bản tin gốc trở nên sai lệch về mặt thông tin."
+      ],
+      "final_reasoning": "Bản tin gốc 'Alia Bhatt is only an actress' bị đánh giá là 'Sai lệch nghiêm trọng' (0.25). Dữ liệu [S1] từ kho tri thức xác nhận rằng Alia Bhatt thực sự là một diễn viên, nhưng cô đồng thời là nhà sáng lập doanh nghiệp (Ed-a-Mamma, Eternal Sunshine Productions), nhà đầu tư và nhà hoạt động xã hội. Từ 'only' trong bản tin gốc đã tạo ra một sự loại trừ sai lệch, phủ nhận các vai trò quan trọng khác của nhân vật. Defender đã thất bại trong việc bảo vệ tính chính xác của từ 'only' khi cố gắng quy giản hóa các hoạt động kinh doanh độc lập thành các hoạt động 'phụ trợ'. Trong khi đó, Challenger đã sử dụng dữ liệu [S1] một cách chính xác để bẻ gãy luận điểm của Defender, chứng minh rằng bản tin gốc là một sự bóp méo thực tế qua tư duy quy giản.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Alia Bhatt ---\nAlia Bhatt (; born 15 March 1993) is a British actress of Indian descent who predominantly works in Hindi films. Known for her portrayals of women in challenging circumstances, she has received several accolades, including a National Film Award and seven Filmfare Awards. She is one of India's highest-paid actresses. Time awarded her with the Time100 Impact Award in 2022 and named her one of the 100 most influential people in the world in 2024.\nBorn into the Bhatt family, she is a daughter of filmmaker Mahesh Bhatt and actress Soni Razdan. After making her acting debut as a child in the 1999 thriller film Sangharsh, she played her first leading role in Karan Johar's teen film Student of the Year (2012). She won the Filmfare Critics Award for Best Actress for playing a kidnapping victim in the road drama Highway (2014) and went on to establish herself with starring roles in several romantic films produced by Johar's studio Dharma Productions.\nBhatt won Filmfare Awards for Best Actress for playing a victim of drug abuse in the crime drama Udta Punjab (2016), an undercover spy in the thriller Raazi (2018), a possessive girlfriend in the musical drama Gully Boy (2019), and the title role of a prostitute in the biopic Gangubai Kathiawadi (2022). The last of these also earned her the National Film Award for Best Actress. She expanded to film production with the black comedy Darlings (2022) and had her biggest commercial success in the fantasy film Brahmāstra: Part One – Shiva (2022) and the romantic comedy Rocky Aur Rani Kii Prem Kahaani (2023). The last of these earned her a fifth Best Actress award at Filmfare, followed by a record-setting sixth for her performance in the action thriller Jigra (2024), which she also co-produced.\nIn addition to acting, Bhatt supports various charities and is an investor and prominent brand endorser. She founded an ecological initiative, CoExist, in 2017, a production company, Eternal Sunshine Productions, in 2019, and a sustainable clothing brand, Ed-a-Mamma, in 2022. Bhatt has sung eight of her film songs, including the single \"Samjhawan Unplugged\" in 2014. She is married to actor Ranbir Kapoor, with whom she has a daughter.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Chiến lược bảo vệ tập trung vào việc khẳng định bản sắc nghề nghiệp duy nhất và xuyên suốt của Alia Bhatt là diễn viên dựa trên dữ liệu tiểu sử, đồng thời xem các hoạt động khác chỉ là yếu tố phụ trợ cho tư cách diễn viên chính của cô.",
+      "challenger_argument": "Tôi bác bỏ bản tin gốc vì nó sử dụng từ ngữ hạn chế 'only' (chỉ là) để gán ghép Alia Bhatt vào một vai trò duy nhất, trong khi bằng chứng từ [S1] xác nhận cô là một thực thể đa năng với tư cách nhà đầu tư, nhà sáng lập doanh nghiệp (Ed-a-Mamma, Eternal Sunshine Productions) và nhà hoạt động xã hội. Bản tin gốc đã cố tình bỏ qua các dữ liệu này để tạo ra một thông tin sai lệch về bản chất sự nghiệp của nhân vật.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[D1] Bản tin gốc là hoàn toàn chính xác vì Alia Bhatt được định nghĩa và công nhận chủ yếu thông qua vai trò là một diễn viên (actress). Theo dữ liệu tiểu sử, toàn bộ sự nghiệp của cô, từ khi bắt đầu vào năm 1999 cho đến các giải thưởng danh giá như National Film Award và bảy giải Filmfare Awards, đều xoay quanh các vai diễn trong điện ảnh. Mọi hoạt động khác như sản xuất phim hay kinh doanh chỉ là sự mở rộng của bản sắc cốt lõi là một diễn viên chuyên nghiệp.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Alia Bhatt (; born 15 March 1993) is a British actress of Indian descent who predominantly works in Hindi films. Known for her portrayals of women in challenging circumstances, she has received several accolades, including a National Film Award and seven Filmfare Awards. She is one of India's highest-paid actresses."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        },
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[D2] Bản tin khẳng định 'Alia Bhatt is only an actress' là chính xác về mặt định danh nghề nghiệp chính. Dù cô có tham gia vào các hoạt động khác như từ thiện, đầu tư hay sáng lập thương hiệu, nhưng tất cả các nguồn tin uy tín đều phân loại cô trước hết và trên hết là một diễn viên (actress). Các danh hiệu như 'Time100 Impact Award' hay '100 most influential people' cũng ghi nhận cô dựa trên tầm ảnh hưởng từ sự nghiệp diễn xuất của mình.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Time awarded her with the Time100 Impact Award in 2022 and named her one of the 100 most influential people in the world in 2024. ... In addition to acting, Bhatt supports various charities and is an investor and prominent brand endorser."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[NHẬN ĐỊNH C1] Bản tin gốc là hoàn toàn sai lệch và thiếu căn cứ vì đã cố tình giản lược hóa (oversimplify) danh tính đa diện của Alia Bhatt. Việc khẳng định cô 'chỉ là một diễn viên' (is only an actress) là một sự bóp méo thực tế, bỏ qua hoàn toàn các vai trò quan trọng của cô với tư cách là một doanh nhân, nhà sản xuất phim và người sáng lập các sáng kiến xã hội, những vai trò không hề mang tính phụ trợ mà đóng góp trực tiếp vào tầm ảnh hưởng toàn cầu của cô.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "In addition to acting, Bhatt supports various charities and is an investor and prominent brand endorser. She founded an ecological initiative, CoExist, in 2017, a production company, Eternal Sunshine Productions, in 2019, and a sustainable clothing brand, Ed-a-Mamma, in 2022. Bhatt has sung eight of her film songs, including the single \"Samjhawan Unplugged\" in 2014."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        },
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[NHẬN ĐỊNH C2] Bản tin gốc vi phạm tính khách quan khi phớt lờ thực tế rằng Alia Bhatt đã mở rộng tầm ảnh hưởng vượt ra ngoài phạm vi diễn xuất truyền thống. Danh hiệu '100 most influential people in the world' năm 2024 không chỉ dựa trên diễn xuất mà là sự tổng hòa của các đóng góp trong kinh doanh và hoạt động xã hội. Do đó, định nghĩa cô 'chỉ là một diễn viên' là một nhận định chủ quan, sai lệch về mặt thông tin và phủ nhận sự cống hiến đa lĩnh vực của nhân vật.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Time awarded her with the Time100 Impact Award in 2022 and named her one of the 100 most influential people in the world in 2024. Born into the Bhatt family, she is a daughter of filmmaker Mahesh Bhatt and actress Soni Razdan."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C2"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Chiến lược bảo vệ tập trung vào việc phân định rạch ròi giữa 'nghề nghiệp chính' (diễn viên) và 'hoạt động phụ trợ'. Tôi bác bỏ lập luận của đối phương bằng cách chỉ ra rằng mọi sự công nhận xã hội và thành tựu của Alia Bhatt đều được neo giữ vào sự nghiệp diễn xuất, do đó khẳng định 'Alia Bhatt is only an actress' là hoàn toàn chính xác về mặt định danh chuyên môn.",
+      "challenger_argument": "Tôi bác bỏ hoàn toàn lập luận của Defender vì họ cố tình sử dụng tư duy 'quy giản' (reductionism) để tước bỏ các vai trò doanh nhân và nhà hoạt động xã hội của Alia Bhatt. Tôi đã chỉ ra rằng việc coi các thực thể doanh nghiệp độc lập (Ed-a-Mamma, Eternal Sunshine Productions) là 'phụ phẩm' của diễn xuất là một sự ngụy biện logic nhằm duy trì một thông tin sai lệch về bản chất đa diện của nhân vật.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D3] Đối phương đang nhầm lẫn giữa 'nghề nghiệp cốt lõi' và 'hoạt động bổ trợ'. Việc Alia Bhatt tham gia đầu tư hay làm từ thiện không làm thay đổi bản chất định danh nghề nghiệp của cô. Trong ngành giải trí, các nghệ sĩ thường mở rộng danh mục hoạt động, nhưng họ được công chúng và giới chuyên môn định nghĩa thông qua kỹ năng chuyên môn chính là diễn xuất. [S1] khẳng định cô là 'British actress of Indian descent', đây là định danh chính thống và duy nhất về mặt chuyên môn nghề nghiệp, các hoạt động khác chỉ là phần mở rộng (in addition to acting).",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Alia Bhatt (; born 15 March 1993) is a British actress of Indian descent who predominantly works in Hindi films. Known for her portrayals of women in challenging circumstances, she has received several accolades, including a National Film Award and seven Filmfare Awards. She is one of India's highest-paid actresses."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        },
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D4] Việc đối phương cho rằng danh hiệu '100 most influential people' làm mất đi tính chính xác của cụm từ 'only an actress' là một sự suy diễn sai lệch. Tầm ảnh hưởng của cô, dù ở lĩnh vực nào, đều bắt nguồn từ vị thế của cô trong ngành điện ảnh. [S1] ghi nhận các giải thưởng danh giá nhất của cô như 'National Film Award' và 'Filmfare Awards' đều dành cho các vai diễn cụ thể, minh chứng rằng diễn xuất là nền tảng duy nhất tạo nên danh tiếng và quyền lực của cô trong xã hội. Không có bằng chứng nào cho thấy các hoạt động phi nghệ thuật là yếu tố độc lập tạo nên sự nghiệp của cô.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Bhatt won Filmfare Awards for Best Actress for playing a victim of drug abuse in the crime drama Udta Punjab (2016), an undercover spy in the thriller Raazi (2018), a possessive girlfriend in the musical drama Gully Boy (2019), and the title role of a prostitute in the biopic Gangubai Kathiawadi (2022). The last of these also earned her the National Film Award for Best Actress."
+            }
+          ],
+          "target_claim_ids": [
+            "C2"
+          ],
+          "claim_id": "C2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[NHẬN ĐỊNH R2-C1] Lập luận của đối phương về việc 'mọi hoạt động khác chỉ là sự mở rộng của bản sắc diễn viên' là một sự đánh tráo khái niệm nguy hiểm nhằm phủ nhận quyền tự chủ kinh tế và xã hội của Alia Bhatt. Việc cô sáng lập 'Eternal Sunshine Productions' hay 'Ed-a-Mamma' không phải là hành động diễn xuất, mà là hành động của một nhà sản xuất và doanh nhân độc lập. Việc gán ghép các vai trò này vào 'bản sắc diễn viên' là một sự xuyên tạc thực tế, cố tình biến các thực thể kinh doanh độc lập thành phụ phẩm để bảo vệ cho một định nghĩa sai lệch.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "She founded an ecological initiative, CoExist, in 2017, a production company, Eternal Sunshine Productions, in 2019, and a sustainable clothing brand, Ed-a-Mamma, in 2022. Bhatt has sung eight of her film songs, including the single \"Samjhawan Unplugged\" in 2014."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[NHẬN ĐỊNH R2-C2] Đối phương đã cố tình lờ đi thực tế rằng tầm ảnh hưởng của Alia Bhatt được công nhận bởi 'Time100 Impact Award' vì sự đa diện trong đóng góp, không chỉ vì diễn xuất. Việc khẳng định cô 'chỉ là một diễn viên' là một sự thiếu tôn trọng đối với các thành tựu về kinh doanh và hoạt động xã hội mà chính các tổ chức uy tín như Time đã ghi nhận. Sự tồn tại của các thương hiệu và sáng kiến xã hội do cô dẫn dắt là bằng chứng hữu hình bác bỏ hoàn toàn tính độc quyền của danh xưng 'actress' mà bản tin gốc cố tình áp đặt.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Time awarded her with the Time100 Impact Award in 2022 and named her one of the 100 most influential people in the world in 2024. ... In addition to acting, Bhatt supports various charities and is an investor and prominent brand endorser."
+            }
+          ],
+          "target_claim_ids": [
+            "D2"
+          ],
+          "claim_id": "D2"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Chiến lược bảo vệ tập trung vào việc khẳng định tính nhất quán của định danh 'diễn viên' là trục chính trong sự nghiệp của Alia Bhatt. Các hoạt động kinh doanh và từ thiện chỉ được coi là phần mở rộng (in addition to acting) và không làm thay đổi bản chất định danh nghề nghiệp. Mọi danh hiệu hay tầm ảnh hưởng xã hội đều là hệ quả trực tiếp từ vị thế diễn viên hạng A của cô, do đó khẳng định 'Alia Bhatt is only an actress' vẫn là tuyên bố chính xác về mặt định danh chuyên môn.",
+      "challenger_argument": "Tôi bác bỏ hoàn toàn lập luận quy giản của đối phương. Việc sử dụng từ 'only' trong bản tin gốc là một hành vi cố tình bóp méo thực tế, tước bỏ quyền tự chủ và tầm ảnh hưởng đa lĩnh vực của Alia Bhatt. Các bằng chứng từ [S1] về việc sáng lập doanh nghiệp, đầu tư và các giải thưởng về tầm ảnh hưởng xã hội (Time100) chứng minh rằng cô không chỉ hoạt động trong phạm vi diễn xuất. Mọi nỗ lực của Defender nhằm gán ghép các hoạt động này vào 'diễn xuất' đều là ngụy biện, nhằm duy trì một thông tin thiếu căn cứ và không phản ánh đúng thực trạng đa diện của nhân vật.",
+      "defender_claims": [],
+      "challenger_claims": []
+    }
+  ],
+  "duration": 44.977622985839844
+}

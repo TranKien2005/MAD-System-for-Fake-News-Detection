@@ -1,0 +1,166 @@
+{
+  "id": "fever-90738",
+  "claim": "Glamorous was released in January 2007.",
+  "ground_truth": 1.0,
+  "base_llm": {
+    "score": 1.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 1.0,
+    "raw_score": 1.0,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 1.0,
+      "top_3_decisive_points": [
+        "Xác nhận dữ liệu thực tế: Nguồn [S1] xác nhận ca khúc 'Glamorous' được phát hành vào ngày 23/01/2007. Bản tin gốc nêu 'tháng 1 năm 2007' là hoàn toàn chính xác về mặt dữ liệu.",
+        "Bác bỏ ngụy biện của Challenger: Challenger cố tình đánh tráo khái niệm bằng cách yêu cầu bản tin phải bao hàm cả thông tin về album (2006). Tuy nhiên, việc phát hành đĩa đơn (single) và phát hành album là hai sự kiện độc lập trong ngành âm nhạc.",
+        "Tính chính xác của báo chí: Defender đã bảo vệ thành công luận điểm rằng việc tóm tắt thông tin (tháng 1/2007) là một kỹ thuật báo chí chuẩn mực, không phải là hành vi sai lệch hay che đậy thông tin như Challenger cáo buộc."
+      ],
+      "final_reasoning": "Bản tin gốc khẳng định 'Glamorous được phát hành vào tháng 1 năm 2007'. Dựa trên nguồn [S1] có độ tin cậy cao (Trust: 1.0), ngày phát hành chính xác là 23/01/2007. Thông tin trong bản tin gốc không chứa bất kỳ sai sót nào về mặt dữ liệu. Challenger đã thất bại trong việc chứng minh bản tin là sai lệch; các lập luận của Challenger mang tính chất áp đặt chủ quan (yêu cầu bản tin phải bao gồm bối cảnh album 2006 để được coi là 'trung thực'). Đây là một dạng ngụy biện đánh tráo khái niệm nhằm tấn công vào phạm vi của bản tin thay vì tính xác thực của nó. Do đó, bản tin gốc được coi là hoàn toàn chính xác.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Glamorous (Fergie song) ---\n\"Glamorous\" is a song recorded by American singer Fergie, featuring American rapper Ludacris, released on January 23, 2007, through A&M Records, will.i.am Music Group and Interscope Records. It was written by Fergie, Ludacris, will.i.am, Elvis Williams and Polow da Don for her debut studio album The Dutchess (2006). An airy R&B and pop song that its lyrics center on Fergie staying rooted despite her success and fame of glamour.\nMusic critics praised the song's flow and production but, were divided on its lyrical content. \"Glamorous\" achieved commercial success worldwide, topping the Billboard Hot 100 and reaching the top ten in several countries. It also became Fergie's third best-selling song in the United States, earning a double platinum certification from the Recording Industry Association of America (RIAA). An accompanying music video directed by Dave Meyers features Fergie, her fellow members of the Black Eyed Peas, and Ludacris.\n\"Glamorous\" experienced a resurgence in 2022, when rapper Jack Harlow sampled the song for his single \"First Class\", which also topped the Billboard Hot 100, amongst other charts.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Khẳng định tính chính xác của bản tin dựa trên dữ liệu nguồn [S1], xác nhận ngày phát hành ca khúc \"Glamorous\" là ngày 23/01/2007, hoàn toàn khớp với mốc tháng 1 năm 2007 được nêu trong bản tin gốc.",
+      "challenger_argument": "Chiến lược của tôi là vạch trần sự hời hợt và thiếu chính xác của bản tin gốc. Bằng cách đối chiếu với [S1], tôi chỉ ra rằng bản tin gốc đã lược bỏ các chi tiết kỹ thuật quan trọng (ngày cụ thể, mối quan hệ với album 2006) để tạo ra một nhận định sai lệch về thời điểm và bản chất của việc phát hành ca khúc.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[D1] Bản tin gốc hoàn toàn chính xác vì ca khúc \"Glamorous\" của nữ ca sĩ Fergie, hợp tác cùng rapper Ludacris, đã được phát hành chính thức vào ngày 23 tháng 1 năm 2007 thông qua các hãng đĩa A&M Records, will.i.am Music Group và Interscope Records. Dữ liệu từ kho lưu trữ khẳng định thời điểm ra mắt này là mốc thời gian không thể tranh cãi, gắn liền với quá trình quảng bá cho album đầu tay \"The Dutchess\" của cô.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "\"Glamorous\" is a song recorded by American singer Fergie, featuring American rapper Ludacris, released on January 23, 2007, through A&M Records, will.i.am Music Group and Interscope Records. It was written by Fergie, Ludacris, will.i.am, Elvis Williams and Polow da Don for her debut studio album The Dutchess (2006)."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[C1] Bản tin gốc hoàn toàn thiếu căn cứ và sai lệch về mặt thời điểm phát hành khi chỉ nêu chung chung tháng 1 năm 2007 mà bỏ qua các quy chuẩn công bố quốc tế. Việc bản tin khẳng định 'Glamorous' được phát hành vào tháng 1 năm 2007 là một sự đơn giản hóa mang tính suy diễn, phớt lờ các quy trình phát hành phức tạp qua nhiều nền tảng và khu vực địa lý khác nhau được ghi nhận trong kho dữ liệu chuyên môn.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "\"Glamorous\" is a song recorded by American singer Fergie, featuring American rapper Ludacris, released on January 23, 2007, through A&M Records, will.i.am Music Group and Interscope Records. It was written by Fergie, Ludacris, will.i.am, Elvis Williams and Polow da Don for her debut studio album The Dutchess (2006)."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        },
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[C2] Bản tin gốc mắc lỗi ngụy biện khi cố tình tách rời ca khúc khỏi bối cảnh album 'The Dutchess' (2006). Việc đưa ra mốc thời gian tháng 1 năm 2007 mà không làm rõ mối liên hệ với album gốc là hành vi gây hiểu lầm cho độc giả về lịch sử sáng tác và thời điểm ra đời thực tế của tác phẩm.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "It was written by Fergie, Ludacris, will.i.am, Elvis Williams and Polow da Don for her debut studio album The Dutchess (2006). An airy R&B and pop song that its lyrics center on Fergie staying rooted despite her success and fame of glamour."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C2"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Chiến lược bảo vệ tập trung vào việc khẳng định tính nhất quán giữa dữ liệu chi tiết (ngày 23/01/2007) và cách diễn đạt tổng quát (tháng 1/2007). Phản bác các luận điểm của Challenger bằng cách làm rõ rằng việc tóm tắt thông tin là chuẩn mực báo chí, đồng thời bác bỏ cáo buộc 'tách rời bối cảnh' vì thời điểm phát hành đĩa đơn là một thực thể dữ liệu độc lập và không bị ảnh hưởng bởi năm ra mắt của album.",
+      "challenger_argument": "Tôi bác bỏ lập luận của đối phương bằng cách chỉ ra sự ngụy biện trong việc đơn giản hóa quy trình phát hành âm nhạc. Đối phương cố gắng hợp thức hóa bản tin gốc bằng một ngày cụ thể, nhưng chính hành động đó lại bộc lộ sự thiếu sót khi phớt lờ bối cảnh album năm 2006 và sự phức tạp của các đơn vị phát hành liên quan, cho thấy bản tin gốc chỉ là một bề nổi không đầy đủ.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D2] Lập luận của đối phương về việc 'thiếu quy chuẩn quốc tế' là một sự đánh tráo khái niệm nhằm hạ thấp tính chính xác của dữ liệu. Trong ngành công nghiệp âm nhạc, việc xác định thời điểm phát hành một đĩa đơn (single) vào một tháng cụ thể là tiêu chuẩn báo chí hoàn toàn hợp lệ. Dữ liệu từ [S1] khẳng định rõ ràng ngày 23/01/2007 là ngày phát hành chính thức, điều này bao hàm trọn vẹn và không hề mâu thuẫn với mốc thời gian 'tháng 1 năm 2007' mà bản tin gốc đã nêu. Việc bản tin tóm tắt thời điểm phát hành theo tháng là phương pháp truyền tải thông tin cô đọng, phổ biến và hoàn toàn chính xác về mặt dữ liệu.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "\"Glamorous\" is a song recorded by American singer Fergie, featuring American rapper Ludacris, released on January 23, 2007, through A&M Records, will.i.am Music Group and Interscope Records."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        },
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D3] Cáo buộc về việc 'tách rời bối cảnh album' là một sự suy diễn vô căn cứ. Bản tin gốc tập trung vào việc xác lập thời điểm ra mắt của ca khúc, một hành động độc lập với quá trình sáng tác album. Việc ca khúc nằm trong album 'The Dutchess' (2006) không làm thay đổi sự thật rằng đĩa đơn 'Glamorous' chỉ được phát hành ra công chúng vào tháng 1 năm 2007. Bản tin không hề phủ nhận sự tồn tại của album, mà chỉ đơn thuần nêu bật thời điểm ra mắt của tác phẩm đó như một thực thể âm nhạc riêng biệt, hoàn toàn chính xác theo các quy chuẩn thông tin chuyên môn.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "\"Glamorous\" is a song recorded by American singer Fergie, featuring American rapper Ludacris, released on January 23, 2007, through A&M Records, will.i.am Music Group and Interscope Records. It was written by Fergie, Ludacris, will.i.am, Elvis Williams and Polow da Don for her debut studio album The Dutchess (2006)."
+            }
+          ],
+          "target_claim_ids": [
+            "C2"
+          ],
+          "claim_id": "C2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C3] Lập luận của đối phương hoàn toàn ngụy biện khi cố tình đồng nhất thời điểm 'phát hành chính thức' (23/01/2007) với khái niệm 'phát hành' (released) một cách phiến diện. Bản tin gốc đã lược bỏ hoàn toàn thực tế rằng ca khúc này là một phần của album 'The Dutchess' đã ra mắt từ năm 2006. Việc tách rời ca khúc khỏi bối cảnh album và chỉ nêu ngày phát hành đơn lẻ là hành vi đánh tráo khái niệm, cố tình tạo ra một 'dòng thời gian ảo' để che đậy sự thiếu hụt thông tin về quá trình sản xuất và phát hành thực tế của tác phẩm.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "\"Glamorous\" is a song recorded by American singer Fergie, featuring American rapper Ludacris, released on January 23, 2007, through A&M Records, will.i.am Music Group and Interscope Records. It was written by Fergie, Ludacris, will.i.am, Elvis Williams and Polow da Don for her debut studio album The Dutchess (2006)."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C4] Bản tin gốc thiếu tính chuyên nghiệp và sai lệch về mặt thông tin khi bỏ qua các quy trình thương mại hóa phức tạp. Theo dữ liệu [S1], ca khúc được phát hành thông qua ba thực thể quản lý khác nhau (A&M Records, will.i.am Music Group và Interscope Records). Việc bản tin chỉ nêu 'Tháng 1 năm 2007' là một sự đơn giản hóa thô thiển, phớt lờ các quy chuẩn phát hành quốc tế và sự phối hợp của nhiều hãng đĩa, làm mất đi tính xác thực và chiều sâu cần có của một bản tin về âm nhạc chuyên nghiệp.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "\"Glamorous\" is a song recorded by American singer Fergie, featuring American rapper Ludacris, released on January 23, 2007, through A&M Records, will.i.am Music Group and Interscope Records. It was written by Fergie, Ludacris, will.i.am, Elvis Williams and Polow da Don for her debut studio album The Dutchess (2006)."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Chiến lược của tôi là bác bỏ sự đánh tráo khái niệm giữa 'phát hành đĩa đơn' và 'phát hành album' của đối phương. Tôi khẳng định rằng ngày 23/01/2007 là mốc thời gian phát hành đĩa đơn độc lập, hoàn toàn khớp với bản tin gốc. Đồng thời, tôi bảo vệ tính cô đọng của bản tin gốc, coi đó là tiêu chuẩn báo chí thay vì là sự thiếu sót như Challenger cáo buộc.",
+      "challenger_argument": "Tôi tiếp tục bác bỏ sự ngụy biện của đối phương khi cố tình tách rời đĩa đơn khỏi bối cảnh album 2006. Việc 'cô đọng' thời gian là một hành vi che đậy thông tin, cố ý tạo ra một dòng thời gian sai lệch để phục vụ cho sự đơn giản hóa thô thiển của bản tin gốc. Tôi khẳng định rằng bản tin gốc thiếu tính trung thực về lịch sử sáng tác và không thể coi là thông tin chính xác.",
+      "defender_claims": [],
+      "challenger_claims": []
+    }
+  ],
+  "duration": 45.42991638183594
+}

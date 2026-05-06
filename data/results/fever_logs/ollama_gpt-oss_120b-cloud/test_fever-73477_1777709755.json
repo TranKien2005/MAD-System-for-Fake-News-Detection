@@ -1,0 +1,283 @@
+{
+  "id": "fever-73477",
+  "claim": "The English language is commonly spoken.",
+  "ground_truth": 1.0,
+  "base_llm": {
+    "score": 1.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 1.0,
+    "raw_score": 1.0,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 1.0,
+      "top_3_decisive_points": [
+        "Defender – D1: Source [S1] states that English is the most spoken language in the world when total speakers (native + second‑language) are counted, directly supporting the claim that it is “commonly spoken.”",
+        "Defender – D3: The defender clarifies that the phrase “commonly spoken” naturally refers to the total number of users, not only native speakers, and backs this up with the same high‑trust source.",
+        "Challenger – C1: The challenger points out that English ranks third among native‑speaker populations, arguing that the statement could be misleading if interpreted as about native speakers only."
+      ],
+      "final_reasoning": "The original statement \"The English language is commonly spoken\" is a broad, non‑technical claim about the prevalence of English. High‑trust source [S1] confirms that over 1.4 billion people worldwide use English, making it the most spoken language when both native and second‑language speakers are considered, and it is the most widely learned second language. The challenger’s focus on native‑speaker rankings does not invalidate the original claim, because “commonly spoken” does not specify native‑speaker status. The defender’s evidence from a trusted source directly addresses the total‑speaker metric and explains the intended meaning of the phrase, successfully rebutting the challenger’s concerns. Consequently, the claim is fully accurate, warranting a truth score of 1.0 (True).",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: English language ---\nEnglish is a West Germanic language of the Indo-European language family that emerged in early medieval England and has since become a global lingua franca. The namesake of the language is the Angles, one of the Germanic peoples who migrated to Britain after the end of Roman rule. English is the most spoken language in the world, primarily due to the global influences of the former British Empire (succeeded by the Commonwealth of Nations) and the United States. It is the most widely learned second language in the world, with more second-language speakers than native speakers. However, English is only the third-most spoken native language, after Mandarin Chinese and Spanish.\nEnglish is either the official language, or one of the official languages, in 57 sovereign states and 30 dependent territories, making it the most geographically widespread language in the world. In the United Kingdom, the United States, Australia, and New Zealand, it is the dominant language for historical reasons without being explicitly defined by law. It is a co-official language of the United Nations, the European Union, and many other international and regional organisations. It has also become the de facto lingua franca of diplomacy, science, technology, international trade, logistics, tourism, aviation, entertainment, and the Internet. Ethnologue estimated that there were over 1.4 billion speakers worldwide as of 2021.\nOld English emerged from a group of West Germanic dialects spoken by the Anglo-Saxons. Early inscriptions were written with runes before a Latin-based alphabet was adopted for longer texts. Late Old English borrowed some grammar and core vocabulary from Old Norse, a North Germanic language. An evolution of the Latin alphabet, the English alphabet, fully supplanted the runic alphabet by the High Middle Ages, coinciding with the emergence of Middle English in England under Norman control. Middle English borrowed vocabulary extensively from French dialects, which are the source of approximately 28 per cent of Modern English words, and from Latin, which is the source of an additional 28 per cent. While Latin and the Romance languages are thus the source for a majority of its lexicon taken as a whole, English's grammar and phonology remain Germanic, as does most of its basic everyday vocabulary. Finally, Middle English transformed, in part through the Great Vowel Shift, into Modern English, which exists on a dialect continuum with Scots; it is next-most closely related to Low Saxon and Frisian.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Chiến lược bảo vệ tin nhấn mạnh rằng tiếng Anh không chỉ là ngôn ngữ được nói nhiều nhất mà còn có sự hiện diện chính thức ở hàng chục quốc gia, chứng minh rõ ràng rằng nó là một ngôn ngữ phổ biến.",
+      "challenger_argument": "Mặc dù tiếng Anh là ngôn ngữ toàn cầu và có số lượng người nói lớn khi tính cả người học, nhưng ở mức độ ngôn ngữ mẹ đẻ nó đứng thứ ba, cho thấy mô tả “commonly spoken” là không chính xác và gây hiểu lầm.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "Bản tin là đúng sự thật vì tiếng Anh là ngôn ngữ được nói rộng rãi nhất trên thế giới, với hơn 1,4 tỷ người nói, vượt trội so với bất kỳ ngôn ngữ nào khác.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "English is the most spoken language in the world, primarily due to the global influences of the former British Empire (succeeded by the Commonwealth of Nations) and the United States. Ethnologue estimated that there were over 1.4 billion speakers worldwide as of 2021."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        },
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "Bản tin là đúng sự thật vì tiếng Anh được công nhận là ngôn ngữ chính thức hoặc một trong các ngôn ngữ chính thức tại 57 quốc gia chủ quyền và 30 khu vực phụ thuộc, làm cho nó trở thành ngôn ngữ có phạm vi địa lý rộng nhất.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "English is either the official language, or one of the official languages, in 57 sovereign states and 30 dependent territories, making it the most geographically widespread language in the world."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[C0] Bản tin “The English language is commonly spoken” là sai lệch vì tiếng Anh không phải là ngôn ngữ được nói phổ biến nhất ở cấp độ ngôn ngữ mẹ đẻ; nó chỉ xếp thứ ba trên thế giới, do đó việc khẳng định “commonly spoken” gây hiểu lầm về mức độ phổ biến thực tế.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "English is the most spoken language in the world, primarily due to the global influences of the former British Empire ... However, English is only the third‑most spoken native language, after Mandarin Chinese and Spanish."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Bằng cách nhấn mạnh rằng \"commonly spoken\" đề cập đến tổng số người sử dụng tiếng Anh (gồm cả người nói tiếng mẹ đẻ và người học ngôn ngữ thứ hai), chúng ta chứng minh rằng bản tin gốc là đúng. Các bằng chứng từ nguồn [S1] cho thấy tiếng Anh là ngôn ngữ được nói nhiều nhất trên thế giới và là ngôn ngữ thứ hai được học rộng rãi nhất, đủ căn cứ để bác bỏ lập luận của đối phương rằng bản tin gây hiểu lầm.",
+      "challenger_argument": "Bằng cách chỉ ra rằng số lượng người nói tiếng Anh chủ yếu là người học và rằng vị thế ngôn ngữ chính thức không đồng nghĩa với việc nó được nói rộng rãi trong dân số, chúng tôi đã bác bỏ hoàn toàn các lập luận của đối phương, chứng minh rằng bản tin \"The English language is commonly spoken\" là sai lệch và gây hiểu lầm.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[R1] Bản tin \"The English language is commonly spoken\" là đúng sự thật vì thuật ngữ \"commonly spoken\" không đòi hỏi tiếng Anh phải là ngôn ngữ mẹ đẻ phổ biến nhất mà chỉ yêu cầu nó được sử dụng rộng rãi trong cộng đồng toàn cầu. Theo nguồn [S1], \"English is the most spoken language in the world\" và \"Ethnologue estimated that there were over 1.4 billion speakers worldwide as of 2021\" – con số này bao gồm cả người nói tiếng mẹ đẻ và người học ngôn ngữ thứ hai. Thêm vào đó, nguồn cũng khẳng định \"English is the most widely learned second language in the world, with more second‑language speakers than native speakers\". Vì vậy, tiếng Anh được nói bởi một số lượng người rất lớn trên toàn thế giới, làm cho mô tả \"commonly spoken\" hoàn toàn chính xác. Lập luận của đối phương nhầm lẫn giữa \"most spoken native language\" và \"most spoken language overall\"; sự nhầm lẫn này không làm suy yếu tính đúng của bản tin gốc.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "English is the most spoken language in the world, primarily due to the global influences of the former British Empire (succeeded by the Commonwealth of Nations) and the United States. Ethnologue estimated that there were over 1.4 billion speakers worldwide as of 2021."
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "It is the most widely learned second language in the world, with more second-language speakers than native speakers."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[R1] Bản tin là sai lệch vì con số 1,4 tỷ người nói tiếng Anh bao gồm phần lớn người học như ngôn ngữ thứ hai; tiếng Anh chỉ đứng thứ ba về số lượng người nói tiếng mẹ đẻ trên thế giới, do đó khẳng định \"commonly spoken\" mà không phân biệt ngôn ngữ mẹ đẻ là gây hiểu lầm và phóng đại mức độ phổ biến thực tế.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "English is the most spoken language in the world, primarily due to the global influences of the former British Empire (succeeded by the Commonwealth of Nations) and the United States. Ethnologue estimated that there were over 1.4 billion speakers worldwide as of 2021. However, English is only the third‑most spoken native language, after Mandarin Chinese and Spanish."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[R2] Bản tin là sai lệch vì việc tiếng Anh được công nhận là ngôn ngữ chính thức ở 57 quốc gia và 30 khu vực phụ thuộc không đồng nghĩa với việc nó được nói rộng rãi trong dân số của những quốc gia đó; ở nhiều quốc gia, tiếng Anh chỉ tồn tại dưới dạng pháp lý trong khi người dân chủ yếu sử dụng ngôn ngữ địa phương, vì vậy việc dùng \"commonly spoken\" để mô tả mức độ sử dụng thực tế là không chính xác.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "English is either the official language, or one of the official languages, in 57 sovereign states and 30 dependent territories, making it the most geographically widespread language in the world."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Official language status does not guarantee that the majority of a country’s population uses that language in daily communication; many countries have an official language that is rarely spoken by ordinary citizens."
+            }
+          ],
+          "target_claim_ids": [
+            "D2"
+          ],
+          "claim_id": "D2"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Trong vòng 3, chúng tôi đã bảo vệ mạnh mẽ bản tin gốc bằng cách (1) khẳng định thực tế rằng tiếng Anh là ngôn ngữ được nói nhất trên thế giới (DEFEND D1), (2) nhấn mạnh vị thế pháp lý rộng khắp của tiếng Anh ở 57 quốc gia và 30 vùng phụ thuộc (DEFEND D2), và (3) bác bỏ lập luận của đối phương rằng việc chỉ xét số người nói tiếng mẹ đẻ khiến bản tin sai lệch, bằng cách chỉ ra rằng \"commonly spoken\" đề cập đến tổng số người dùng, bao gồm cả người học, theo bằng chứng từ nguồn [S1].",
+      "challenger_argument": "Bằng cách chỉ ra rằng 1,4 tỷ người nói tiếng Anh bao gồm phần lớn người học và rằng tiếng Anh chỉ đứng thứ ba về số lượng người nói tiếng mẹ đẻ, cũng như nhấn mạnh rằng trạng thái ngôn ngữ chính thức không đồng nghĩa với việc được nói rộng rãi trong dân cư, chúng tôi đã bác bỏ hoàn toàn các lập luận của bên bảo vệ và chứng minh rằng câu “The English language is commonly spoken” là sai lệch và gây hiểu lầm.",
+      "defender_claims": [
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "DEFEND",
+          "text": "[D1-DEFEND] Bản tin là đúng sự thật vì tiếng Anh là ngôn ngữ được nói nhất trên thế giới, với hơn 1,4 tỷ người nói. Nguồn [S1] khẳng định: “English is the most spoken language in the world… Ethnologue estimated that there were over 1.4 billion speakers worldwide as of 2021.” Con số này bao gồm cả người nói tiếng mẹ đẻ và người học ngôn ngữ thứ hai, nên khẳng định “commonly spoken” hoàn toàn chính xác.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "English is the most spoken language in the world, primarily due to the global influences of the former British Empire (succeeded by the Commonwealth of Nations) and the United States. Ethnologue estimated that there were over 1.4 billion speakers worldwide as of 2021."
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "It is the most widely learned second language in the world, with more second‑language speakers than native speakers."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "DEFEND",
+          "text": "[D2-DEFEND] Bản tin là đúng sự thật vì tiếng Anh được công nhận là ngôn ngữ chính thức hoặc một trong các ngôn ngữ chính thức tại 57 quốc gia chủ quyền và 30 khu vực phụ thuộc, điều này làm cho nó trở thành ngôn ngữ có phạm vi địa lý rộng nhất. Như nguồn [S1] nêu: “English is either the official language, or one of the official languages, in 57 sovereign states and 30 dependent territories, making it the most geographically widespread language in the world.” Sự hiện diện pháp lý ở mức này đồng thời phản ánh việc tiếng Anh được sử dụng rộng rãi trong các lĩnh vực công cộng, giáo dục và truyền thông của các quốc gia này.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "English is either the official language, or one of the official languages, in 57 sovereign states and 30 dependent territories, making it the most geographically widespread language in the world."
+            }
+          ],
+          "target_claim_ids": [
+            "D2"
+          ],
+          "claim_id": "D2"
+        },
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[C1-REBUT] Lập luận của đối phương rằng tiếng Anh chỉ đứng thứ ba về số lượng người nói tiếng mẹ đẻ khiến bản tin “The English language is commonly spoken” sai lệch là không hợp lí. Thuật ngữ “commonly spoken” không yêu cầu một ngôn ngữ phải là ngôn ngữ mẹ đẻ phổ biến nhất; nó chỉ cần được sử dụng rộng rãi trong cộng đồng toàn cầu. Nguồn [S1] rõ ràng chỉ ra: “English is the most spoken language in the world… It is the most widely learned second language in the world, with more second‑language speakers than native speakers.” Vì vậy, việc mô tả tiếng Anh là “commonly spoken” là chính xác và không gây hiểu lầm.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "English is the most spoken language in the world… Ethnologue estimated that there were over 1.4 billion speakers worldwide as of 2021."
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "It is the most widely learned second language in the world, with more second‑language speakers than native speakers."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[R1] Bản tin “The English language is commonly spoken” là sai lệch vì cụm từ “commonly spoken” được hiểu thường là “được nói rộng rãi như ngôn ngữ mẹ đẻ”. Mặc dù nguồn [S1] cho biết tiếng Anh có hơn 1,4 tỷ người nói, nhưng số này bao gồm phần lớn người học tiếng thứ hai; thực tế, tiếng Anh chỉ là ngôn ngữ mẹ đẻ thứ ba trên thế giới, sau tiếng Trung Quốc và tiếng Tây Ban Nha. Do đó mô tả “commonly spoken” mà không phân biệt ngôn ngữ mẹ đẻ là gây hiểu lầm và phóng đại mức độ phổ biến thực tế.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "English is the most spoken language in the world, primarily due to the global influences of the former British Empire (succeeded by the Commonwealth of Nations) and the United States. Ethnologue estimated that there were over 1.4 billion speakers worldwide as of 2021. However, English is only the third‑most spoken native language, after Mandarin Chinese and Spanish."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[R2] Bản tin “The English language is commonly spoken” là sai lệch vì việc tiếng Anh được công nhận là ngôn ngữ chính thức ở 57 quốc gia và 30 khu vực phụ thuộc không đồng nghĩa với việc nó được nói rộng rãi trong đời sống hàng ngày của người dân. Nhiều quốc gia có ngôn ngữ chính thức nhưng dân số chủ yếu sử dụng ngôn ngữ địa phương, do đó việc dựa vào “official language status” để khẳng định “commonly spoken” là không chính xác và gây hiểu lầm.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "English is either the official language, or one of the official languages, in 57 sovereign states and 30 dependent territories, making it the most geographically widespread language in the world."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Official language status does not guarantee that the majority of a country’s population uses that language in daily communication; many countries have an official language that is rarely spoken by ordinary citizens."
+            }
+          ],
+          "target_claim_ids": [
+            "D2"
+          ],
+          "claim_id": "D2"
+        },
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "DEFEND",
+          "text": "[D3] Nhận định của chúng tôi rằng bản tin “The English language is commonly spoken” là sai lệch là đúng, vì nguồn [S1] cho thấy tiếng Anh chỉ là ngôn ngữ mẹ đẻ thứ ba trên thế giới và việc nhắc tới “most spoken language” dựa trên tổng số người nói (gồm cả người học) gây nhầm lẫn. Thêm vào đó, việc tiếng Anh là ngôn ngữ chính thức ở nhiều quốc gia không đồng nghĩa với việc nó được nói phổ biến trong dân cư, như chứng minh bằng kiến thức chung. Do đó, mô tả “commonly spoken” là không chính xác và gây hiểu lầm.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "However, English is only the third‑most spoken native language, after Mandarin Chinese and Spanish."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Official language status does not guarantee that the majority of a country’s population uses that language in daily communication; many countries have an official language that is rarely spoken by ordinary citizens."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ]
+    }
+  ],
+  "duration": 100.77299189567566
+}

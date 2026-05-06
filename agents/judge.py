@@ -70,6 +70,12 @@ def _format_full_debate_with_evaluator(debate_history: list, evaluator_rulings: 
 
 
 def _parse_verdict(raw_text: Any) -> dict:
+    if not raw_text:
+        return {
+            "truth_score": 0.5,
+            "reasoning": "ERROR: Judge returned empty response. Check model availability or context length."
+        }
+
     if isinstance(raw_text, list):
         text = "".join([c.get("text", "") for c in raw_text if isinstance(c, dict)])
     else:
@@ -77,30 +83,89 @@ def _parse_verdict(raw_text: Any) -> dict:
         
     text = text.strip()
 
+    # Nếu rỗng sau khi strip
+    if not text:
+        return {
+            "truth_score": 0.5,
+            "reasoning": "ERROR: Judge returned empty/whitespace-only response."
+        }
+
     if text.startswith("```"):
         lines = text.split("\n")
-        text = "\n".join(lines[1:-1])
+        # Kiểm tra xem có đủ dòng để cắt không
+        if len(lines) > 2:
+            text_cleaned = "\n".join(lines[1:-1])
+            # Thử parse JSON từ phần đã cắt
+            try:
+                data = json.loads(text_cleaned)
+                return _validate_data(data, text)
+            except:
+                pass
 
+    # Thử parse toàn bộ văn bản là JSON
     try:
         data = json.loads(text)
+        return _validate_data(data, text)
     except json.JSONDecodeError:
-        start = text.find("{")
-        end = text.rfind("}") + 1
-        if start != -1 and end > start:
-            try:
-                data = json.loads(text[start:end])
-            except json.JSONDecodeError:
-                raise ValueError(f"Không thể parse JSON từ kết quả của Judge: {text}")
-        else:
-            raise ValueError(f"Không tìm thấy JSON trong kết quả của Judge: {text}")
+        pass
 
-    # Trích xuất truth_score (BẮT BUỘC)
+    # Cách 1: Tìm dấu ngoặc nhọn (JSON bọc trong văn bản)
+    import re
+    json_match = re.search(r'(\{.*\})', text, re.DOTALL)
+    if json_match:
+        try:
+            data = json.loads(json_match.group(1))
+            return _validate_data(data, text)
+        except json.JSONDecodeError:
+            pass
+
+    # Cách 2: Regex quét thủ công điểm số và lý do
+    data = {}
+    
+    # Quét truth_score (hỗ trợ cả dạng "truth_score": 1.0 hoặc "Score: 1.0")
+    score_patterns = [
+        r'"truth_score":\s*(0\.0|1\.0|0|1|0\.5)',
+        r'truth_score\s*[:=]\s*(0\.0|1\.0|0|1|0\.5)',
+        r'score\s*[:=]\s*(0\.0|1\.0|0|1|0\.5)'
+    ]
+    for pattern in score_patterns:
+        match = re.search(pattern, text, re.IGNORECASE)
+        if match:
+            try:
+                data["truth_score"] = float(match.group(1))
+                break
+            except:
+                continue
+    
+    # Quét reasoning
+    reason_patterns = [
+        r'"reasoning":\s*"(.*?)"',
+        r'reasoning\s*[:=]\s*(.*)'
+    ]
+    for pattern in reason_patterns:
+        match = re.search(pattern, text, re.IGNORECASE | re.DOTALL)
+        if match:
+            data["reasoning"] = match.group(1).strip()
+            break
+
+    return _validate_data(data, text)
+
+
+def _validate_data(data: dict, original_text: str) -> dict:
+    """Đảm bảo dữ liệu có đầy đủ các trường cần thiết, nếu không thì tung lỗi."""
+    if not isinstance(data, dict):
+        raise ValueError(f"Judge output không phải là JSON hợp lệ. Nội dung: {original_text[:200]}...")
+
+    # BẮT BUỘC phải có truth_score
     if "truth_score" not in data:
-        raise ValueError(f"Kết quả của Judge thiếu trường 'truth_score': {data}")
-        
+        raise ValueError(f"Không thể tìm thấy 'truth_score' trong kết quả của Judge. Nội dung: {original_text[:200]}...")
+    
     try:
         data["truth_score"] = float(data["truth_score"])
     except (ValueError, TypeError):
-        raise ValueError(f"Giá trị 'truth_score' của Judge không hợp lệ: {data.get('truth_score')}")
+        raise ValueError(f"Giá trị 'truth_score' không hợp lệ: {data.get('truth_score')}")
+        
+    if not data.get("reasoning"):
+        data["reasoning"] = "(No reasoning provided by Judge)"
         
     return data

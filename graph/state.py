@@ -54,6 +54,7 @@ class MADState(TypedDict):
 
     # --- Input ---
     original_news: str
+    initial_context: str | None
 
     # --- Version ---
     state_version: int
@@ -74,6 +75,7 @@ class MADState(TypedDict):
     focused_targets: Annotated[dict[str, dict], update_dict]
 
     # --- Debate ---
+    debate_mode: str # "search" or "non_search"
     current_round: int
     max_rounds: int
     debate_history: Annotated[list[DebateRound], add_to_list]
@@ -94,11 +96,18 @@ class MADState(TypedDict):
     custom_output_instructions: str | None
 
 
-def build_initial_state(news_text: str, max_rounds: int | None = None, custom_output_instructions: str | None = None) -> MADState:
+def build_initial_state(
+    news_text: str, 
+    initial_context: str | None = None,
+    debate_mode: str = "search",
+    max_rounds: int | None = None, 
+    custom_output_instructions: str | None = None
+) -> MADState:
     """Build a consistent initial state used by both CLI and UI entry points."""
     resolved_rounds = max_rounds if max_rounds is not None else config.debate.max_rounds
     return {
         "original_news": news_text,
+        "initial_context": initial_context,
         "state_version": 2,
         "knowledge_base": [],
         "source_scores": {},
@@ -110,6 +119,7 @@ def build_initial_state(news_text: str, max_rounds: int | None = None, custom_ou
         "claim_contexts": {},
         "focused_targets": {},
         "active_side": "DEFENDER",
+        "debate_mode": debate_mode,
         "current_round": 1,
         "max_rounds": resolved_rounds,
         "debate_history": [],
@@ -128,6 +138,8 @@ def ensure_state_defaults(state: dict) -> MADState:
     """Backfill missing keys so legacy callers can still run under the new schema."""
     merged = build_initial_state(
         news_text=state.get("original_news", ""),
+        initial_context=state.get("initial_context"),
+        debate_mode=state.get("debate_mode", "search"),
         max_rounds=state.get("max_rounds", config.debate.max_rounds),
     )
     merged.update(state)

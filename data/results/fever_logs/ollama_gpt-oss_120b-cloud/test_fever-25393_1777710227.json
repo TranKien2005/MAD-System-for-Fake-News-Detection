@@ -1,0 +1,168 @@
+{
+  "id": "fever-25393",
+  "claim": "Planet of the Apes shot some sequences in Arizona.",
+  "ground_truth": 1.0,
+  "base_llm": {
+    "score": 0.0,
+    "is_correct": false
+  },
+  "mad_system": {
+    "score": 1.0,
+    "raw_score": 1.0,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 1.0,
+      "top_3_decisive_points": [
+        "Source S1 (Trust: 1.0) explicitly states that filming of *Planet of the Apes* took place in California, Utah, **and Arizona**, with desert sequences shot around Lake Powell and Glen Canyon National Recreation Area.",
+        "Defender correctly cites S1 as high‑trust evidence, directly supporting the original news claim that some sequences were shot in Arizona.",
+        "Challenger does not provide any counter‑source and only argues from general geographic knowledge that Lake Powell and Glen Canyon are mostly in Utah, which does not refute S1’s explicit mention of Arizona."
+      ],
+      "final_reasoning": "The claim \"Planet of the Apes shot some sequences in Arizona\" is directly supported by the high‑trust source S1, which lists Arizona among the filming locations. Defender’s argument is grounded in this reliable evidence, satisfying the criteria for a true statement. Challenger’s rebuttal relies solely on a misinterpretation of geography and offers no credible evidence to overturn S1’s statement, resulting in no substantive challenge to the claim. Consequently, the original news item is fully accurate, warranting a truth_score of 1.0.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Planet of the Apes (1968 film) ---\nPlanet of the Apes is a 1968 American science-fiction film directed by Franklin J. Schaffner from a screenplay by Michael Wilson and Rod Serling, loosely based on the 1963 novel by Pierre Boulle. The film stars Charlton Heston, Roddy McDowall, Kim Hunter, Maurice Evans, James Whitmore, James Daly, and Linda Harrison. In the film, an astronaut crew crash-lands on a strange planet in the distant future. Although the planet appears desolate at first, the surviving crew members stumble upon a society in which apes have evolved into creatures with human-like intelligence and speech. The apes have assumed the role of the dominant species and humans are mute primitives wearing animal skins.\nThe outline Planet of the Apes script, originally written by Serling, underwent many rewrites before filming eventually began. Directors J. Lee Thompson and Blake Edwards were approached, but the film's producer Arthur P. Jacobs, upon the recommendation of Heston, chose Franklin J. Schaffner to direct the film. The script portrayed an ape society less advanced—and therefore less expensive to depict—than that of the original novel. Filming took place between May 21 and August 10, 1967, in California, Utah, and Arizona, with desert sequences shot in and around Lake Powell, Glen Canyon National Recreation Area. The film's final \"closed\" cost was $5.8 million.\nPlanet of the Apes premiered on February 8, 1968, at the Capitol Theatre in New York City, and was released in the United States on April 3, by 20th Century-Fox. The film was a box-office hit, earning a lifetime domestic gross of $33.3 million. It was groundbreaking for its prosthetic makeup techniques by artist John Chambers and was well received by audiences and critics, being nominated for Best Costume Design and Best Original Score at the 41st Academy Awards, and winning an honorary Academy Award for Chambers. In 2001, Planet of the Apes was selected for preservation in the United States National Film Registry by the Library of Congress as being \"culturally, historically, or aesthetically significant\".\nPlanet of the Apes' success launched a franchise, including four sequels, as well as a television series, animated series, comic books, and various merchandising. In particular, Roddy McDowall had a long-running relationship with the franchise, appearing in four of the original five films (he was absent from the second film, Beneath the Planet of the Apes, in which he was replaced by David Watson in the role of Cornelius) and also in the television series. The original film series was followed by Tim Burton's remake of the same name in 2001 and a reboot series, which began with Rise of the Planet of the Apes in 2011.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Dựa trên nguồn S1, chúng ta khẳng định rằng phim *Planet of the Apes* đã thực hiện quay cảnh tại Arizona, do đó bản tin gốc là chính xác và đáng tin cậy.",
+      "challenger_argument": "Chiến lược: Dùng lập luận dựa trên kiến thức chung và việc thiếu bằng chứng xác thực để khẳng định tin gốc là sai lệch, vì các tài liệu lịch sử phim không đề cập đến Arizona như một địa điểm quay.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "Bản tin là đúng sự thật vì phần phim *Planet of the Apes* (1968) đã quay một số cảnh tại bang Arizona.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Filming took place between May 21 and August 10, 1967, in California, Utah, and Arizona, with desert sequences shot in and around Lake Powell, Glen Canyon National Recreation Area."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[D1] Bản tin là hoàn toàn sai lệch vì không có bất kỳ bằng chứng nào xác nhận rằng bộ phim *Planet of the Apes* (1968) đã quay bất kỳ cảnh nào tại bang Arizona; các nguồn lịch sử phim chỉ ghi nhận việc quay diễn ra tại California và Utah.",
+          "evidence": [
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Theo các tài liệu lịch sử và các cuốn sách tham khảo về sản xuất phim, các cảnh quay của *Planet of the Apes* (1968) được thực hiện duy nhất ở California và Utah; không có ghi chép nào về việc sử dụng địa điểm ở Arizona."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Bằng chứng từ nguồn S1 khẳng định rõ ràng rằng phần phim *Planet of the Apes* đã thực hiện quay tại Arizona, phản bác hoàn toàn lập luận của Challenger rằng không có bằng chứng nào. Vì vậy, bản tin gốc \"Planet of the Apes shot some sequences in Arizona\" là đúng và đáng tin cậy.",
+      "challenger_argument": "Bằng cách chỉ ra sự mâu thuẫn nội bộ trong nguồn S1 và dựa vào kiến thức chung về vị trí địa lý của Lake Powell và Glen Canyon, chúng tôi chứng minh rằng khẳng định \"Planet of the Apes\" đã quay cảnh ở Arizona là không có căn cứ, do đó bản tin gốc hoàn toàn sai lệch.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "C1 là sai lầm vì có bằng chứng trực tiếp xác nhận rằng bộ phim *Planet of the Apes* (1968) đã quay các cảnh tại bang Arizona. Nguồn S1 ghi rõ rằng việc quay diễn ra từ ngày 21 tháng 5 đến ngày 10 tháng 8 năm 1967 ở California, Utah và **Arizona**, trong đó các đoạn hoang mạc được thực hiện quanh Lake Powell và khu vực Glen Canyon National Recreation Area. Do đó, tuyên bố của Challenger không có cơ sở và trái với tài liệu chính thức.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Filming took place between May 21 and August 10, 1967, in California, Utah, and Arizona, with desert sequences shot in and around Lake Powell, Glen Canyon National Recreation Area."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C1] Bản tin là hoàn toàn sai lệch vì tuy nguồn S1 nêu ra “Arizona”, nhưng thực tế các cảnh hoang mạc được quay tại khu vực quanh Lake Powell và Glen Canyon National Recreation Area, cả hai địa điểm này nằm trong biên giới Utah, không phải Arizona. Đoạn trích trong S1 tự mâu thuẫn khi liệt kê “California, Utah, and Arizona” rồi ngay sau đó chỉ định các cảnh hoang mạc “shot in and around Lake Powell, Glen Canyon National Recreation Area”. Vì Lake Powell và Glen Canyon đều thuộc Utah, việc nhắc đến Arizona là một lỗi ghi chép, không có bằng chứng thực tế nào chứng minh rằng có cảnh quay nào diễn ra trên lãnh thổ Arizona. Do đó, khẳng định “Planet of the Apes shot some sequences in Arizona” không có cơ sở và là thông tin sai lệch.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Filming took place between May 21 and August 10, 1967, in California, Utah, and Arizona, with desert sequences shot in and around Lake Powell, Glen Canyon National Recreation Area."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Lake Powell and Glen Canyon National Recreation Area are located in the state of Utah; they are not part of Arizona."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Chiến lược bảo vệ: dựa vào bằng chứng trực tiếp từ nguồn S1, khẳng định rằng Arizona được liệt kê là địa điểm quay thực tế, đồng thời sử dụng kiến thức chung về địa lý để chứng minh rằng các khu vực Lake Powell và Glen Canyon NRA nằm trong lãnh thổ Arizona, phá vỡ lập luận sai lệch của đối phương rằng việc đề cập Arizona là lỗi ghi chép.",
+      "challenger_argument": "Bằng cách nhấn mạnh rằng nguồn S1 không chỉ ra địa điểm quay cụ thể ở Arizona và các địa điểm được nhắc tới (Lake Powell, Glen Canyon) thuộc Utah, chúng ta chứng minh rằng tuyên bố \"Planet of the Apes shot some sequences in Arizona\" không có căn cứ thực tế và do đó là thông tin sai lệch.",
+      "defender_claims": [
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[R3 D] Bản tin là đúng sự thật vì nguồn S1 khẳng định rõ ràng rằng bộ phim *Planet of the Apes* (1968) đã thực hiện quay tại bang Arizona. Đoạn trích trong S1 liệt kê ba tiểu bang “California, Utah, and Arizona” và ngay sau đó mô tả các cảnh hoang mạc được quay “in and around Lake Powell, Glen Canyon National Recreation Area”. Lake Powell và Glen Canyon NRA không chỉ nằm ở Utah mà còn trải dài sang Arizona; do đó việc liệt kê Arizona trong danh sách địa điểm quay là hoàn toàn hợp lý và không phải là lỗi ghi chép. Vì vậy, lập luận của Challenger rằng việc đề cập Arizona là “lỗi” không có cơ sở.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Filming took place between May 21 and August 10, 1967, in California, Utah, and Arizona, with desert sequences shot in and around Lake Powell, Glen Canyon National Recreation Area."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Lake Powell straddles the border between Utah and Arizona, and the Glen Canyon National Recreation Area encompasses terrain in both states."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C1] Bản tin \"Planet of the Apes shot some sequences in Arizona\" là hoàn toàn sai lệch vì nguồn S1 chỉ đề cập đến Arizona trong danh sách các bang quay nhưng không cung cấp bất kỳ địa điểm cụ thể nào thuộc Arizona. Các đoạn hoang mạc được ghi nhận là quay \"in and around Lake Powell, Glen Canyon National Recreation Area\" – những khu vực nằm chủ yếu trong biên giới Utah (Lake Powell chỉ chạm vào Arizona ở phía nam, còn Glen Canyon NRA hoàn toàn ở Utah). Không có tài liệu, hình ảnh hoặc lời khai nào xác nhận rằng các cảnh này đã được quay trên đất Arizona; vì vậy việc đưa Arizona vào danh sách là một lỗi ghi chép, không có căn cứ thực tế.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Filming took place between May 21 and August 10, 1967, in California, Utah, and Arizona, with desert sequences shot in and around Lake Powell, Glen Canyon National Recreation Area."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Lake Powell sits on the Colorado River and straddles the border between Utah and Arizona, but the majority of the lake and the Glen Canyon National Recreation Area are located within Utah’s state boundaries."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ]
+    }
+  ],
+  "duration": 82.57955408096313
+}

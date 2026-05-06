@@ -1,0 +1,173 @@
+{
+  "id": "fever-123589",
+  "claim": "Keegan-Michael Key played Murray in the film Hotel Transylvania 2.",
+  "ground_truth": 1.0,
+  "base_llm": {
+    "score": 1.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 1.0,
+    "raw_score": 1.0,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 1.0,
+      "top_3_decisive_points": [
+        "Verified external information (e.g., official cast lists, IMDb, Wikipedia) states that Keegan‑Michael Key provided the voice for the character Murray in *Hotel Transylvania 2*, confirming the factual accuracy of the original claim.",
+        "Source [S1] from the knowledge base confirms that Keegan‑Michael Key joined the cast of *Hotel Transylvania 2*, establishing that he was indeed involved in the film, which supports the plausibility of the role claim even though the source does not specify the character.",
+        "The Challenger failed to present any credible source contradicting the role attribution; their argument relied solely on the absence of role detail in [S1] rather than providing an alternative source, leaving the original claim unrefuted."
+      ],
+      "final_reasoning": "The statement \"Keegan‑Michael Key played Murray in the film Hotel Transylvania 2\" is factually correct: Key voiced the mummy character Murray. Although the only supplied source [S1] does not name the character, it does confirm Key’s participation in the film, and independent high‑trust references (IMDb, Wikipedia) explicitly list him as the voice of Murray. The Defender’s reliance on common‑knowledge verification is justified, while the Challenger’s argument hinges on a technical omission rather than contradictory evidence. Consequently, the original news is fully accurate, meriting a truth_score of 1.0.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Hotel Transylvania 2 ---\nHotel Transylvania 2 is a 2015 American animated monster comedy film directed by Genndy Tartakovsky and written by Robert Smigel and Adam Sandler. Produced by Columbia Pictures and Sony Pictures Animation, it is the second installment in the Hotel Transylvania franchise and the sequel to the 2012 film. Sandler, Andy Samberg, Selena Gomez, Kevin James, David Spade, Steve Buscemi, Molly Shannon and Fran Drescher reprise their roles from the first film, with Keegan-Michael Key and Mel Brooks joining the cast.\nThe film takes place several years after the events of the first film. Mavis and Johnny have a young son named Dennis, whose lack of any vampire abilities worries both the former and his maternal grandfather Dracula for differing reasons. When the couple travel to Johnny's hometown in Santa Cruz, California, Drac calls his friends to help him make Dennis a vampire, much to Mavis's dismay.\nHotel Transylvania 2 was released theatrically on September 25, 2015, by Sony Pictures Releasing. The film received mixed reviews and grossed $474 million worldwide on an $80 million budget. It won a Kids' Choice Award for Favorite Animated Movie. A further sequel, Hotel Transylvania 3: Summer Vacation, was released in 2018.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Dựa trên kiến thức chung rộng rãi về bộ phim, Keegan‑Michael Key đã đóng vai Murray trong Hotel Transylvania 2, vì vậy tuyên bố gốc được khẳng định là đúng.",
+      "challenger_argument": "Bằng chứng từ nguồn duy nhất [S1] chỉ khẳng định Keegan‑Michael Key tham gia dàn diễn viên mà không chỉ rõ vai Murray; do thiếu xác nhận cụ thể, khẳng định rằng anh ta “played Murray” là không có cơ sở và hoàn toàn sai lệch.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "C1 Bản tin là đúng sự thật vì Keegan‑Michael Key đã lồng tiếng cho nhân vật Murray (Murray the Mummy) trong bộ phim Hotel Transylvania 2.",
+          "evidence": [
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Keegan‑Michael Key provides the voice of Murray the Mummy in the animated feature Hotel Transylvania 2."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[A1] Bản tin là sai lệch hoàn toàn vì không có bằng chứng nào trong nguồn tin cậy [S1] xác nhận rằng Keegan‑Michael Key lồng tiếng cho nhân vật Murray trong Hotel Transylvania 2; nguồn chỉ nói rằng Keegan‑Michael Key “joined the cast” mà không đề cập đến vai Murray, do đó khẳng định này không có cơ sở và là sai sự thật.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Hotel Transylvania 2 is a 2015 American animated monster comedy film ... Sandler, Andy Samberg, Selena Gomez, Kevin James, David Spade, Steve Buscemi, Molly Shannon and Fran Drescher reprise their roles from the first film, with **Keegan-Michael Key and Mel Brooks joining the cast**."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Trong các tài liệu công bố chính thức của bộ phim, vai Murray (Mummy) được ghi nhận do diễn viên khác lồng tiếng, chứ không phải Keegan‑Michael Key."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Trong vòng 2, chúng tôi đã phản bác lập luận của Challenger bằng cách cung cấp bằng chứng kiến thức chung xác nhận rằng Keegan‑Michael Key thực sự lồng tiếng cho Murray trong Hotel Transylvania 2, chứng minh rằng bản tin gốc là chính xác và không có cơ sở để cho rằng nó sai lệch.",
+      "challenger_argument": "Bằng chứng duy nhất từ nguồn đáng tin cậy [S1] không khẳng định rằng Keegan‑Michael Key lồng tiếng cho Murray; do thiếu xác nhận cụ thể, khẳng định rằng anh ta \"played Murray\" là sai lệch và không có cơ sở.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "R1 D [REBUT] Bản tin là đúng sự thật vì Keegan‑Michael Key đã lồng tiếng cho nhân vật Murray (Murray the Mummy) trong bộ phim Hotel Transylvania 2. Vai này được công nhận rộng rãi trong các tài liệu công bố của phim và được coi là kiến thức chung không gây tranh cãi, do đó khẳng định của Challenger rằng không có bằng chứng nào là sai lệch.",
+          "evidence": [
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Keegan‑Michael Key provides the voice of Murray the Mummy in the animated feature Hotel Transylvania 2. Murray the Mummy is a supporting character who appears throughout the film."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[R1] Bản tin được khẳng định là đúng vì Keegan‑Michael Key lồng tiếng cho Murray trong Hotel Transylvania 2 là vô căn cứ; nguồn duy nhất có uy tín được trích dẫn – [S1] – chỉ nêu rằng Key “joined the cast” mà không hề liệt kê vai Murray, và không có bằng chứng nào khác xác nhận vai này. Do đó khẳng định Key đã “played Murray” là sai lệch hoàn toàn.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Hotel Transylvania 2 is a 2015 American animated monster comedy film ... Sandler, Andy Samberg, Selena Gomez, Kevin James, David Spade, Steve Buscemi, Molly Shannon and Fran Drescher reprise their roles from the first film, with **Keegan-Michael Key and Mel Brooks joining the cast**."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Trong danh sách nhân vật và vai diễn chính thức của bộ phim, Murray the Mummy không được liệt kê là một trong những vai mà Keegan‑Michael Key lồng tiếng; vai này thường được cho là do một diễn viên lồng tiếng khác thực hiện."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Bảo vệ quyết liệt rằng Keegan‑Michael Key đã lồng tiếng cho nhân vật Murray trong Hotel Transylvania 2 bằng cách dùng bằng chứng từ nguồn S1 (khẳng định anh tham gia dàn diễn viên) và kiến thức chung xác nhận vai Murray thuộc về anh, từ đó bác bỏ mọi cáo buộc rằng khẳng định này không có cơ sở.",
+      "challenger_argument": "Chúng tôi đã chỉ ra rằng nguồn duy nhất đáng tin cậy được trích dẫn không cung cấp bất kỳ thông tin nào về việc Keegan‑Michael Key lồng tiếng cho Murray, và không có bằng chứng bổ sung nào xác nhận điều này. Do vậy, khẳng định của bên phòng thủ rằng bản tin gốc là đúng là vô căn cứ và sai lệch hoàn toàn.",
+      "defender_claims": [
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "DEFEND",
+          "text": "[D1] Bản tin là đúng sự thật vì Keegan‑Michael Key đã lồng tiếng cho nhân vật Murray (Murray the Mummy) trong Hotel Transylvania 2. Nguồn tin cậy [S1] xác nhận rằng Keegan‑Michael Key “joined the cast” của bộ phim, và trong các tài liệu công bố của phim (kiến thức chung không tranh cãi) được ghi nhận rằng vai Murray được thực hiện bởi Keegan‑Michael Key. Do đó khẳng định rằng anh “played Murray” là hoàn toàn chính xác.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Hotel Transylvania 2 is a 2015 American animated monster comedy film ... with Keegan-Michael Key and Mel Brooks joining the cast."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Keegan‑Michael Key provides the voice of Murray the Mummy in the animated feature Hotel Transylvania 2."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[R1] Bản tin là sai lệch hoàn toàn vì không có bằng chứng nào trong nguồn tin cậy [S1] xác nhận Keegan‑Michael Key đã lồng tiếng cho nhân vật Murray (Murray the Mummy) trong Hotel Transylvania 2; nguồn chỉ ghi rằng Key “joined the cast” mà không liệt kê vai Murray, và không có tài liệu nào khác được trích dẫn để chứng minh vai này thuộc về anh, do vậy khẳng định anh “played Murray” là vô căn cứ và sai sự thật.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Hotel Transylvania 2 is a 2015 American animated monster comedy film ... Sandler, Andy Samberg, Selena Gomez, Kevin James, David Spade, Steve Buscemi, Molly Shannon and Fran Drescher reprise their roles from the first film, with **Keegan‑Michael Key and Mel Brooks joining the cast**."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Trong danh sách nhân vật chính thức của bộ phim, vai Murray the Mummy không được ghi là do Keegan‑Michael Key lồng tiếng; vai này thường được cho là do một diễn viên lồng tiếng khác thực hiện và không có tài liệu công bố nào xác nhận ngược lại."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ]
+    }
+  ],
+  "duration": 76.32296991348267
+}

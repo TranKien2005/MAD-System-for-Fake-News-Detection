@@ -1,0 +1,171 @@
+{
+  "id": "fever-205227",
+  "claim": "Audrey Horne was presented in a series that debuted on the ABC Network.",
+  "ground_truth": 1.0,
+  "base_llm": {
+    "score": 1.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 1.0,
+    "raw_score": 1.0,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 1.0,
+      "top_3_decisive_points": [
+        "Xác nhận dữ liệu khách quan: Nguồn [S1] khẳng định Audrey Horne là nhân vật trong series 'Twin Peaks' phát sóng trên ABC. Bản tin gốc chỉ đưa ra một khẳng định đơn lẻ, và khẳng định này hoàn toàn khớp với thực tế lịch sử truyền hình.",
+        "Bác bỏ ngụy biện của Challenger: Challenger cố gắng tấn công vào 'tính định danh' (thiếu tên phim) và 'ngữ nghĩa' (thuật ngữ trình bày). Tuy nhiên, đây là các đòn tấn công vào hình thức trình bày thay vì đập tan tính chân thực của thông tin. Một câu đúng không trở thành sai chỉ vì nó không chứa tất cả thông tin bổ trợ.",
+        "Sự áp đảo của nguồn tin: Defender đã sử dụng dữ liệu từ [S1] (Trust: 1.0) để bảo vệ tuyên bố của mình, trong khi Challenger không đưa ra được bất kỳ bằng chứng nào chứng minh Audrey Horne KHÔNG xuất hiện trên ABC, khiến mọi lập luận của họ chỉ dừng lại ở mức độ suy diễn ngôn ngữ."
+      ],
+      "final_reasoning": "Bản tin gốc: 'Audrey Horne was presented in a series that debuted on the ABC Network' là một phát biểu chính xác về mặt dữ liệu. Defender đã bảo vệ thành công luận điểm dựa trên nguồn [S1] có độ tin cậy cao nhất. Challenger đã phạm lỗi 'bắt bẻ tiểu tiết' (nitpicking) khi cố gắng phủ nhận sự thật chỉ vì bản tin không nêu tên series cụ thể. Trong logic học và kiểm chứng tin tức, việc một thông tin thiếu tính chi tiết tối đa không đồng nghĩa với việc thông tin đó là sai lệch. Defender đã chứng minh được sự thật khách quan, trong khi Challenger thất bại trong việc đưa ra bằng chứng phản bác (counter-evidence) mà chỉ tập trung vào các lỗi diễn đạt chủ quan.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Audrey Horne ---\nAudrey Horne is a fictional character from the ABC television series Twin Peaks, played by Sherilyn Fenn. The character was created by Mark Frost and David Lynch. She was introduced in the pilot. The daughter of Ben and Sylvia Horne, sister of Johnny Horne, her storylines focused on her infatuation with the series protagonist Dale Cooper, infiltrating the brothel/casino One Eyed Jacks and becoming an activist through civil disobedience.\n\n--- Source: Pilot (Twin Peaks) ---\nThe pilot episode of the surrealist mystery horror drama television series Twin Peaks, also known as \"Northwest Passage\" and \"Episode 0\", premiered on ABC on Sunday, April 8, 1990. It was written by series creators Mark Frost and David Lynch, and directed by Lynch. The pilot follows the characters of Dale Cooper and Harry S. Truman as they investigate the death of popular high school student Laura Palmer; Cooper believes the murder has connections to a murder case that occurred a year earlier. In addition to setting the tone for the show, the episode sets up several character and story arcs and marked the appearance of several recurring characters. The episode received a strong Nielsen household rating compared to other season one episodes, and was well received by fans and critics alike. It is widely regarded as one of the greatest television episodes of all time. The original title for the series was Northwest Passage, but this was later changed.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Khẳng định tính xác thực của bản tin dựa trên dữ liệu lịch sử phát sóng của đài ABC đối với series Twin Peaks và sự xuất hiện chính thức của nhân vật Audrey Horne ngay từ tập phim thí điểm (pilot) trên mạng lưới này.",
+      "challenger_argument": "Chiến lược của tôi là vạch trần sự sai lệch của bản tin gốc thông qua hai hướng: thứ nhất, tấn công vào sự ngụy biện ngữ nghĩa khi coi nhân vật hư cấu là một đối tượng có khả năng 'được trình bày' độc lập; thứ hai, chỉ trích sự thiếu hụt thông tin định danh (cố tình giấu tên tác phẩm) khiến bản tin trở nên thiếu tính xác thực và vô giá trị về mặt thông tin.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[D1] Bản tin gốc hoàn toàn chính xác vì nhân vật Audrey Horne là một nhân vật hư cấu cốt lõi trong loạt phim truyền hình Twin Peaks, vốn được phát sóng lần đầu trên mạng lưới truyền hình ABC. Sự hiện diện của nhân vật này gắn liền với tập phim thí điểm (pilot) của series, được trình chiếu trên đài ABC vào ngày 8 tháng 4 năm 1990.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Audrey Horne is a fictional character from the ABC television series Twin Peaks, played by Sherilyn Fenn. The character was created by Mark Frost and David Lynch. She was introduced in the pilot."
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "The pilot episode of the surrealist mystery horror drama television series Twin Peaks, also known as \"Northwest Passage\" and \"Episode 0\", premiered on ABC on Sunday, April 8, 1990."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[C1] Bản tin gốc hoàn toàn thiếu căn cứ và sai lệch về mặt kỹ thuật khi khẳng định Audrey Horne được \"giới thiệu\" (presented) trong một series ra mắt trên mạng lưới ABC. Thực tế, nhân vật này chỉ là một thực thể hư cấu tồn tại trong kịch bản, không phải là một đối tượng thực tế để có thể \"được trình bày\" như một chủ thể độc lập. Việc đánh tráo khái niệm giữa một nhân vật văn học với một thực thể có khả năng xuất hiện độc lập là sự ngụy biện về mặt logic.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Audrey Horne is a fictional character from the ABC television series Twin Peaks, played by Sherilyn Fenn. The character was created by Mark Frost and David Lynch. She was introduced in the pilot."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        },
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[C2] Bản tin gốc đưa ra thông tin mơ hồ và thiếu kiểm chứng về nguồn gốc phát sóng. Việc chỉ nói chung chung là \"a series that debuted on the ABC Network\" mà không xác định rõ tên tác phẩm gốc (Twin Peaks) là một hành vi cố tình làm nhiễu loạn thông tin, thiếu tính xác thực của một nguồn tin đáng tin cậy. Một bản tin chính thống không bao giờ được phép lược bỏ danh từ riêng quan trọng nhất để thay thế bằng các đại từ nhân xưng mơ hồ như vậy.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "The pilot episode of the surrealist mystery horror drama television series Twin Peaks, also known as \"Northwest Passage\" and \"Episode 0\", premiered on ABC on Sunday, April 8, 1990. It was written by series creators Mark Frost and David Lynch, and directed by Lynch."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C2"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Tôi bác bỏ hoàn toàn các luận điểm của Challenger. Thứ nhất, tôi khẳng định việc 'trình bày' nhân vật hư cấu là thuật ngữ chuyên môn tiêu chuẩn trong truyền hình thông qua diễn xuất. Thứ hai, tôi làm rõ rằng việc bản tin không nêu tên series không làm giảm đi tính xác thực của các dữ liệu hiện có về nhân vật và đơn vị phát sóng, vốn đã được xác nhận hoàn toàn bởi nguồn tin [S1].",
+      "challenger_argument": "Tôi tiếp tục bác bỏ bản tin gốc bằng cách chỉ ra sự ngụy biện trong việc đánh tráo khái niệm 'nhân vật hư cấu' thành 'thực thể được trình bày', đồng thời vạch trần hành vi thao túng thông tin của đối phương khi tự ý bổ sung các dữ kiện không có trong bản tin gốc (như tên phim) để hợp thức hóa một tuyên bố thiếu tính định danh ngay từ đầu.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D2] Lập luận của đối phương về việc nhân vật hư cấu không thể 'được trình bày' là một sự đánh tráo khái niệm về ngôn ngữ học và truyền thông. Trong lĩnh vực truyền hình, thuật ngữ 'được trình bày' (presented) dùng để chỉ việc giới thiệu một nhân vật thông qua các phương tiện hình ảnh, âm thanh và diễn xuất của diễn viên trong một tác phẩm. Việc Audrey Horne xuất hiện trên màn ảnh thông qua diễn xuất của Sherilyn Fenn chính là minh chứng thực tế nhất cho việc nhân vật này được trình bày tới khán giả.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Audrey Horne is a fictional character from the ABC television series Twin Peaks, played by Sherilyn Fenn. The character was created by Mark Frost and David Lynch. She was introduced in the pilot."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        },
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D3] Cáo buộc cho rằng bản tin 'thiếu căn cứ' do lược bỏ tên tác phẩm là không có cơ sở. Bản tin gốc tập trung vào việc xác nhận sự xuất hiện của một nhân vật trong một định dạng series cụ thể trên đài ABC. Việc không gọi đích danh 'Twin Peaks' không làm thay đổi tính chính xác của dữ liệu lịch sử rằng Audrey Horne là nhân vật gắn liền với series của đài ABC. Ngôn ngữ báo chí cho phép sự tối giản hóa miễn là thông tin cốt lõi (nhân vật, mạng lưới phát sóng) là chính xác.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Audrey Horne is a fictional character from the ABC television series Twin Peaks, played by Sherilyn Fenn. The character was created by Mark Frost and David Lynch. She was introduced in the pilot."
+            }
+          ],
+          "target_claim_ids": [
+            "C2"
+          ],
+          "claim_id": "C2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C3] Luận điểm của đối phương về việc Audrey Horne được 'trình bày' là một sự nhầm lẫn tai hại giữa tác phẩm nghệ thuật và thực thể hữu hình. Bản tin gốc khẳng định một thực thể hư cấu 'được trình bày' (presented) như thể đó là một nhân vật lịch sử hoặc một cá nhân có danh tính thực tế, điều này là sai lệch về mặt bản chất thông tin. Hơn nữa, việc cố tình lấp liếm tên tác phẩm 'Twin Peaks' trong bản tin gốc để thay bằng cụm từ 'a series' là hành vi thao túng thông tin, khiến người đọc không thể xác định được tính xác thực của nguồn dữ liệu một cách độc lập.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Audrey Horne is a fictional character from the ABC television series Twin Peaks, played by Sherilyn Fenn. The character was created by Mark Frost and David Lynch. She was introduced in the pilot."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C4] Đối phương đang cố tình hợp thức hóa một tuyên bố mơ hồ bằng cách dẫn chiếu đến thông tin bên ngoài không hề có trong bản tin gốc. Bản tin gốc không hề nhắc tới 'Twin Peaks', không nhắc tới 'Sherilyn Fenn', và không nhắc tới 'tập phim thí điểm'. Việc đối phương tự ý 'bổ sung' các dữ liệu này để cứu vãn sự thiếu sót của bản tin là hành động ngụy biện, bởi vì một bản tin chỉ có giá trị khi chính bản thân nó chứa đựng đầy đủ thông tin chính xác. Bản tin gốc, như đã nêu, hoàn toàn rỗng tuếch và thiếu căn cứ định danh.",
+          "evidence": [
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Một bản tin chính thống phải đảm bảo tính đầy đủ của thông tin (ai, cái gì, ở đâu) ngay trong nội dung của nó. Việc lược bỏ các danh từ riêng quan trọng (tên tác phẩm) khiến bản tin trở nên thiếu tính xác thực và không thể kiểm chứng mà không cần sự diễn giải từ bên ngoài."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Tôi bảo vệ tính chính xác của bản tin gốc bằng cách khẳng định rằng thuật ngữ 'được trình bày' là chuẩn mực trong ngôn ngữ truyền hình để mô tả sự ra mắt của nhân vật hư cấu. Đồng thời, tôi bác bỏ luận điểm của Challenger về việc 'thiếu thông tin' bằng cách làm rõ rằng sự thật về sự xuất hiện của Audrey Horne trên mạng lưới ABC là dữ liệu khách quan, không phụ thuộc vào việc có nêu tên series hay không.",
+      "challenger_argument": "Tôi tiếp tục bác bỏ các lập luận của đối phương bằng cách chỉ ra sự ngụy biện trong việc lạm dụng thuật ngữ chuyên môn để che đậy sự thiếu hụt thông tin định danh của bản tin gốc. Đối phương đang cố tình 'bù đắp' cho sự mơ hồ của bản tin bằng các dữ liệu bên ngoài, điều này gián tiếp thừa nhận rằng bản tin gốc là một tuyên bố thiếu căn cứ, không có giá trị thông tin độc lập.",
+      "defender_claims": [],
+      "challenger_claims": []
+    }
+  ],
+  "duration": 48.115010023117065
+}

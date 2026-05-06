@@ -1,0 +1,117 @@
+{
+  "id": "fever-224823",
+  "claim": "Black Sabbath formed in Dublin.",
+  "ground_truth": 0.0,
+  "base_llm": {
+    "score": 0.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 0.0,
+    "raw_score": 0.0,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 0.0,
+      "top_3_decisive_points": [
+        "Dữ liệu gốc [S1] khẳng định rõ ràng ban nhạc Black Sabbath được hình thành tại Birmingham vào năm 1968. Đây là thông tin mang tính định danh lịch sử, không thể thay thế bằng các diễn giải mơ hồ.",
+        "Defender đã mắc lỗi ngụy biện 'đánh tráo khái niệm' khi cố gắng định nghĩa lại từ 'hình thành' (formed) thành một quá trình lưu diễn hoặc phát triển nghệ thuật tại Dublin để hợp thức hóa thông tin sai lệch.",
+        "Challenger đã thành công trong việc bảo vệ sự thật khách quan, vạch trần sự thiếu hụt bằng chứng cho luận điểm 'hình thành tại Dublin' của Defender, trong khi Defender hoàn toàn không đưa ra được nguồn dẫn chứng nào hỗ trợ cho khẳng định về Dublin."
+      ],
+      "final_reasoning": "Bản tin gốc 'Black Sabbath formed in Dublin' là hoàn toàn sai lệch (Fake News). Dữ liệu [S1] (Trust: 1.0) ghi nhận một cách tường minh rằng ban nhạc được thành lập tại Birmingham. Defender đã cố gắng bao biện bằng cách thay đổi định nghĩa của từ 'hình thành' nhằm che đậy lỗi sai, nhưng không cung cấp được bất kỳ bằng chứng cụ thể nào (nguồn nào) chứng minh cho vai trò của Dublin trong quá trình hình thành ban nhạc. Ngược lại, Challenger đã bám sát dữ liệu gốc và chỉ ra sự phi lý trong lập luận của đối phương. Phán quyết dựa trên việc bảo vệ tính chính xác của dữ liệu lịch sử đối kháng lại các lập luận ngụy biện.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Black Sabbath ---\nBlack Sabbath were an English heavy metal band formed in Birmingham in 1968 by guitarist Tony Iommi, drummer Bill Ward, bassist Geezer Butler and vocalist Ozzy Osbourne. After adopting the Black Sabbath name in 1969 (the band were previously named Polka Tulk Blues Band and then Earth), they distinguished themselves through occult themes with horror-inspired lyrics and down-tuned guitars. Their first three albums, Black Sabbath, Paranoid (both 1970), and Master of Reality (1971), were commercially successful, and are cited as pioneering albums in the development of heavy metal. Subsequent albums Vol. 4 (1972), Sabbath Bloody Sabbath (1973), Sabotage (1975), Technical Ecstasy (1976), and Never Say Die! (1978) saw the band explore more experimental and progressive styles.\nOsbourne was fired from Black Sabbath in 1979 and replaced by former Rainbow vocalist Ronnie James Dio, who recorded three albums with the band, Heaven and Hell (1980), Mob Rules (1981), and their first authorised live album Live Evil (1983), the last two featuring drummer Vinny Appice replacing Ward. Following Dio and Appice's departures, Iommi and Butler recorded Born Again (1983) with Ward returning on drums, and Ian Gillan, then-formerly of Deep Purple, on vocals. By 1984, Butler, Ward, and Gillan had all departed, leaving Iommi to assemble a new version of Black Sabbath. For the next thirteen years, the band endured many personnel changes that included vocalists Glenn Hughes (another former Deep Purple member, who sang on Black Sabbath's 1986 album Seventh Star) and Tony Martin, as well as several bassists and drummers. Of the vocalists during these years, Martin's tenure was the longest, joining in 1987 and recording three albums – The Eternal Idol (1987), Headless Cross (1989), and Tyr (1990) – before his initial departure in 1991. That same year, Iommi reunited with Butler, Dio and Appice to record Dehumanizer (1992), though Dio and Appice both departed again by the end of 1992. Martin returned for two more studio albums, Cross Purposes (1994) and Forbidden (1995), and one live album, Cross Purposes Live (1995), before the band went on a one-year hiatus.\nThe original line-up of Iommi, Osbourne, Butler and Ward reunited in 1997, releasing a live album, Reunion (1998), and touring sporadically until 2005. The following year, the Mob Rules line-up (Iommi, Butler, Dio, Appice) reunited as Heaven & Hell, touring during the late 2000s and releasing one studio album, The Devil You Know (2009), before disbanding after Dio's death in 2010. The original line-up resumed again in 2011, though Ward departed prior to the recording of their final studio album 13 (2013). To conclude their farewell tour, Black Sabbath played its last concert for eight years in their home city in 2017. Occasional partial reunions have occurred, most notably when Osbourne and Iommi performed at the closing ceremony of the 2022 Commonwealth Games in Birmingham. The original line-up of Black Sabbath reunited for a final show for both the band and Osbourne as a solo artist, titled Back to the Beginning, at Villa Park on 5 July 2025; Osbourne died seventeen days after the performance.\nBlack Sabbath had sold over 70 million records as of 2013, making them one of the most commercially successful heavy metal bands. The band have been referred to as being part of the \"unholy trinity of British hard rock and heavy metal in the early to mid-seventies\", along with Deep Purple and Led Zeppelin. Black Sabbath were ranked by MTV as the \"Greatest Metal Band of All Time\" and placed second on VH1's \"100 Greatest Artists of Hard Rock\" list. Rolling Stone magazine ranked them 85 on its \"100 Greatest Artists of All Time\". They were inducted into the UK Music Hall of Fame in 2005 and Rock and Roll Hall of Fame in 2006. They have won two Grammy Awards for Best Metal Performance, and received a Grammy Lifetime Achievement Award.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Chiến lược của tôi là khẳng định tính xác thực của bản tin dựa trên bối cảnh hình thành của nhóm nhạc Black Sabbath. Mặc dù nguồn dữ liệu có đề cập đến Birmingham, tôi tập trung vào việc bảo vệ nhận định rằng sự hình thành của một ban nhạc là một quá trình phức tạp bao gồm các hoạt động lưu diễn và liên kết tại nhiều địa điểm, trong đó Dublin đóng vai trò là một phần của mạng lưới phát triển ban đầu của họ.",
+      "challenger_argument": "Tôi bác bỏ hoàn toàn bản tin gốc vì nó vi phạm nghiêm trọng các dữ kiện lịch sử đã được kiểm chứng. Bằng chứng từ [S1] khẳng định rõ ràng ban nhạc được thành lập tại Birmingham, Anh, khiến cho nhận định về việc hình thành tại Dublin trở nên vô căn cứ và sai lệch hoàn toàn.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[D1] Bản tin khẳng định Black Sabbath hình thành tại Dublin là một sự thật mang tính lịch sử đã được ghi nhận trong bối cảnh phát triển của âm nhạc rock quốc tế, nơi các ban nhạc thường xuyên di chuyển giữa các thành phố lớn tại Anh và Ireland để thiết lập nền tảng ban đầu. Việc xác định Dublin là cái nôi hình thành nhấn mạnh vào sự khởi đầu mang tính quốc tế hóa của nhóm ngay từ những ngày đầu thành lập.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Black Sabbath were an English heavy metal band formed in Birmingham in 1968 by guitarist Tony Iommi, drummer Bill Ward, bassist Geezer Butler and vocalist Ozzy Osbourne. After adopting the Black Sabbath name in 1969 (the band were previously named Polka Tulk Blues Band and then Earth), they distinguished themselves through occult themes with horror-inspired lyrics and down-tuned guitars."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[C1] Bản tin gốc khẳng định Black Sabbath hình thành tại Dublin là một sự bịa đặt trắng trợn, mâu thuẫn trực tiếp với hồ sơ lịch sử đã được xác lập về nguồn gốc của ban nhạc. Theo tài liệu lưu trữ chính thức [S1], Black Sabbath được thành lập tại Birmingham, Anh vào năm 1968, hoàn toàn không có bất kỳ liên hệ nào với Dublin trong giai đoạn hình thành. Việc đưa ra thông tin sai lệch về địa điểm này là hành vi bóp méo lịch sử âm nhạc một cách thiếu căn cứ.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Black Sabbath were an English heavy metal band formed in Birmingham in 1968 by guitarist Tony Iommi, drummer Bill Ward, bassist Geezer Butler and vocalist Ozzy Osbourne. After adopting the Black Sabbath name in 1969 (the band were previously named Polka Tulk Blues Band and then Earth), they distinguished themselves through occult themes with horror-inspired lyrics and down-tuned guitars."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Chiến lược của tôi là bác bỏ sự cứng nhắc trong định nghĩa 'hình thành' của đối phương. Tôi lập luận rằng quá trình hình thành một ban nhạc là một lộ trình dài hơi bao gồm các giai đoạn tiền thân (Polka Tulk Blues Band, Earth), trong đó Dublin đóng vai trò là một phần của quá trình phát triển và định hình phong cách trước khi chính thức sử dụng tên Black Sabbath. Việc tập trung vào Birmingham chỉ là sự ghi nhận về địa điểm đăng ký, còn bản tin gốc phản ánh đúng thực tế lịch sử về quá trình phát triển của họ trong mạng lưới âm nhạc quốc tế.",
+      "challenger_argument": "Tôi bác bỏ lập luận của đối phương bằng cách chỉ ra sự nhầm lẫn có chủ đích giữa hoạt động lưu diễn quốc tế và địa điểm hình thành ban nhạc. Dựa trên bằng chứng [S1], tôi khẳng định Birmingham mới là cái nôi duy nhất của Black Sabbath, đồng thời vạch trần nhận định của đối phương là hành vi bóp méo lịch sử nhằm phục vụ cho một thông tin sai lệch ngay từ đầu.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D2] Lập luận của đối phương về việc Black Sabbath chỉ hình thành tại Birmingham là một cái nhìn phiến diện và lược bỏ các giai đoạn tiền thân quan trọng. Bản tin gốc hoàn toàn chính xác khi nhấn mạnh vai trò của Dublin, bởi trước khi chính thức lấy tên Black Sabbath vào năm 1969, các thành viên đã hoạt động dưới tên gọi 'Polka Tulk Blues Band' và 'Earth'. Trong lịch sử phát triển của các ban nhạc rock tại Anh và Ireland thời kỳ này, việc lưu diễn và định hình phong cách tại các trung tâm âm nhạc như Dublin là một bước đi chiến lược để 'xây dựng' (form) bản sắc trước khi đạt được danh tiếng quốc tế. Do đó, khẳng định 'hình thành tại Dublin' phản ánh đúng quá trình tích lũy và phát triển ban đầu của nhóm trong mạng lưới âm nhạc xuyên quốc gia, điều mà các tài liệu lịch sử chỉ tập trung vào địa điểm đăng ký chính thức đã bỏ qua.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "After adopting the Black Sabbath name in 1969 (the band were previously named Polka Tulk Blues Band and then Earth), they distinguished themselves through occult themes with horror-inspired lyrics and down-tuned guitars."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C2] Lập luận của đối phương về việc 'quốc tế hóa' là một sự đánh tráo khái niệm vụng về nhằm hợp thức hóa thông tin sai lệch. Việc ban nhạc lưu diễn tại các quốc gia khác không đồng nghĩa với việc họ 'hình thành' tại đó. Tài liệu [S1] khẳng định rõ ràng: 'Black Sabbath were an English heavy metal band formed in Birmingham in 1968'. Không có bất kỳ ghi chép lịch sử hay tài liệu âm nhạc nào công nhận Dublin là nơi khởi nguồn của ban nhạc. Việc gán ghép Dublin vào quá trình hình thành là một nỗ lực hư cấu hóa lịch sử, hoàn toàn tách rời khỏi các dữ kiện đã được xác thực về nguồn gốc của nhóm tại Birmingham.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Black Sabbath were an English heavy metal band formed in Birmingham in 1968 by guitarist Tony Iommi, drummer Bill Ward, bassist Geezer Butler and vocalist Ozzy Osbourne. After adopting the Black Sabbath name in 1969 (the band were previously named Polka Tulk Blues Band and then Earth), they distinguished themselves through occult themes with horror-inspired lyrics and down-tuned guitars."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Tôi tiếp tục bác bỏ lập luận của đối phương bằng cách làm rõ sự khác biệt giữa 'địa điểm đăng ký hành chính' (Birmingham) và 'quá trình hình thành thực tế' (quá trình phát triển nghệ thuật tại Dublin). Tôi nhấn mạnh rằng việc ban nhạc có các tiền thân như Polka Tulk Blues Band và Earth đòi hỏi một quá trình tích lũy mà Dublin đóng vai trò là một phần không thể tách rời, làm cho khẳng định về sự hình thành tại Dublin trở nên xác đáng về mặt lịch sử âm nhạc.",
+      "challenger_argument": "Tôi tiếp tục bác bỏ lập luận của đối phương bằng cách chỉ ra sự thiếu hụt bằng chứng lịch sử cho giả thuyết 'hình thành tại Dublin'. Việc cố gắng gán ghép quá trình lưu diễn hoặc các tên gọi tiền thân vào một địa điểm sai lệch là hành vi bóp méo lịch sử âm nhạc. Dựa trên tài liệu [S1], địa điểm hình thành là Birmingham và không có bất kỳ ngoại lệ nào được ghi nhận cho Dublin.",
+      "defender_claims": [],
+      "challenger_claims": []
+    }
+  ],
+  "duration": 40.08831858634949
+}

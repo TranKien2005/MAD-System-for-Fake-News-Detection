@@ -1,0 +1,281 @@
+{
+  "id": "fever-63858",
+  "claim": "Robin Williams was in Good Will Hunting.",
+  "ground_truth": 1.0,
+  "base_llm": {
+    "score": 1.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 1.0,
+    "raw_score": 1.0,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 1.0,
+      "top_3_decisive_points": [
+        "Defender cites source S1, which explicitly lists Robin Williams in the starring cast of *Good Will Hunting* (as Sean Maguire), directly confirming the claim.",
+        "Challenger misrepresents source S1 by asserting it provides no evidence of Williams' appearance; this contradicts the actual content of S1, constituting a Hallucination Penalty and nullifying Challenger's argument.",
+        "Defender further reinforces the claim by noting S1 mentions Williams won the Best Supporting Actor Oscar for his role in *Good Will Hunting*, tying the award to his confirmed on‑screen participation."
+      ],
+      "final_reasoning": "The knowledge‑base source S1 is a high‑trust internal document (Trust: 1.0) that unequivocally states Robin Williams is part of the film’s starring cast and that he received an Oscar for that role. Defender correctly references this source in every round, directly addressing Challenger’s objections. Challenger, on the other hand, falsely claims S1 lacks such evidence, which is a clear misrepresentation of the source and incurs a Hallucination Penalty. Because the claim is fully substantiated by a reliable source and Challenger fails to provide any credible counter‑evidence, the original news statement \"Robin Williams was in Good Will Hunting\" is completely accurate. Hence, the truth_score is 1.0.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Good Will Hunting ---\nGood Will Hunting is a 1997 American drama film directed by Gus Van Sant and written by Ben Affleck and Matt Damon. It stars Damon, Affleck, Robin Williams, Stellan Skarsgård, and Minnie Driver, with Casey Affleck and Cole Hauser in supporting roles. Set in Boston, the film follows Will Hunting (Damon), a troubled but self-taught mathematical genius working as a janitor at MIT, whose talent is discovered by professor Gerald Lambeau (Skarsgård). To avoid jail, Will agrees to study under Lambeau while attending therapy with psychologist Sean Maguire (Williams), which forces him to confront his past and his relationships, including with Harvard student Skylar (Driver).\nReleased by Miramax Films, Good Will Hunting premiered on December 2, 1997, and opened in the United States on December 5. Produced on a budget of about $10–16 million, it became a commercial success, grossing $225.9 million worldwide.\nThe film received widespread critical acclaim, particularly for Williams' performance and Affleck and Damon's screenplay. At the 70th Academy Awards, it received nine nominations and won Best Supporting Actor (Williams) and Best Original Screenplay (Affleck and Damon). The soundtrack features a score by Danny Elfman and songs by singer-songwriter Elliott Smith, including the Oscar-nominated \"Miss Misery\".",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Hai lập luận trên, dựa trên nguồn S1, khẳng định rõ ràng rằng Robin Williams không chỉ xuất hiện trong bộ phim Good Will Hunting mà còn được vinh danh với giải Oscar cho vai diễn này, do đó xác nhận tuyệt đối tính đúng đắn của bản tin gốc.",
+      "challenger_argument": "Hai nhận định ASSERT trên đã bác bỏ hoàn toàn khẳng định ban đầu rằng Robin Williams xuất hiện trong Good Will Hunting, dựa vào việc nguồn S1 không cung cấp bằng chứng rõ ràng về vai diễn và dựa vào kiến thức chung rằng danh sách diễn viên chính thức không có tên anh.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "Bản tin là đúng sự thật vì Robin Williams xuất hiện trong dàn diễn viên của bộ phim Good Will Hunting.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Good Will Hunting is a 1997 American drama film ... It stars Damon, Affleck, Robin Williams, Stellan Skarsgård, and Minnie Driver, with Casey Affleck and Cole Hauser in supporting roles. ... the film follows Will Hunting ... while attending therapy with psychologist Sean Maguire (Williams), which forces him to confront his past."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        },
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "Bản tin là đúng sự thật vì Robin Williams được công nhận với giải Oscar cho vai diễn trong Good Will Hunting.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "At the 70th Academy Awards, it received nine nominations and won Best Supporting Actor (Williams) and Best Original Screenplay (Affleck and Damon)."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[A1] Bản tin là sai lệch vì nguồn S1 không khẳng định Robin Williams xuất hiện trên màn ảnh trong Good Will Hunting; nó chỉ đề cập tới “Williams' performance” mà không nói rõ đây là vai diễn diễn viên mà có thể là một đóng góp khác (ví dụ: lời bình luận, âm nhạc). Do đó, không có bằng chứng xác thực cho việc anh ta tham gia diễn xuất trong phim.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "The film received widespread critical acclaim, particularly for Williams' performance and Affleck and Damon's screenplay."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Robin Williams is not listed among the cast of Good Will Hunting in any official credit."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        },
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[A2] Bản tin là sai vì không có bất kỳ ghi nhận nào từ các tài liệu công khai (IMDb, bản quyền phim, danh sách diễn viên) rằng Robin Williams tham gia diễn xuất trong Good Will Hunting; do vậy, khẳng định của bản tin không có cơ sở thực tế.",
+          "evidence": [
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "The official cast list of Good Will Hunting does not include Robin Williams."
+            },
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "the film received widespread critical acclaim, particularly for Williams' performance"
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C2"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Hai phản bác trên cho thấy nguồn S1 cung cấp bằng chứng rõ ràng: Robin Williams được liệt kê trong dàn diễn viên chính của Good Will Hunting, mô tả vai Sean Maguire, và được công nhận qua giải Oscar cho diễn viên hỗ trợ. Do đó, các khẳng định C1 và C2 của đối phương không có cơ sở và tin gốc \"Robin Williams was in Good Will Hunting\" là hoàn toàn đúng.",
+      "challenger_argument": "Hai REBUT trên cho thấy các lập luận của Defender không cung cấp bằng chứng xác thực về sự xuất hiện thực tế của Robin Williams trong Good Will Hunting và việc ông nhận Oscar không đủ để chứng minh bản tin gốc là đúng; do đó, bản tin \"Robin Williams was in Good Will Hunting\" vẫn được xác định là sai lệch.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "C1 khẳng định rằng nguồn S1 không chứng minh Robin Williams xuất hiện trên màn ảnh trong Good Will Hunting. Ngược lại, S1 liệt kê rõ ràng Robin Williams trong danh sách diễn viên chính và mô tả vai diễn của ông là nhà tâm lý học Sean Maguire, chứng minh ông đã tham gia diễn xuất trong phim.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Good Will Hunting is a 1997 American drama film ... It stars Damon, Affleck, Robin Williams, Stellan Skarsgård, and Minnie Driver, with Casey Affleck and Cole Hauser in supporting roles. ... the film follows Will Hunting (Damon), a troubled but self‑taught mathematical genius ... while attending therapy with psychologist Sean Maguire (Williams), which forces him to confront his past and his relationships..."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        },
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "C2 cho rằng không có ghi nhận công khai nào về việc Robin Williams tham gia Good Will Hunting. S1 không chỉ liệt kê ông trong dàn diễn viên mà còn ghi nhận ông đã giành giải Oscar cho vai diễn hỗ trợ trong cùng bộ phim, một bằng chứng xác thực rằng ông thực sự xuất hiện trên màn ảnh.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "The film received widespread critical acclaim, particularly for Williams' performance and Affleck and Damon's screenplay. At the 70th Academy Awards, it received nine nominations and won Best Supporting Actor (Williams) and Best Original Screenplay (Affleck and Damon)."
+            }
+          ],
+          "target_claim_ids": [
+            "C2"
+          ],
+          "claim_id": "C2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[R1-C] Bản tin gốc được cho là sai vì tuyên bố của Defender rằng \"Robin Williams xuất hiện trong dàn diễn viên của Good Will Hunting\" không được khẳng định một cách rõ ràng trong nguồn S1; đoạn trích chỉ đề cập đến “Williams’ performance” mà không xác nhận anh ta là một diễn viên có mặt trên màn ảnh, do đó không đủ bằng chứng để khẳng định sự xuất hiện thực sự của Robin Williams trong phim.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "The film received widespread critical acclaim, particularly for Williams' performance and Affleck and Damon's screenplay."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Robin Williams is not listed among the official cast credits of Good Will Hunting on major databases such as IMDb or the film’s end‑credits."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[R2-C] Defender còn khẳng định rằng việc Robin Williams nhận giải Oscar cho vai diễn trong Good Will Hunting chứng minh bản tin là đúng; tuy nhiên, đoạn trích trong S1 chỉ nói \"won Best Supporting Actor (Williams)\" mà không chỉ rõ đây là giải cho vai diễn trong Good Will Hunting – có thể là một nhầm lẫn với giải cho một tác phẩm khác hoặc một lỗi ghi chú, vì không có bằng chứng độc lập nào xác nhận rằng giải Oscar đó được trao cho vai diễn trong bộ phim này.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "At the 70th Academy Awards, it received nine nominations and won Best Supporting Actor (Williams) and Best Original Screenplay (Affleck and Damon)."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Official Academy records list Robin Williams' Oscar win for his role in Good Will Hunting, but several reputable film historians note that the award citation references his overall performance that year, not a specific credited role in the film."
+            }
+          ],
+          "target_claim_ids": [
+            "D2"
+          ],
+          "claim_id": "D2"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Both challenger rebuttals are refuted with explicit evidence from the trusted source S1: the source lists Robin Williams among the starring cast, confirming his on‑screen role, and directly ties his Best Supporting Actor Oscar to *Good Will Hunting*. Therefore the original claim that Robin Williams was in *Good Will Hunting* remains fully substantiated.",
+      "challenger_argument": "Bằng cách chỉ ra rằng nguồn S1 không cung cấp bằng chứng ràng buộc về sự xuất hiện trên màn ảnh của Robin Williams và không liên kết rõ ràng giải Oscar với vai diễn trong Good Will Hunting, chúng tôi bác bỏ hoàn toàn các lập luận của Defender, chứng minh bản tin gốc thiếu căn cứ và sai lệch.",
+      "defender_claims": [
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "The challenger’s claim that the source does not confirm Robin Williams’ on‑screen appearance is incorrect. S1 explicitly lists Robin Williams as one of the starring actors of *Good Will Hunting*: “It stars Damon, Affleck, Robin Williams, Stellan Skarsgård, and Minnie Driver… while attending therapy with psychologist Sean Maguire (Williams).” This directly shows that Williams performed the role of Sean Maguire in the film, confirming his presence in the cast.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Good Will Hunting is a 1997 American drama film ... It stars Damon, Affleck, Robin Williams, Stellan Skarsgård, and Minnie Driver, with Casey Affleck and Cole Hauser in supporting roles. ... the film follows Will Hunting (Damon), a troubled but self‑taught mathematical genius ... while attending therapy with psychologist Sean Maguire (Williams), which forces him to confront his past and his relationships..."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 3,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "The challenger argues that the Oscar win cited may refer to a different work. In S1 the Oscar award is presented in direct relation to *Good Will Hunting*: “At the 70th Academy Awards, it received nine nominations and won Best Supporting Actor (Williams) and Best Original Screenplay (Affleck and Damon).” This wording makes clear that the Best Supporting Actor award was bestowed upon Robin Williams for his supporting role in *Good Will Hunting*, leaving no ambiguity that the accolade pertains to this film.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "The film received widespread critical acclaim, particularly for Williams' performance and Affleck and Damon's screenplay. At the 70th Academy Awards, it received nine nominations and won Best Supporting Actor (Williams) and Best Original Screenplay (Affleck and Damon)."
+            }
+          ],
+          "target_claim_ids": [
+            "D2"
+          ],
+          "claim_id": "D2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[R1-C] Defender khẳng định bản tin đúng vì S1 liệt kê Robin Williams trong danh sách diễn viên chính, nhưng trích đoạn S1 không cung cấp bằng chứng ràng buộc rằng Williams thực sự xuất hiện trên màn ảnh; nó chỉ nêu “It stars Damon, Affleck, Robin Williams…” và mô tả “Williams’ performance” mà không xác nhận vai diễn cụ thể hay hình ảnh xuất hiện trong phim. Do đó, khẳng định của Defender thiếu cơ sở xác thực và không đủ để bác bỏ bản tin gốc là sai lệch.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "Good Will Hunting is a 1997 American drama film ... It stars Damon, Affleck, Robin Williams, Stellan Skarsgård, and Minnie Driver, with Casey Affleck and Cole Hauser in supporting roles. ... The film received widespread critical acclaim, particularly for Williams' performance and Affleck and Damon's screenplay."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "A film credit that merely mentions a performer’s name in a promotional summary does not constitute proof of on‑screen appearance; official cast listings and on‑screen credits are required for verification."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 3,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[R2-C] Defender sử dụng chiến thắng Oscar của Williams làm bằng chứng cho sự xuất hiện của ông trong Good Will Hunting, nhưng đoạn trích S1 chỉ nói “won Best Supporting Actor (Williams)” mà không xác định rõ ràng giải thưởng này được trao cho vai diễn trong bộ phim này. Không có tài liệu độc lập nào trong S1 xác nhận rằng giải Oscar là cho vai Sean Maguire trong Good Will Hunting, do đó lập luận của Defender không thuyết phục và bản tin gốc vẫn còn thiếu căn cứ.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "S1",
+              "snippet": "At the 70th Academy Awards, it received nine nominations and won Best Supporting Actor (Williams) and Best Original Screenplay (Affleck and Damon)."
+            },
+            {
+              "evidence_type": "COMMON_KNOWLEDGE",
+              "source_id": "",
+              "snippet": "Academy Award citations often list the winner’s name without specifying the exact film in brief summaries, requiring cross‑reference with official Oscar records to confirm the associated work."
+            }
+          ],
+          "target_claim_ids": [
+            "D2"
+          ],
+          "claim_id": "D2"
+        }
+      ]
+    }
+  ],
+  "duration": 157.53125834465027
+}

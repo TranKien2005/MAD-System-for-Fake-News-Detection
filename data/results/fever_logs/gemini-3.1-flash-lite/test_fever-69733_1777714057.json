@@ -1,0 +1,181 @@
+{
+  "id": "fever-69733",
+  "claim": "Portia de Rossi appeared in a part.",
+  "ground_truth": 1.0,
+  "base_llm": {
+    "score": 1.0,
+    "is_correct": true
+  },
+  "mad_system": {
+    "score": 1.0,
+    "raw_score": 0.75,
+    "is_correct": true,
+    "verdict": {
+      "truth_score": 0.75,
+      "top_3_decisive_points": [
+        "Defender xác lập được tính xác thực của sự kiện: Portia de Rossi là một diễn viên có nhiều vai diễn (parts), do đó khẳng định 'appeared in a part' là thông tin đúng về mặt sự kiện (factually correct).",
+        "Challenger thất bại trong việc chứng minh bản tin là 'Sai lệch' (False/Misleading) mà chỉ tập trung vào việc chỉ trích 'phong cách diễn đạt' và 'ý đồ truyền thông', đây là các đánh giá chủ quan thay vì phản bác dữ liệu.",
+        "Bản tin gốc dù thiếu chi tiết và sơ sài (vague), nhưng không chứa đựng thông tin sai sự thật (falsehood). Defender đã bảo vệ thành công tính đúng đắn dựa trên [S1]."
+      ],
+      "final_reasoning": "Bản tin gốc 'Portia de Rossi appeared in a part' là một phát ngôn đúng về mặt dữ liệu (factually true) vì dựa trên [S1], Portia de Rossi thực sự là một diễn viên đã đảm nhận nhiều vai diễn (parts) trong các bộ phim. Mặc dù Challenger nỗ lực cáo buộc đây là hành vi 'làm sai lệch bối cảnh' hoặc 'hạ thấp uy tín', nhưng họ không đưa ra được bằng chứng nào cho thấy thông tin này là sai sự thật. Trong tranh luận, việc một thông tin bị cho là 'thiếu chi tiết' hoặc 'cách diễn đạt kỳ lạ' không đồng nghĩa với việc nó là 'Sai lệch' (Misleading). Defender đã bảo vệ thành công luận điểm rằng đây là một sự thật khách quan. Điểm 0.75 được chọn thay vì 1.0 vì bản tin gốc có chất lượng biên tập rất thấp và thiếu ngữ cảnh cần thiết của một bản tin chuyên nghiệp, tuy nhiên về mặt logic, nó không phải là tin giả.",
+      "reasoning": "(No reasoning provided by Judge)"
+    }
+  },
+  "context_used": "--- Source: Portia de Rossi ---\nPortia Lee James DeGeneres (born Amanda Lee Rogers; 31 January 1973), known professionally as Portia de Rossi, is an Australian and American former actress. She played Nelle Porter on the American drama series Ally McBeal (1998–2002), for which she won a Screen Actors Guild Award; Lindsay Bluth Fünke on the American television sitcom Arrested Development (2003–2006, 2013, 2018–2019), and Elizabeth North on the American political thriller series Scandal (2014–2017).\nShe also portrayed high-end escort Olivia Lord on the American television drama series Nip/Tuck (2007–2009) and wise-cracking office manager Veronica Palmer on the American television sitcom Better Off Ted (2009–2010). De Rossi is a lesbian and is married to comedian, actress, and ex-television host Ellen DeGeneres.",
+  "debate_history": [
+    {
+      "round_number": 1,
+      "defender_argument": "Chiến lược bảo vệ tập trung vào việc khẳng định sự nghiệp diễn xuất dày dặn của Portia de Rossi thông qua các nguồn dữ liệu xác thực, chứng minh rằng bà đã thực hiện nhiều 'phần' (vai diễn) trong các bộ phim truyền hình nổi tiếng, từ đó xác nhận tính đúng đắn của bản tin gốc là một sự thật khách quan.",
+      "challenger_argument": "Chiến lược của tôi là vạch trần sự mơ hồ mang tính ác ý của bản tin gốc. Bằng cách đối chiếu dữ liệu chi tiết trong [S1] với cách diễn đạt 'appeared in a part' của bản tin, tôi chứng minh rằng bản tin này cố tình bóp méo thực tế, hạ thấp sự nghiệp của một diễn viên có nhiều vai diễn chính danh giá thành một thông tin rời rạc, vô giá trị.",
+      "defender_claims": [
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[D1] Bản tin gốc hoàn toàn chính xác vì Portia de Rossi là một nữ diễn viên chuyên nghiệp đã góp mặt trong nhiều dự án truyền hình danh giá. Cụm từ 'appeared in a part' (xuất hiện trong một vai diễn) là một cách diễn đạt chuẩn xác để mô tả sự nghiệp diễn xuất đa dạng của bà thông qua các vai diễn cụ thể như Nelle Porter trong 'Ally McBeal', Lindsay Bluth Fünke trong 'Arrested Development' hay Elizabeth North trong 'Scandal'.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Portia Lee James DeGeneres (born Amanda Lee Rogers; 31 January 1973), known professionally as Portia de Rossi, is an Australian and American former actress. She played Nelle Porter on the American drama series Ally McBeal (1998–2002), for which she won a Screen Actors Guild Award; Lindsay Bluth Fünke on the American television sitcom Arrested Development (2003–2006, 2013, 2018–2019), and Elizabeth North on the American political thriller series Scandal (2014–2017)."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D1"
+        },
+        {
+          "round": 1,
+          "side": "D",
+          "action_type": "ASSERT",
+          "text": "[D2] Bản tin gốc phản ánh đúng thực tế sự nghiệp của Portia de Rossi, người đã đảm nhận các vai diễn quan trọng trong nhiều thể loại phim khác nhau, từ phim tâm lý tội phạm đến phim sitcom hài hước, chứng minh rằng việc bà 'appeared in a part' là một sự thật không thể chối cãi dựa trên lịch sử đóng phim đồ sộ được ghi nhận.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "She also portrayed high-end escort Olivia Lord on the American television drama series Nip/Tuck (2007–2009) and wise-cracking office manager Veronica Palmer on the American television sitcom Better Off Ted (2009–2010)."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "D2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[C1] Bản tin gốc hoàn toàn vô căn cứ và thiếu tính xác thực vì sử dụng thuật ngữ 'appeared in a part' một cách mơ hồ, không xác định. Việc dùng cụm từ này để mô tả sự nghiệp của một diễn viên chuyên nghiệp là hành vi đánh tráo khái niệm, cố tình hạ thấp quy mô công việc của Portia de Rossi mà không đưa ra được bất kỳ thông tin cụ thể nào về thời gian, địa điểm hay dự án thực tế.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Portia Lee James DeGeneres (born Amanda Lee Rogers; 31 January 1973), known professionally as Portia de Rossi, is an Australian and American former actress. She played Nelle Porter on the American drama series Ally McBeal (1998–2002), for which she won a Screen Actors Guild Award; Lindsay Bluth Fünke on the American television sitcom Arrested Development (2003–2006, 2013, 2018–2019), and Elizabeth North on the American political thriller series Scandal (2014–2017)."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C1"
+        },
+        {
+          "round": 1,
+          "side": "C",
+          "action_type": "ASSERT",
+          "text": "[C2] Bản tin gốc mang tính chất tung tin giả vì nó cô lập thông tin về đời tư và sự nghiệp của Portia de Rossi khỏi bối cảnh thực tế. Nguồn tin chính thống [S1] ghi nhận bà đã đảm nhận nhiều vai diễn lớn trong các series dài tập với các danh hiệu cụ thể, trong khi bản tin gốc lại sử dụng cụm từ 'a part' (số ít, mơ hồ) nhằm mục đích gây hiểu lầm rằng bà chỉ là một diễn viên phụ hoặc vô danh, hoàn toàn sai lệch với dữ liệu thực tế về sự nghiệp của bà.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "She also portrayed high-end escort Olivia Lord on the American television drama series Nip/Tuck (2007–2009) and wise-cracking office manager Veronica Palmer on the American television sitcom Better Off Ted (2009–2010). De Rossi is a lesbian and is married to comedian, actress, and ex-television host Ellen DeGeneres."
+            }
+          ],
+          "target_claim_ids": [],
+          "claim_id": "C2"
+        }
+      ]
+    },
+    {
+      "round_number": 2,
+      "defender_argument": "Chiến lược bảo vệ tập trung vào việc khẳng định tính đúng đắn về mặt logic và ngôn ngữ của bản tin gốc. Tôi bác bỏ các cáo buộc về sự 'mơ hồ' hay 'gây hiểu lầm' bằng cách chỉ ra rằng 'appeared in a part' là một sự thật khách quan được chứng minh bởi danh sách các vai diễn mà Portia de Rossi đã đảm nhận trong [S1]. Việc bản tin không liệt kê chi tiết không đồng nghĩa với việc thông tin đó là sai hoặc mang tính hạ thấp, mà đó là cách diễn đạt cô đọng về sự nghiệp diễn xuất của nghệ sĩ.",
+      "challenger_argument": "Tôi bác bỏ hoàn toàn các luận điểm của phe bảo vệ vì họ đã cố tình phớt lờ tính chất thiếu căn cứ và mơ hồ ác ý của bản tin gốc. Việc sử dụng cụm từ 'appeared in a part' cho một diễn viên có bề dày thành tích như Portia de Rossi không phải là cách diễn đạt chuẩn, mà là một thủ thuật đánh tráo khái niệm nhằm làm suy giảm giá trị sự nghiệp của diễn viên này, đồng thời thiếu đi các chi tiết xác thực tối thiểu mà một bản tin chính thống phải có.",
+      "defender_claims": [
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D3] Bản tin gốc hoàn toàn chính xác về mặt ngữ nghĩa và thực tế. Việc sử dụng cụm từ 'appeared in a part' không hề mơ hồ mà là cách diễn đạt tối giản, trực diện để khẳng định sự tham gia của một diễn viên vào các tác phẩm nghệ thuật. Trong ngôn ngữ chuyên môn, 'a part' (vai diễn) là đơn vị cơ bản nhất cấu thành nên sự nghiệp của bất kỳ diễn viên nào. Việc phản biện cho rằng đây là sự hạ thấp là một suy diễn chủ quan, vì chính nguồn dữ liệu [S1] đã xác nhận bà đã đảm nhận các vai diễn cụ thể như Nelle Porter hay Lindsay Bluth Fünke. Việc một bản tin tóm tắt sự nghiệp của bà bằng cụm từ 'appeared in a part' là hoàn toàn khớp với thực tế khách quan là bà đã từng đảm nhận các vai diễn này.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "She played Nelle Porter on the American drama series Ally McBeal (1998–2002), for which she won a Screen Actors Guild Award; Lindsay Bluth Fünke on the American television sitcom Arrested Development (2003–2006, 2013, 2018–2019), and Elizabeth North on the American political thriller series Scandal (2014–2017)."
+            }
+          ],
+          "target_claim_ids": [
+            "C1"
+          ],
+          "claim_id": "C1"
+        },
+        {
+          "round": 2,
+          "side": "D",
+          "action_type": "REBUT",
+          "text": "[D4] Lập luận cho rằng bản tin 'gây hiểu lầm' là hoàn toàn sai lệch. Bản tin gốc không phủ nhận sự nghiệp đồ sộ của Portia de Rossi, mà chỉ đơn thuần nêu lên một sự thật không thể chối cãi: bà đã 'appeared in a part' (xuất hiện trong một vai diễn). Đây là một mệnh đề logic đúng (True statement). Việc đối phương cố gắng gán ghép ý đồ 'hạ thấp' vào bản tin chỉ là một nỗ lực nhằm làm chệch hướng sự thật khách quan rằng bà là một diễn viên có kinh nghiệm đóng phim. Dữ liệu từ [S1] khẳng định bà đã đóng nhiều vai, và việc bản tin gốc chọn lọc một khía cạnh để đưa tin không làm thay đổi tính đúng đắn của thông tin đó.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "She also portrayed high-end escort Olivia Lord on the American television drama series Nip/Tuck (2007–2009) and wise-cracking office manager Veronica Palmer on the American television sitcom Better Off Ted (2009–2010)."
+            }
+          ],
+          "target_claim_ids": [
+            "C2"
+          ],
+          "claim_id": "C2"
+        }
+      ],
+      "challenger_claims": [
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C3] Lập luận của phe bảo vệ là một sự ngụy biện về ngữ nghĩa nhằm hợp thức hóa một bản tin vô giá trị. Việc đánh đồng sự nghiệp diễn xuất đồ sộ của Portia de Rossi với cụm từ 'appeared in a part' là hành vi hạ thấp nghiêm trọng, biến một thực tế nghệ thuật phức tạp thành một thông tin rời rạc, thiếu tính xác thực về mặt báo chí. Bản tin gốc không cung cấp bất kỳ bối cảnh nào về thời gian, vai trò hay tầm ảnh hưởng, cho thấy đây là một nỗ lực xuyên tạc có chủ đích.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "Portia Lee James DeGeneres (born Amanda Lee Rogers; 31 January 1973), known professionally as Portia de Rossi, is an Australian and American former actress. She played Nelle Porter on the American drama series Ally McBeal (1998–2002), for which she won a Screen Actors Guild Award; Lindsay Bluth Fünke on the American television sitcom Arrested Development (2003–2006, 2013, 2018–2019), and Elizabeth North on the American political thriller series Scandal (2014–2017)."
+            }
+          ],
+          "target_claim_ids": [
+            "D1"
+          ],
+          "claim_id": "D1"
+        },
+        {
+          "round": 2,
+          "side": "C",
+          "action_type": "REBUT",
+          "text": "[C4] Phản biện của phe bảo vệ tại [D2] hoàn toàn thất bại trong việc giải thích tại sao bản tin lại sử dụng hình thức số ít 'a part' một cách mơ hồ. Trong báo chí, việc đưa tin về một diễn viên có lịch sử đóng phim đa dạng mà chỉ dùng cụm từ 'appeared in a part' là hành vi gây hiểu lầm, cố tình tách rời các cột mốc sự nghiệp quan trọng khỏi bối cảnh thực tế để phục vụ mục đích tung tin giả, hạ thấp danh tiếng của đối tượng được nhắc đến.",
+          "evidence": [
+            {
+              "evidence_type": "SOURCE",
+              "source_id": "[S1]",
+              "snippet": "She also portrayed high-end escort Olivia Lord on the American television drama series Nip/Tuck (2007–2009) and wise-cracking office manager Veronica Palmer on the American television sitcom Better Off Ted (2009–2010). De Rossi is a lesbian and is married to comedian, actress, and ex-television host Ellen DeGeneres."
+            }
+          ],
+          "target_claim_ids": [
+            "D2"
+          ],
+          "claim_id": "D2"
+        }
+      ]
+    },
+    {
+      "round_number": 3,
+      "defender_argument": "Chiến lược bảo vệ của tôi tập trung vào việc khẳng định tính chuẩn xác về mặt ngữ nghĩa và logic của bản tin. Tôi bác bỏ các cáo buộc về 'ý đồ hạ thấp' bằng cách chỉ ra rằng 'appeared in a part' là mô tả trung lập và chính xác về hoạt động nghề nghiệp của diễn viên, đồng thời chứng minh rằng việc chọn lọc thông tin không làm mất đi tính chân thực của bản tin gốc dựa trên dữ liệu sự nghiệp đã được xác thực từ [S1].",
+      "challenger_argument": "Tôi tiếp tục bác bỏ các luận điểm của phe bảo vệ bằng cách chỉ ra rằng họ đang nhầm lẫn giữa 'tính đúng đắn của ngữ pháp' với 'tính trung thực của thông tin'. Việc sử dụng cụm từ 'appeared in a part' để mô tả một sự nghiệp diễn xuất nhiều giải thưởng là hành vi cố tình làm sai lệch bối cảnh (contextual distortion), một thủ thuật thường thấy trong các bản tin giả nhằm hạ thấp uy tín của nhân vật.",
+      "defender_claims": [],
+      "challenger_claims": []
+    }
+  ],
+  "duration": 46.07643675804138
+}
