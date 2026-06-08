@@ -99,10 +99,9 @@ prepare
 ├── utils/                    # Rate limiting và retry wrapper
 ├── scripts/                  # Chuẩn bị dữ liệu và chạy benchmark
 ├── data/                     # Raw data, processed data và kết quả đánh giá
-├── figures/                  # Hình minh họa PNG dùng trong báo cáo LaTeX
+├── docs/                     # Tài liệu kiến trúc và định hướng sản phẩm
 ├── main.py                   # Entry point CLI và hàm run_mad
 ├── app.py                    # Gradio demo UI
-├── main.tex                  # Báo cáo đồ án LaTeX
 └── README.md
 ```
 
@@ -228,18 +227,14 @@ Theo các lần chạy FEVER trong tài liệu dự án, MAD cải thiện độ
 
 Các kết quả này dùng mẫu FEVER nhị phân SUPPORTS/REFUTES và nên được hiểu trong phạm vi thiết lập thử nghiệm của dự án.
 
-## Báo cáo và hình minh họa
+## Tài liệu dự án
 
-Báo cáo chính nằm ở `main.tex`. Thư mục `figures/` chứa các hình minh họa PNG đã được tạo để chèn vào báo cáo, bao gồm:
+Các tài liệu cần giữ được gom trong thư mục `docs/`:
 
-- Tổng quan kiến trúc MAD System.
-- Mô hình phiên tòa số của Multi-Agent Debate.
-- Quan hệ giữa MADState, knowledge base, debate history và claims registry.
-- Workflow Search Mode và Non-search Mode.
-- Pipeline chuẩn bị dữ liệu/đánh giá FEVER.
-- Biểu đồ so sánh accuracy giữa Base LLM và MAD.
+- `docs/architecture.md`: tóm tắt kiến trúc hiện tại của hệ thống MAD.
+- `docs/product-report-draft.md`: bản nháp báo cáo sản phẩm theo hướng VeriAI / AI Output Auditor.
 
-Khi biên dịch trên Overleaf, cần upload cả `main.tex`, `logo.png` nếu muốn hiện logo thật, và toàn bộ thư mục `figures/`.
+Các file báo cáo LaTeX, slide và hình minh họa cũ đã được loại bỏ khỏi repo sau khi hoàn tất phần viết báo cáo.
 
 ## Trạng thái hiện tại và lưu ý kỹ thuật
 
@@ -247,7 +242,6 @@ Khi biên dịch trên Overleaf, cần upload cả `main.tex`, `logo.png` nếu 
 - `score_sources` đang được dùng trong Search Mode để chấm nguồn.
 - Hàm đánh giá vòng tranh luận trong `agents/evaluator.py` có tồn tại nhưng chưa được nối trực tiếp vào workflow chính.
 - `app.py` là demo UI Gradio, nhưng có thể cần đồng bộ thêm nếu cấu hình model hoặc chữ ký hàm workflow đã thay đổi.
-- Một số tài liệu cũ như `SYSTEM_DESIGN.md` mang tính thiết kế/ý tưởng và có thể không khớp hoàn toàn với code hiện tại.
 
 ## Hướng phát triển
 

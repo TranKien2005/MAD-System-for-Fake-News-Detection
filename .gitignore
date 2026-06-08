@@ -21,3 +21,19 @@ build/
 # OS
 .DS_Store
 Thumbs.db
+
+# Office/PowerPoint temporary lock files
+~$*
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
